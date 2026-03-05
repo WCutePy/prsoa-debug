@@ -1,0 +1,26 @@
+overlay5:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0x43A0
+    NA: 0x43A0
+    JP: 0x43E0
+  description: Unknown.
+  functions: []
+  data:
+    - name: OV5_STATIC_INITIALIZER
+      address:
+        EU: 0x2121078
+        NA: 0x21203F8
+        JP: 0x2120624
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 5.

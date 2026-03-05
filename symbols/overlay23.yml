@@ -1,0 +1,26 @@
+overlay23:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0x2920
+    NA: 0x2920
+    JP: 0x28C0
+  description: Unknown.
+  functions: []
+  data:
+    - name: OV23_STATIC_INITIALIZER
+      address:
+        EU: 0x211FE10
+        NA: 0x211F194
+        JP: 0x211F348
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 23.

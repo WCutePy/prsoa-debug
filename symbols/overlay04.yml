@@ -1,0 +1,26 @@
+overlay4:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0xF60
+    NA: 0xF60
+    JP: 0xF80
+  description: Unknown.
+  functions: []
+  data:
+    - name: OV4_STATIC_INITIALIZER
+      address:
+        EU: 0x211E42C
+        NA: 0x211D7AC
+        JP: 0x211D9E0
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 4.

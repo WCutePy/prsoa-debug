@@ -1,0 +1,26 @@
+overlay25:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0x33A0
+    NA: 0x3340
+    JP: 0x3340
+  description: Unknown.
+  functions: []
+  data:
+    - name: OV25_STATIC_INITIALIZER
+      address:
+        EU: 0x2120730
+        NA: 0x211FA64
+        JP: 0x211FC84
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 25.

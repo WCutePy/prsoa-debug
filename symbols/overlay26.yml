@@ -1,0 +1,26 @@
+overlay26:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0x11C0
+    NA: 0x1180
+    JP: 0x1180
+  description: Unknown.
+  functions: []
+  data:
+    - name: OV26_STATIC_INITIALIZER
+      address:
+        EU: 0x211E288
+        NA: 0x211D5CC
+        JP: 0x211D7EC
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 26.

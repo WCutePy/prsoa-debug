@@ -1,0 +1,26 @@
+overlay1:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0x25940
+    NA: 0x25820
+    JP: 0x25D40
+  description: Unknown.
+  functions: []
+  data:
+    - name: OV1_STATIC_INITIALIZER
+      address:
+        EU: 0x214153C
+        NA: 0x2140734
+        JP: 0x2140E48
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 1.

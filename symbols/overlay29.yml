@@ -1,0 +1,21 @@
+overlay29:
+  versions:
+    - EU
+    - NA
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+  length:
+    EU: 0x360
+    NA: 0x360
+  description: Unknown. Missing from the JP release.
+  functions: []
+  data:
+    - name: OV29_STATIC_INITIALIZER
+      address:
+        EU: 0x211D948
+        NA: 0x211CCC8
+      length:
+        EU: 0x4
+        NA: 0x4
+      description: Static initializer for overlay 29.

@@ -1,0 +1,6 @@
+#ifndef HEADERS_DATA_OVERLAY22_H_
+#define HEADERS_DATA_OVERLAY22_H_
+
+extern undefined4 OV22_STATIC_INITIALIZER;
+
+#endif

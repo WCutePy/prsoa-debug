@@ -1,0 +1,6 @@
+#ifndef HEADERS_DATA_OVERLAY14_H_
+#define HEADERS_DATA_OVERLAY14_H_
+
+extern undefined4 OV14_STATIC_INITIALIZER;
+
+#endif

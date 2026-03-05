@@ -1,0 +1,26 @@
+overlay3:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0xF000
+    NA: 0xEB20
+    JP: 0xED40
+  description: Unknown.
+  functions: []
+  data:
+    - name: OV3_STATIC_INITIALIZER
+      address:
+        EU: 0x212B7E8
+        NA: 0x212A6C8
+        JP: 0x212AAE0
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 3.

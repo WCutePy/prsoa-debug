@@ -1,0 +1,26 @@
+overlay27:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0x4CC0
+    NA: 0x4CA0
+    JP: 0x4CC0
+  description: Unknown.
+  functions: []
+  data:
+    - name: OV27_STATIC_INITIALIZER
+      address:
+        EU: 0x2121DC4
+        NA: 0x212112C
+        JP: 0x212137C
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 27.

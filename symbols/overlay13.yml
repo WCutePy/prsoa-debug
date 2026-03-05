@@ -1,0 +1,26 @@
+overlay13:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0x20
+    NA: 0x20
+    JP: 0x20
+  description: Unused; all zeroes.
+  functions: []
+  data:
+    - name: OV13_STATIC_INITIALIZER
+      address:
+        EU: 0x211D660
+        NA: 0x211CC00
+        JP: 0x211C9E0
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 13.

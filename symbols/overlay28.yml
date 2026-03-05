@@ -1,0 +1,26 @@
+overlay28:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0x1320
+    NA: 0x1320
+    JP: 0x1320
+  description: Unknown.
+  functions: []
+  data:
+    - name: OV28_STATIC_INITIALIZER
+      address:
+        EU: 0x211E840
+        NA: 0x211DBC0
+        JP: 0x211DDE4
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 28.

@@ -1,0 +1,26 @@
+overlay6:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0x1380
+    NA: 0x1380
+    JP: 0x13A0
+  description: Unknown.
+  functions: []
+  data:
+    - name: OV6_STATIC_INITIALIZER
+      address:
+        EU: 0x211E8DC
+        NA: 0x211DC5C
+        JP: 0x211DE8C
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 6.

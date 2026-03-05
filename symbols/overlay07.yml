@@ -1,0 +1,26 @@
+overlay7:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0x2E80
+    NA: 0x2E80
+    JP: 0x2E80
+  description: Unknown.
+  functions: []
+  data:
+    - name: OV7_STATIC_INITIALIZER
+      address:
+        EU: 0x21202A8
+        NA: 0x211F628
+        JP: 0x211F848
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 7.

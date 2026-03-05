@@ -1,0 +1,26 @@
+overlay24:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x211D660
+    NA: 0x211C9E0
+    JP: 0x211CC00
+  length:
+    EU: 0x960
+    NA: 0x940
+    JP: 0x940
+  description: Unknown.
+  functions: []
+  data:
+    - name: OV24_STATIC_INITIALIZER
+      address:
+        EU: 0x211DF48
+        NA: 0x211D2A4
+        JP: 0x211D4C4
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: Static initializer for overlay 24.
