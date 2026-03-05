@@ -1,0 +1,43 @@
+arm9:
+  versions:
+    - EU
+    - NA
+    - JP
+  address:
+    EU: 0x2000000
+    NA: 0x2000000
+    JP: 0x2000000
+  length:
+    EU: 0x8F9D8
+    NA: 0x8F9D8
+    JP: 0x8F9D8
+  description: |-
+    The main ARM9 binary.
+    
+    This is the main binary that gets loaded when the game is launched, and contains the core code that runs the game, low level facilities such as memory allocation, compression, other external dependencies (such as linked libraries), and the functions and tables necessary to load overlays and dispatch execution to them.
+    
+    Speaking generally, this is the program run by the Nintendo DS's main ARM946E-S CPU, which handles all gameplay mechanisms and graphics rendering.
+    Lengths for EU and JP are a guess; I haven't actually checked them yet.
+  functions:
+    - name: _start
+      address:
+        EU: 0x2000800
+        NA: 0x2000800
+        JP: 0x2000800
+      description: |-
+        The entrypoint for the ARM9 CPU. This is like the "main" function for the ARM9 subsystem.
+        
+        Once the entry function reaches the end, a constant containing the address to NitroMain is loaded into a register (r1), and a `bx` branch will jump to NitroMain.
+        
+        No params.
+  data:
+    - name: SECURE
+      address:
+        EU: 0x2000000
+        NA: 0x2000000
+        JP: 0x2000000
+      length:
+        EU: 0x800
+        NA: 0x800
+        JP: 0x800
+      description: "The header of the DS cartridge secure area. See https://problemkaputt.de/gbatek.htm#dscartridgesecurearea"
