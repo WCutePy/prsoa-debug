@@ -17,8 +17,8 @@ overlay16:
     - name: OV16_STATIC_INITIALIZER
       address:
         EU: 0x211D660
-        NA: 0x211CC00
-        JP: 0x211C9E0
+        NA: 0x211C9E0
+        JP: 0x211CC00
       length:
         EU: 0x4
         NA: 0x4
