@@ -4,7 +4,7 @@ inputs:
   version:
     description: The version of resymgen to install
     required: true
-    default: 'v0.6.0'
+    default: '0.6.0'
 runs:
   using: composite
   steps:
