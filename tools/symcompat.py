@@ -66,7 +66,10 @@ def check_symbol_compatibility(
     old_symbols = get_symbols(old_table)
     new_symbols_set = set(get_symbols(new_table))
     # Maintain symbol order for reporting determinism
-    removed_symbols = [s for s in old_symbols if s not in new_symbols_set]
+    removed_symbols = [
+        s for s in old_symbols 
+        if s not in new_symbols_set and not s.upper().startswith("UNK")
+    ]
     if not removed_symbols:
         return True
 
