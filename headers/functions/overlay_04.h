@@ -9,7 +9,7 @@ void unk_fun_overlay_04_0211ccd8(int32_t param_1);
 void unk_fun_overlay_04_0211d060(int32_t param_1);
 void unk_fun_overlay_04_0211d394(void);
 void unk_fun_overlay_04_0211d440(int32_t param_1, undefined4 param_2, undefined4 param_3,
-                                  undefined4 param_4);
+                                 undefined4 param_4);
 void unk_fun_overlay_04_0211d560(void);
 undefined4 unk_fun_overlay_04_0211d564(int32_t param_1);
 void unk_fun_overlay_04_0211d788(int32_t param_1);

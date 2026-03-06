@@ -20,25 +20,25 @@ void unk_fun_overlay_09_0211ce80(undefined2* param_1);
 void unk_fun_overlay_09_0211cef0(int32_t param_1);
 void unk_fun_overlay_09_0211cf14(int32_t param_1);
 void unk_fun_overlay_09_0211cf48(int32_t param_1, undefined4 param_2, undefined4 param_3,
-                                  undefined4 param_4);
+                                 undefined4 param_4);
 void unk_fun_overlay_09_0211d0a0(int32_t param_1);
 void unk_fun_overlay_09_0211d0cc(int32_t param_1, undefined4 param_2, undefined4 param_3,
-                                  undefined4 param_4);
+                                 undefined4 param_4);
 undefined4 unk_fun_overlay_09_0211d484(undefined2* param_1);
 undefined4 unk_fun_overlay_09_0211d49c(int32_t param_1);
 void unk_fun_overlay_09_0211d4d4(int32_t param_1, undefined4 param_2, undefined4 param_3,
-                                  undefined4 param_4);
+                                 undefined4 param_4);
 void unk_fun_overlay_09_0211d568(int32_t param_1, undefined4 param_2, undefined4 param_3,
-                                  uint32_t param_4);
+                                 uint32_t param_4);
 void unk_fun_overlay_09_0211d66c(undefined2* param_1);
 void unk_fun_overlay_09_0211d680(int32_t param_1, undefined2 param_2);
 void unk_fun_overlay_09_0211d690(int32_t param_1);
 int32_t unk_fun_overlay_09_0211d754(int32_t param_1, undefined4 param_2, undefined4 param_3,
-                                     undefined4 param_4);
+                                    undefined4 param_4);
 void unk_fun_overlay_09_0211d790(int32_t param_1, undefined4 param_2, undefined4 param_3,
-                                  undefined4 param_4);
+                                 undefined4 param_4);
 void unk_fun_overlay_09_0211d7fc(int32_t param_1, undefined4 param_2, undefined4 param_3,
-                                  undefined4 param_4);
+                                 undefined4 param_4);
 void unk_fun_overlay_09_0211d84c(undefined2* param_1);
 void unk_fun_overlay_09_0211d878(undefined4 param_1, undefined4 param_2);
 uint16_t unk_fun_overlay_09_0211d89c(int32_t param_1, uint32_t param_2);
