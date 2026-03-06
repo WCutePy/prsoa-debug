@@ -4019,17 +4019,4 @@ void UNK_FUN_0208f7c0(int32_t param_1, undefined4 param_2, undefined4 param_3, u
 undefined4 UNK_FUN_0208f854(int32_t param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 void UNK_FUN_0208f8b8(int32_t param_1, int32_t param_2, uint32_t param_3, undefined4 param_4);
-void UNK_FUN_0211c9e0(int32_t param_1);
-void UNK_FUN_0211ca50(void);
-undefined4 UNK_FUN_0211def8(uint32_t param_1, uint32_t param_2, uint32_t* param_3);
-void thunk_UNK_FUN_02007cc4(void);
-void thunk_UNK_FUN_0203efe4(void);
-void thunk_UNK_FUN_0203f034(void);
-void thunk_UNK_FUN_020579d0(void);
-void thunk_UNK_FUN_02057d50(void);
-void thunk_UNK_FUN_020120b0(void);
-void thunk_UNK_FUN_020121f4(void);
-void thunk_UNK_FUN_02007d98(void);
-void thunk_UNK_FUN_02007d98(void);
-void thunk_UNK_FUN_02007d98(void);
 #endif
