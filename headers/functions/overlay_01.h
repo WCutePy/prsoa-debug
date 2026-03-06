@@ -1049,3 +1049,5 @@ undefined4 UNK_FUN_overlay_01__0213f9d0(undefined4 param_1);
 undefined4 UNK_FUN_overlay_01__0213f9e4(undefined4 param_1);
 void UNK_FUN_overlay_01__0213f9f8(int32_t* param_1, undefined4 param_2, undefined4 param_3);
 void UNK_FUN_overlay_01__0213fb4c(undefined4* param_1);
+void thunk_UNK_FUN_020120b0(void);
+void thunk_UNK_FUN_020121f4(void);
