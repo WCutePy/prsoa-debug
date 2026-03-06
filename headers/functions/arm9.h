@@ -2,8 +2,6 @@
 #define HEADERS_FUNCTIONS_ARM9_H_
 
 void _start(void);
-void UNK_FUN_02000074(void);
-void UNK_FUN_02000446(void);
 int32_t UNK_FUN_02000970(int32_t param_1);
 void UNK_FUN_02000b9c(void);
 void UNK_FUN_02000c6c(void);

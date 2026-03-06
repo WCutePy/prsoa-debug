@@ -18,20 +18,6 @@ arm9:
     
     Speaking generally, this is the program run by the Nintendo DS's main ARM946E-S CPU, which handles all gameplay mechanisms and graphics rendering.
   functions:
-    - name: UNK_FUN_02000074
-      address:
-        NA: 0x02000074
-      description: |-
-        Use unknown.
-        
-        No params. 
-    - name: UNK_FUN_02000446
-      address:
-        NA: 0x02000446
-      description: |-
-        Use unknown.
-        
-        No params. 
     - name: _start
       address:
         EU: 0x2000800
