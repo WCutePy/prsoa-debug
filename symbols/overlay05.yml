@@ -13,7 +13,7 @@ overlay5:
     JP: 0x43E0
   description: Unknown.
   functions:
-    - name: UNK_FUN_overlay_05__0211c9e0
+    - name: unk_fun_overlay_05_0211c9e0
       address:
         NA: 0x211C9E0
       description: |-
@@ -21,91 +21,91 @@ overlay5:
         
         r0: undefined4 pointer
         r1: undefined4
-    - name: UNK_FUN_overlay_05__0211ca18
+    - name: unk_fun_overlay_05_0211ca18
       address:
         NA: 0x211CA18
       description: |-
         Use unknown.
         
         r0: undefined4
-    - name: UNK_FUN_overlay_05__0211ca2c
+    - name: unk_fun_overlay_05_0211ca2c
       address:
         NA: 0x211CA2C
       description: |-
         Use unknown.
         
         r0: undefined4
-    - name: UNK_FUN_overlay_05__0211ca48
+    - name: unk_fun_overlay_05_0211ca48
       address:
         NA: 0x211CA48
       description: |-
         Use unknown.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211cb5c
+    - name: unk_fun_overlay_05_0211cb5c
       address:
         NA: 0x211CB5C
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211cc74
+    - name: unk_fun_overlay_05_0211cc74
       address:
         NA: 0x211CC74
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211cd1c
+    - name: unk_fun_overlay_05_0211cd1c
       address:
         NA: 0x211CD1C
       description: |-
         Use unknown.
         
         r0: undefined4
-    - name: UNK_FUN_overlay_05__0211cd30
+    - name: unk_fun_overlay_05_0211cd30
       address:
         NA: 0x211CD30
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211cdc8
+    - name: unk_fun_overlay_05_0211cdc8
       address:
         NA: 0x211CDC8
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211cdd8
+    - name: unk_fun_overlay_05_0211cdd8
       address:
         NA: 0x211CDD8
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211ce0c
+    - name: unk_fun_overlay_05_0211ce0c
       address:
         NA: 0x211CE0C
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211ce10
+    - name: unk_fun_overlay_05_0211ce10
       address:
         NA: 0x211CE10
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211ce38
+    - name: unk_fun_overlay_05_0211ce38
       address:
         NA: 0x211CE38
       description: |-
         Use unknown.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211ce40
+    - name: unk_fun_overlay_05_0211ce40
       address:
         NA: 0x211CE40
       description: |-
@@ -113,42 +113,42 @@ overlay5:
         
         r0: undefined4 pointer
         r1: undefined4
-    - name: UNK_FUN_overlay_05__0211ce5c
+    - name: unk_fun_overlay_05_0211ce5c
       address:
         NA: 0x211CE5C
       description: |-
         Use unknown.
         
         r0: undefined4
-    - name: UNK_FUN_overlay_05__0211ce70
+    - name: unk_fun_overlay_05_0211ce70
       address:
         NA: 0x211CE70
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211cecc
+    - name: unk_fun_overlay_05_0211cecc
       address:
         NA: 0x211CECC
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211d048
+    - name: unk_fun_overlay_05_0211d048
       address:
         NA: 0x211D048
       description: |-
         Use unknown.
         
         r0: int32_t pointer
-    - name: UNK_FUN_overlay_05__0211d1e0
+    - name: unk_fun_overlay_05_0211d1e0
       address:
         NA: 0x211D1E0
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211d25c
+    - name: unk_fun_overlay_05_0211d25c
       address:
         NA: 0x211D25C
       description: |-
@@ -158,21 +158,21 @@ overlay5:
         r1: int32_t
         r2: int32_t
         r3: undefined4
-    - name: UNK_FUN_overlay_05__0211d2a4
+    - name: unk_fun_overlay_05_0211d2a4
       address:
         NA: 0x211D2A4
       description: |-
         Use unknown.
         
         r0: undefined4 pointer
-    - name: UNK_FUN_overlay_05__0211d588
+    - name: unk_fun_overlay_05_0211d588
       address:
         NA: 0x211D588
       description: |-
         Use unknown.
         
         r0: undefined4
-    - name: UNK_FUN_overlay_05__0211d674
+    - name: unk_fun_overlay_05_0211d674
       address:
         NA: 0x211D674
       description: |-
@@ -181,35 +181,35 @@ overlay5:
         r0: undefined4 pointer
         r1: undefined4
         r2: int32_t
-    - name: UNK_FUN_overlay_05__0211d6f4
+    - name: unk_fun_overlay_05_0211d6f4
       address:
         NA: 0x211D6F4
       description: |-
         Use unknown.
         
         r0: int32_t pointer
-    - name: UNK_FUN_overlay_05__0211d71c
+    - name: unk_fun_overlay_05_0211d71c
       address:
         NA: 0x211D71C
       description: |-
         Use unknown.
         
         r0: int32_t pointer
-    - name: UNK_FUN_overlay_05__0211d74c
+    - name: unk_fun_overlay_05_0211d74c
       address:
         NA: 0x211D74C
       description: |-
         Use unknown.
         
         r0: undefined4
-    - name: UNK_FUN_overlay_05__0211d784
+    - name: unk_fun_overlay_05_0211d784
       address:
         NA: 0x211D784
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211d7e0
+    - name: unk_fun_overlay_05_0211d7e0
       address:
         NA: 0x211D7E0
       description: |-
@@ -219,35 +219,35 @@ overlay5:
         r1: undefined4
         r2: undefined4
         r3: undefined4
-    - name: UNK_FUN_overlay_05__0211d8a4
+    - name: unk_fun_overlay_05_0211d8a4
       address:
         NA: 0x211D8A4
       description: |-
         Use unknown.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211d918
+    - name: unk_fun_overlay_05_0211d918
       address:
         NA: 0x211D918
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211e0d4
+    - name: unk_fun_overlay_05_0211e0d4
       address:
         NA: 0x211E0D4
       description: |-
         Use unknown.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211e310
+    - name: unk_fun_overlay_05_0211e310
       address:
         NA: 0x211E310
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211e868
+    - name: unk_fun_overlay_05_0211e868
       address:
         NA: 0x211E868
       description: |-
@@ -257,56 +257,56 @@ overlay5:
         r1: undefined4
         r2: undefined4
         r3: undefined4
-    - name: UNK_FUN_overlay_05__0211e958
+    - name: unk_fun_overlay_05_0211e958
       address:
         NA: 0x211E958
       description: |-
         Use unknown.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211e968
+    - name: unk_fun_overlay_05_0211e968
       address:
         NA: 0x211E968
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211eab8
+    - name: unk_fun_overlay_05_0211eab8
       address:
         NA: 0x211EAB8
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211ead4
+    - name: unk_fun_overlay_05_0211ead4
       address:
         NA: 0x211EAD4
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211ead8
+    - name: unk_fun_overlay_05_0211ead8
       address:
         NA: 0x211EAD8
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211eadc
+    - name: unk_fun_overlay_05_0211eadc
       address:
         NA: 0x211EADC
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211eae0
+    - name: unk_fun_overlay_05_0211eae0
       address:
         NA: 0x211EAE0
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211eae4
+    - name: unk_fun_overlay_05_0211eae4
       address:
         NA: 0x211EAE4
       description: |-
@@ -315,56 +315,56 @@ overlay5:
         r0: undefined4 pointer
         r1: undefined4
         r2: int32_t
-    - name: UNK_FUN_overlay_05__0211eb2c
+    - name: unk_fun_overlay_05_0211eb2c
       address:
         NA: 0x211EB2C
       description: |-
         Use unknown.
         
         r0: int32_t pointer
-    - name: UNK_FUN_overlay_05__0211eb54
+    - name: unk_fun_overlay_05_0211eb54
       address:
         NA: 0x211EB54
       description: |-
         Use unknown.
         
         r0: int32_t pointer
-    - name: UNK_FUN_overlay_05__0211eb84
+    - name: unk_fun_overlay_05_0211eb84
       address:
         NA: 0x211EB84
       description: |-
         Use unknown.
         
         r0: undefined4
-    - name: UNK_FUN_overlay_05__0211ebb4
+    - name: unk_fun_overlay_05_0211ebb4
       address:
         NA: 0x211EBB4
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211ec10
+    - name: unk_fun_overlay_05_0211ec10
       address:
         NA: 0x211EC10
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211ec58
+    - name: unk_fun_overlay_05_0211ec58
       address:
         NA: 0x211EC58
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211ec5c
+    - name: unk_fun_overlay_05_0211ec5c
       address:
         NA: 0x211EC5C
       description: |-
         Use unknown.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211ecfc
+    - name: unk_fun_overlay_05_0211ecfc
       address:
         NA: 0x211ECFC
       description: |-
@@ -374,7 +374,7 @@ overlay5:
         r1: undefined4
         r2: undefined4
         r3: undefined4
-    - name: UNK_FUN_overlay_05__0211eef0
+    - name: unk_fun_overlay_05_0211eef0
       address:
         NA: 0x211EEF0
       description: |-
@@ -384,7 +384,7 @@ overlay5:
         r1: int32_t
         r2: int32_t
         r3: int32_t
-    - name: UNK_FUN_overlay_05__0211ef80
+    - name: unk_fun_overlay_05_0211ef80
       address:
         NA: 0x211EF80
       description: |-
@@ -394,42 +394,42 @@ overlay5:
         r1: undefined4
         r2: undefined4
         r3: undefined4
-    - name: UNK_FUN_overlay_05__0211f08c
+    - name: unk_fun_overlay_05_0211f08c
       address:
         NA: 0x211F08C
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211f364
+    - name: unk_fun_overlay_05_0211f364
       address:
         NA: 0x211F364
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211f51c
+    - name: unk_fun_overlay_05_0211f51c
       address:
         NA: 0x211F51C
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211f550
+    - name: unk_fun_overlay_05_0211f550
       address:
         NA: 0x211F550
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211f554
+    - name: unk_fun_overlay_05_0211f554
       address:
         NA: 0x211F554
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211f558
+    - name: unk_fun_overlay_05_0211f558
       address:
         NA: 0x211F558
       description: |-
@@ -442,14 +442,14 @@ overlay5:
         stack[0]: undefined4
         stack[1]: undefined4
         stack[2]: int32_t
-    - name: UNK_FUN_overlay_05__0211f5cc
+    - name: unk_fun_overlay_05_0211f5cc
       address:
         NA: 0x211F5CC
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211f5dc
+    - name: unk_fun_overlay_05_0211f5dc
       address:
         NA: 0x211F5DC
       description: |-
@@ -457,7 +457,7 @@ overlay5:
         
         r0: int32_t
         r1: int32_t
-    - name: UNK_FUN_overlay_05__0211f64c
+    - name: unk_fun_overlay_05_0211f64c
       address:
         NA: 0x211F64C
       description: |-
@@ -467,14 +467,14 @@ overlay5:
         r1: undefined4
         r2: undefined4
         r3: int32_t
-    - name: UNK_FUN_overlay_05__0211f6e0
+    - name: unk_fun_overlay_05_0211f6e0
       address:
         NA: 0x211F6E0
       description: |-
         Use unknown.
         
         r0: int32_t pointer
-    - name: UNK_FUN_overlay_05__0211f778
+    - name: unk_fun_overlay_05_0211f778
       address:
         NA: 0x211F778
       description: |-
@@ -483,77 +483,77 @@ overlay5:
         r0: undefined4 pointer
         r1: undefined4
         r2: int32_t
-    - name: UNK_FUN_overlay_05__0211f7e4
+    - name: unk_fun_overlay_05_0211f7e4
       address:
         NA: 0x211F7E4
       description: |-
         Use unknown.
         
         r0: int32_t pointer
-    - name: UNK_FUN_overlay_05__0211f80c
+    - name: unk_fun_overlay_05_0211f80c
       address:
         NA: 0x211F80C
       description: |-
         Use unknown.
         
         r0: int32_t pointer
-    - name: UNK_FUN_overlay_05__0211f83c
+    - name: unk_fun_overlay_05_0211f83c
       address:
         NA: 0x211F83C
       description: |-
         Use unknown.
         
         r0: undefined4
-    - name: UNK_FUN_overlay_05__0211f874
+    - name: unk_fun_overlay_05_0211f874
       address:
         NA: 0x211F874
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211f948
+    - name: unk_fun_overlay_05_0211f948
       address:
         NA: 0x211F948
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211f978
+    - name: unk_fun_overlay_05_0211f978
       address:
         NA: 0x211F978
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211f9a0
+    - name: unk_fun_overlay_05_0211f9a0
       address:
         NA: 0x211F9A0
       description: |-
         Use unknown.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211fa2c
+    - name: unk_fun_overlay_05_0211fa2c
       address:
         NA: 0x211FA2C
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211fb04
+    - name: unk_fun_overlay_05_0211fb04
       address:
         NA: 0x211FB04
       description: |-
         Use unknown.
         
         No params.
-    - name: UNK_FUN_overlay_05__0211fb6c
+    - name: unk_fun_overlay_05_0211fb6c
       address:
         NA: 0x211FB6C
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211fc98
+    - name: unk_fun_overlay_05_0211fc98
       address:
         NA: 0x211FC98
       description: |-
@@ -563,49 +563,49 @@ overlay5:
         r1: undefined4
         r2: undefined4 pointer
         r3: undefined4
-    - name: UNK_FUN_overlay_05__0211fd0c
+    - name: unk_fun_overlay_05_0211fd0c
       address:
         NA: 0x211FD0C
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__0211fe34
+    - name: unk_fun_overlay_05_0211fe34
       address:
         NA: 0x211FE34
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__02120140
+    - name: unk_fun_overlay_05_02120140
       address:
         NA: 0x2120140
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__02120200
+    - name: unk_fun_overlay_05_02120200
       address:
         NA: 0x2120200
       description: |-
         Use unknown.
         
         r0: int32_t
-    - name: UNK_FUN_overlay_05__02120240
+    - name: unk_fun_overlay_05_02120240
       address:
         NA: 0x2120240
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_05__02120244
+    - name: unk_fun_overlay_05_02120244
       address:
         NA: 0x2120244
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_05__02120248
+    - name: unk_fun_overlay_05_02120248
       address:
         NA: 0x2120248
       description: |-

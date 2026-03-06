@@ -13,63 +13,63 @@ overlay10:
     JP: 0xC0
   description: Unknown.
   functions:
-    - name: UNK_FUN_overlay_10__0211c9e4
+    - name: unk_fun_overlay_10_0211c9e4
       address:
         NA: 0x211C9E4
       description: |-
         Use unknown.
         
         No params.
-    - name: UNK_FUN_overlay_10__0211c9ec
+    - name: unk_fun_overlay_10_0211c9ec
       address:
         NA: 0x211C9EC
       description: |-
         Use unknown.
         
         r0: undefined4
-    - name: UNK_FUN_overlay_10__0211ca08
+    - name: unk_fun_overlay_10_0211ca08
       address:
         NA: 0x211CA08
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_10__0211ca0c
+    - name: unk_fun_overlay_10_0211ca0c
       address:
         NA: 0x211CA0C
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_10__0211ca10
+    - name: unk_fun_overlay_10_0211ca10
       address:
         NA: 0x211CA10
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_10__0211ca14
+    - name: unk_fun_overlay_10_0211ca14
       address:
         NA: 0x211CA14
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_10__0211ca18
+    - name: unk_fun_overlay_10_0211ca18
       address:
         NA: 0x211CA18
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_10__0211ca1c
+    - name: unk_fun_overlay_10_0211ca1c
       address:
         NA: 0x211CA1C
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
         No params.
-    - name: UNK_FUN_overlay_10__0211ca20
+    - name: unk_fun_overlay_10_0211ca20
       address:
         NA: 0x211CA20
       description: |-
