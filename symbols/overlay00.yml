@@ -21,7 +21,7 @@ overlay0:
         
         r0: undefined4 pointer
         r1: int32_t
-    - name: unk_fun_0211ca50
+    - name: unk_fun_overlay_00_0211ca50
       address:
         NA: 0x211CA50
       description: |-
@@ -52,7 +52,7 @@ overlay0:
         r1: undefined4
         r2: undefined4
         r3: undefined4
-    - name: unk_fun_0211def8
+    - name: unk_fun_overlay_00_0211def8
       address:
         NA: 0x211DEF8
       description: |-
