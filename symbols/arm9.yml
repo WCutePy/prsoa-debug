@@ -118,28 +118,18 @@ arm9:
         No params.
     - name: thunk_unk_fun_02002258
       address:
-        NA: 0x2001458
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: thunk_unk_fun_02002258
-      address:
-        NA: 0x2001464
+        NA: 
+          - 0x2001458
+          - 0x2001464
       description: |-
         Use unknown.
         
         No params.
     - name: thunk_unk_fun_020022f4
       address:
-        NA: 0x2001470
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: thunk_unk_fun_020022f4
-      address:
-        NA: 0x200147c
+        NA: 
+          - 0x2001470
+          - 0x200147c
       description: |-
         Use unknown.
         
@@ -176,7 +166,10 @@ arm9:
         r0: uint16_t pointer
     - name: thunk_unk_fun_0200233c
       address:
-        NA: 0x2001d28
+        NA:
+          - 0x2001d28
+          - 0x200203c
+          - 0x20101a8
       description: |-
         Use unknown.
         
@@ -216,13 +209,6 @@ arm9:
         Use unknown.
         
         r0: int32_t
-    - name: thunk_unk_fun_0200233c
-      address:
-        NA: 0x200203c
-      description: |-
-        Use unknown.
-        
-        No params.
     - name: thunk_unk_fun_0200235c
       address:
         NA: 0x2002048
@@ -3799,13 +3785,6 @@ arm9:
         
         r0: int32_t
         r1: int32_t
-    - name: thunk_unk_fun_0200233c
-      address:
-        NA: 0x20101a8
-      description: |-
-        Use unknown.
-        
-        No params.
     - name: unk_fun_020101b4
       address:
         NA: 0x20101B4
@@ -17930,13 +17909,6 @@ arm9:
         
         r0: int32_t
         r1: int32_t
-    - name: thunk_unk_fun_020565d0
-      address:
-        NA: 0x2056b18
-      description: |-
-        Use unknown.
-        
-        No params.
     - name: unk_fun_02056b24
       address:
         NA: 0x2056B24
@@ -18025,7 +17997,9 @@ arm9:
         r1: int32_t
     - name: thunk_unk_fun_020565d0
       address:
-        NA: 0x2056db0
+        NA: 
+          - 0x2056db0
+          - 0x2056b18
       description: |-
         Use unknown.
         
@@ -25172,7 +25146,9 @@ arm9:
         r0: int32_t
     - name: thunk_unk_fun_0206ef24
       address:
-        NA: 0x206f728
+        NA: 
+          - 0x206f728
+          - 0x206fe1c
       description: |-
         Use unknown.
         
@@ -25263,13 +25239,6 @@ arm9:
     - name: unk_fun_0206fdb8
       address:
         NA: 0x206FDB8
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: thunk_unk_fun_0206ef24
-      address:
-        NA: 0x206fe1c
       description: |-
         Use unknown.
         

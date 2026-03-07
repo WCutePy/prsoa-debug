@@ -690,7 +690,6 @@ undefined4 unk_fun_overlay_00_02146444(int32_t param_1, undefined4 param_2, unde
                                        undefined4 param_4);
 void unk_fun_overlay_00_021464bc(void);
 void unk_fun_overlay_00_021464c0(int32_t param_1);
-undefined4 thunk_unk_fun_overlay_00_02142240(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_overlay_00_02146574(int32_t param_1, int32_t param_2, int32_t param_3);
 void unk_fun_overlay_00_0214659c(int32_t param_1);
 void unk_fun_overlay_00_02146674(void);
@@ -705,7 +704,6 @@ undefined4 unk_fun_overlay_00_02146908(int32_t param_1);
 undefined4 unk_fun_overlay_00_021469c8(int32_t param_1, undefined4 param_2, undefined4 param_3,
                                        undefined4 param_4);
 void unk_fun_overlay_00_02146a1c(int32_t param_1);
-undefined4 thunk_unk_fun_overlay_00_02142240(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_overlay_00_02146a54(int32_t param_1, int32_t param_2, int32_t param_3);
 void unk_fun_overlay_00_02146a7c(int32_t param_1);
 void unk_fun_overlay_00_02146af4(undefined4 param_1, undefined4 param_2);
@@ -727,7 +725,6 @@ void unk_fun_overlay_00_02147540(int32_t param_1, undefined4 param_2, undefined4
                                  undefined4 param_4);
 void unk_fun_overlay_00_02147564(void);
 void unk_fun_overlay_00_02147568(int32_t param_1);
-undefined4 thunk_unk_fun_overlay_00_02142240(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_overlay_00_021475a8(int32_t param_1, int32_t param_2, int32_t param_3);
 void unk_fun_overlay_00_021475d0(void);
 undefined4 unk_fun_overlay_00_021475ec(void);

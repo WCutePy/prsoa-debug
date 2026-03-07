@@ -4704,14 +4704,6 @@ overlay0:
         Use unknown.
         
         r0: int32_t
-    - name: thunk_unk_fun_overlay_00_02142240
-      address:
-        NA: 0x2146568
-      description: |-
-        Use unknown.
-        
-        r0: int32_t
-        r1: int32_t
     - name: unk_fun_overlay_00_02146574
       address:
         NA: 0x2146574
@@ -4804,14 +4796,6 @@ overlay0:
         Use unknown.
         
         r0: int32_t
-    - name: thunk_unk_fun_overlay_00_02142240
-      address:
-        NA: 0x2146a48
-      description: |-
-        Use unknown.
-        
-        r0: int32_t
-        r1: int32_t
     - name: unk_fun_overlay_00_02146a54
       address:
         NA: 0x2146A54
@@ -4961,7 +4945,11 @@ overlay0:
         r0: int32_t
     - name: thunk_unk_fun_overlay_00_02142240
       address:
-        NA: 0x214759c
+        NA: 
+          - 0x214759c
+          - 0x2146a48
+          - 0x2146568
+          - 0x2148034
       description: |-
         Use unknown.
         
@@ -5125,14 +5113,6 @@ overlay0:
         Use unknown.
         
         r0: int32_t
-    - name: thunk_unk_fun_overlay_00_02142240
-      address:
-        NA: 0x2148034
-      description: |-
-        Use unknown.
-        
-        r0: int32_t
-        r1: int32_t
     - name: unk_fun_overlay_00_02148040
       address:
         NA: 0x2148040
