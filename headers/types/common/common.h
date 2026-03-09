@@ -116,7 +116,7 @@ ASSERT_SIZE(struct mission_quest_data, 92);
 struct pokemon_data {
     int16_t form_id; // NOT natdex number! Will be an enum at some point!
     struct room_id_16 room_caught; // Used to determine if a pokemon was already caught here.
-    int16_t room_caught_index; // TODO: get clarification on what this does. Discovered at 5 AM
+    int16_t room_caught_index; // Index of this pokemon in room_caught's available pokemon.
     undefined field5_0x6;
     undefined field6_0x7;
     undefined field7_0x8; // Seems to be 00-05.
