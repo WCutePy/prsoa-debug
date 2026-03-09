@@ -46,7 +46,7 @@ struct ranger_core_data {
     undefined field23_0x17;
     undefined field24_0x18;
     undefined field25_0x19;
-    enum room_id room;
+    struct room_id_16 room;
     int16_t player_coordinates[2];
     undefined field28_0x20;
     undefined field29_0x21;
@@ -140,7 +140,7 @@ struct pokemon_data {
     undefined field22_0x17;
 };
 
-ASSERT_SIZE(struct pokemon_data, 1);
+ASSERT_SIZE(struct pokemon_data, 24);
 
 
 // Statistics on seend and befriended pokemon.
@@ -1156,8 +1156,10 @@ struct play_time {
     int hours;
     int8_t minutes; // Created by retype action
     int8_t seconds;
+    undefined field_0x6;
+    undefined field_0x7;
 };
-ASSERT_SIZE(struct play_time, 6);
+ASSERT_SIZE(struct play_time, 8);
 
 // Records for various things the player can do.
 struct ranger_records {
@@ -1254,11 +1256,9 @@ struct ranger_records {
     undefined field90_0x72;
     undefined field91_0x73;
     struct play_time last_play_time;
-    undefined field93_0x7a;
-    undefined field94_0x7b;
     struct play_time current_play_time;
 };
-ASSERT_SIZE(struct ranger_records, 130);
+ASSERT_SIZE(struct ranger_records, 132);
 
 struct ranger_glossary {
     enum glossary_table_entry friend_pokemon_entry : 2;
@@ -1350,6 +1350,7 @@ struct ranger_glossary {
     enum glossary_table_entry haruba_village_entry : 2;
     enum glossary_table_entry hippowdon_temple_entry : 2;
     enum glossary_table_entry altru_tower_entry : 2;
+    enum undefined field_0x28 : 6;
     undefined field1_0x29;
     undefined field2_0x2a;
     undefined field3_0x2b;
