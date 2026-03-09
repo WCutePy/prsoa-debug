@@ -19,9 +19,15 @@ ram:
     TODO: ensure the length is actually correct.
   functions: []
   data:
+    - name: MISSION_QUEST_DATA
+      address:
+        NA: 0x20b2638
+      length:
+        NA: 0x5C
+      description: "Likely a small portion of the save file, storing the current mission/quest and mission/quest progression."
     - name: RANGER_DATA
       address:
-        NA: 0x211C9E0
+        NA: 0x20B26A0
       length:
         NA: 0x8B68
       description: "Likely a large portion of the save file, often called from memory from this particular offset. Likely larger in size than documented."
