@@ -94,7 +94,7 @@ enum capture_rank {
     RANK_S = 0b00,
     RANK_A = 0b01,
     RANK_B = 0b10,
-    RANK_C = 0b11,
+    RANK_C = 0b11
 };
 
 enum species_status {
@@ -496,5 +496,12 @@ enum room_id {
 #pragma pack(push, 1)
 ENUM_16_BIT(room_id);
 #pragma pack(pop)
+
+// Nep please confirm this looks accurate!
+enum glossary_table_entry {
+    GLOSS_LOCKED = 0b00,
+    GLOSS_UNLOCKED = 0b01,
+    GLOSS_READ = 0b10
+};
 
 #endif
