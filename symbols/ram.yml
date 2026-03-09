@@ -24,4 +24,4 @@ ram:
         NA: 0x211C9E0
       length:
         NA: 0x8B68
-      description: Likely a large portion of the save file, often called from memory from this particular offset. Likely larger in size than documented
+      description: "Likely a large portion of the save file, often called from memory from this particular offset. Likely larger in size than documented."
