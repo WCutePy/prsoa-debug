@@ -114,16 +114,16 @@ ASSERT_SIZE(struct mission_quest_data, 92);
 
 // Data type for befriended pokemon
 struct pokemon_data {
-    int16_t species_id;
-    struct room_id_16 room_caught;
-    undefined field3_0x4;
-    undefined field4_0x5;
+    int16_t form_id; // NOT natdex number! Will be an enum at some point!
+    struct room_id_16 room_caught; // Used to determine if a pokemon was already caught here.
+    int16_t room_caught_index; // TODO: get clarification on what this does. Discovered at 5 AM
     undefined field5_0x6;
     undefined field6_0x7;
-    undefined field7_0x8;
+    undefined field7_0x8; // Seems to be 00-05.
     undefined field8_0x9;
     undefined field9_0xa;
     undefined field10_0xb;
+    // These last 12 bytes change rapidly, and are likely related to pokemon motion.
     undefined field11_0xc;
     undefined field12_0xd;
     undefined field13_0xe;
