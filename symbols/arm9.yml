@@ -1747,9 +1747,6 @@ arm9:
       address:
         NA: 
           - 0x02007D98
-          - 0x0211DBF4
-          - 0x0211CD70
-          - 0x0211CEF0
       description: |-
         Use unknown.
         
