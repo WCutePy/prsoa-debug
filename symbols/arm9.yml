@@ -5783,14 +5783,14 @@ arm9:
         r1: int pointer
         r2: int pointer
         r3: undefined4
-    - name: update_play_time
+    - name: UpdatePlayTime
       address:
         NA: 0x201668C
       description: |-
         Copies the most recent play_time struct over the backup.
         
         r0: ranger_data pointer
-    - name: debug_print
+    - name: DebugPrint
       address:
         NA: 0x2016794
       description: |-
@@ -5800,7 +5800,7 @@ arm9:
         r1: undefined4
         r2: undefined4
         r3: undefined4
-    - name: assign_partner_moods
+    - name: AssignPartnerMoods
       address:
         NA: 0x20167B4
       description: |-
@@ -5832,7 +5832,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-    - name: set_current_player_exp
+    - name: SetPlayerExp
       address:
         NA: 0x2016D4C
       description: |-
@@ -5840,7 +5840,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: value to assign
-    - name: add_and_get_player_exp
+    - name: AddPlayerExp
       address:
         NA: 0x2016D64
       description: |-
@@ -5848,7 +5848,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: value to assign
-    - name: set_max_steps_record
+    - name: SetMaxStepsRecord
       address:
         NA: 0x2016D88
       description: |-
@@ -5856,7 +5856,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-    - name: add_and_get_max_steps_record
+    - name: AddMaxStepsRecord
       address:
         NA: 0x2016DA4
       description: |-
@@ -5864,7 +5864,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-    - name: set_conversations_record
+    - name: SetconversationsRecord
       address:
         NA: 0x2016DD0
       description: |-
@@ -5872,7 +5872,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-    - name: add_and_get_conversations_record
+    - name: AddconversationsRecord
       address:
         NA: 0x2016DEC
       description: |-
@@ -5880,7 +5880,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-    - name: set_targets_checked_record
+    - name: SetTargetsCheckedRecord
       address:
         NA: 0x2016E18
       description: |-
@@ -5888,7 +5888,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-    - name: add_and_get_targets_checked_record
+    - name: AddTargetsCheckedRecord
       address:
         NA: 0x2016E34
       description: |-
@@ -5896,7 +5896,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-    - name: set_game_saves_record
+    - name: SetGameSavesRecord
       address:
         NA: 0x2016E60
       description: |-
@@ -5904,7 +5904,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-    - name: add_and_get_game_saves_record
+    - name: AddGameSavesRecord
       address:
         NA: 0x2016E7C
       description: |-
@@ -5912,7 +5912,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-    - name: set_pokemon_rides_data
+    - name: SetPokemonRidesRecord
       address:
         NA: 0x2016EA8
       description: |-
@@ -5920,7 +5920,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-    - name: add_and_get_pokemon_rides_record
+    - name: AddPokemonRidesRecord
       address:
         NA: 0x2016EC4
       description: |-
@@ -5953,7 +5953,7 @@ arm9:
         Use unknown.
         
         r0: ranger_data pointer
-    - name: set_capture_line_len_record
+    - name: SetCaptureLineLenRecord
       address:
         NA: 0x2017020
       description: |-
@@ -5961,7 +5961,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-    - name: add_and_get_capture_line_len_record
+    - name: AddCaptureLineLenRecord
       address:
         NA: 0x201703C
       description: |-
@@ -5969,7 +5969,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-    - name: set_num_loops_record
+    - name: SetNumLoopsRecord
       address:
         NA: 0x2017068
       description: |-
@@ -5977,7 +5977,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-    - name: add_and_get_num_loops_record
+    - name: AddNumLoopsRecord
       address:
         NA: 0x2017084
       description: |-
@@ -5985,7 +5985,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-    - name: set_pokemon_captured_record
+    - name: SetPokemonCapturedRecord
       address:
         NA: 0x20170B0
       description: |-
@@ -5993,7 +5993,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: int16_t
-    - name: add_and_get_pokemon_captured_record
+    - name: AddPokemonCapturedRecord
       address:
         NA: 0x20170D0
       description: |-
@@ -6001,7 +6001,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: short
-    - name: set_fled_pokemon_record
+    - name: SetFledPokemonRecord
       address:
         NA: 0x2017100
       description: |-
@@ -6009,7 +6009,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: int16_t
-    - name: add_and_get_fled_pokemon_record
+    - name: AddFledPokemonRecord
       address:
         NA: 0x2017120
       description: |-
@@ -6017,7 +6017,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: short
-    - name: set_poke_assists_used_record
+    - name: SetPokeAssistsUsedRecord
       address:
         NA: 0x2017150
       description: |-
@@ -6025,7 +6025,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: int16_t
-    - name: add_and_get_poke_assist_record
+    - name: AddPokeAssistsUsedRecord
       address:
         NA: 0x2017170
       description: |-
@@ -11567,42 +11567,42 @@ arm9:
         Use unknown.
         
         r0: int pointer
-    - name: disable_active_timers_and_more
+    - name: DisableActiveTimersAndMore
       address:
         NA: 0x20337EC
       description: |-
         Resets the timer fields in RANGER_DATA, but seems to do something else too.
         
         No params.
-    - name: init_timer_type_1
+    - name: InitTimerType1
       address:
         NA: 0x203381C
       description: |-
         Begins a timer of type 1 by initializing relevant fields in RANGER_DATA.
         
         r0: pointer to the timer duration, in frames.
-    - name: init_timer_type_2
+    - name: InitTimerType2
       address:
         NA: 0x2033844
       description: |-
         Begins a timer of type 2 by initializing relevant fields in RANGER_DATA.
         
         r0: pointer to the timer 2 "duration", in frames.
-    - name: set_timer_type_none
+    - name: SetTimerTypeNone
       address:
         NA: 0x203386C
       description: |-
         Sets only the timer type field in RANGER_DATA to 0.
         
         No params.
-    - name: set_timer_type_1
+    - name: SetTimerType1
       address:
         NA: 0x2033884
       description: |-
         Sets only the timer type field in RANGER_DATA to 1.
         
         No params.
-    - name: set_timer_type_2
+    - name: SetTimerType2
       address:
         NA: 0x20338A0
       description: |-
@@ -11623,21 +11623,21 @@ arm9:
         Use unknown.
         
         No params.
-    - name: get_timer_1_duration
+    - name: GetTimer1Duration
       address:
         NA: 0x20338FC
       description: |-
         Retrieves the current timer 1 duration in frames, from RANGER_DATA.
         
         No params.
-    - name: set_timer_1_duration
+    - name: SetTimer1Duration
       address:
         NA: 0x2033918
       description: |-
         Sets only the current timer 1 duration in RANGER_DATA.
         
         r0: pointer to the duration of the timer in frames.
-    - name: timer_is_active
+    - name: TimerIsActive
       address:
         NA: 0x2033934
       description: |-
