@@ -149,8 +149,8 @@ arm9:
     - name: thunk_unk_fun_02002258
       address:
         NA:
-          - 0x02001458
-          - 0x02001464
+          - 0x2001458
+          - 0x2001464
       description: |-
         Use unknown.
         
@@ -158,8 +158,8 @@ arm9:
     - name: thunk_unk_fun_020022f4
       address:
         NA:
-          - 0x02001470
-          - 0x0200147C
+          - 0x2001470
+          - 0x200147C
       description: |-
         Use unknown.
         
@@ -197,9 +197,9 @@ arm9:
     - name: thunk_unk_fun_0200233c
       address:
         NA:
-          - 0x02001D28
-          - 0x0200203C
-          - 0x020101A8
+          - 0x2001D28
+          - 0x200203C
+          - 0x20101A8
       description: |-
         Use unknown.
         
@@ -1703,7 +1703,7 @@ arm9:
         No params.
     - name: unk_fun_02007cc4
       address:
-        NA: 0x02007CC4
+        NA: 0x2007CC4
       description: |-
         Use unknown.
         
@@ -1746,7 +1746,7 @@ arm9:
     - name: unk_fun_02007d98
       address:
         NA:
-          - 0x02007D98
+          - 0x2007D98
       description: |-
         Use unknown.
         
@@ -4871,7 +4871,7 @@ arm9:
         r1: int
     - name: unk_fun_020120b0
       address:
-        NA: 0x020120B0
+        NA: 0x20120B0
       description: |-
         Use unknown.
         
@@ -4895,7 +4895,7 @@ arm9:
         r3: undefined4
     - name: unk_fun_020121f4
       address:
-        NA: 0x020121F4
+        NA: 0x20121F4
       description: |-
         Use unknown.
         
@@ -13618,7 +13618,7 @@ arm9:
         r0: int pointer
     - name: unk_fun_0203efe4
       address:
-        NA: 0x0203EFE4
+        NA: 0x203EFE4
       description: |-
         Use unknown.
         
@@ -13626,7 +13626,7 @@ arm9:
         r1: int
     - name: unk_fun_0203f034
       address:
-        NA: 0x0203F034
+        NA: 0x203F034
       description: |-
         Use unknown.
         
@@ -18011,7 +18011,7 @@ arm9:
         r1: int
     - name: unk_fun_02056194
       address:
-        NA: 0x02056194
+        NA: 0x2056194
       description: |-
         Use unknown.
         
@@ -18227,8 +18227,8 @@ arm9:
     - name: thunk_unk_fun_020565d0
       address:
         NA:
-          - 0x02056B18
-          - 0x02056DB0
+          - 0x2056B18
+          - 0x2056DB0
       description: |-
         Use unknown.
         
@@ -18640,7 +18640,7 @@ arm9:
         r3: int
     - name: unk_fun_020579d0
       address:
-        NA: 0x020579D0
+        NA: 0x20579D0
       description: |-
         Use unknown.
         
@@ -18695,7 +18695,7 @@ arm9:
         No params.
     - name: unk_fun_02057d50
       address:
-        NA: 0x02057D50
+        NA: 0x2057D50
       description: |-
         Use unknown.
         
@@ -22865,7 +22865,7 @@ arm9:
         r0: int
     - name: unk_fun_02065928
       address:
-        NA: 0x02065928
+        NA: 0x2065928
       description: |-
         Use unknown.
         
@@ -25664,8 +25664,8 @@ arm9:
     - name: thunk_unk_fun_0206ef24
       address:
         NA:
-          - 0x0206F728
-          - 0x0206FE1C
+          - 0x206F728
+          - 0x206FE1C
       description: |-
         Use unknown.
         
@@ -26307,8 +26307,8 @@ arm9:
     - name: unk_fun_02072378
       address:
         NA:
-          - 0x02072378
-          - 0x02072CC0
+          - 0x2072378
+          - 0x2072CC0
       description: |-
         Use unknown.
         
@@ -27393,7 +27393,7 @@ arm9:
         r2: int
     - name: unk_fun_020788b8
       address:
-        NA: 0x020788B8
+        NA: 0x20788B8
       description: |-
         Use unknown.
         
@@ -27408,7 +27408,7 @@ arm9:
         r1: undefined4
     - name: thunk_unk_fun_02078910
       address:
-        NA: 0x02078904
+        NA: 0x2078904
       description: |-
         Use unknown.
         
@@ -27424,7 +27424,7 @@ arm9:
         r1: char pointer
     - name: unk_fun_02078930
       address:
-        NA: 0x02078930
+        NA: 0x2078930
       description: |-
         Use unknown.
         

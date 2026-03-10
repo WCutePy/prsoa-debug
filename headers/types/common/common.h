@@ -30,7 +30,7 @@ struct ranger_core_data {
     undefined field6_0x6;
     undefined field7_0x7;
     undefined field8_0x8;
-    int8_t partner_pokemon_moods[17]; // 0x0 normal, 0x1 happy, 0x2 very happy? 
+    int8_t partner_pokemon_moods[17]; // 0x0 normal, 0x1 happy, 0x2 very happy?
     struct room_id_16 room;
     int16_t player_coordinates[2];
     undefined field28_0x20;
@@ -1158,7 +1158,8 @@ struct ranger_records {
     int8_t timer_type_active; // 0 = no timer, 1 = timer counting down, 2 = unknown
     int32_t timer_1_frames_left;
     int32_t timer_2_frames_left; // May count upwards. More clarification needed.
-    enum partner_unlock_flag munchlax_met : 1; // This seems to be the internal order used by the partners.
+    enum partner_unlock_flag
+        munchlax_met : 1; // This seems to be the internal order used by the partners.
     enum partner_unlock_flag chimchar_met : 1;
     enum partner_unlock_flag piplup_met : 1;
     enum partner_unlock_flag turtwig_met : 1;
