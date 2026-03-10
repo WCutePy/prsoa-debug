@@ -1703,9 +1703,7 @@ arm9:
         No params.
     - name: unk_fun_02007cc4
       address:
-        NA: 
-          - 0x02007CC4
-          - 0x021220A0
+        NA: 0x02007CC4
       description: |-
         Use unknown.
         
@@ -11576,7 +11574,7 @@ arm9:
         Use unknown.
         
         r0: int pointer
-    - name: disable_active_timers_and_more?
+    - name: disable_active_timers_and_more
       address:
         NA:  0x020337EC
       description: |-

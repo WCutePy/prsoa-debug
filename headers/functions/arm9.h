@@ -3491,7 +3491,7 @@ undefined4 unk_fun_0203044c(void);
 undefined4 unk_fun_02030e2c(undefined4 *param_1);
 undefined4 unk_fun_020327b8(uint *param_1);
 void unk_fun_0203365c(void);
-void disable_active_timers_and_more?(void);
+void disable_active_timers_and_more(void);
 void init_timer_type_1(int *param_1);
 void init_timer_type_2(int *param_1);
 void set_timer_type_none(void);
