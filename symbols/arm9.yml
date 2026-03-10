@@ -29057,55 +29057,6 @@ arm9:
         r1: int 
         r2: uint 
         r3: undefined4 
-    - name: unk_fun_020fd334
-      address:
-        NA:  0x020FD334
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: unk_fun_020fd340
-      address:
-        NA:  0x020FD340
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: unk_fun_020fd3fc
-      address:
-        NA:  0x020FD3FC
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: unk_fun_020fd408
-      address:
-        NA:  0x020FD408
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: unk_fun_020fe664
-      address:
-        NA:  0x020FE664
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: unk_fun_020fe678
-      address:
-        NA:  0x020FE678
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: unk_fun_020ff02c
-      address:
-        NA:  0x020FF02C
-      description: |-
-        Use unknown.
-        
-        No params.
   data:
     - name: SECURE
       address:
