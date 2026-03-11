@@ -1159,8 +1159,8 @@ struct ranger_records {
     int8_t timer_type_active; // 0 = no timer, 1 = timer counting down, 2 = unknown
     int32_t timer_1_frames_left;
     int32_t timer_2_frames_left; // May count upwards. More clarification needed.
-    enum partner_unlock_flag
-        munchlax_met : 1; // This seems to be the internal order used by the partners.
+    // This seems to be the internal order used by the partners.
+    enum partner_unlock_flag munchlax_met : 1; 
     enum partner_unlock_flag chimchar_met : 1;
     enum partner_unlock_flag piplup_met : 1;
     enum partner_unlock_flag turtwig_met : 1;
