@@ -3,6 +3,19 @@
 #ifndef HEADERS_TYPES_COMMON_ENUMS_H_
 #define HEADERS_TYPES_COMMON_ENUMS_H_
 
+enum os_arena_id {
+    OS_ARENA_MAIN = 0,
+    OS_ARENA_MAIN_SUBPRIV = 1,
+    OS_ARENA_MAINEX = 2,
+    OS_ARENA_ITCM = 3,
+    OS_ARENA_DTCM = 4,
+    OS_ARENA_SHARED = 5,
+    OS_ARENA_WRAM_MAIN = 6,
+    OS_ARENA_WRAM_SUB = 7,
+    OS_ARENA_WRAM_SUBPRIV = 8,
+    OS_ARENA_MAX = 9
+};
+
 enum os_thread_state {
     OS_THREAD_STATE_WAITING = 0,
     OS_THREAD_STATE_READY = 1,
@@ -29,6 +42,10 @@ enum pxi_fifo_tag {
     PXI_FIFO_TAG_CTRDG_Ex,   // Cartridge Ex
     PXI_MAX_FIFO_TAG = 32    // MAX FIFO TAG
 };
+
+enum pxi_proc { PXI_PROC_ARM9 = 0, PXI_PROC_ARM7 = 1 };
+
+enum mi_wram { MI_WRAM_ARM9_ALL = 0, MI_WRAM_1616_1 = 1, MI_WRAM_1616_2 = 2, MI_WRAM_ARM7_ALL = 3 };
 
 enum mi_cartridge_rom_cycle_1st {
     MI_CTRDG_ROMCYCLE1_10 = 0,

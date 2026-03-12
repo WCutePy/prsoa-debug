@@ -55,17 +55,9 @@ struct mission_quest_data {
     struct quest_table_entry quest_table[62]; // bitfield by quest id
     undefined field_0x52;
     undefined field_0x53;
-    undefined field_0x54;
-    undefined field_0x55;
-    undefined field_0x56;
-    undefined field_0x57;
-    undefined field_0x58;
-    undefined field_0x59;
-    undefined field_0x5a;
-    undefined field_0x5b;
 };
 
-ASSERT_SIZE(struct mission_quest_data, 92);
+ASSERT_SIZE(struct mission_quest_data, 84);
 
 // Contains critical player data, such as their gender, HP, position, and exp.
 struct ranger_core_data {
@@ -1310,6 +1302,75 @@ struct ranger_glossary {
 
 ASSERT_SIZE(struct ranger_glossary, 48);
 
+struct following_npc {
+    int is_valid; // 0x0: If true, an NPC is following the player.
+    undefined4 unk_field0_0x4;
+    int16_t sprite_id; // 0x8: Determines which sprite the following NPC will have.
+    int16_t
+        face_angle;   // 0xA: Continuous, Right = 0x0000, Down = 0x4000, Left = 0x8000, Up = 0xC000.
+    int x_coordinate; // 0xC
+    int y_coordinate; // 0x10
+    char talk_script_name[32]; // 0x14: Unknown how long this actually is.
+    int16_t unk_field1_0x34;   // 0x34
+    undefined unk_field1_0x36; // 0x36
+    undefined unk_field1_0x37; // 0x37
+};
+
+ASSERT_SIZE(struct following_npc, 56);
+
 #include "ranger_data.h"
+
+struct save_header {
+    char game_mark[0x8];    // 0x0: For this game, is DSPRS
+    int main_save_0_offset; // 0x8: Should be 0x1C
+    int main_save_1_offset; // 0xC: Should be 0x949E
+    int checksum;           // 0x10
+    int newest_save_index;  // 0x14: 00 = main_save_0, 01 = main_save_1, 02+ unknown.
+    undefined field_0x18;
+    undefined field_0x19;
+    undefined field_0x1a;
+    undefined field_0x1b;
+};
+
+ASSERT_SIZE(struct save_header, 28);
+
+struct save_data {
+    struct ranger_data ranger_data_struct; // 0x0
+    // Of the 30 pokemon slots, only the first 8 of each group are stored in the save file...
+    struct pokemon_data party_group_0[8]; // 0x8804
+    struct pokemon_data party_group_1[8]; // 0x88C4
+    struct pokemon_data party_group_2[8]; // 0x8984
+    struct following_npc follower_1;      // 0x8A44
+    struct following_npc follower_2;
+    ;                                             // 0x8A7C
+    struct mission_quest_data mission_quest_data; // 0x8AB4
+    int32_t unk_field_0x8b08[63];                 // 0x8B08: Permanent home is 0x210C0B0
+    undefined unk_field_0x8c04[96];               // 0x8C04: Permanent home is 0x210C1C0
+    undefined unk_field_0x8c64[2048];             // 0x8C64: Permanent home is 0x210C228
+    undefined unk_field_0x9464[4];                // 0x9464: Permanent home is 0x208B5C0
+    undefined unk_field_0x9468[8];                // 0x9468: Permanent home is 0x20AF5E4
+    undefined unk_field_0x9470[8];                // 0x9470: Permanent home is 0x20AF5F8
+    undefined unk_field_0x9478[8];                // 0x9478: Permanent home is 0x20AF60C
+    int16_t ranger_net_completion_bits;           // 0x9480:
+    undefined unk_field_0x9482;
+    undefined unk_field_0x9483;
+};
+
+ASSERT_SIZE(struct save_data, 38020);
+
+struct save_file {
+    struct save_header main_save_header;  // 0x0
+    struct save_data main_save_0;         // 0x1C
+    struct save_data main_save_1;         // 0x94A0
+    struct save_header quick_save_header; // 0x12924: Should be zeroed if quicksave not active.
+    struct save_data quick_save; // 0x12940: So far, no reason to believe different from main save.
+    int8_t ranger_net_mission1[0x3020]; // 0x1BDC4
+    int8_t ranger_net_mission2[0x3020]; // 0x1EDE4
+    int8_t ranger_net_mission3[0x3020]; // 0x21E04
+    int8_t ranger_net_mission4[0x3020]; // 0x24E24
+    int8_t ranger_net_mission5[0x3020]; // 0x27E44
+    int8_t ranger_net_mission6[0x3020]; // 0x2AE64
+};
+ASSERT_SIZE(struct save_file, 188036);
 
 #endif

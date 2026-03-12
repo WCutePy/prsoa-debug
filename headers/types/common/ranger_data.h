@@ -2,6 +2,7 @@
 #define HEADERS_TYPES_COMMON_RANGER_DATA_H_
 
 #include "enums.h"
+#include "common.h"
 
 struct ranger_data {
     struct ranger_core_data core_data;
@@ -43,25 +44,103 @@ struct ranger_data {
     undefined2 field31_0x86b6[32];
     undefined2 field32_0x86f6[48];
     undefined1 field33_0x8756;
-    undefined1 field34_0x8757;
+    int8_t player_language; // 0 if JP/NA. EU: eng = 1 fre = 2 ger = 3, ita = 4 spa = 5
     struct ranger_records records;
     undefined1 field36_0x87dc[7];
     char player_name[7];
     undefined1 field38_0x87ea[22];
-    // This is likely the beginning of a sub-struct!
     undefined1 field33832_0x8800[2];
     undefined field33834_0x8802;
     undefined field33835_0x8803;
-    struct pokemon_data recruited_pokemon_table[30];
-    undefined4 field4_0x2d4[14];
-    undefined4 field5_0x30c[14];
-    char string_buffer[32];
-    struct battle_result_8 battle_result;
-    undefined field34361_0x8b65;
-    undefined field34362_0x8b66;
-    undefined field34363_0x8b67;
-    // This is MUCH longer, but I do not know how long yet!
 };
-ASSERT_SIZE(struct ranger_data, 35688);
+
+ASSERT_SIZE(struct ranger_data, 34820);
+
+// I have reason to doubt this struct is as long as it is. I may be splitting it, but until I'm sure
+// I want it split, it's going to be ranger_data_old... That said, Ghidra has a better time
+// recognizing these fields as one large struct. Occasionally the game references this struct with a
+// large offset, when referring what I believe to to a completely different struct in all other
+// ways. This is my solution to that problem...
+struct ranger_data_old {
+    struct ranger_core_data core_data;
+    // This seems to update the as maps are entered... enteries 0-441 correspond to room_ids 0x0
+    // thru 0x1b8.
+    undefined4 room_nibble_field_0[441][6]; // This is really 441 sets of 48 nibbles!
+    undefined4 room_nibble_field_1[441][4]; // This is really 441 sets of 32 nibbles!
+    undefined4 room_nibble_field_2[441][4]; // This is really 441 sets of 32 nibbles!
+    undefined4 room_nibble_field_3[441][4]; // This is really 441 sets of 32 nibbles!
+    undefined4 field13_0x7c38;              // Related to battle result somehow...
+    struct ranger_pokedex pokedex;
+    struct ranger_glossary glossary;
+    undefined4 field14_0x7f60;
+    undefined4 field15_0x7f64;
+    undefined4 field16_0x7f68;
+    undefined2 field17_0x7f6c;
+    undefined2 field18_0x7f6e[63];
+    undefined2 field19_0x7fec[10];
+    undefined4 field20_0x8000[27];
+    undefined2 field21_0x806c[64];
+    undefined2 field22_0x80ec[32];
+    undefined2 field23_0x812c[32];
+    undefined2 field24_0x816c[32];
+    undefined4 field25_0x81ac;
+    undefined4 field26_0x81b0;
+    undefined4 field27_0x81b4;
+    undefined4 field28_0x81b8[31];
+    undefined4 field29_0x8234[48];
+    undefined2 field30_0x82f4[160];
+    undefined2 field31_0x8434;
+    undefined2 field32_0x8436[32];
+    undefined2 field33_0x8476[48];
+    undefined2 field34_0x84d6[32];
+    undefined2 field35_0x8516[48];
+    undefined2 field36_0x8576[32];
+    undefined2 field37_0x85b6[48];
+    undefined2 field38_0x8616[32];
+    undefined2 field39_0x8656[48];
+    undefined2 field40_0x86b6[32];
+    undefined2 field41_0x86f6[48];
+    undefined1 field42_0x8756;
+    int8_t player_language; // 0 if JP/NA. EU: eng = 1 fre = 2 ger = 3, ita = 4 spa = 5
+    struct ranger_records records;
+    undefined1 field43_0x87dc[7];
+    char player_name[7];
+    undefined1 field44_0x87ea[22];
+    // This is likely the beginning of a sub-struct!
+    undefined1 field45_0x8800[2];
+    undefined field46_0x8802;
+    undefined field47_0x8803;
+    // There appear to be 3 tables of recruited pokemon, each with 10 entries. Of those, only 8 per
+    // table are actually stored in the save file.
+    struct pokemon_data recruited_pokemon_tables[3][10];
+    struct following_npc follower_1;
+    struct following_npc follower_2;
+    char debug_string_buffer[32]; // Seems to hold the contents of various debug text.
+    struct battle_result_8 battle_result;
+    undefined field48_0x8b65;
+    undefined field49_0x8b66;
+    undefined field50_0x8b67;
+    undefined4 field51_0x8b68;
+    undefined4 field52_0x8b6c;
+    undefined4 field53_0x8b70;
+    undefined4 unk_battle_value;
+    undefined2 field55_0x8b78;
+    undefined2 field56_0x8b7a;
+    undefined4 field57_0x8b7c;
+    undefined4 field58_0x8b80;
+    undefined4 field59_0x8b84;
+    undefined4 field60_0x8b88;
+    undefined4 field61_0x8b8c;
+    undefined4 field62_0x8b90;
+    undefined4 field63_0x8b94;
+    undefined4 field64_0x8b98;
+    undefined4 field65_0x8b9c;
+    undefined4 field66_0x8ba0;
+    undefined field67_0x8ba4[331356];
+    int field330536_0x59a00;
+    int field330537_0x59a04[63];
+    // 0x2017AA4 NA says it's this big at least. It might be larger!
+};
+ASSERT_SIZE(struct ranger_data_old, 367360);
 
 #endif
