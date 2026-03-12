@@ -5,6 +5,7 @@
 
 
 struct ranger_data {
+    struct ranger_core_data core_data;
     // This seems to update the as maps are entered... enteries 0-441 correspond to room_ids 0x0
     // thru 0x1b8.
     undefined4 room_nibble_field_0[441][6]; // This is really 441 sets of 48 nibbles!
