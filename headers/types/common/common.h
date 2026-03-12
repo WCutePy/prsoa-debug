@@ -5,6 +5,7 @@
 
 #include "util.h"
 #include "enums.h"
+#include "ranger_data.h"
 
 // Parameters used by the NitroSDK to read the ROM.
 struct start_module_params {
@@ -1368,6 +1369,6 @@ struct save_file {
 
 
 
-#include "ranger_data.h"
+
 
 #endif
