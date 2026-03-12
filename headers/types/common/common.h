@@ -5,7 +5,6 @@
 
 #include "util.h"
 #include "enums.h"
-#include "ranger_data.h"
 
 // Parameters used by the NitroSDK to read the ROM.
 struct start_module_params {
@@ -1317,6 +1316,9 @@ struct following_npc {
 
 ASSERT_SIZE(struct following_npc, 56);
 
+
+#include "ranger_data.h"
+
 struct save_header {
     char game_mark[0x8]; // 0x0: For this game, is DSPRS
     int main_save_0_offset; // 0x8: Should be 0x1C
@@ -1350,7 +1352,7 @@ struct save_data {
     int16_t ranger_net_completion_bits; // 0x9480:
 };
 
-ASSERT_SIZE(struct main_save_data, 38018)
+ASSERT_SIZE(struct main_save_data, 38018);
 
 
 struct save_file {
@@ -1366,9 +1368,6 @@ struct save_file {
     int8_t ranger_net_mission5[0x3020]; // 0x27E3E
     int8_t ranger_net_mission6[0x3020]; // 0x2AE5E
 };
-
-
-
-
+ASSERT_SIZE(struct main_save_data, 188030);
 
 #endif
