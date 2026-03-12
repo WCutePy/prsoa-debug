@@ -1331,11 +1331,11 @@ struct save_header {
 ASSERT_SIZE(struct save_header, 28);
 
 struct save_data {
-    struct ranger_data ranger_data; // 0x0
+    struct ranger_data ranger_data_struct; // 0x0
     // Of the 30 pokemon slots, only the first 8 of each group are stored in the save file...
-    struct pokemon_data party_pokemon_0[8]; // 0x8804
-    struct pokemon_data party_pokemon_1[8]; // 0x88C4
-    struct pokemon_data party_pokemon_0[8]; // 0x8984
+    struct pokemon_data party_group_0[8]; // 0x8804
+    struct pokemon_data party_group_1[8]; // 0x88C4
+    struct pokemon_data party_group_2[8]; // 0x8984
     struct following_npc follower_1; // 0x8A44
     struct following_npc follower_2;; // 0x8A7C
     struct mission_quest_data mission_quest_data; // 0x8AB4
