@@ -46,7 +46,8 @@ struct ranger_data {
     undefined1 field33_0x8756;
     int8_t player_language; // 0 if JP/NA. EU: eng = 1 fre = 2 ger = 3, ita = 4 spa = 5
     struct ranger_records records;
-    undefined1 field36_0x87dc[7];
+    struct styler_upgrades styler_upgrades;
+    undefined field_0x88e2;
     char player_name[7];
     undefined1 field38_0x87ea[22];
     undefined1 field33832_0x8800[2];
@@ -103,8 +104,9 @@ struct ranger_data_old {
     undefined1 field42_0x8756;
     int8_t player_language; // 0 if JP/NA. EU: eng = 1 fre = 2 ger = 3, ita = 4 spa = 5
     struct ranger_records records;
-    undefined1 field43_0x87dc[7];
-    char player_name[7];
+    struct styler_upgrades styler_upgrades;
+    undefined field_0x88e2;
+    char player_name[7]; // In other languages, the player name has a different length.
     undefined1 field44_0x87ea[22];
     // This is likely the beginning of a sub-struct!
     undefined1 field45_0x8800[2];

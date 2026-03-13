@@ -64,7 +64,8 @@ struct ranger_core_data {
     bool ranger_is_female;
     int8_t current_hp;
     int8_t max_hp;
-    int8_t ranger_n_styler_rank;
+    int8_t styler_rank : 4;
+    enum styler_type styler_type : 4;
     undefined field4_0x4;
     undefined field5_0x5;
     undefined field6_0x6;
@@ -1318,6 +1319,78 @@ struct following_npc {
 
 ASSERT_SIZE(struct following_npc, 56);
 
+struct styler_upgrades {
+    enum styler_upgrade_level grass_defense : 2;
+    enum styler_upgrade_level water_defense : 2;
+    enum styler_upgrade_level electric_defense : 2;
+    enum styler_upgrade_level fire_defense : 2;
+
+    enum styler_upgrade_level fighting_defense : 2;
+    enum styler_upgrade_level poison_defense : 2;
+    enum styler_upgrade_level psychic_defense : 2;
+    enum styler_upgrade_level bug_defense : 2;
+
+    enum styler_upgrade_level ground_defense : 2;
+    enum styler_upgrade_level flying_defense : 2;
+    enum styler_upgrade_level dark_defense : 2;
+    enum styler_upgrade_level rock_defense : 2;
+    
+    enum styler_upgrade_level ghost_defense : 2;
+    enum styler_upgrade_level ice_defense : 2;
+    enum styler_upgrade_level normal_defense : 2;
+    enum styler_upgrade_level steel_defense : 2;
+
+    enum styler_upgrade_level dragon_defense : 2;
+    enum styler_upgrade_level time_assist : 2;
+    enum styler_upgrade_level latent_power : 2;
+    enum styler_upgrade_level combo_bonus : 2;
+
+    enum styler_upgrade_level recovery : 2;
+    enum styler_upgrade_level energy_plus : 2;
+    enum styler_upgrade_level power_plus : 2;
+    enum styler_upgrade_level long_line : 2;
+};
+
+ASSERT_SIZE(struct styler_upgrades, 6);
+
+// Most interactions with these values seem to treat them as tables of ints, rather than individual fields.
+// For ghidra analysis in the short term, this struct will be a simple table for now, even though we know what some of these values mean.
+struct settings_and_variables {
+    // Generally, the event_variable_table can be thought of as chapter-specific scratch paper. 
+    int32_t event_variable_table[21]; 
+    // Used to track in-game settings, and has a byte to play the unlock cutscene for a styler upgrade.
+    int32_t settings_variable_table[31];
+    // Unknown, but debug prints seem to suggest these relate to quests. Or something else that begins with q...
+    int32_t quest_variable_table[11];
+};
+
+ASSERT_SIZE(struct settings_and_variables, 252);
+
+// This struct is equivalent the the above event_variable_table, but with definitions instead of being an arbitrary table of ints.
+struct event_variables {
+    int32_t subchapter_progression; // 0x00: Seems to increase linearly, or to the nearest multiple of 10. Sub-sub-chapters perhaps?
+    int32_t scrach_paper[20]; // 0x04: Varies wildly by subchapter. 
+};
+
+ASSERT_SIZE(struct event_variables, 84);
+
+// This struct is equivalent the the above settings_variable_table, but with definitions instead of being an arbitrary table of ints.
+struct settings_variables {
+    int32_t unk_setting_0x0;
+    int32_t window_border; // 0x4: Determines what color the textbox border will be. 
+    int32_t text_speed; // 0x8: 0x03 for slow, 0x02 for medium, 0x01 for fast. No other values seem to have an impact. :(
+    // If non-zero, opening the styler upgrade menu will unlock a new styler upgrade. 
+    struct styler_unlock_upgrade_type styler_upgrade_interrupt; // 0xC
+    // Incremented by the cutscene produced by the above field!
+    int32_t num_styler_upgrades; // 0x10
+    int32_t unk_settings[25]; // 0x14
+};
+
+ASSERT_SIZE(struct settings_variables, 124);
+
+// Nothing is known about quest variables at this time. 
+
+
 #include "ranger_data.h"
 
 struct save_header {
@@ -1341,10 +1414,10 @@ struct save_data {
     struct pokemon_data party_group_1[8]; // 0x88C4
     struct pokemon_data party_group_2[8]; // 0x8984
     struct following_npc follower_1;      // 0x8A44
-    struct following_npc follower_2;
-    ;                                             // 0x8A7C
+    struct following_npc follower_2;      // 0x8A7C
     struct mission_quest_data mission_quest_data; // 0x8AB4
-    int32_t unk_field_0x8b08[63];                 // 0x8B08: Permanent home is 0x210C0B0
+    // Consists of event flags, 
+    struct settings_and_variables settings_and_variables;  // 0x8B08
     undefined unk_field_0x8c04[96];               // 0x8C04: Permanent home is 0x210C1C0
     undefined unk_field_0x8c64[2048];             // 0x8C64: Permanent home is 0x210C228
     undefined unk_field_0x9464[4];                // 0x9464: Permanent home is 0x208B5C0
