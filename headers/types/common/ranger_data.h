@@ -46,7 +46,37 @@ struct ranger_data {
     undefined1 field33_0x8756;
     int8_t player_language; // 0 if JP/NA. EU: eng = 1 fre = 2 ger = 3, ita = 4 spa = 5
     struct ranger_records records;
-    undefined1 field36_0x87dc[7];
+    // struct styler_upgrades styler_upgrades;
+    enum styler_upgrade_level grass_defense : 2;
+    enum styler_upgrade_level water_defense : 2;
+    enum styler_upgrade_level electric_defense : 2;
+    enum styler_upgrade_level fire_defense : 2;
+
+    enum styler_upgrade_level fighting_defense : 2;
+    enum styler_upgrade_level poison_defense : 2;
+    enum styler_upgrade_level psychic_defense : 2;
+    enum styler_upgrade_level bug_defense : 2;
+
+    enum styler_upgrade_level ground_defense : 2;
+    enum styler_upgrade_level flying_defense : 2;
+    enum styler_upgrade_level dark_defense : 2;
+    enum styler_upgrade_level rock_defense : 2;
+
+    enum styler_upgrade_level ghost_defense : 2;
+    enum styler_upgrade_level ice_defense : 2;
+    enum styler_upgrade_level normal_defense : 2;
+    enum styler_upgrade_level steel_defense : 2;
+
+    enum styler_upgrade_level dragon_defense : 2;
+    enum styler_upgrade_level time_assist : 2;
+    enum styler_upgrade_level latent_power : 2;
+    enum styler_upgrade_level combo_bonus : 2;
+
+    enum styler_upgrade_level recovery : 2;
+    enum styler_upgrade_level energy_plus : 2;
+    enum styler_upgrade_level power_plus : 2;
+    enum styler_upgrade_level long_line : 2;
+    undefined field_0x88e2;
     char player_name[7];
     undefined1 field38_0x87ea[22];
     undefined1 field33832_0x8800[2];
@@ -103,8 +133,38 @@ struct ranger_data_old {
     undefined1 field42_0x8756;
     int8_t player_language; // 0 if JP/NA. EU: eng = 1 fre = 2 ger = 3, ita = 4 spa = 5
     struct ranger_records records;
-    undefined1 field43_0x87dc[7];
-    char player_name[7];
+    // struct styler_upgrades styler_upgrades;
+    enum styler_upgrade_level grass_defense : 2;
+    enum styler_upgrade_level water_defense : 2;
+    enum styler_upgrade_level electric_defense : 2;
+    enum styler_upgrade_level fire_defense : 2;
+
+    enum styler_upgrade_level fighting_defense : 2;
+    enum styler_upgrade_level poison_defense : 2;
+    enum styler_upgrade_level psychic_defense : 2;
+    enum styler_upgrade_level bug_defense : 2;
+
+    enum styler_upgrade_level ground_defense : 2;
+    enum styler_upgrade_level flying_defense : 2;
+    enum styler_upgrade_level dark_defense : 2;
+    enum styler_upgrade_level rock_defense : 2;
+
+    enum styler_upgrade_level ghost_defense : 2;
+    enum styler_upgrade_level ice_defense : 2;
+    enum styler_upgrade_level normal_defense : 2;
+    enum styler_upgrade_level steel_defense : 2;
+
+    enum styler_upgrade_level dragon_defense : 2;
+    enum styler_upgrade_level time_assist : 2;
+    enum styler_upgrade_level latent_power : 2;
+    enum styler_upgrade_level combo_bonus : 2;
+
+    enum styler_upgrade_level recovery : 2;
+    enum styler_upgrade_level energy_plus : 2;
+    enum styler_upgrade_level power_plus : 2;
+    enum styler_upgrade_level long_line : 2;
+    undefined field_0x88e2;
+    char player_name[7]; // In other languages, the player name has a different length.
     undefined1 field44_0x87ea[22];
     // This is likely the beginning of a sub-struct!
     undefined1 field45_0x8800[2];
@@ -136,7 +196,32 @@ struct ranger_data_old {
     undefined4 field64_0x8b98;
     undefined4 field65_0x8b9c;
     undefined4 field66_0x8ba0;
-    undefined field67_0x8ba4[331356];
+    undefined field67_0x8ba4[44];
+    struct pokemon_data recruited_pokemon_tables_backup[3][10];
+    struct following_npc follower_1_backup;
+    struct following_npc follower_2_backup;
+    char debug_string_buffer_backup[32]; // Seems to hold the contents of various debug text.
+    struct battle_result_8 battle_result_backup;
+    undefined field67_0x8f31;
+    undefined field68_0x8f32;
+    undefined field69_0x8f33;
+    undefined4 field70_0x8f34;
+    undefined4 field71_0x8f38;
+    undefined4 field72_0x8f3c;
+    undefined4 unk_battle_value_backup;
+    undefined2 field73_0x8f40;
+    undefined2 field74_0x8f42;
+    undefined4 field75_0x8f44;
+    undefined4 field76_0x8f48;
+    undefined4 field77_0x8f4c;
+    undefined4 field78_0x8f50;
+    undefined4 field79_0x8f54;
+    undefined4 field80_0x8f58;
+    undefined4 field81_0x8f5c;
+    undefined4 field82_0x8f60;
+    undefined4 field83_0x8f64;
+    undefined4 field84_0x8f68;
+    undefined field84_0x8f70[330384];
     int field330536_0x59a00;
     int field330537_0x59a04[63];
     // 0x2017AA4 NA says it's this big at least. It might be larger!

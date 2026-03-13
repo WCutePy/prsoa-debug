@@ -28,11 +28,13 @@ void unk_fun_02001c20(uint16_t* param_1);
 void thunk_unk_fun_0200233c(void);
 undefined4* unk_fun_02001d34(undefined4* param_1);
 undefined4* unk_fun_02001df4(undefined4* param_1);
+void unk_fun_02001eb4(void);
 undefined4 unk_fun_02001eb8(undefined4 param_1);
 void unk_fun_02001ecc(void);
 void unk_fun_02001ed0(int32_t param_1);
 void thunk_unk_fun_0200235c(void);
 undefined4* unk_fun_02002054(undefined4* param_1);
+undefined4 unk_fun_02002074(undefined4 param_1);
 undefined4 unk_fun_02002088(undefined4 param_1);
 void unk_fun_020020a4(int32_t param_1);
 void unk_fun_0200215c(int32_t param_1, undefined4 param_2, undefined4 param_3);
@@ -71,6 +73,7 @@ undefined4* unk_fun_02002bc4(undefined4* param_1, undefined4 param_2, undefined4
                              undefined4 param_4, undefined4 param_5, undefined4 param_6,
                              undefined4 param_7);
 undefined4* unk_fun_02002c34(undefined4* param_1);
+undefined4* unk_fun_02002c54(undefined4* param_1);
 undefined4* unk_fun_02002c7c(undefined4* param_1);
 void unk_fun_02002c9c(int32_t param_1);
 int32_t unk_fun_02002cb4(int32_t param_1, int32_t param_2, int32_t param_3, undefined4 param_4,
@@ -83,22 +86,31 @@ void unk_fun_02003108(undefined4 param_1, undefined4 param_2, undefined4 param_3
 undefined4 unk_fun_02003124(void);
 undefined4* unk_fun_0200313c(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                              undefined4 param_4);
+undefined4 unk_fun_020031b8(undefined4 param_1);
 undefined4 unk_fun_020031cc(undefined4 param_1);
 undefined4* unk_fun_020031e8(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                              undefined4 param_4);
+undefined4* unk_fun_02003274(undefined4* param_1);
+undefined4* unk_fun_0200329c(undefined4* param_1);
 undefined4* unk_fun_020032cc(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                              undefined4 param_4);
+undefined4* unk_fun_02003358(undefined4* param_1);
+undefined4* unk_fun_02003380(undefined4* param_1);
 undefined4* unk_fun_020033b0(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                              undefined4 param_4);
 undefined4* unk_fun_0200343c(undefined4* param_1);
 undefined4* unk_fun_02003464(undefined4* param_1);
 undefined4* unk_fun_02003494(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                              undefined4 param_4);
+undefined4* unk_fun_02003520(undefined4* param_1);
+undefined4* unk_fun_02003548(undefined4* param_1);
 undefined4* unk_fun_02003578(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                              undefined4 param_4);
+undefined4* unk_fun_02003604(undefined4* param_1);
 undefined4* unk_fun_0200362c(undefined4* param_1);
 undefined4* unk_fun_0200365c(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                              undefined4 param_4);
+undefined4 unk_fun_020036e8(undefined4 param_1);
 undefined4 unk_fun_020036fc(undefined4 param_1);
 undefined4 unk_fun_02003718(undefined4 param_1);
 void unk_fun_0200372c(void);
@@ -110,6 +122,7 @@ void unk_fun_020037b4(undefined4* param_1);
 void unk_fun_0200381c(int32_t param_1);
 void unk_fun_020038a8(int32_t param_1, undefined4* param_2, int32_t param_3);
 void unk_fun_02003938(undefined4* param_1);
+void unk_fun_0200396c(void);
 undefined4 unk_fun_02003970(undefined4 param_1);
 void unk_fun_02003984(void);
 undefined4* unk_fun_02003988(undefined4* param_1);
@@ -232,7 +245,7 @@ void unk_fun_02007848(undefined4* param_1);
 void unk_fun_02007854(int32_t param_1);
 int32_t unk_fun_02007880(undefined4 param_1, uint16_t* param_2);
 int32_t unk_fun_020078e4(int32_t param_1, undefined2 param_2);
-int32_t unk_fun_020079b8(int32_t* param_1, int32_t param_2, int32_t param_3, int32_t param_4,
+int32_t unk_fun_020079b8(int32_t* param_1, undefined4* param_2, int32_t param_3, int32_t param_4,
                          uint16_t param_5);
 undefined4 unk_fun_02007a94(int32_t param_1, undefined4 param_2);
 int32_t unk_fun_02007aa4(int32_t param_1);
@@ -333,6 +346,7 @@ void unk_fun_02009124(int32_t param_1, undefined2 param_2);
 undefined4 unk_fun_0200912c(int32_t* param_1, int32_t param_2);
 int32_t unk_fun_02009188(int32_t** param_1, undefined4 param_2, int32_t param_3,
                          undefined4 param_4);
+undefined4 unk_fun_020091d4(void);
 void unk_fun_020091dc(undefined4* param_1);
 int32_t unk_fun_020091e8(int32_t param_1);
 void unk_fun_02009274(int32_t param_1);
@@ -355,7 +369,7 @@ void unk_fun_02009d8c(int32_t param_1, undefined4 param_2, int32_t param_3, int3
 bool unk_fun_02009ecc(int32_t param_1);
 void unk_fun_02009f28(int32_t param_1);
 void unk_fun_02009fb0(int32_t param_1, int32_t param_2, int32_t param_3);
-void unk_fun_0200a088(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
+void unk_fun_0200a088(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_0200a118(int32_t param_1);
 uint32_t unk_fun_0200a804(int32_t param_1, int32_t param_2);
 void unk_fun_0200a84c(int32_t param_1);
@@ -424,8 +438,8 @@ void unk_fun_0200c6c8(int32_t param_1, int32_t param_2, undefined4 param_3, unde
                       undefined4 param_9);
 void unk_fun_0200c7a4(undefined4* param_1, int32_t param_2, int32_t param_3, int32_t param_4,
                       undefined4 param_5, undefined4* param_6, int32_t param_7, int32_t param_8);
-void unk_fun_0200c980(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
-void unk_fun_0200c9b4(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
+void unk_fun_0200c980(int32_t param_1, int32_t param_2);
+void unk_fun_0200c9b4(int32_t param_1, int32_t param_2, undefined4 param_3);
 void unk_fun_0200c9e8(undefined4 param_1, undefined4 param_2);
 void unk_fun_0200ca2c(undefined4 param_1, undefined4 param_2);
 void unk_fun_0200ca70(int32_t param_1);
@@ -441,7 +455,7 @@ void unk_fun_0200ccd0(int32_t param_1, int32_t param_2, undefined4 param_3, unde
                       undefined4 param_9);
 void unk_fun_0200cda0(undefined4* param_1, int32_t param_2, int32_t param_3, int32_t param_4,
                       undefined4 param_5, undefined4* param_6, int32_t param_7, int32_t param_8);
-void unk_fun_0200cf7c(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
+void unk_fun_0200cf7c(int32_t param_1, int32_t param_2);
 void unk_fun_0200cfb0(int32_t param_1);
 int32_t unk_fun_0200cfc0(int32_t param_1, int32_t param_2, undefined4 param_3, int32_t param_4);
 int32_t* unk_fun_0200cff4(int32_t* param_1);
@@ -484,7 +498,7 @@ void unk_fun_0200e210(uint16_t* param_1);
 void unk_fun_0200e2d4(int32_t param_1);
 bool unk_fun_0200e310(uint16_t* param_1);
 uint16_t unk_fun_0200e324(uint16_t* param_1);
-void unk_fun_0200e330(undefined2* param_1, uint32_t param_2);
+void unk_fun_0200e330(undefined2* param_1, undefined* param_2);
 void unk_fun_0200e378(uint16_t* param_1, undefined4 param_2, undefined4 param_3, uint32_t param_4,
                       uint16_t param_5);
 void unk_fun_0200e44c(uint16_t* param_1);
@@ -555,8 +569,7 @@ void unk_fun_0201024c(int32_t param_1);
 void unk_fun_0201028c(int32_t param_1);
 void unk_fun_020102e8(int32_t param_1);
 void unk_fun_02010324(int32_t param_1);
-undefined4 unk_fun_02010378(int32_t param_1, undefined4 param_2, undefined4 param_3,
-                            undefined4 param_4);
+undefined4 unk_fun_02010378(int32_t param_1);
 void unk_fun_02010400(int32_t param_1);
 void unk_fun_02010448(void);
 void unk_fun_0201044c(int32_t param_1);
@@ -617,11 +630,12 @@ undefined2 unk_fun_02010c34(int32_t param_1);
 undefined4 unk_fun_02010c3c(undefined4 param_1);
 void unk_fun_02010c50(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                       undefined4 param_4);
-void unk_fun_02010c94(undefined4 param_1, int32_t param_2);
+void unk_fun_02010c94(undefined4 param_1, int8_t* param_2);
 undefined* unk_fun_02010cc0(void);
 undefined4* unk_fun_02010ccc(undefined4* param_1);
+void unk_fun_02010cec(void);
 undefined4 unk_fun_02010cf0(undefined4 param_1);
-void unk_fun_02010d04(int32_t param_1);
+void unk_fun_02010d04(int8_t* param_1);
 int8_t* unk_fun_02010d2c(int8_t* param_1, undefined4 param_2, undefined4 param_3,
                          undefined4 param_4);
 char unk_fun_02010e60(char* param_1);
@@ -650,7 +664,8 @@ void unk_fun_0201128c(int32_t param_1, undefined4 param_2, undefined4 param_3, u
 void unk_fun_020112dc(undefined4 param_1, uint32_t param_2);
 uint32_t unk_fun_02011318(undefined4 param_1, uint32_t param_2);
 void unk_fun_0201135c(undefined4 param_1);
-undefined4 unk_fun_02011370(undefined4 param_1);
+struct mission_quest_data* unk_fun_02011370(struct mission_quest_data* param_1);
+void unk_fun_02011384(int32_t param_1);
 void unk_fun_02011394(int32_t param_1, undefined4 param_2, undefined4 param_3);
 void unk_fun_020113b4(char* param_1, int32_t param_2);
 void unk_fun_0201140c(char* param_1);
@@ -766,6 +781,7 @@ int32_t unk_fun_02014310(int32_t param_1);
 undefined4 unk_fun_02014364(int32_t param_1);
 int32_t unk_fun_0201437c(int32_t param_1, uint32_t param_2);
 int32_t unk_fun_020143b8(int32_t* param_1);
+uint32_t unk_fun_02014414(undefined4 param_1, int32_t param_2, uint32_t param_3);
 void unk_fun_02014514(int32_t* param_1, int32_t param_2, undefined4 param_3, undefined4 param_4,
                       uint16_t param_5, int32_t param_6, int32_t param_7, undefined4 param_8,
                       int32_t param_9);
@@ -776,19 +792,21 @@ undefined4 unk_fun_02014ea4(undefined4 param_1, int8_t* param_2, undefined4 para
 int32_t unk_fun_02015070(int32_t param_1, uint32_t param_2);
 int32_t unk_fun_020150ac(int32_t param_1, int32_t param_2);
 void zero_pokemon_data(struct pokemon_data* param_1);
+struct pokemon_data* unk_fun_020150f4(struct pokemon_data* param_1);
 void unk_fun_02015108(void);
 undefined4 unk_fun_0201510c(undefined4 param_1);
 void unk_fun_02015120(void);
 void unk_fun_02015124(undefined4* param_1);
 void unk_fun_02015164(int32_t param_1, char* param_2, int32_t param_3);
 void unk_fun_0201518c(int32_t param_1);
-void unk_fun_02015198(undefined* param_1, undefined4 param_2, undefined4 param_3,
-                      undefined4 param_4);
+void unk_fun_02015198(int8_t* param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 int32_t unk_fun_020152d0(int32_t param_1, undefined4 param_2, undefined4 param_3,
                          undefined4 param_4);
 int32_t unk_fun_020153ac(int32_t param_1);
 undefined4 unk_fun_02015434(int32_t param_1, uint32_t param_2, uint32_t param_3);
 int32_t unk_fun_0201549c(int32_t param_1, uint32_t param_2);
+struct pokemon_data* unk_fun_02015520(struct ranger_data* param_1, uint32_t param_2);
+struct pokemon_data* unk_fun_020155fc(struct ranger_data* param_1, int32_t param_2);
 char unk_fun_02015658(struct ranger_data* param_1, uint32_t param_2);
 undefined4 unk_fun_02015690(int32_t param_1, int32_t param_2, uint32_t param_3);
 void unk_fun_02015714(int32_t param_1, int32_t param_2, uint32_t param_3);
@@ -804,14 +822,14 @@ void unk_fun_02015c08(int32_t param_1, int32_t param_2, uint32_t param_3);
 undefined4 unk_fun_02015c78(struct ranger_data* param_1, int32_t param_2, int16_t param_3,
                             uint32_t param_4);
 undefined4 unk_fun_02015e54(struct ranger_data* param_1, uint32_t param_2);
-void unk_fun_02016024(int32_t param_1);
+void unk_fun_02016024(struct ranger_data* param_1);
 void unk_fun_020160b8(struct ranger_data* param_1, uint32_t param_2);
 int32_t unk_fun_02016138(struct ranger_data* param_1, int32_t param_2);
 int32_t unk_fun_020161ac(struct ranger_data* param_1, undefined4 param_2, undefined4 param_3);
 int32_t unk_fun_020161e4(struct ranger_data* param_1, undefined4 param_2);
 undefined4 unk_fun_0201621c(struct ranger_data* param_1, undefined4 param_2);
 undefined4 unk_fun_02016268(struct ranger_data* param_1, undefined4 param_2);
-void unk_fun_020162bc(struct ranger_data* param_1, int32_t param_2);
+void unk_fun_020162bc(struct ranger_data* param_1, uint32_t param_2);
 void unk_fun_0201630c(struct ranger_data* param_1, int32_t* param_2, int32_t* param_3,
                       undefined4 param_4);
 void UpdatePlayTime(struct ranger_data* param_1);
@@ -849,7 +867,8 @@ undefined unk_fun_020171a0(void);
 void unk_fun_020171b8(int32_t param_1);
 bool unk_fun_02017298(void);
 void unk_fun_020172bc(void);
-void unk_fun_020172d4(int32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
+void unk_fun_020172d4(struct ranger_data* param_1, undefined4 param_2, undefined4 param_3,
+                      undefined4 param_4);
 void unk_fun_02017520(struct ranger_data* param_1);
 int8_t* unk_fun_020176bc(int8_t* param_1, uint32_t param_2, undefined4 param_3, undefined4 param_4);
 void unk_fun_0201772c(int32_t param_1);
@@ -889,18 +908,18 @@ void unk_fun_02018d94(int32_t param_1, undefined4* param_2);
 void unk_fun_02018dc4(int32_t param_1, undefined4 param_2);
 void unk_fun_02018dd0(int32_t param_1, undefined4 param_2);
 void unk_fun_02018ddc(int32_t param_1);
-undefined4 unk_fun_02018df4(undefined4 param_1);
-undefined4 unk_fun_02018e08(undefined4 param_1);
-void unk_fun_02018e1c(undefined4 param_1);
-void unk_fun_02018e30(int32_t param_1);
-void unk_fun_02018e4c(int32_t param_1, int32_t param_2, undefined4 param_3);
-undefined4 unk_fun_02018e54(int32_t param_1, int32_t param_2);
-void unk_fun_02018e5c(int32_t param_1);
-void unk_fun_02018e7c(int32_t param_1, int32_t param_2, undefined4 param_3);
-undefined4 unk_fun_02018e88(int32_t param_1, int32_t param_2);
-void unk_fun_02018e94(int32_t param_1, int32_t param_2);
-void unk_fun_0201926c(int32_t param_1, int32_t param_2, undefined4 param_3);
-undefined4 unk_fun_02019278(int32_t param_1, int32_t param_2);
+struct settings_and_variables* unk_fun_02018df4(struct settings_and_variables* param_1);
+struct settings_and_variables* unk_fun_02018e08(struct settings_and_variables* param_1);
+void ZeroSettingsAndVariables(struct settings_and_variables* param_1);
+void ZeroEventVariables(struct settings_and_variables* param_1);
+void SetEventVariable(struct settings_and_variables* param_1, int32_t param_2, int32_t param_3);
+int32_t GetEventVariable(struct settings_and_variables* param_1, int32_t param_2);
+void ZeroQuestVariables(struct settings_and_variables* param_1);
+void SetQuestVariable(struct settings_and_variables* param_1, int32_t param_2, int32_t param_3);
+int32_t GetQuestVariable(struct settings_and_variables* param_1, int32_t param_2);
+void unk_fun_02018e94(undefined* param_1, int32_t param_2);
+void SetSettingsVariable(struct settings_and_variables* param_1, int32_t param_2, int32_t param_3);
+int32_t GetSettingsVariable(struct settings_and_variables* param_1, int32_t param_2);
 undefined4* unk_fun_02019284(undefined4* param_1);
 undefined4* unk_fun_0201933c(undefined4* param_1);
 undefined4* unk_fun_020193c4(undefined4* param_1);
@@ -931,6 +950,7 @@ void unk_fun_0201a1a4(int32_t param_1, int32_t param_2);
 void unk_fun_0201a220(int32_t param_1, int32_t param_2, int32_t param_3);
 void unk_fun_0201a26c(int32_t param_1, undefined2 param_2);
 void unk_fun_0201a388(int32_t param_1, undefined4 param_2);
+void unk_fun_0201a40c(void);
 void unk_fun_0201a410(int32_t param_1);
 void unk_fun_0201a458(int32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void unk_fun_0201a588(int32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
@@ -1050,15 +1070,15 @@ undefined4 unk_fun_02020804(undefined4 param_1, int32_t param_2, undefined4 para
                             undefined4 param_7);
 undefined4 unk_fun_020208b4(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4, undefined4 param_5, undefined4 param_6);
-int32_t unk_fun_0202091c(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                         undefined4 param_4, int32_t param_5);
+undefined4* unk_fun_0202091c(undefined4 param_1, undefined4 param_2, undefined4 param_3,
+                             undefined4 param_4, undefined4* param_5);
 void unk_fun_02020a14(undefined4 param_1, undefined4 param_2, undefined4 param_3, int32_t param_4);
 void unk_fun_02020a54(undefined4 param_1, int32_t param_2, undefined4 param_3, int32_t param_4);
 uint32_t unk_fun_02020b40(undefined4 param_1);
 undefined4 unk_fun_02020da0(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4, undefined4 param_5, undefined4 param_6);
-int32_t unk_fun_02020e08(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                         undefined4 param_4, int32_t param_5);
+undefined4* unk_fun_02020e08(undefined4 param_1, undefined4 param_2, undefined4 param_3,
+                             undefined4 param_4, undefined4* param_5);
 void unk_fun_02020f04(undefined4 param_1, undefined4 param_2, undefined4 param_3, int32_t param_4,
                       int32_t param_5);
 undefined4 unk_fun_02020ff0(undefined4 param_1, int32_t param_2, undefined4 param_3,
@@ -1067,8 +1087,9 @@ undefined4 unk_fun_02020ff0(undefined4 param_1, int32_t param_2, undefined4 para
 undefined4 unk_fun_0202108c(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4, undefined4 param_5, undefined4 param_6,
                             undefined4 param_7, undefined4 param_8);
-int32_t unk_fun_0202110c(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                         int32_t param_4, uint32_t param_5, int32_t param_6, undefined4 param_7);
+undefined4* unk_fun_0202110c(undefined4 param_1, undefined4 param_2, undefined4 param_3,
+                             int32_t param_4, uint32_t param_5, undefined4* param_6,
+                             undefined4 param_7);
 void unk_fun_02021318(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                       undefined4 param_4);
 undefined4 unk_fun_02021404(undefined4 param_1, undefined4 param_2);
@@ -1220,8 +1241,7 @@ undefined4 unk_fun_02025690(undefined4 param_1);
 void unk_fun_020256a4(int32_t param_1);
 int32_t unk_fun_020257f4(uint32_t* param_1, int32_t param_2, undefined4 param_3,
                          undefined4 param_4);
-void unk_fun_02026150(uint32_t* param_1, undefined4 param_2, undefined4 param_3,
-                      undefined4 param_4);
+void unk_fun_02026150(uint32_t* param_1);
 int32_t unk_fun_02026968(int32_t param_1, int32_t param_2);
 void unk_fun_02026c18(void);
 void unk_fun_02026e54(void);
@@ -1264,10 +1284,10 @@ undefined4 unk_fun_020282cc(int32_t param_1);
 void unk_fun_02028360(int32_t param_1);
 undefined4 unk_fun_02028374(int32_t param_1);
 void unk_fun_02028408(int32_t param_1);
-undefined4 unk_fun_0202841c(int32_t param_1, undefined4 param_2, undefined4 param_3,
+undefined4 unk_fun_0202841c(int32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 int8_t unk_fun_02028464(int32_t** param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
-int8_t unk_fun_0202899c(int32_t** param_1, undefined4 param_2, undefined4 param_3,
+int8_t unk_fun_0202899c(int32_t* param_1, undefined4 param_2, undefined4 param_3,
                         undefined4 param_4);
 void unk_fun_02028cec(undefined4 param_1);
 void unk_fun_02028cfc(int32_t param_1, int32_t param_2);
@@ -1290,6 +1310,9 @@ void unk_fun_02029540(int32_t param_1);
 void unk_fun_020295b0(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
 void unk_fun_02029648(int32_t param_1);
 void unk_fun_020296b0(int32_t param_1);
+undefined4 unk_fun_02029704(int32_t param_1);
+undefined4 unk_fun_02029770(int32_t param_1);
+void unk_fun_02029778(void);
 int32_t unk_fun_0202977c(int32_t param_1);
 undefined4 unk_fun_02029784(int32_t param_1, uint32_t param_2);
 undefined4 unk_fun_020297b0(int32_t param_1, uint32_t param_2);
@@ -1317,8 +1340,8 @@ void unk_fun_0202a32c(int32_t* param_1, int32_t param_2, uint32_t param_3, int32
                       undefined4 param_5, undefined4 param_6);
 undefined4 unk_fun_0202a404(int32_t* param_1, int32_t param_2);
 void unk_fun_0202a47c(int32_t param_1);
-void unk_fun_0202a4a0(int32_t param_1);
-void unk_fun_0202a4d8(int32_t param_1);
+void unk_fun_0202a4a0(int8_t* param_1);
+void unk_fun_0202a4d8(int8_t* param_1);
 int32_t unk_fun_0202a510(int32_t param_1, undefined4 param_2);
 undefined4 unk_fun_0202a528(undefined4 param_1);
 void unk_fun_0202a53c(undefined2* param_1);
@@ -1346,16 +1369,19 @@ int32_t unk_fun_0202b458(int32_t param_1, uint32_t param_2);
 void unk_fun_0202b50c(int32_t param_1, undefined4 param_2, int32_t param_3, undefined4 param_4);
 void unk_fun_0202b5a8(int32_t param_1, undefined2* param_2, undefined2* param_3);
 void unk_fun_0202b5d0(undefined4* param_1);
+int32_t* unk_fun_0202b5f4(int32_t* param_1);
 int32_t* unk_fun_0202b61c(int32_t* param_1);
 int32_t* unk_fun_0202b64c(int32_t* param_1);
-undefined4 unk_fun_0202b674(int32_t* param_1);
+undefined4 unk_fun_0202b674(int32_t* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
 undefined4 unk_fun_0202b6f0(int32_t param_1);
-undefined4 unk_fun_0202b72c(int32_t param_1, undefined4 param_2, undefined4 param_3,
+undefined4 unk_fun_0202b72c(int32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0202b80c(void);
 undefined4* unk_fun_0202b8a4(undefined4* param_1);
 undefined4 unk_fun_0202b8d8(undefined4 param_1);
 undefined4 unk_fun_0202b8ec(undefined4 param_1);
+void unk_fun_0202b908(int32_t param_1);
 undefined4 unk_fun_0202b928(int32_t* param_1, int32_t param_2, int32_t param_3, int32_t param_4);
 undefined4 unk_fun_0202b98c(int32_t* param_1, int32_t param_2, int32_t param_3, int32_t param_4);
 bool unk_fun_0202b9ec(int32_t param_1);
@@ -1364,19 +1390,57 @@ void unk_fun_0202bcd4(undefined4 param_1, undefined4 param_2, undefined4 param_3
                       undefined4 param_4);
 undefined4 unk_fun_0202bcfc(int32_t param_1);
 undefined4 unk_fun_0202bd5c(int32_t param_1);
+undefined4 unk_fun_0202bdbc(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202bde4(undefined4 param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202be0c(undefined4 param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
 undefined4 unk_fun_0202be34(int32_t* param_1);
+undefined4 unk_fun_0202be78(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202bea0(void);
 undefined4 unk_fun_0202bea8(int32_t* param_1, undefined4 param_2, uint32_t param_3,
                             undefined4 param_4);
+undefined4 unk_fun_0202bef0(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202bf18(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202bf40(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202bf68(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202bf90(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202bfb8(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202bfe0(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202c008(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202c030(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202c058(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202c080(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
 undefined4 unk_fun_0202c0a8(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202c0d8(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0202c100(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0202c12c(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_0202c158(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
 undefined4 unk_fun_0202c180(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0202c1c4(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_0202c208(undefined4* param_1);
+undefined4 unk_fun_0202c22c(void);
+undefined4 unk_fun_0202c248(void);
 undefined4 unk_fun_0202c26c(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0202c374(void);
@@ -1384,22 +1448,42 @@ undefined4 unk_fun_0202c44c(undefined4* param_1, undefined4 param_2, undefined4 
                             undefined4 param_4);
 undefined4 unk_fun_0202c478(int32_t* param_1);
 undefined4 unk_fun_0202c510(int32_t* param_1);
+uint32_t unk_fun_0202c5a8(int32_t* param_1);
 int32_t unk_fun_0202c5f0(void);
+undefined4 unk_fun_0202c658(int32_t* param_1);
 undefined4 unk_fun_0202c6a4(void);
 undefined4 unk_fun_0202c768(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0202c86c(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+void unk_fun_0202c8b0(void);
 undefined4 unk_fun_0202c8d0(void);
 undefined4 unk_fun_0202c8fc(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_0202c928(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202c950(void);
+undefined4 unk_fun_0202c974(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202c99c(void);
+undefined4 unk_fun_0202c9c0(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202c9e8(void);
+undefined4 unk_fun_0202ca0c(void);
+void unk_fun_0202ca30(void);
+void unk_fun_0202ca54(void);
 undefined4 unk_fun_0202ca74(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0202cab8(int32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_0202cb18(undefined4* param_1);
 undefined4 unk_fun_0202cb38(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 bool unk_fun_0202cc58(void);
+undefined4 unk_fun_0202cc84(void);
+undefined4 unk_fun_0202cca4(void);
+int32_t unk_fun_0202ccc4(void);
+int32_t unk_fun_0202ccf8(void);
 undefined4 unk_fun_0202cd2c(undefined4* param_1);
 undefined4 unk_fun_0202cd5c(undefined4* param_1);
 undefined4 unk_fun_0202cd8c(undefined4* param_1);
@@ -1413,11 +1497,14 @@ int32_t unk_fun_0202d190(undefined4* param_1);
 int32_t unk_fun_0202d1d8(undefined4* param_1);
 undefined4 unk_fun_0202d234(undefined4* param_1);
 undefined4 unk_fun_0202d2e0(int32_t* param_1, int32_t param_2);
+void unk_fun_0202d394(void);
 undefined4 unk_fun_0202d398(int32_t* param_1, int32_t param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0202d448(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_0202d4fc(int32_t param_1, int32_t param_2, undefined4 param_3,
                             undefined4 param_4);
+void unk_fun_0202d5ac(undefined4* param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
+void unk_fun_0202d5d4(undefined4* param_1);
 undefined4 unk_fun_0202d5f0(undefined4* param_1);
 undefined4 unk_fun_0202d608(int32_t* param_1);
 undefined4 unk_fun_0202d680(int32_t* param_1);
@@ -1441,14 +1528,19 @@ undefined4 unk_fun_0202dd14(undefined4* param_1);
 undefined4 unk_fun_0202dd48(undefined4* param_1);
 undefined4 unk_fun_0202dd88(undefined4* param_1);
 undefined4 unk_fun_0202dee8(undefined4* param_1);
+undefined4 unk_fun_0202e060(void);
+undefined4 unk_fun_0202e068(void);
 undefined4 unk_fun_0202e070(int32_t* param_1);
 void DebugPrintError(char* string);
 undefined4 unk_fun_0202e210(undefined4* param_1);
 undefined4 unk_fun_0202e330(int32_t param_1);
 undefined4 unk_fun_0202e43c(int32_t param_1);
+undefined4 unk_fun_0202e548(void);
+undefined4 unk_fun_0202e550(void);
 undefined4 unk_fun_0202e558(undefined4* param_1);
 bool unk_fun_0202e61c(undefined4* param_1);
 undefined4 unk_fun_0202e64c(int32_t* param_1);
+void unk_fun_0202e68c(int32_t param_1, undefined4 param_2);
 undefined4 unk_fun_0202e694(undefined4* param_1);
 undefined4 unk_fun_0202e6b8(undefined4* param_1);
 undefined4 unk_fun_0202e6dc(undefined4* param_1);
@@ -1462,6 +1554,7 @@ undefined4 unk_fun_0202ec08(undefined4* param_1);
 undefined4 unk_fun_0202ed10(undefined4* param_1);
 undefined4 unk_fun_0202edc8(undefined4* param_1);
 undefined4 unk_fun_0202edfc(void);
+undefined4 unk_fun_0202ee20(undefined4* param_1);
 undefined4 unk_fun_0202ee44(undefined4* param_1);
 undefined4 unk_fun_0202ee68(undefined4* param_1);
 undefined4 unk_fun_0202eea0(undefined4* param_1);
@@ -1476,13 +1569,23 @@ undefined4 unk_fun_0202f088(undefined4* param_1);
 undefined4 unk_fun_0202f0a8(undefined4* param_1);
 undefined unk_fun_0202f0e4(undefined4* param_1);
 undefined4 unk_fun_0202f13c(void);
-undefined4 unk_fun_0202f174(char** param_1);
+undefined4 CopyStringToRangerDebugBuffer(char** param_1);
+void unk_fun_0202f1ac(void);
+undefined4 unk_fun_0202f1c0(void);
 undefined4 unk_fun_0202f208(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0202f23c(uint32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0202f268(uint32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_0202f294(void);
+undefined4 unk_fun_0202f29c(void);
+undefined4 unk_fun_0202f2a4(void);
+undefined4 unk_fun_0202f2ac(void);
+undefined4 unk_fun_0202f2b4(void);
+undefined4 unk_fun_0202f2d8(undefined4 param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202f300(void);
 undefined4 unk_fun_0202f348(uint32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0202f374(uint32_t* param_1, undefined4 param_2, undefined4 param_3,
@@ -1498,36 +1601,72 @@ undefined4 unk_fun_0202f424(uint32_t* param_1, undefined4 param_2, undefined4 pa
 void unk_fun_0202f458(uint32_t* param_1);
 undefined4 unk_fun_0202f4bc(uint32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_0202f4e8(undefined4 param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_0202f510(undefined4 param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
 undefined4 unk_fun_0202f528(void);
 void unk_fun_0202f764(void);
+undefined4 unk_fun_0202f784(void);
+undefined4 unk_fun_0202f78c(void);
+undefined4 unk_fun_0202f794(void);
+undefined4 unk_fun_0202f79c(void);
+undefined4 unk_fun_0202f7a4(void);
 undefined4 unk_fun_0202f7ac(void);
 int32_t unk_fun_0202f980(void);
+undefined4 unk_fun_0202f9fc(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+uint32_t unk_fun_0202fa24(void);
+undefined unk_fun_0202fa44(void);
+int8_t GetRangerStylerRank(void);
+int32_t GetRangerStylerType(void);
 undefined4 unk_fun_0202fa80(undefined4* param_1);
 undefined4 unk_fun_0202fb38(uint32_t* param_1);
 undefined4 unk_fun_0202fc74(undefined4* param_1);
 undefined4 unk_fun_0202fcd4(uint32_t* param_1);
+undefined4 unk_fun_0202fe28(void);
 undefined4 unk_fun_0202fe30(uint32_t* param_1);
+undefined GetStylerLevelSafe(void);
 undefined4 unk_fun_0202fec0(uint32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+int8_t GetRangerMaxHpSafe(void);
+int8_t GetRangerCurrentHpSafe(void);
+undefined4 unk_fun_0202ff38(void);
 undefined2 unk_fun_0202ff48(undefined4* param_1);
 undefined4 unk_fun_0202ffe4(undefined4* param_1);
-undefined4 unk_fun_020300b8(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+undefined4 unk_fun_02030040(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+int32_t unk_fun_02030068(void);
+undefined4 unk_fun_02030094(void);
+undefined4 unk_fun_020300b8(undefined4* param_1);
+undefined4 unk_fun_020300fc(void);
+undefined4 unk_fun_02030120(void);
+undefined4 unk_fun_02030144(void);
+undefined4 unk_fun_02030168(void);
+undefined4 unk_fun_0203018c(void);
+undefined4 unk_fun_020301b0(void);
+undefined4 unk_fun_020301d4(undefined4* param_1);
+undefined4 unk_fun_0203020c(void);
 undefined4 unk_fun_02030230(int32_t* param_1);
 undefined4 unk_fun_02030328(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_02030428(void);
 undefined4 unk_fun_0203044c(void);
 undefined4 unk_fun_02030468(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 bool unk_fun_02030494(void);
+undefined4 unk_fun_020304cc(void);
 undefined4 unk_fun_020304f4(void);
+undefined4 unk_fun_02030528(undefined4* param_1);
 undefined4 unk_fun_0203054c(void);
 undefined4 unk_fun_02030570(void);
 undefined4 unk_fun_0203059c(void);
 undefined4 unk_fun_020305c4(int32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_020305f0(void);
 undefined4 unk_fun_02030610(int32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_0203064c(void);
 undefined4 unk_fun_02030664(int32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_020306e0(int32_t* param_1);
@@ -1541,10 +1680,12 @@ undefined4 unk_fun_02030958(uint32_t* param_1);
 undefined4 unk_fun_020309b4(uint32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_02030a40(void);
+undefined4 unk_fun_02030ad0(void);
 undefined4 unk_fun_02030ad8(int32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_02030b1c(void);
 undefined4 unk_fun_02030b40(undefined4* param_1, int32_t param_2);
-undefined4 unk_fun_02030bb8(char** param_1);
+bool unk_fun_02030bf0(void);
 undefined4 unk_fun_02030c1c(uint32_t* param_1, int32_t param_2);
 undefined4 unk_fun_02030ca0(uint32_t* param_1, int32_t param_2);
 undefined4 unk_fun_02030d24(int32_t param_1, int32_t param_2);
@@ -1552,10 +1693,17 @@ undefined4 unk_fun_02030da8(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_02030e2c(undefined4* param_1);
 undefined4 unk_fun_02030e40(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_02030e90(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+void unk_fun_02030eb8(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                      undefined4 param_4);
+void unk_fun_02030ee0(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                      undefined4 param_4);
 undefined4 unk_fun_02030f08(uint32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_02030f38(uint32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+void unk_fun_02030f68(void);
 undefined4 unk_fun_02030f8c(undefined4* param_1);
 undefined4 unk_fun_02031078(void);
 undefined4 unk_fun_0203117c(undefined4* param_1, undefined4 param_2, undefined4 param_3,
@@ -1566,42 +1714,76 @@ undefined4 unk_fun_020312c4(undefined4 param_1, undefined4 param_2, undefined4 p
                             undefined4 param_4);
 bool unk_fun_0203133c(void);
 undefined4 unk_fun_02031374(void);
+undefined unk_fun_020313e8(void);
+undefined4 unk_fun_02031404(void);
+undefined4 unk_fun_02031428(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_02031450(void);
 undefined4 unk_fun_02031474(undefined4* param_1);
 undefined4 unk_fun_02031574(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 bool unk_fun_020315d8(void);
 undefined4 unk_fun_02031610(void);
+undefined4 unk_fun_02031684(void);
+void unk_fun_020316a8(undefined4* param_1);
+undefined unk_fun_020316cc(void);
+undefined4 unk_fun_020316e8(void);
+undefined4 unk_fun_0203170c(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+void unk_fun_02031734(undefined4* param_1);
+undefined4 unk_fun_02031758(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+void unk_fun_02031780(undefined4* param_1);
 undefined4 unk_fun_020317a4(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 bool unk_fun_02031808(void);
 undefined4 unk_fun_02031840(void);
 undefined4 unk_fun_020318b4(int32_t* param_1);
+undefined4 unk_fun_020319c4(void);
+undefined4 unk_fun_020319cc(void);
 undefined4 unk_fun_020319e8(int32_t* param_1);
-undefined4 unk_fun_02031b84(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+undefined4 unk_fun_02031b38(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
-undefined4 unk_fun_02031bd4(undefined4* param_1, undefined4 param_2, undefined4 param_3,
-                            undefined4 param_4);
-undefined4 unk_fun_02031c24(undefined4* param_1, undefined4 param_2, undefined4 param_3,
-                            undefined4 param_4);
+void unk_fun_02031b60(undefined4* param_1);
+undefined4 unk_fun_02031b84(undefined4* param_1);
+void unk_fun_02031bb0(undefined4* param_1);
+undefined4 unk_fun_02031bd4(undefined4* param_1);
+void unk_fun_02031c00(undefined4* param_1);
+undefined4 unk_fun_02031c24(undefined4* param_1);
 undefined4 unk_fun_02031c50(void);
 undefined4 unk_fun_02031cb4(void);
 undefined4 unk_fun_02031e00(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+void unk_fun_02031e30(void);
+void unk_fun_02031e54(void);
 undefined4 unk_fun_02031e78(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_02031ea8(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_02031ed8(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_02031f00(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_02031f28(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_02031f50(void);
 int32_t unk_fun_02031f64(int32_t* param_1);
 undefined4 unk_fun_02031fd4(uint32_t* param_1);
+void unk_fun_02032080(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                      undefined4 param_4);
+bool unk_fun_020320a8(void);
 void unk_fun_020320c4(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                       undefined4 param_4);
 undefined4 unk_fun_020320ec(undefined4* param_1);
-undefined4 unk_fun_02032148(undefined4* param_1);
-undefined4 unk_fun_02032174(undefined4* param_1);
-undefined4 unk_fun_020321a0(undefined4* param_1);
-undefined4 unk_fun_020321cc(undefined4* param_1);
+undefined4 unk_fun_02032148(uint32_t* param_1);
+undefined4 unk_fun_02032174(uint32_t* param_1);
+undefined4 unk_fun_020321a0(uint32_t* param_1);
+undefined4 unk_fun_020321cc(uint32_t* param_1);
 undefined4 unk_fun_020321f8(void);
 undefined2 unk_fun_020322b0(void);
+undefined4 unk_fun_0203238c(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_020323b4(void);
 undefined4 unk_fun_020323c8(int32_t* param_1);
 undefined unk_fun_020324a8(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                            undefined4 param_4);
@@ -1620,13 +1802,22 @@ undefined4 unk_fun_020326cc(uint32_t* param_1, undefined4 param_2, undefined4 pa
 undefined4 unk_fun_02032708(uint32_t* param_1);
 undefined4 unk_fun_02032768(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
-undefined4 unk_fun_020327b8(uint32_t* param_1);
+undefined4 unk_fun_02032794(void);
+undefined4 BitorPartnerPokemonStatus(uint32_t* param_1);
+uint32_t BitandPartnerPokemonStatus(uint32_t* param_1);
+int8_t GetPartnerPokemonMood(int32_t* param_1);
+undefined4 unk_fun_02032828(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                            undefined4 param_4);
+undefined4 unk_fun_02032850(void);
 undefined4 unk_fun_02032858(undefined4* param_1);
 undefined4 unk_fun_0203289c(undefined4* param_1);
 undefined4 unk_fun_020328d0(undefined4* param_1);
 int32_t unk_fun_02032918(undefined4* param_1);
 int32_t unk_fun_0203297c(undefined4* param_1);
+undefined4 unk_fun_020329e0(void);
+undefined4 unk_fun_020329fc(void);
 undefined4 unk_fun_02032a18(undefined4* param_1);
+void unk_fun_02032a44(void);
 undefined4 unk_fun_02032a48(undefined4* param_1);
 undefined4 unk_fun_02032a74(int32_t* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
@@ -1679,12 +1870,13 @@ undefined4 TimerIsActive(void);
 undefined4 unk_fun_02033968(void);
 uint32_t unk_fun_02033994(uint32_t* param_1);
 undefined4 unk_fun_020339d8(uint32_t* param_1);
-undefined4 unk_fun_02033a38(int32_t* param_1, undefined4 param_2, undefined4 param_3,
-                            undefined4 param_4);
+undefined4 unk_fun_02033a38(int32_t* param_1);
 uint32_t unk_fun_02033a7c(int32_t* param_1);
 undefined4 unk_fun_02033ad4(int32_t* param_1);
+undefined4 IncrementPokemonRidesRecord(void);
 undefined4 unk_fun_02033b6c(void);
 undefined4 unk_fun_02033bbc(void);
+int32_t GetGameSavesRecordSafe(void);
 undefined4 unk_fun_02033c4c(undefined4 param_1);
 undefined4 unk_fun_02033c60(int32_t param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4, undefined4 param_5);
@@ -1773,6 +1965,7 @@ void unk_fun_02035774(int32_t* param_1);
 undefined4 unk_fun_020357f8(undefined4 param_1);
 void unk_fun_0203580c(int32_t* param_1, undefined4 param_2);
 void unk_fun_020358ac(int32_t* param_1, undefined4 param_2);
+void unk_fun_020358fc(void);
 int32_t unk_fun_02035900(int32_t* param_1, undefined4 param_2);
 undefined4 unk_fun_02035940(int32_t param_1, undefined4 param_2);
 void unk_fun_02035998(int32_t* param_1);
@@ -1781,12 +1974,14 @@ undefined4* unk_fun_02035a38(undefined4 param_1, undefined4 param_2);
 int32_t unk_fun_02035c74(int32_t param_1);
 int32_t unk_fun_02035c8c(int32_t param_1);
 int32_t unk_fun_02035ca4(int32_t* param_1, int32_t param_2);
+undefined4 unk_fun_02035d30(void);
 undefined4 unk_fun_02035d38(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_02035da0(int32_t* param_1, int32_t param_2, undefined4 param_3,
                             undefined4 param_4, undefined4 param_5);
 undefined4 unk_fun_02035e3c(int32_t* param_1, int32_t param_2, undefined4 param_3);
 undefined4 unk_fun_02035ecc(int32_t* param_1, int32_t param_2);
 undefined4 unk_fun_02035f50(int32_t* param_1, int32_t param_2, undefined4 param_3);
+void unk_fun_02035fe4(void);
 undefined4 unk_fun_02035fe8(int32_t param_1, undefined4 param_2);
 undefined4 unk_fun_02036184(int32_t* param_1, undefined4 param_2, undefined4 param_3,
                             int32_t param_4);
@@ -1797,6 +1992,7 @@ undefined4 unk_fun_02036488(int32_t* param_1);
 void unk_fun_020364dc(int32_t param_1);
 undefined4 unk_fun_02036558(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_020367b8(int32_t param_1, int32_t param_2);
+undefined4 unk_fun_020368bc(undefined4 param_1);
 undefined4 unk_fun_020368d8(undefined4 param_1);
 undefined4 unk_fun_020368ec(undefined4 param_1);
 undefined4 unk_fun_02036908(undefined4 param_1);
@@ -1811,6 +2007,7 @@ undefined4 unk_fun_0203724c(int32_t param_1, undefined4 param_2, undefined4 para
 undefined4 unk_fun_0203731c(int32_t param_1);
 void unk_fun_02037330(int32_t param_1);
 void unk_fun_0203733c(int32_t param_1);
+undefined4 unk_fun_02037354(void);
 undefined4* unk_fun_02037388(undefined4* param_1, int32_t param_2);
 undefined4 unk_fun_02037540(int32_t param_1, undefined4 param_2);
 void unk_fun_020377c0(int32_t param_1, undefined4 param_2);
@@ -1818,6 +2015,7 @@ undefined4 unk_fun_020378ac(int32_t param_1);
 undefined4 unk_fun_020378f4(int32_t param_1);
 void unk_fun_02037914(int32_t param_1);
 undefined4* unk_fun_02037938(undefined4* param_1);
+undefined4 unk_fun_02037980(int32_t param_1);
 undefined4* unk_fun_02037988(undefined4* param_1);
 undefined4* unk_fun_020379c8(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                              undefined4 param_4);
@@ -1827,6 +2025,7 @@ undefined4 unk_fun_02037ed4(int32_t param_1);
 undefined4 unk_fun_02037f1c(int32_t param_1);
 void unk_fun_02037f3c(int32_t param_1);
 undefined4* unk_fun_02037f60(undefined4* param_1);
+undefined4 unk_fun_02037fa8(void);
 undefined4* unk_fun_02037fb0(undefined4* param_1);
 undefined4* unk_fun_02038018(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                              undefined4 param_4);
@@ -1837,6 +2036,7 @@ undefined4 unk_fun_02038880(int32_t param_1);
 void unk_fun_020388a0(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
 void unk_fun_020388e8(int32_t param_1);
 undefined4* unk_fun_02038938(undefined4* param_1);
+undefined4 unk_fun_02038990(void);
 undefined4* unk_fun_02038998(undefined4* param_1);
 undefined4* unk_fun_020389e8(undefined4* param_1, int32_t param_2);
 undefined4 unk_fun_02038b04(int32_t param_1);
@@ -1845,6 +2045,7 @@ undefined4 unk_fun_02038c54(void);
 undefined4 unk_fun_02038c5c(int32_t param_1);
 void unk_fun_02038c70(int32_t param_1);
 undefined4* unk_fun_02038c94(undefined4* param_1);
+undefined4 unk_fun_02038ccc(int32_t param_1);
 undefined4* unk_fun_02038cd4(undefined4* param_1);
 undefined4* unk_fun_02038d04(undefined4* param_1, undefined4 param_2);
 undefined4 unk_fun_02038dec(int32_t param_1, undefined4 param_2);
@@ -1855,13 +2056,17 @@ undefined4 unk_fun_02039cf0(int32_t param_1);
 undefined4 unk_fun_02039d50(undefined4 param_1);
 void unk_fun_02039d6c(int32_t param_1);
 undefined4* unk_fun_02039d90(undefined4* param_1);
+undefined4 unk_fun_02039dc8(int32_t param_1);
 undefined4* unk_fun_02039ddc(undefined4* param_1);
+undefined4 unk_fun_02039e0c(undefined4 param_1);
 void unk_fun_02039e20(int32_t param_1);
 undefined4 unk_fun_0203a010(int32_t param_1);
 undefined4 unk_fun_0203a068(int32_t param_1, undefined4 param_2);
 void unk_fun_0203a3cc(int32_t param_1, int32_t param_2);
 void unk_fun_0203a604(int32_t param_1);
 undefined4* unk_fun_0203a6cc(undefined4* param_1);
+undefined4 unk_fun_0203a70c(undefined4 param_1);
+undefined4 unk_fun_0203a72c(void);
 undefined4* unk_fun_0203a734(undefined4* param_1);
 undefined4* unk_fun_0203a76c(undefined4* param_1);
 undefined4 unk_fun_0203a854(int32_t param_1, int32_t param_2, undefined4 param_3,
@@ -1870,6 +2075,7 @@ void unk_fun_0203a934(int32_t param_1, undefined4 param_2);
 undefined4 unk_fun_0203a9c4(void);
 undefined4 unk_fun_0203a9cc(void);
 undefined4* unk_fun_0203a9d4(undefined4* param_1);
+undefined4 unk_fun_0203aa0c(void);
 undefined4* unk_fun_0203aa14(undefined4* param_1);
 undefined4* unk_fun_0203aa44(undefined4* param_1);
 undefined4 unk_fun_0203ab28(int32_t param_1);
@@ -1878,6 +2084,7 @@ undefined4 unk_fun_0203afbc(int32_t param_1);
 undefined4 unk_fun_0203b244(int32_t param_1);
 void unk_fun_0203b2a8(int32_t param_1);
 undefined4* unk_fun_0203b2cc(undefined4* param_1);
+undefined4 unk_fun_0203b30c(void);
 undefined4* unk_fun_0203b314(undefined4* param_1);
 undefined4* unk_fun_0203b34c(undefined4* param_1, undefined4 param_2);
 undefined4 unk_fun_0203b4a0(int32_t param_1, undefined4 param_2);
@@ -1887,6 +2094,7 @@ undefined4 unk_fun_0203bbac(int32_t param_1);
 void unk_fun_0203bbcc(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
 void unk_fun_0203bc14(int32_t param_1);
 undefined4* unk_fun_0203bc64(undefined4* param_1);
+undefined4 unk_fun_0203bcbc(int32_t param_1);
 undefined4* unk_fun_0203bcc4(undefined4* param_1);
 undefined4* unk_fun_0203bd14(undefined4* param_1, int32_t param_2, undefined4 param_3,
                              undefined4 param_4);
@@ -1896,6 +2104,7 @@ undefined4* unk_fun_0203bda4(undefined4* param_1);
 undefined4* unk_fun_0203bdd8(undefined4* param_1);
 undefined4* unk_fun_0203be14(undefined4* param_1);
 undefined4 unk_fun_0203be48(int32_t param_1, int32_t param_2, int32_t param_3);
+undefined4 unk_fun_0203bf00(int32_t param_1);
 void unk_fun_0203bf20(int32_t param_1);
 undefined4* unk_fun_0203bf40(undefined4* param_1);
 undefined4* unk_fun_0203bfd4(undefined4* param_1);
@@ -1903,6 +2112,7 @@ undefined4* unk_fun_0203c068(undefined4* param_1);
 undefined4* unk_fun_0203c0d4(undefined4* param_1);
 undefined4* unk_fun_0203c148(undefined4* param_1);
 undefined4 unk_fun_0203c1b4(int32_t param_1, undefined4 param_2);
+undefined4 unk_fun_0203c1fc(int32_t param_1, int32_t param_2, undefined4 param_3);
 undefined4 unk_fun_0203c22c(int32_t param_1, char* param_2, undefined4 param_3, undefined4 param_4);
 undefined4 unk_fun_0203c288(int32_t param_1);
 void unk_fun_0203c2b8(int32_t param_1);
@@ -1930,15 +2140,20 @@ undefined4 unk_fun_0203d578(int32_t param_1, undefined4 param_2);
 void unk_fun_0203d890(int32_t param_1, int32_t param_2);
 void unk_fun_0203d910(int32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void unk_fun_0203da10(int32_t param_1);
+undefined4 unk_fun_0203da38(void);
 void unk_fun_0203da40(undefined4 param_1, undefined4 param_2);
+void unk_fun_0203da60(int32_t param_1, undefined4 param_2);
 undefined4* unk_fun_0203da68(undefined4* param_1);
+undefined4* unk_fun_0203db60(undefined4* param_1);
 undefined4* unk_fun_0203db88(undefined4* param_1);
 void unk_fun_0203dbb8(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4,
                       undefined2 param_5, int32_t param_6);
 void unk_fun_0203e10c(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4,
                       uint32_t param_5, int32_t param_6);
 void unk_fun_0203e55c(int32_t param_1);
+undefined4 unk_fun_0203e650(undefined4 param_1);
 void unk_fun_0203e66c(int32_t param_1);
+void unk_fun_0203e920(undefined4 param_1, undefined4 param_2);
 void unk_fun_0203e930(void);
 int32_t unk_fun_0203e934(int32_t param_1, undefined4 param_2, int32_t param_3);
 void unk_fun_0203ee3c(int32_t param_1);
@@ -1956,6 +2171,8 @@ undefined4 unk_fun_0203f144(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_0203f190(int32_t param_1);
 undefined4 unk_fun_0203f1fc(int32_t param_1, int32_t param_2, undefined4 param_3,
                             undefined4 param_4);
+undefined4 unk_fun_0203f278(int32_t param_1, int32_t param_2, undefined4 param_3,
+                            undefined4 param_4);
 void unk_fun_0203f2b0(int32_t param_1, undefined4 param_2, int32_t param_3);
 void unk_fun_0203f348(int32_t param_1, undefined4 param_2, undefined4 param_3);
 void unk_fun_0203f3c8(int32_t param_1);
@@ -1964,12 +2181,19 @@ void unk_fun_0203f4b8(int32_t param_1, undefined2 param_2, undefined param_3, un
 void unk_fun_0203f58c(int32_t param_1, undefined param_2);
 void unk_fun_0203f604(int32_t param_1, undefined2 param_2);
 void unk_fun_0203f688(int32_t param_1, undefined param_2);
+void unk_fun_0203f700(int32_t param_1);
+void unk_fun_0203f754(int32_t param_1, undefined4 param_2, int32_t param_3);
+void unk_fun_0203f7ac(int32_t param_1);
 undefined4 unk_fun_0203f7f4(int32_t param_1, int32_t* param_2, int32_t param_3, int32_t param_4,
                             undefined4* param_5);
 undefined4 unk_fun_02040158(int32_t param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4, int32_t param_5);
+void unk_fun_02040384(int32_t param_1, undefined4 param_2, undefined4 param_3);
+void unk_fun_02040428(int32_t param_1);
 void unk_fun_02040460(int32_t param_1);
 void unk_fun_020404bc(undefined4* param_1);
+undefined4* unk_fun_020404e8(undefined4* param_1);
+undefined4* unk_fun_02040508(undefined4* param_1);
 undefined4 unk_fun_02040530(int32_t param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4, undefined4 param_5, undefined4 param_6);
 undefined4 unk_fun_020405b4(int32_t param_1, undefined4 param_2, undefined4 param_3,
@@ -1978,6 +2202,7 @@ void unk_fun_02040638(int32_t param_1);
 int32_t unk_fun_02040668(int32_t param_1, undefined4 param_2, int32_t param_3, undefined4 param_4);
 void unk_fun_02040740(int32_t param_1);
 undefined4 unk_fun_02040778(undefined4 param_1);
+void unk_fun_0204078c(void);
 undefined4* unk_fun_02040790(undefined4* param_1);
 undefined4* unk_fun_020407e0(undefined4* param_1);
 void unk_fun_02040830(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4,
@@ -2002,6 +2227,7 @@ void unk_fun_020411b4(int32_t param_1);
 void unk_fun_020411d8(int32_t param_1);
 void unk_fun_02041230(int32_t* param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4,
                       undefined2 param_5);
+void unk_fun_0204129c(void);
 undefined4* unk_fun_020412a0(undefined4* param_1);
 int32_t* unk_fun_020412dc(int32_t* param_1);
 int32_t* unk_fun_0204130c(int32_t* param_1);
@@ -2009,6 +2235,7 @@ void unk_fun_02041344(int32_t* param_1, uint32_t param_2, undefined4 param_3, ui
                       int32_t param_5);
 int32_t unk_fun_020415c8(int32_t param_1, uint32_t param_2);
 int32_t unk_fun_02041604(int32_t* param_1);
+uint32_t unk_fun_02041660(undefined4 param_1, int32_t param_2);
 void unk_fun_02041688(int32_t param_1);
 undefined4* unk_fun_020416ac(undefined4* param_1, undefined4 param_2);
 undefined4 unk_fun_02041704(undefined4 param_1);
@@ -2055,7 +2282,8 @@ void unk_fun_02043124(void);
 void unk_fun_02043128(void);
 undefined4 unk_fun_0204312c(void);
 undefined4* unk_fun_02043134(undefined4* param_1);
-void unk_fun_02043180(int32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
+void unk_fun_02043180(undefined* param_1, undefined4 param_2, undefined4 param_3,
+                      undefined4 param_4);
 void unk_fun_02043338(int32_t param_1);
 undefined4 unk_fun_0204338c(int32_t param_1);
 void unk_fun_02043880(void);
@@ -2078,7 +2306,7 @@ void thunk_unk_fun_02064f9c(void);
 void unk_fun_020441ac(void);
 void unk_fun_020441b0(void);
 void unk_fun_02044200(char* param_1);
-void unk_fun_02044260(undefined* param_1, undefined4 param_2, undefined4 param_3, void* param_4);
+void unk_fun_02044260(undefined* param_1, undefined4 param_2, undefined4 param_3, void** param_4);
 void DebugPrintInternal(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                         undefined4 param_4);
 void unk_fun_02044308(undefined4 param_1, undefined4 param_2, undefined4 param_3,
@@ -2120,6 +2348,7 @@ undefined4 unk_fun_0204663c(undefined4* param_1, undefined4 param_2, undefined4 
 undefined4 unk_fun_02046654(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 uint32_t unk_fun_0204666c(int32_t* param_1);
+void unk_fun_0204668c(undefined4* param_1);
 int32_t unk_fun_020466a0(uint32_t* param_1);
 int32_t unk_fun_020466c4(uint32_t* param_1);
 uint32_t unk_fun_020466f0(undefined4* param_1);
@@ -2183,7 +2412,7 @@ void unk_fun_020475d0(undefined4 param_1, undefined4 param_2, undefined4 param_3
 void unk_fun_02047678(void);
 int32_t unk_fun_02047680(void);
 undefined4 unk_fun_020476bc(int32_t param_1);
-int32_t unk_fun_02047730(undefined4 param_1);
+int8_t* unk_fun_02047730(undefined4 param_1);
 int32_t unk_fun_02047798(int32_t param_1);
 int32_t unk_fun_02047818(undefined2* param_1);
 int32_t unk_fun_02047840(int32_t param_1, undefined* param_2, undefined4 param_3, uint32_t param_4);
@@ -2198,8 +2427,8 @@ undefined4 unk_fun_02047c0c(int32_t param_1, undefined4 param_2, undefined4 para
 int32_t unk_fun_02047d54(int32_t param_1);
 void unk_fun_02047df0(int32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4,
                       undefined4 param_5, uint32_t param_6);
-int32_t unk_fun_02047e64(int32_t param_1, undefined4 param_2, int32_t param_3, undefined2* param_4,
-                         undefined4* param_5);
+uint32_t unk_fun_02047e64(int32_t param_1, undefined4* param_2, uint32_t param_3,
+                          undefined2* param_4, undefined4* param_5);
 int32_t unk_fun_02047f6c(int32_t param_1, int32_t* param_2, undefined2* param_3,
                          undefined2* param_4, undefined4* param_5);
 void unk_fun_02047fe0(undefined4 param_1, undefined4 param_2, undefined4 param_3,
@@ -2207,10 +2436,9 @@ void unk_fun_02047fe0(undefined4 param_1, undefined4 param_2, undefined4 param_3
 uint32_t unk_fun_0204802c(int32_t param_1);
 undefined4 unk_fun_0204817c(int32_t param_1);
 int32_t unk_fun_020481d8(int32_t param_1);
-uint32_t unk_fun_02048214(int32_t param_1, undefined4 param_2, uint32_t param_3,
+uint32_t unk_fun_02048214(int32_t param_1, undefined4* param_2, uint32_t param_3,
                           undefined2* param_4, int32_t* param_5, uint32_t param_6);
-undefined4 unk_fun_02048358(undefined4 param_1, int32_t param_2, int32_t param_3,
-                            undefined4 param_4);
+undefined4 unk_fun_02048358(undefined4* param_1, uint32_t param_2, int32_t param_3);
 undefined4 unk_fun_0204846c(int32_t param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4, undefined4 param_5, uint32_t param_6);
 int32_t unk_fun_02048580(int32_t param_1, int32_t param_2, int32_t param_3, undefined4 param_4,
@@ -2218,11 +2446,11 @@ int32_t unk_fun_02048580(int32_t param_1, int32_t param_2, int32_t param_3, unde
 int32_t unk_fun_02048684(int32_t param_1, int32_t param_2, int32_t param_3, uint32_t* param_4,
                          uint32_t param_5);
 int32_t unk_fun_02048708(int32_t param_1);
-int32_t unk_fun_0204872c(int32_t param_1, int32_t param_2, int32_t param_3, int32_t param_4,
+int32_t unk_fun_0204872c(int32_t param_1, undefined4* param_2, int32_t param_3, int32_t param_4,
                          undefined2 param_5, int32_t param_6, uint32_t param_7);
 int32_t unk_fun_020488a0(int32_t param_1);
 int32_t unk_fun_020489d0(int32_t param_1, undefined4 param_2, uint32_t param_3);
-int32_t unk_fun_02048a74(int32_t param_1, int32_t param_2, int32_t param_3, undefined4 param_4);
+int32_t unk_fun_02048a74(undefined4* param_1, uint32_t param_2, int32_t param_3);
 undefined4 unk_fun_02048b0c(int32_t param_1);
 undefined4 unk_fun_02048bb8(int32_t param_1);
 undefined4 unk_fun_02048be8(int32_t param_1);
@@ -2296,16 +2524,16 @@ undefined4 unk_fun_0204a1d0(uint32_t param_1);
 bool unk_fun_0204a20c(uint32_t param_1);
 undefined4 unk_fun_0204a220(int32_t param_1);
 undefined4 unk_fun_0204a2a0(int16_t* param_1, int16_t* param_2);
-void unk_fun_0204a2cc(int32_t param_1, int32_t param_2, int32_t param_3, int32_t param_4);
-void unk_fun_0204a338(int32_t param_1, undefined4 param_2, char* param_3, int32_t param_4,
-                      int32_t param_5, int32_t param_6);
+void unk_fun_0204a2cc(int32_t param_1, int32_t param_2, undefined4* param_3, uint32_t param_4);
+void unk_fun_0204a338(undefined4* param_1, undefined4* param_2, char* param_3, int32_t param_4,
+                      undefined4* param_5, uint32_t param_6);
 void unk_fun_0204a52c(void);
 int32_t unk_fun_0204a584(int32_t* param_1);
 void unk_fun_0204a644(void);
 undefined* unk_fun_0204a688(undefined* param_1);
 void unk_fun_0204a758(uint32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 int32_t unk_fun_0204a854(undefined4 param_1);
-void unk_fun_0204a8c4(int32_t param_1, int32_t param_2, int32_t param_3, undefined4 param_4);
+void unk_fun_0204a8c4(undefined4* param_1, undefined4* param_2, int32_t param_3);
 void unk_fun_0204aa00(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4,
                       undefined4 param_5, uint16_t param_6);
 void unk_fun_0204aad0(int32_t param_1, int32_t param_2, undefined4 param_3, int32_t param_4,
@@ -2340,7 +2568,7 @@ void unk_fun_0204c1d0(undefined4 param_1, undefined4 param_2, undefined4 param_3
 void unk_fun_0204c29c(void);
 void unk_fun_0204c2d8(undefined4 param_1, int32_t param_2, int32_t param_3);
 void unk_fun_0204c3f8(int32_t param_1, uint16_t* param_2, int32_t param_3, undefined4 param_4);
-int8_t* unk_fun_0204c604(int8_t* param_1, undefined4* param_2);
+undefined4* unk_fun_0204c604(undefined4* param_1, undefined4* param_2);
 void unk_fun_0204c8d0(int8_t* param_1, uint32_t param_2, undefined4 param_3, int32_t param_4);
 void unk_fun_0204ca94(void);
 undefined2 unk_fun_0204cb04(void);
@@ -2375,9 +2603,8 @@ int32_t unk_fun_0204d5a8(void);
 void unk_fun_0204d618(undefined4 param_1, int32_t param_2);
 void unk_fun_0204d658(void);
 void unk_fun_0204d6f8(void);
-int32_t unk_fun_0204da68(undefined2* param_1, undefined param_2, uint32_t* param_3,
-                         undefined4 param_4);
-int32_t unk_fun_0204dbf4(undefined4 param_1, uint32_t param_2, int32_t param_3, uint32_t param_4);
+int32_t unk_fun_0204da68(undefined2* param_1, undefined param_2, uint32_t* param_3);
+int8_t* unk_fun_0204dbf4(uint32_t param_1, uint32_t param_2, int8_t* param_3, uint32_t param_4);
 undefined4 unk_fun_0204dc28(void);
 undefined4 unk_fun_0204dcec(int32_t param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
@@ -2386,16 +2613,16 @@ bool unk_fun_0204e144(void);
 undefined4 unk_fun_0204e19c(uint32_t* param_1, int32_t param_2);
 void unk_fun_0204e298(void);
 void unk_fun_0204e304(int8_t* param_1);
-int32_t unk_fun_0204e334(char* param_1, uint32_t param_2, uint32_t param_3, undefined4 param_4,
+int32_t unk_fun_0204e334(char* param_1, uint32_t param_2, uint32_t param_3, undefined4* param_4,
                          uint32_t param_5);
 int32_t unk_fun_0204e5dc(int8_t* param_1, int8_t** param_2);
 undefined4 unk_fun_0204e610(int8_t* param_1, uint32_t* param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0204e6ac(undefined4 param_1, int32_t param_2, undefined4 param_3);
 int32_t unk_fun_0204e710(undefined4 param_1);
-void unk_fun_0204e848(int32_t param_1);
-void unk_fun_0204e8dc(int32_t param_1, uint32_t param_2, uint32_t param_3);
-void unk_fun_0204e97c(int32_t param_1, int32_t param_2, uint32_t param_3, undefined4 param_4);
+void unk_fun_0204e848(undefined4* param_1);
+void unk_fun_0204e8dc(undefined4* param_1, uint32_t param_2, uint32_t param_3);
+void unk_fun_0204e97c(undefined4* param_1, int32_t param_2, uint32_t param_3);
 void unk_fun_0204ea68(int32_t param_1);
 int32_t unk_fun_0204ead0(void);
 void unk_fun_0204eb08(undefined4 param_1);
@@ -2414,7 +2641,7 @@ void unk_fun_0204f488(void);
 int32_t unk_fun_0204f4b4(char* param_1);
 undefined4 unk_fun_0204f4d8(char* param_1, char* param_2);
 void unk_fun_0204f544(int32_t param_1, int8_t* param_2, undefined4 param_3, undefined4 param_4);
-void unk_fun_0204f768(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
+void unk_fun_0204f768(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_0204f81c(int8_t* param_1, int32_t param_2, int32_t param_3, int32_t param_4);
 undefined2 unk_fun_0204f868(undefined4 param_1, undefined4 param_2, undefined4 param_3);
 bool unk_fun_0204f8c8(int32_t param_1);
@@ -2422,7 +2649,7 @@ void unk_fun_0204f8d8(int32_t param_1, undefined* param_2, undefined4 param_3, u
 void unk_fun_0204f9a0(int32_t param_1, undefined* param_2);
 void unk_fun_0204fa3c(int32_t param_1, undefined4 param_2, int32_t* param_3);
 void unk_fun_0204fc7c(undefined4 param_1, char* param_2, int32_t param_3, undefined4 param_4);
-void unk_fun_0204fd18(undefined4 param_1);
+void unk_fun_0204fd18(undefined4* param_1);
 void unk_fun_0204fd78(int32_t param_1, undefined4 param_2, int32_t param_3);
 void unk_fun_0204ff44(int32_t param_1, undefined4 param_2);
 void unk_fun_0204ff80(int32_t param_1, undefined4 param_2, uint32_t param_3, undefined4 param_4);
@@ -2432,7 +2659,7 @@ void unk_fun_020501f8(char* param_1);
 undefined4 unk_fun_0205021c(int32_t param_1, undefined4 param_2, undefined4 param_3);
 int32_t unk_fun_02050234(int32_t param_1, int32_t param_2);
 int32_t unk_fun_02050464(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
-undefined4 unk_fun_02050668(int32_t param_1, uint32_t param_2, undefined4 param_3,
+undefined4 unk_fun_02050668(undefined4* param_1, uint32_t param_2, undefined4 param_3,
                             uint32_t param_4);
 void unk_fun_020506d4(int32_t param_1, undefined4 param_2, undefined4 param_3);
 void unk_fun_02050700(int32_t param_1, char* param_2, undefined4 param_3, undefined4 param_4);
@@ -2451,8 +2678,8 @@ int32_t unk_fun_020513bc(int32_t* param_1, int32_t param_2);
 void unk_fun_02051494(uint32_t param_1, int32_t param_2);
 void unk_fun_020514e4(int32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 int32_t unk_fun_02051628(int32_t param_1);
-int32_t unk_fun_020516a4(int32_t param_1, uint32_t param_2, int32_t param_3, int32_t param_4,
-                         int32_t param_5);
+int32_t unk_fun_020516a4(undefined4* param_1, uint32_t param_2, undefined4* param_3,
+                         int32_t param_4, int32_t param_5);
 void unk_fun_020517d8(int32_t param_1);
 void unk_fun_02051858(int32_t param_1);
 void unk_fun_02051890(undefined param_1);
@@ -2462,7 +2689,7 @@ void unk_fun_020519bc(undefined4 param_1, undefined4 param_2);
 void unk_fun_020519d4(undefined4 param_1, undefined4 param_2);
 void unk_fun_020519ec(uint32_t* param_1, undefined4 param_2);
 void unk_fun_02051e08(undefined4* param_1);
-void unk_fun_02051e50(int32_t param_1, int32_t param_2, uint32_t param_3);
+void unk_fun_02051e50(int32_t param_1, undefined4* param_2, uint32_t param_3);
 void unk_fun_02051f08(int32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 uint32_t unk_fun_02051f70(uint32_t param_1, int32_t param_2);
 void unk_fun_02051fb4(undefined* param_1, undefined4* param_2, uint32_t param_3);
@@ -2470,7 +2697,7 @@ void unk_fun_02051ff8(uint32_t* param_1, int32_t param_2, uint32_t param_3);
 void unk_fun_02052040(uint32_t* param_1, undefined4 param_2, undefined4 param_3,
                       undefined4 param_4);
 void unk_fun_020526c8(undefined4* param_1);
-void unk_fun_0205271c(int32_t param_1, int32_t param_2, uint32_t param_3);
+void unk_fun_0205271c(int32_t param_1, undefined4* param_2, uint32_t param_3);
 void unk_fun_020527d4(int32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void unk_fun_0205283c(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                       undefined4 param_4);
@@ -2486,20 +2713,20 @@ void unk_fun_02052ae4(int32_t param_1, int32_t param_2, int32_t param_3, int32_t
 void unk_fun_02052b8c(int32_t param_1, int32_t param_2, uint32_t param_3, int32_t param_4);
 undefined4 unk_fun_02052bf4(int32_t param_1, int32_t param_2, int32_t param_3);
 void unk_fun_02052c2c(int32_t param_1, uint32_t param_2, int32_t param_3, int32_t param_4);
-void unk_fun_02052c60(undefined4 param_1, int32_t param_2, int32_t param_3, int32_t param_4);
+void unk_fun_02052c60(int8_t* param_1, int32_t param_2, int32_t param_3, int32_t param_4);
 void unk_fun_02052d0c(int32_t param_1, int32_t param_2, int32_t param_3, int32_t param_4);
 void unk_fun_02052d84(int32_t param_1, int32_t param_2, int32_t param_3, undefined4 param_4);
 int64_t unk_fun_02052eb8(uint16_t* param_1);
 int64_t unk_fun_02052ec4(undefined2* param_1);
 uint64_t unk_fun_02052ed4(undefined2* param_1);
 int64_t unk_fun_02052ee8(undefined2* param_1);
-void unk_fun_02052f04(int32_t param_1, undefined4 param_2, int32_t param_3, int32_t param_4,
-                      int32_t param_5, int32_t param_6);
-void unk_fun_020530e4(undefined2* param_1, undefined4 param_2, int32_t param_3, int32_t param_4,
+void unk_fun_02052f04(undefined4* param_1, undefined4* param_2, int32_t param_3,
+                      undefined4* param_4, int32_t param_5, int32_t param_6);
+void unk_fun_020530e4(undefined4* param_1, undefined4* param_2, int32_t param_3, int32_t param_4,
                       int32_t param_5);
-void unk_fun_02053278(undefined4 param_1, undefined4 param_2, undefined4 param_3, int32_t param_4,
-                      int32_t param_5);
-void unk_fun_020533c4(void* param_1, undefined4 param_2, int32_t param_3, int32_t param_4,
+void unk_fun_02053278(undefined4 param_1, undefined4* param_2, undefined4* param_3, int32_t param_4,
+                      undefined4* param_5);
+void unk_fun_020533c4(undefined4* param_1, undefined4* param_2, int32_t param_3, int32_t param_4,
                       int32_t param_5, undefined4 param_6, undefined4 param_7, int32_t param_8,
                       undefined4 param_9);
 void unk_fun_020534ec(undefined4 param_1, undefined4 param_2, int32_t param_3, int32_t param_4,
@@ -2514,16 +2741,14 @@ void unk_fun_02053bfc(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_02053c1c(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 undefined4 unk_fun_02053d94(void);
-undefined4 unk_fun_02053e38(int32_t param_1, int8_t* param_2, undefined4 param_3,
-                            undefined4 param_4);
+undefined4 unk_fun_02053e38(undefined4* param_1, int8_t* param_2, undefined4 param_3);
 undefined4 unk_fun_0205403c(void);
 undefined4 unk_fun_02054158(void);
 undefined4 unk_fun_02054368(void);
 uint32_t unk_fun_02054398(uint32_t param_1);
 undefined4 unk_fun_02054434(void);
-void unk_fun_02054444(uint32_t* param_1, undefined4 param_2, undefined4 param_3,
-                      undefined4 param_4);
-void unk_fun_02054564(int32_t param_1, char* param_2, undefined4 param_3);
+void unk_fun_02054444(uint32_t* param_1, undefined4 param_2);
+void unk_fun_02054564(undefined4* param_1, undefined4* param_2, undefined4 param_3);
 void unk_fun_020546fc(void);
 uint64_t unk_fun_0205471c(int32_t param_1);
 void unk_fun_020547ac(undefined4 param_1, undefined4 param_2, undefined4 param_3,
@@ -2554,7 +2779,7 @@ void unk_fun_02055df8(void);
 int32_t unk_fun_02055e68(void);
 int32_t unk_fun_02055eac(undefined2* param_1);
 void unk_fun_02055f0c(undefined4 param_1);
-uint32_t unk_fun_02055f2c(undefined4 param_1, undefined4 param_2, uint32_t param_3);
+uint32_t unk_fun_02055f2c(undefined4 param_1, undefined4* param_2, uint32_t param_3);
 void unk_fun_0205608c(int16_t* param_1);
 undefined4 unk_fun_020560e0(int32_t param_1);
 void unk_fun_02056130(int32_t param_1);
@@ -2596,7 +2821,7 @@ uint32_t unk_fun_02056bb8(int32_t param_1, int32_t param_2);
 int32_t unk_fun_02056c3c(int32_t param_1, undefined4 param_2, undefined4 param_3,
                          undefined4 param_4);
 uint32_t unk_fun_02056c84(uint32_t* param_1, int32_t param_2, int32_t param_3);
-uint32_t unk_fun_02056ce0(uint32_t* param_1, int32_t param_2, int32_t param_3, undefined4 param_4);
+undefined4* unk_fun_02056ce0(uint32_t* param_1, int32_t param_2, int32_t param_3);
 void unk_fun_02056d38(int32_t param_1);
 void unk_fun_02056d4c(int32_t param_1);
 undefined4 unk_fun_02056d78(int32_t param_1, int32_t param_2);
@@ -2611,6 +2836,10 @@ int32_t unk_fun_02057070(undefined4 param_1, undefined4 param_2, undefined4 para
                          undefined4 param_4);
 int32_t unk_fun_020570c0(int32_t param_1, uint32_t param_2);
 undefined4 unk_fun_020570ec(undefined4 param_1, int32_t param_2, uint32_t param_3);
+undefined4 unk_fun_0205712c(void);
+undefined4 unk_fun_02057134(void);
+undefined4 unk_fun_0205713c(void);
+undefined4 unk_fun_02057144(void);
 uint32_t unk_fun_0205714c(int32_t param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
 bool unk_fun_0205716c(int32_t param_1);
 bool unk_fun_02057184(int32_t param_1);
@@ -2618,10 +2847,34 @@ void unk_fun_02057198(undefined4 param_1, undefined4 param_2, undefined4 param_3
 void unk_fun_020571c4(undefined4 param_1, undefined4 param_2, undefined4 param_3);
 void unk_fun_020571f0(undefined4 param_1, undefined4 param_2, undefined4 param_3);
 void unk_fun_02057214(undefined4 param_1, undefined4 param_2, undefined4 param_3);
+void thunk_unk_fun_02063b08(void);
+void thunk_unk_fun_02063bc8(void);
+void thunk_unk_fun_02063c88(void);
+void thunk_unk_fun_02063d48(void);
+void thunk_unk_fun_02063808(void);
+void thunk_unk_fun_020638c8(void);
+void thunk_unk_fun_02063988(void);
+void thunk_unk_fun_02063a48(void);
+void thunk_unk_fun_020635fc(void);
+void thunk_unk_fun_02063550(void);
 void unk_fun_020572c8(undefined4 param_1, undefined4 param_2, undefined4 param_3);
 void unk_fun_020572f4(undefined4 param_1, undefined4 param_2, undefined4 param_3);
+void thunk_unk_fun_020636ac(void);
+void thunk_unk_fun_02063758(void);
+void thunk_unk_fun_02063b68(void);
+void thunk_unk_fun_02063c28(void);
+void thunk_unk_fun_02063ce8(void);
+void thunk_unk_fun_02063da8(void);
+void thunk_unk_fun_02063868(void);
+void thunk_unk_fun_02063928(void);
+void thunk_unk_fun_020639e8(void);
+void thunk_unk_fun_02063aa8(void);
+void thunk_unk_fun_02063654(void);
+void thunk_unk_fun_020635a4(void);
 void unk_fun_020573c8(undefined4 param_1, undefined4 param_2, undefined4 param_3);
 void unk_fun_020573f4(undefined4 param_1, undefined4 param_2, undefined4 param_3);
+void thunk_unk_fun_02063700(void);
+void thunk_unk_fun_020637b0(void);
 void unk_fun_02057438(int32_t* param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 undefined4 unk_fun_02057480(int32_t param_1);
 int32_t unk_fun_020574bc(int32_t* param_1);
@@ -2633,7 +2886,7 @@ undefined4 unk_fun_0205759c(undefined4 param_1, undefined4 param_2, undefined4 p
                             undefined4 param_4);
 undefined4 unk_fun_02057604(void);
 void unk_fun_02057628(undefined4 param_1);
-void unk_fun_02057648(undefined4* param_1, void* param_2, undefined4 param_3);
+void unk_fun_02057648(undefined4* param_1, void** param_2, undefined4 param_3);
 void unk_fun_02057678(undefined4* param_1);
 void unk_fun_02057684(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_020576d0(int32_t* param_1, undefined4* param_2, undefined4 param_3,
@@ -2681,7 +2934,7 @@ undefined4 unk_fun_020582ec(undefined4 param_1, int32_t* param_2);
 int32_t* unk_fun_02058320(int32_t param_1, int32_t param_2);
 void unk_fun_020583b0(uint32_t* param_1);
 undefined4 unk_fun_020584c4(int32_t param_1);
-undefined4 unk_fun_020584d0(void** param_1, int32_t param_2);
+undefined4 unk_fun_020584d0(void*** param_1, int32_t param_2);
 void unk_fun_02058684(undefined4* param_1);
 void unk_fun_020586c4(undefined4* param_1);
 void unk_fun_020586dc(int32_t* param_1, undefined4 param_2, int32_t param_3);
@@ -2692,13 +2945,14 @@ undefined4 unk_fun_02058770(int32_t param_1, int32_t param_2);
 void unk_fun_02058778(int32_t param_1);
 void unk_fun_02058798(int32_t param_1, int32_t param_2, undefined4 param_3);
 undefined4 unk_fun_020587a4(int32_t param_1, int32_t param_2);
-void unk_fun_020587b0(uint16_t* param_1, undefined4 param_2, uint32_t param_3, uint32_t* param_4);
+void unk_fun_020587b0(uint16_t* param_1, undefined4 param_2, uint32_t param_3, undefined* param_4);
 void unk_fun_020589dc(undefined4* param_1, undefined4 param_2, int32_t param_3,
                       undefined4* param_4);
 void unk_fun_02058ad4(int32_t* param_1, undefined2 param_2, undefined2 param_3);
 void unk_fun_02058af8(int32_t* param_1, undefined2 param_2);
 void unk_fun_02058b18(int32_t* param_1, int32_t param_2, int32_t param_3);
 void unk_fun_02058b38(undefined4* param_1, undefined4 param_2);
+void unk_fun_02058b48(int32_t param_1);
 void unk_fun_02058b70(int32_t param_1);
 void unk_fun_02058c60(int32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void unk_fun_02058c9c(undefined4 param_1);
@@ -2734,7 +2988,7 @@ void unk_fun_02059540(int32_t param_1, uint16_t* param_2, int32_t param_3, int32
                       int32_t param_5, int32_t param_6, int32_t param_7, int32_t param_8,
                       int32_t param_9, int32_t param_10);
 void unk_fun_02059768(int32_t param_1, uint16_t* param_2, int32_t param_3, int32_t param_4,
-                      int32_t param_5, int32_t param_6, int32_t param_7, undefined4 param_8,
+                      int32_t param_5, int32_t param_6, int32_t param_7, uint32_t param_8,
                       int32_t param_9);
 void unk_fun_020597d0(int32_t param_1, uint16_t* param_2, int32_t param_3, int32_t param_4,
                       int32_t param_5, int32_t param_6, int32_t param_7, int32_t param_8,
@@ -2762,16 +3016,15 @@ void unk_fun_02059da0(int32_t* param_1, int32_t* param_2, undefined4 param_3, in
 int32_t unk_fun_02059e34(uint32_t param_1, uint32_t param_2, uint32_t param_3, uint32_t param_4,
                          uint32_t param_5, uint32_t param_6);
 undefined4 unk_fun_02059f2c(int8_t* param_1);
-void unk_fun_02059f48(int32_t param_1, int32_t param_2, int32_t param_3, int32_t param_4,
+void unk_fun_02059f48(undefined4* param_1, int32_t param_2, int32_t param_3, int32_t param_4,
                       int32_t param_5, uint32_t param_6, int32_t param_7);
 void unk_fun_0205a080(int32_t* param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void unk_fun_0205a2c0(int32_t* param_1, int32_t* param_2, uint32_t param_3, uint32_t param_4,
                       undefined4 param_5, int32_t* param_6);
 void unk_fun_0205a458(int32_t* param_1, int32_t* param_2, undefined4 param_3, undefined4 param_4,
                       undefined4 param_5, int32_t* param_6);
-void unk_fun_0205a668(undefined4* param_1, uint32_t param_2, undefined4 param_3,
-                      undefined4 param_4);
-void unk_fun_0205a6b8(int32_t* param_1, uint32_t param_2);
+void unk_fun_0205a668(undefined4* param_1, uint32_t param_2);
+void unk_fun_0205a6b8(undefined4* param_1, uint32_t param_2);
 void unk_fun_0205a738(int32_t* param_1, undefined4 param_2, uint32_t param_3, uint32_t param_4,
                       int32_t param_5, int32_t param_6);
 void unk_fun_0205a8d4(int32_t* param_1, undefined4 param_2, uint32_t param_3, uint32_t param_4,
@@ -2802,6 +3055,10 @@ void unk_fun_0205b468(int32_t param_1, int32_t param_2, int32_t param_3, undefin
 undefined4 unk_fun_0205b548(int32_t* param_1, int32_t* param_2);
 void unk_fun_0205b69c(int32_t param_1);
 uint32_t unk_fun_0205b778(undefined4* param_1, int32_t param_2);
+undefined2 unk_fun_0205b7d8(undefined4* param_1);
+uint32_t unk_fun_0205b7ec(int8_t** param_1);
+uint16_t unk_fun_0205b868(int8_t** param_1);
+undefined unk_fun_0205b8bc(undefined4* param_1);
 void unk_fun_0205b8d0(int32_t* param_1, int32_t* param_2, uint32_t param_3);
 void unk_fun_0205b968(void);
 void unk_fun_0205b9f0(void);
@@ -2974,8 +3231,7 @@ undefined4 unk_fun_0205fba4(int32_t param_1, undefined4 param_2, undefined4 para
                             undefined4 param_4);
 void unk_fun_0205fc28(int32_t param_1, undefined4 param_2, undefined4 param_3, int32_t param_4);
 undefined4 unk_fun_0205fc70(int32_t param_1, undefined4 param_2);
-undefined4 unk_fun_0205fc9c(int32_t param_1, undefined4 param_2, undefined4 param_3,
-                            int32_t param_4);
+uint32_t unk_fun_0205fc9c(int32_t param_1, undefined4* param_2, uint32_t param_3, int32_t param_4);
 void unk_fun_0205fcbc(int32_t param_1);
 int32_t unk_fun_0205fd0c(int32_t param_1, uint32_t param_2);
 void unk_fun_0205fd4c(undefined4* param_1);
@@ -3042,6 +3298,7 @@ void unk_fun_02062110(int32_t param_1);
 void unk_fun_020621b8(int32_t param_1);
 void unk_fun_02062228(int32_t param_1);
 void unk_fun_020622a8(int32_t param_1);
+uint16_t unk_fun_02062328(uint16_t* param_1);
 void unk_fun_0206235c(void);
 void unk_fun_02062370(void);
 void unk_fun_02062384(void);
@@ -3189,13 +3446,13 @@ uint32_t OS_DisableIrqMask(uint32_t mask);
 uint32_t OS_ResetRequestIrqMask(uint32_t mask);
 void OS_SetIrqStackChecker(void);
 void OS_InitLock(void);
-int OS_LockByWord(uint16_t lock_id, struct os_lock_word* lockp, lock_ctrl_funcp ctrl_funcp);
-undefined4 unk_fun_02064c7c(uint32_t param_1, undefined4* param_2, void* param_3, int32_t param_4);
-int OS_UnlockByWord(uint16_t lock_id, struct os_lock_word* lockp, lock_ctrl_funcp ctrl_funcp);
-int32_t unk_fun_02064d00(undefined4 param_1, int32_t param_2, void* param_3, int32_t param_4);
+int32_t OS_LockByWord(uint16_t lock_id, struct os_lock_word* lockp, lock_ctrl_funcp ctrl_funcp);
+undefined4 unk_fun_02064c7c(uint32_t param_1, undefined4* param_2, void** param_3, int32_t param_4);
+int32_t OS_UnlockByWord(uint16_t lock_id, struct os_lock_word* lockp, lock_ctrl_funcp ctrl_funcp);
+int32_t unk_fun_02064d00(undefined4 param_1, int32_t param_2, void** param_3, int32_t param_4);
 void unk_fun_02064d6c(undefined4 param_1);
-int OS_UnlockCartridge(uint16_t lock_id);
-int OS_UnlockCartridgeVeneer(uint16_t lock_id);
+int32_t OS_UnlockCartridge(uint16_t lock_id);
+int32_t OS_UnlockCartridgeVeneer(uint16_t lock_id);
 void unk_fun_02064db8(undefined4 param_1);
 void unk_fun_02064df0(void);
 void unk_fun_02064e08(undefined4 param_1);
@@ -3243,7 +3500,7 @@ os_switch_thread_callback OS_SetSwitchThreadCallback(os_switch_thread_callback c
 void OSi_IdleThreadProc(void* arg);
 int32_t unk_fun_02065a28(void);
 int32_t unk_fun_02065a5c(void);
-void OS_SetThreadDestructor(struct thread* thread, int value);
+void OS_SetThreadDestructor(struct thread* thread, int32_t value);
 void unk_fun_02065a98(undefined4* param_1, int32_t param_2, int32_t param_3);
 bool OS_SaveContext(struct os_context* context);
 void OS_LoadContext(struct os_context* context);
@@ -3323,8 +3580,8 @@ void unk_fun_0206714c(void);
 undefined4 unk_fun_020672c4(int32_t param_1, int32_t param_2, int32_t param_3);
 undefined4 unk_fun_02067310(int32_t param_1);
 int64_t unk_fun_02067350(void);
-int OS_DisableInterrupts(void);
-int OS_RestoreInterrupts(int new_value);
+int32_t OS_DisableInterrupts(void);
+int32_t OS_RestoreInterrupts(int32_t new_value);
 int64_t unk_fun_02067390(void);
 undefined4 unk_fun_020673a4(void);
 undefined4 unk_fun_020673bc(void);
@@ -3350,19 +3607,19 @@ void unk_fun_0206790c(int32_t param_1, undefined4 param_2, undefined4 param_3, u
 void unk_fun_0206797c(int32_t param_1, undefined4 param_2, undefined4 param_3, uint32_t param_4);
 void MI_DmaCopy16(uint32_t dma_no, void* src, void* dest, uint32_t size);
 void unk_fun_02067a68(int32_t param_1, undefined4 param_2, undefined4 param_3, uint32_t param_4,
-                      void* param_5, undefined4 param_6);
+                      void** param_5, undefined4 param_6);
 void unk_fun_02067b2c(undefined4 param_1, undefined4 param_2, undefined4 param_3, uint32_t param_4,
-                      void* param_5, undefined4 param_6);
+                      void** param_5, undefined4 param_6);
 void unk_fun_02067bc4(int32_t param_1);
 void MI_StopDma(uint32_t dma_no);
 void unk_fun_02067ca8(int32_t param_1, uint32_t param_2);
 void MIi_CheckDma0SourceAddress(uint32_t dma_no, uint32_t src, uint32_t size, uint32_t dir);
-void MIi_CpuClear16(uint16_t val, void* ptr, int len);
-void MIi_CpuCopy16(void* src, void* dest, int len);
-void MIi_CpuClear32(uint32_t val, void* ptr, int len);
-void MIi_CpuCopy32(void* src, void* dest, int len);
-void MIi_CpuClearFast(uint32_t val, void* ptr, int len);
-void MIi_CpuCopyFast(void* src, void* dest, int len);
+void MIi_CpuClear16(uint16_t val, void* ptr, int32_t len);
+void MIi_CpuCopy16(void* src, void* dest, int32_t len);
+void MIi_CpuClear32(uint32_t val, void* ptr, int32_t len);
+void MIi_CpuCopy32(void* src, void* dest, int32_t len);
+void MIi_CpuClearFast(uint32_t val, void* ptr, int32_t len);
+void MIi_CpuCopyFast(void* src, void* dest, int32_t len);
 int64_t unk_fun_02067ef0(undefined4* param_1, undefined4* param_2);
 void MI_CpuFill8(void* ptr, char val, uint32_t len);
 void MI_CpuCopy8(void* src, void* dest, uint32_t n);
@@ -3444,9 +3701,9 @@ void unk_fun_020694ec(int32_t param_1, int32_t param_2, undefined4 param_3);
 uint32_t unk_fun_02069520(int32_t param_1, int32_t param_2);
 void Pxi_Init(void);
 void Pxi_InitFifo(void);
-void Pxi_SetFifoRecvCallback(int fifo_tag, pxi_fifo_callback callback);
-void Pxi_IsCallbackReady(int fifo_tag, enum pxi_proc proc);
-int Pxi_SendWordByFifo(int fifo_tag, uint32_t data, bool err);
+void Pxi_SetFifoRecvCallback(int32_t fifo_tag, pxi_fifo_callback callback);
+void Pxi_IsCallbackReady(int32_t fifo_tag, enum pxi_proc proc);
+int32_t Pxi_SendWordByFifo(int32_t fifo_tag, uint32_t data, bool err);
 void Pxii_HandlerRecvFifoNotEmpty(void);
 void unk_fun_02069878(int32_t* param_1, int32_t param_2);
 int32_t unk_fun_020698d4(int32_t param_1, uint32_t param_2);
@@ -3464,19 +3721,21 @@ undefined4 unk_fun_02069fa8(int32_t param_1, undefined4 param_2, undefined4 para
                             undefined4 param_4);
 int32_t unk_fun_0206a354(int32_t param_1, undefined4 param_2, undefined4 param_3,
                          undefined4 param_4);
+undefined4 unk_fun_0206a3d4(int32_t param_1);
+undefined4 unk_fun_0206a3fc(void);
 uint32_t unk_fun_0206a404(int32_t param_1, int32_t param_2);
-undefined4 unk_fun_0206a45c(int32_t param_1, undefined4 param_2, int32_t param_3,
-                            undefined4 param_4);
-undefined4 unk_fun_0206a478(int32_t param_1, undefined4 param_2, int32_t param_3,
-                            undefined4 param_4);
-undefined4 unk_fun_0206a498(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                            undefined4 param_4);
+undefined4 unk_fun_0206a45c(int32_t param_1, undefined4* param_2, int32_t param_3,
+                            uint32_t param_4);
+undefined4 unk_fun_0206a478(int32_t param_1, undefined4* param_2, int32_t param_3,
+                            uint32_t param_4);
+undefined4 unk_fun_0206a498(undefined4 param_1, undefined4* param_2, undefined4* param_3,
+                            uint32_t param_4);
 int32_t unk_fun_0206a4b0(int32_t param_1, undefined4 param_2, undefined4 param_3,
                          undefined4 param_4);
 void unk_fun_0206a6c4(int32_t param_1);
 bool unk_fun_0206a758(int32_t param_1);
 undefined4 unk_fun_0206a79c(int32_t* param_1, uint32_t param_2);
-void unk_fun_0206a940(int32_t param_1);
+void unk_fun_0206a940(int8_t* param_1);
 int32_t* unk_fun_0206a96c(void);
 undefined4 unk_fun_0206a9ac(undefined4* param_1, undefined4 param_2, undefined4 param_3);
 void unk_fun_0206aa60(int32_t* param_1);
@@ -3516,7 +3775,8 @@ void unk_fun_0206b780(int32_t param_1);
 void unk_fun_0206b7bc(undefined4* param_1, int32_t param_2);
 undefined4 unk_fun_0206b7e4(int32_t param_1, int32_t param_2, int32_t param_3, undefined4 param_4,
                             int32_t param_5, uint32_t param_6, int32_t param_7, uint32_t param_8);
-undefined4 unk_fun_0206b8dc(int32_t param_1, int32_t param_2, int32_t param_3, undefined4 param_4);
+undefined4 unk_fun_0206b8dc(undefined4* param_1, int32_t param_2, int32_t param_3,
+                            undefined4 param_4);
 undefined4 unk_fun_0206b9d8(int32_t param_1, undefined4 param_2, undefined4 param_3,
                             undefined4 param_4);
 bool unk_fun_0206ba68(int32_t param_1, undefined4 param_2, undefined4 param_3);
@@ -3527,10 +3787,13 @@ undefined4 unk_fun_0206bce0(void);
 undefined4 unk_fun_0206bcf0(undefined4 param_1, undefined4 param_2);
 undefined4 unk_fun_0206bd44(undefined4 param_1, undefined4 param_2);
 void unk_fun_0206bd90(undefined4* param_1);
-void unk_fun_0206bdd0(int32_t param_1, int32_t param_2, uint32_t param_3);
-void unk_fun_0206be98(undefined4 param_1, int32_t param_2, undefined4 param_3, undefined4 param_4);
+void unk_fun_0206bdd0(int32_t param_1, undefined4* param_2, uint32_t param_3);
+void unk_fun_0206be98(undefined4* param_1, undefined4* param_2, undefined4 param_3,
+                      undefined4 param_4);
 void unk_fun_0206bf50(uint32_t* param_1);
-void unk_fun_0206c354(int32_t param_1, uint32_t param_2, uint32_t param_3, undefined4 param_4);
+void unk_fun_0206c354(int32_t param_1, undefined4* param_2, uint32_t param_3, undefined4 param_4);
+void unk_fun_0206c4a8(undefined4* param_1, undefined* param_2, undefined4 param_3,
+                      undefined4 param_4);
 void unk_fun_0206c6a4(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                       undefined4 param_4, undefined4 param_5);
 void unk_fun_0206c738(int32_t param_1, int32_t param_2, int32_t param_3, undefined4***** param_4,
@@ -3588,7 +3851,7 @@ int32_t unk_fun_0206e038(undefined4 param_1, undefined4 param_2, undefined4 para
 undefined4 unk_fun_0206e060(undefined4 param_1, undefined4 param_2, undefined4 param_3);
 int32_t unk_fun_0206e0a8(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                          int32_t param_4);
-void unk_fun_0206e178(void** param_1);
+void unk_fun_0206e178(void*** param_1);
 void unk_fun_0206e1a0(undefined4 param_1);
 void unk_fun_0206e1b8(undefined4 param_1);
 void unk_fun_0206e1d0(undefined4 param_1);
@@ -3630,7 +3893,7 @@ void unk_fun_0206efa0(undefined4 param_1);
 void unk_fun_0206efbc(undefined4 param_1);
 void unk_fun_0206efd8(undefined4 param_1);
 void unk_fun_0206efe8(undefined4 param_1);
-void unk_fun_0206f010(uint32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
+void unk_fun_0206f010(uint32_t param_1);
 void unk_fun_0206f2e0(int32_t* param_1);
 bool unk_fun_0206f4b8(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                       undefined4 param_4, undefined4 param_5, int32_t param_6, undefined4 param_7,
@@ -3673,7 +3936,7 @@ void unk_fun_02070458(int32_t param_1, undefined4 param_2);
 uint16_t* unk_fun_02070470(void);
 undefined4 unk_fun_020704c8(undefined2 param_1, uint32_t param_2, undefined4 param_3,
                             undefined4 param_4);
-undefined4 unk_fun_02070574(undefined4 param_1, undefined4 param_2);
+undefined4 unk_fun_02070574(undefined4* param_1, uint32_t param_2);
 undefined4 unk_fun_020705e4(void);
 undefined4 unk_fun_020705f4(void);
 int32_t unk_fun_02070610(void);
@@ -3686,7 +3949,7 @@ undefined2 unk_fun_02070ad8(void);
 uint32_t unk_fun_02070b08(void);
 undefined2 unk_fun_02070b38(void);
 int32_t unk_fun_02070b80(undefined4 param_1);
-int32_t unk_fun_02070bc4(int32_t param_1, void* param_2, undefined4 param_3, undefined4 param_4);
+int32_t unk_fun_02070bc4(int32_t param_1, void** param_2, undefined4 param_3, undefined4 param_4);
 int32_t unk_fun_02070c9c(int32_t param_1);
 uint32_t unk_fun_02070ce8(void);
 int32_t unk_fun_02070d54(void);
@@ -3716,8 +3979,8 @@ int32_t unk_fun_02071668(undefined4 param_1, int32_t* param_2, undefined4 param_
                          undefined4 param_4);
 int32_t unk_fun_02071754(undefined4 param_1, int32_t* param_2);
 int32_t unk_fun_020718a4(undefined4 param_1);
-int32_t unk_fun_020718e4(undefined4 param_1, uint16_t* param_2, int32_t param_3, undefined4 param_4,
-                         undefined2 param_5);
+int32_t unk_fun_020718e4(undefined4 param_1, uint16_t* param_2, undefined4* param_3,
+                         undefined4 param_4, undefined2 param_5);
 int32_t unk_fun_020719b0(undefined4 param_1, uint32_t param_2);
 int32_t unk_fun_02071a98(undefined4 param_1, uint32_t param_2);
 int32_t unk_fun_02071b24(undefined4 param_1, undefined4 param_2, uint32_t param_3,
@@ -3730,10 +3993,10 @@ void unk_fun_02071d38(undefined4 param_1, undefined4 param_2, undefined4 param_3
 int32_t unk_fun_02071da0(undefined4 param_1, undefined4 param_2, int32_t param_3, uint32_t param_4);
 int32_t unk_fun_02071edc(undefined4 param_1);
 int32_t unk_fun_02071f4c(undefined4 param_1, int32_t param_2, uint32_t param_3);
-int32_t unk_fun_02071fec(undefined4 param_1, undefined4 param_2, undefined4 param_3,
+int32_t unk_fun_02071fec(undefined4 param_1, undefined4* param_2, undefined4 param_3,
                          uint32_t param_4);
 int32_t unk_fun_020720b8(undefined4 param_1);
-int32_t unk_fun_02072124(int32_t param_1, uint32_t param_2, int32_t param_3, int16_t param_4,
+int32_t unk_fun_02072124(undefined4* param_1, uint32_t param_2, int32_t param_3, int16_t param_4,
                          int32_t param_5);
 undefined4 unk_fun_02072378(int32_t param_1);
 int32_t unk_fun_020723c0(int32_t param_1, int32_t param_2, int32_t param_3);
@@ -3753,8 +4016,7 @@ int32_t unk_fun_02072ec4(undefined4 param_1, undefined4 param_2, undefined4 para
 int32_t unk_fun_02072f24(undefined4 param_1, undefined2 param_2, undefined2 param_3,
                          undefined2 param_4, undefined2 param_5);
 void unk_fun_02072f9c(undefined4 param_1);
-int32_t unk_fun_02072fc4(int32_t param_1, undefined4 param_2, undefined4 param_3,
-                         undefined4 param_4);
+int32_t unk_fun_02072fc4(int32_t param_1);
 undefined4 unk_fun_02073048(int32_t param_1);
 undefined4 unk_fun_0207309c(int32_t param_1, undefined4 param_2);
 void unk_fun_0207317c(int32_t param_1, undefined4 param_2, undefined4 param_3);
@@ -3774,7 +4036,8 @@ void unk_fun_0207435c(undefined4 param_1, undefined2 param_2, undefined4 param_3
                       undefined4 param_4);
 uint32_t unk_fun_02074374(int32_t param_1, undefined4 param_2, undefined4 param_3,
                           undefined4 param_4);
-int32_t unk_fun_020743f4(undefined* param_1, int32_t param_2, uint32_t param_3, undefined4 param_4);
+int32_t unk_fun_020743f4(undefined* param_1, undefined4* param_2, uint32_t param_3,
+                         undefined4 param_4);
 void unk_fun_0207484c(void);
 void unk_fun_02074850(uint32_t* param_1, uint32_t param_2, uint32_t param_3, int32_t param_4);
 undefined4 unk_fun_020748c8(int32_t param_1, int32_t param_2, undefined4 param_3,
@@ -3787,7 +4050,7 @@ undefined4 unk_fun_02074ec4(int32_t param_1, uint32_t param_2, int32_t param_3);
 uint32_t unk_fun_02074f70(int32_t param_1, uint32_t param_2, uint32_t param_3);
 void unk_fun_0207503c(int32_t param_1, undefined4 param_2, undefined4 param_3);
 uint32_t unk_fun_02075074(uint16_t* param_1, int32_t param_2);
-void unk_fun_020750c0(int32_t param_1, int32_t param_2, int32_t param_3, undefined4 param_4);
+void unk_fun_020750c0(undefined4* param_1, int32_t param_2, int32_t param_3);
 undefined4 unk_fun_020751b0(int32_t param_1, int32_t param_2, int32_t param_3);
 void unk_fun_02075250(int32_t param_1, undefined4 param_2, uint32_t param_3, undefined4 param_4);
 int32_t unk_fun_020752c0(int16_t* param_1);
@@ -3809,11 +4072,12 @@ void unk_fun_02075a60(uint16_t* param_1);
 void unk_fun_02076214(int32_t param_1);
 void unk_fun_02076284(uint16_t* param_1);
 int64_t unk_fun_02076ab0(void);
-undefined4 unk_fun_02076b18(int32_t param_1, int32_t param_2, undefined4 param_3, int32_t param_4,
-                            undefined2 param_5);
+undefined4 unk_fun_02076b18(int32_t param_1, undefined4* param_2, undefined4 param_3,
+                            int32_t param_4, undefined2 param_5);
 bool unk_fun_02076cfc(uint32_t param_1, uint32_t param_2, int32_t param_3);
 undefined4 unk_fun_02076d6c(undefined4 param_1, undefined4 param_2);
 undefined4 unk_fun_02076e04(void);
+undefined4 unk_fun_02076ed8(undefined2 param_1);
 void unk_fun_020770bc(void);
 int32_t unk_fun_020770e0(void);
 undefined4 unk_fun_02077124(void);
@@ -3831,8 +4095,8 @@ void unk_fun_02077564(undefined2 param_1, int32_t param_2);
 void unk_fun_0207759c(undefined4 param_1);
 void unk_fun_020775b0(int32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4,
                       undefined4 param_5);
-undefined4 unk_fun_02077618(undefined4* param_1, int32_t param_2, undefined4 param_3,
-                            int32_t param_4);
+undefined4 unk_fun_02077618(undefined4* param_1, int32_t param_2, undefined4* param_3,
+                            uint32_t param_4);
 void unk_fun_020776b0(int32_t param_1);
 void unk_fun_020777c8(int32_t param_1, int32_t param_2);
 bool unk_fun_02077848(void);
@@ -3927,7 +4191,7 @@ void unk_fun_0207ad48(int32_t param_1, int32_t param_2);
 int8_t* unk_fun_0207ae6c(undefined4 param_1, undefined4 param_2, int32_t param_3,
                          undefined4 param_4, undefined4 param_5, undefined4 param_6,
                          int32_t param_7);
-wchar_t unk_fun_0207b5d0(void* param_1, undefined4 param_2, char* param_3, wchar_t** param_4);
+wchar_t unk_fun_0207b5d0(void** param_1, undefined4 param_2, char* param_3, wchar_t** param_4);
 undefined4 unk_fun_0207bdf4(undefined4 param_1, undefined4 param_2, int32_t param_3,
                             undefined4 param_4);
 undefined4 unk_fun_0207be20(int32_t* param_1, void* param_2, size_t param_3);
@@ -3943,7 +4207,7 @@ int32_t strcmp(const char* s1, const char* s2);
 int32_t strncmp(const char* s1, const char* s2, size_t n);
 char* strchr(const char* string, int32_t c);
 char* strstr(const char* haystack, const char* needle);
-uint32_t unk_fun_0207c504(int32_t param_1, int32_t param_2, void* param_3, undefined4 param_4,
+uint32_t unk_fun_0207c504(int32_t param_1, int32_t param_2, void** param_3, undefined4 param_4,
                           int32_t* param_5, undefined4* param_6, undefined4* param_7);
 uint32_t unk_fun_0207c8ec(int32_t param_1, int32_t* param_2, undefined4 param_3,
                           undefined4 param_4);
@@ -3961,7 +4225,7 @@ int16_t* unk_fun_0207d53c(uint32_t param_1, undefined4 param_2, int32_t param_3,
 void unk_fun_0207d8d4(int32_t param_1, int32_t param_2);
 int32_t unk_fun_0207d9f8(undefined4 param_1, undefined4 param_2, int32_t param_3,
                          undefined4 param_4, uint32_t param_5, undefined4 param_6, int32_t param_7);
-int32_t unk_fun_0207e044(void* param_1, undefined4 param_2, int16_t* param_3, int32_t** param_4);
+int32_t unk_fun_0207e044(void** param_1, undefined4 param_2, int16_t* param_3, int32_t** param_4);
 void unk_fun_0207e934(int32_t* param_1, undefined4 param_2, int32_t param_3, undefined4 param_4);
 void unk_fun_0207e974(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                       undefined4 param_4);
@@ -3987,10 +4251,15 @@ uint32_t unk_fun_0207f7f4(undefined4 param_1, uint32_t param_2);
 undefined4 unk_fun_0207f808(uint32_t param_1, uint32_t param_2);
 undefined4* unk_fun_0207f87c(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                              undefined4 param_4);
+undefined4 unk_fun_0207f8fc(undefined4 param_1);
+void unk_fun_0207f910(void);
 int32_t unk_fun_0207f914(int32_t param_1, undefined4 param_2);
+void unk_fun_0207f93c(int32_t param_1);
 int32_t unk_fun_0207f94c(int32_t param_1);
 int32_t* unk_fun_0207f98c(int32_t* param_1);
 undefined4 unk_fun_0207f9ac(undefined4 param_1);
+void unk_fun_0207f9c0(void);
+undefined4 unk_fun_0207f9c4(int32_t param_1);
 int32_t unk_fun_0207f9cc(int32_t param_1);
 int32_t unk_fun_0207f9e4(int32_t param_1);
 int32_t unk_fun_0207fa04(int32_t param_1);
@@ -4032,6 +4301,7 @@ int64_t unk_fun_02081c18(void);
 int64_t unk_fun_02081c2c(void);
 undefined4 unk_fun_02081c3c(undefined4 param_1, int32_t param_2, uint32_t* param_3);
 undefined4 unk_fun_02081c8c(undefined4 param_1, int32_t param_2, uint32_t* param_3);
+undefined4 unk_fun_02081cc0(void);
 char* unk_fun_02081cc8(char* param_1, uint32_t* param_2);
 int8_t* unk_fun_02081d54(int8_t* param_1, uint32_t* param_2);
 int32_t unk_fun_02081de0(int32_t param_1, int32_t param_2, uint32_t param_3);
@@ -4043,19 +4313,22 @@ void unk_fun_020822f0(int32_t param_1, int32_t param_2, int8_t* param_3);
 int32_t unk_fun_02082ba0(undefined4* param_1, undefined4* param_2);
 undefined4 unk_fun_02082cf4(undefined4 param_1, uint32_t* param_2);
 void unk_fun_02082d78(void);
+void unk_fun_02082e20(void);
 void unk_fun_02082e24(undefined4* param_1, int32_t* param_2, int32_t param_3, undefined4 param_4);
 int32_t unk_fun_02082e84(undefined4* param_1, undefined4* param_2, undefined4 param_3);
 void unk_fun_02083060(char** param_1, int32_t param_2, int32_t param_3);
-void unk_fun_020831a8(int32_t* param_1, undefined4 param_2, void* param_3, undefined4 param_4);
+void unk_fun_020830bc(int32_t* param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
+void unk_fun_020831a8(int32_t* param_1, undefined4 param_2, void** param_3, undefined4 param_4);
 undefined4 unk_fun_020831d0(undefined4 param_1);
-void unk_fun_020831f0(void* param_1);
+undefined* unk_fun_020831e4(void);
+void unk_fun_020831f0(void** param_1);
 void unk_fun_0208321c(void);
-void unk_fun_02083260(uint32_t param_1, uint32_t param_2, int32_t param_3, void* param_4);
-int32_t unk_fun_020832bc(int32_t param_1, int32_t param_2, uint32_t param_3, void* param_4);
-void unk_fun_02083374(int32_t param_1, int32_t param_2, int32_t param_3, void* param_4,
+void unk_fun_02083260(uint32_t param_1, uint32_t param_2, int32_t param_3, void** param_4);
+int32_t unk_fun_020832bc(int32_t param_1, int32_t param_2, uint32_t param_3, void** param_4);
+void unk_fun_02083374(int32_t param_1, int32_t param_2, int32_t param_3, void** param_4,
                       int32_t param_5);
-void unk_fun_02083424(int32_t param_1, int32_t param_2, int32_t param_3, void* param_4);
-void unk_fun_020834b4(int32_t param_1, int32_t param_2, int32_t param_3, void* param_4);
+void unk_fun_02083424(int32_t param_1, int32_t param_2, int32_t param_3, void** param_4);
+void unk_fun_020834b4(int32_t param_1, int32_t param_2, int32_t param_3, void** param_4);
 void unk_fun_02083510(int32_t param_1, undefined4 param_2, int32_t param_3, int32_t param_4);
 void unk_fun_02083544(void);
 undefined4 unk_fun_02083548(int32_t param_1, int32_t param_2);
@@ -4070,20 +4343,26 @@ void thunk_unk_fun_020792c8(void);
 void unk_fun_02083628(void);
 void unk_fun_02083634(void);
 void unk_fun_0208364c(void);
-void unk_fun_02083664(struct ranger_data* param_1, undefined4 param_2, undefined4* param_3);
+void unk_fun_02083664(struct settings_and_variables* param_1, undefined4 param_2,
+                      undefined4* param_3);
 undefined4 unk_fun_02083684(char* param_1, char* param_2, int32_t* param_3);
 undefined4 unk_fun_02083834(int32_t param_1);
 void unk_fun_02083890(int32_t param_1, int32_t param_2);
 undefined4 unk_fun_02083930(int32_t param_1);
 void unk_fun_02083950(int8_t* param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
-void unk_fun_02083980(undefined4 param_1, undefined4 param_2, void* UNRECOVERED_JUMPTABLE);
+void unk_fun_02083980(undefined4 param_1, undefined4 param_2, void** UNRECOVERED_JUMPTABLE);
 void unk_fun_020839b0(int32_t param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
+void unk_fun_020839f8(void);
 void thunk_unk_fun_02081c2c(void);
 void unk_fun_02084038(void);
 void unk_fun_0208406c(void);
 void unk_fun_020840b0(void);
+void unk_fun_02084160(void);
 void unk_fun_0208418c(void);
+void unk_fun_020841b8(void);
 void unk_fun_020841e4(void);
+void unk_fun_02084238(void);
+void unk_fun_02084260(void);
 void unk_fun_0208f4e4(void);
 void unk_fun_0208f518(void);
 void unk_fun_0208f5e4(undefined4 param_1, undefined4* param_2, int32_t param_3);
