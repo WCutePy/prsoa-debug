@@ -1385,7 +1385,7 @@ struct settings_variables {
     enum styler_unlock_upgrade_type styler_upgrade_interrupt; // 0xC
     // Incremented by the cutscene produced by the above field!
     int32_t num_styler_upgrades; // 0x10
-    int32_t unk_settings[25]; // 0x14
+    int32_t unk_settings[26]; // 0x14
 };
 
 ASSERT_SIZE(struct settings_variables, 124);
