@@ -11392,14 +11392,14 @@ arm9:
         r1: undefined4 
         r2: undefined4 
         r3: undefined4 
-    - name: GetRangerMaxHPSafe
+    - name: GetRangerMaxHpSafe
       address:
         NA: 0x202FF08
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: GetRangerCurrentHPSafe
+    - name: GetRangerCurrentHpSafe
       address:
         NA: 0x202FF20
       description: |-
