@@ -1797,9 +1797,7 @@ arm9:
         No params.
     - name: unk_fun_02007cc4
       address:
-        NA:
-          - 0x2007CC4
-          - 0x21220A0
+        NA: 0x2007CC4
       description: |-
         Use unknown.
         
@@ -1841,11 +1839,7 @@ arm9:
         No params.
     - name: unk_fun_02007d98
       address:
-        NA:
-          - 0x2007D98
-          - 0x211DBF4
-          - 0x211CD70
-          - 0x211CEF0
+        NA: 0x2007D98
       description: |-
         Use unknown.
         
@@ -4981,9 +4975,7 @@ arm9:
         r1: int32_t 
     - name: unk_fun_020120b0
       address:
-        NA:
-          - 0x20120B0
-          - 0x2127280
+        NA: 0x20120B0
       description: |-
         Use unknown.
         
@@ -5007,9 +4999,7 @@ arm9:
         r3: undefined4 
     - name: unk_fun_020121f4
       address:
-        NA:
-          - 0x20121F4
-          - 0x212E48C
+        NA: 0x20121F4
       description: |-
         Use unknown.
         
@@ -11398,14 +11388,14 @@ arm9:
         r1: undefined4 
         r2: undefined4 
         r3: undefined4 
-    - name: GetRangerMaxHPSafe
+    - name: GetRangerMaxHpSafe
       address:
         NA: 0x202FF08
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: GetRangerCurrentHPSafe
+    - name: GetRangerCurrentHpSafe
       address:
         NA: 0x202FF20
       description: |-
@@ -11754,15 +11744,7 @@ arm9:
         Use unknown.
         
         r0: undefined4 pointer
-        r1: int32_t 
-
-    - name: unk_fun_02030bb8
-      address:
-        NA: 0x2030BB8
-      description: |-
-        Use unknown.
-        
-        r0: char pointer
+        r1: int32_t
     - name: unk_fun_02030bf0
       address:
         NA: 0x2030BF0
@@ -15028,9 +15010,7 @@ arm9:
         r0: int32_t pointer
     - name: unk_fun_0203efe4
       address:
-        NA:
-          - 0x203EFE4
-          - 0x213C654
+        NA: 0x203EFE4
       description: |-
         Use unknown.
         
@@ -15038,9 +15018,7 @@ arm9:
         r1: int32_t 
     - name: unk_fun_0203f034
       address:
-        NA:
-          - 0x203F034
-          - 0x213C660
+        NA: 0x203F034
       description: |-
         Use unknown.
         
@@ -19523,9 +19501,7 @@ arm9:
         r1: int32_t 
     - name: unk_fun_02056194
       address:
-        NA:
-          - 0x2056194
-          - 0x213B598
+        NA: 0x2056194
       description: |-
         Use unknown.
         
@@ -20401,9 +20377,7 @@ arm9:
         r3: int32_t 
     - name: unk_fun_020579d0
       address:
-        NA:
-          - 0x20579D0
-          - 0x214C900
+        NA: 0x20579D0
       description: |-
         Use unknown.
         
@@ -20458,9 +20432,7 @@ arm9:
         No params.
     - name: unk_fun_02057d50
       address:
-        NA:
-          - 0x2057D50
-          - 0x214C90C
+        NA: 0x2057D50
       description: |-
         Use unknown.
         
@@ -24633,9 +24605,7 @@ arm9:
         r0: int32_t 
     - name: unk_fun_02065928
       address:
-        NA:
-          - 0x2065928
-          - 0x213E708
+        NA: 0x2065928
       description: |-
         Use unknown.
         
@@ -29063,10 +29033,7 @@ arm9:
         r2: int32_t 
     - name: unk_fun_020788b8
       address:
-        NA:
-          - 0x20788B8
-          - 0x215F490
-          - 0x2162820
+        NA: 0x20788B8
       description: |-
         Use unknown.
         
@@ -29081,9 +29048,7 @@ arm9:
         r1: undefined4 
     - name: thunk_unk_fun_02078910
       address:
-        NA:
-          - 0x2078904
-          - 0x215F41C
+        NA: 0x2078904
       description: |-
         Use unknown.
         
@@ -29099,9 +29064,7 @@ arm9:
         r1: char pointer
     - name: unk_fun_02078930
       address:
-        NA:
-          - 0x2078930
-          - 0x216282C
+        NA: 0x2078930
       description: |-
         Use unknown.
         
@@ -30850,55 +30813,6 @@ arm9:
         r1: int32_t 
         r2: uint32_t 
         r3: undefined4 
-    - name: unk_fun_020fd334
-      address:
-        NA: 0x20FD334
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: unk_fun_020fd340
-      address:
-        NA: 0x20FD340
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: unk_fun_020fd3fc
-      address:
-        NA: 0x20FD3FC
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: unk_fun_020fd408
-      address:
-        NA: 0x20FD408
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: unk_fun_020fe664
-      address:
-        NA: 0x20FE664
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: unk_fun_020fe678
-      address:
-        NA: 0x20FE678
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: unk_fun_020ff02c
-      address:
-        NA: 0x20FF02C
-      description: |-
-        Use unknown.
-        
-        No params.
   data:
     - name: SECURE
       address:
