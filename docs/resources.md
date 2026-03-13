@@ -31,7 +31,7 @@ This is a list of tools or projects created for _Shadows of Almia_. It aims to g
 - [almia-randomizer](https://github.com/ronitsinha/almia-randomizer), a Pokémon randomizer for SoA written in C. It is currently not playable from a new save.
 - [almiascript](https://gitlab.com/Fexean/almiascript), a tool for disassembling and compiling .fsb script files found in SoA written in C. Documents the structure of .fsb scripts and lists and documents opcodes and syscalls.
 - [Almiamap](https://gitlab.com/Fexean/almiamap), a WIP level editor. Documents the structure map data takes. Expands on research by AlmiaE.
-- [ra23mes](https://github.com/SombrAbsol/ra23mes)m MES text file converters for _Pokémon Ranger: Shadows of Almia_ and _Pokémon Ranger: Guardian Signs_. Documents the MES format and lists control characters.
+- [ra23mes](https://github.com/SombrAbsol/ra23mes), MES text file converters for _Pokémon Ranger: Shadows of Almia_ and _Pokémon Ranger: Guardian Signs_. Documents the MES format and lists control characters.
 - [PRSA---Rom-Manager-](https://github.com/etienerodri/PRSA---Rom-Manager-), a ROM manager tool with graphical interface. Documents map data.
 - [PRSA-Pokemon-Palette-Editor-
 ](https://github.com/etienerodri/PRSA-Pokemon-Palette-Editor), a palette editor for the Pokémon found in SoA with graphical interface.
