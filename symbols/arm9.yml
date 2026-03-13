@@ -11749,14 +11749,6 @@ arm9:
         
         r0: undefined4 pointer
         r1: int32_t 
-
-    - name: unk_fun_02030bb8
-      address:
-        NA: 0x2030BB8
-      description: |-
-        Use unknown.
-        
-        r0: char pointer
     - name: unk_fun_02030bf0
       address:
         NA: 0x2030BF0
@@ -19995,94 +19987,83 @@ arm9:
         r0: undefined4 
         r1: undefined4 
         r2: undefined4 
-    - name: unk_fun_02063b08
+    - name: thunk_unk_fun_02063b08
       address:
         NA:
           - 0x2057238
-          - 0x2063B08
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063bc8
+    - name: thunk_unk_fun_02063bc8
       address:
         NA:
           - 0x2057244
-          - 0x2063BC8
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063c88
+    - name: thunk_unk_fun_02063c88
       address:
         NA:
           - 0x2057250
-          - 0x2063C88
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063d48
+    - name: thunk_unk_fun_02063d48
       address:
         NA:
           - 0x205725C
-          - 0x2063D48
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063808
+    - name: thunk_unk_fun_02063808
       address:
         NA:
           - 0x2057268
-          - 0x2063808
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_020638c8
+    - name: thunk_unk_fun_020638c8
       address:
         NA:
           - 0x2057274
-          - 0x20638C8
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063988
+    - name: thunk_unk_fun_02063988
       address:
         NA:
           - 0x2057280
           - 0x2057298
-          - 0x2063988
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063a48
+    - name: thunk_unk_fun_02063a48
       address:
         NA:
           - 0x205728C
           - 0x20572A4
-          - 0x2063A48
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_020635fc
+    - name: thunk_unk_fun_020635fc
       address:
         NA:
           - 0x20572B0
-          - 0x20635FC
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063550
+    - name: thunk_unk_fun_02063550
       address:
-        NA:
-          - 0x20572BC
-          - 0x2063550
+        NA: 0x20572BC
       description: |-
         Use unknown.
         
@@ -20105,112 +20086,100 @@ arm9:
         r0: undefined4 
         r1: undefined4 
         r2: undefined4 
-    - name: unk_fun_020636ac
+    - name: thunk_unk_fun_020636ac
       address:
         NA:
           - 0x2057320
-          - 0x20636AC
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063758
+    - name: thunk_unk_fun_02063758
       address:
         NA:
           - 0x205732C
-          - 0x2063758
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063b68
+    - name: thunk_unk_fun_02063b68
       address:
         NA:
           - 0x2057338
-          - 0x2063B68
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063c28
+    - name: thunk_unk_fun_02063c28
       address:
         NA:
           - 0x2057344
-          - 0x2063C28
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063ce8
+    - name: thunk_unk_fun_02063ce8
       address:
         NA:
           - 0x2057350
-          - 0x2063CE8
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063da8
+    - name: thunk_unk_fun_02063da8
       address:
         NA:
           - 0x205735C
-          - 0x2063DA8
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063868
+    - name: thunk_unk_fun_02063868
       address:
         NA:
           - 0x2057368
-          - 0x2063868
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063928
+    - name: thunk_unk_fun_02063928
       address:
         NA:
           - 0x2057374
-          - 0x2063928
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_020639e8
+    - name: thunk_unk_fun_020639e8
       address:
         NA:
           - 0x2057380
           - 0x2057398
-          - 0x20639E8
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063aa8
+    - name: thunk_unk_fun_02063aa8
       address:
         NA:
           - 0x205738C
           - 0x20573A4
-          - 0x2063AA8
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_02063654
+    - name: thunk_unk_fun_02063654
       address:
         NA:
           - 0x20573B0
-          - 0x2063654
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_020635a4
+    - name: thunk_unk_fun_020635a4
       address:
         NA:
           - 0x20573BC
-          - 0x20635A4
       description: |-
         Use unknown.
         
@@ -20233,20 +20202,18 @@ arm9:
         r0: undefined4 
         r1: undefined4 
         r2: undefined4 
-    - name: unk_fun_02063700
+    - name: thunk_unk_fun_02063700
       address:
         NA:
           - 0x2057420
-          - 0x2063700
       description: |-
         Use unknown.
         
         No params.
-    - name: unk_fun_020637b0
+    - name: thunk_unk_fun_020637b0
       address:
         NA:
           - 0x205742C
-          - 0x20637B0
       description: |-
         Use unknown.
         
@@ -23808,7 +23775,6 @@ arm9:
         r0: undefined4
         r1: int
         r2: uint
-
     - name: unk_fun_020635a4
       address:
         NA: 0x20635A4
