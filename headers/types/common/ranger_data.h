@@ -61,7 +61,7 @@ struct ranger_data {
     enum styler_upgrade_level flying_defense : 2;
     enum styler_upgrade_level dark_defense : 2;
     enum styler_upgrade_level rock_defense : 2;
-    
+
     enum styler_upgrade_level ghost_defense : 2;
     enum styler_upgrade_level ice_defense : 2;
     enum styler_upgrade_level normal_defense : 2;
@@ -148,7 +148,7 @@ struct ranger_data_old {
     enum styler_upgrade_level flying_defense : 2;
     enum styler_upgrade_level dark_defense : 2;
     enum styler_upgrade_level rock_defense : 2;
-    
+
     enum styler_upgrade_level ghost_defense : 2;
     enum styler_upgrade_level ice_defense : 2;
     enum styler_upgrade_level normal_defense : 2;

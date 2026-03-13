@@ -569,7 +569,6 @@ enum room_id {
 ENUM_16_BIT(room_id);
 #pragma pack(pop)
 
-
 enum field_move {
     FIELD_MOVE_NONE = 0,
     FIELD_MOVE_CUT = 1,
@@ -598,7 +597,12 @@ enum field_move {
     FIELD_MOVE_DARK_POWER = 24
 };
 
-enum styler_upgrade_level { UPGRADE_LOCKED = 0b00, UPGRADE_LVL_1 = 0b01, UPGRADE_LVL_2 = 0b10, UPGRADE_LVL_2_AND_SUPREME = 0b11 };
+enum styler_upgrade_level {
+    UPGRADE_LOCKED = 0b00,
+    UPGRADE_LVL_1 = 0b01,
+    UPGRADE_LVL_2 = 0b10,
+    UPGRADE_LVL_2_AND_SUPREME = 0b11
+};
 
 enum styler_unlock_upgrade_type {
     UNLOCK_UPGRADE_NONE = 0,
@@ -621,8 +625,14 @@ enum styler_unlock_upgrade_type {
     UNLOCK_UPGRADE_TYPE_DRAGON = 17
 };
 
-// The upper 2 bits do not seem to be used for anything else, but the whole nibble is read and copied.
-enum styler_type { STYLER_TYPE_SCHOOL = 0b0000, STYLER_TYPE_RANGER = 0b0001, STYLER_TYPE_TOP = 0b0010, STYLER_TYPE_UNKNOWN = 0b0011 };
+// The upper 2 bits do not seem to be used for anything else, but the whole nibble is read and
+// copied.
+enum styler_type {
+    STYLER_TYPE_SCHOOL = 0b0000,
+    STYLER_TYPE_RANGER = 0b0001,
+    STYLER_TYPE_TOP = 0b0010,
+    STYLER_TYPE_UNKNOWN = 0b0011
+};
 
 // Nep please confirm this looks accurate!
 enum glossary_table_entry { GLOSS_LOCKED = 0b00, GLOSS_UNLOCKED = 0b01, GLOSS_READ = 0b10 };

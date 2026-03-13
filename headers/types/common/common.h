@@ -1335,7 +1335,7 @@ struct styler_upgrades {
     enum styler_upgrade_level flying_defense : 2;
     enum styler_upgrade_level dark_defense : 2;
     enum styler_upgrade_level rock_defense : 2;
-    
+
     enum styler_upgrade_level ghost_defense : 2;
     enum styler_upgrade_level ice_defense : 2;
     enum styler_upgrade_level normal_defense : 2;
@@ -1355,43 +1355,49 @@ struct styler_upgrades {
 ASSERT_SIZE(struct styler_upgrades, 6);
 */
 
-// Most interactions with these values seem to treat them as tables of ints, rather than individual fields.
-// For ghidra analysis in the short term, this struct will be a simple table for now, even though we know what some of these values mean.
+// Most interactions with these values seem to treat them as tables of ints, rather than individual
+// fields. For ghidra analysis in the short term, this struct will be a simple table for now, even
+// though we know what some of these values mean.
 struct settings_and_variables {
-    // Generally, the event_variable_table can be thought of as chapter-specific scratch paper. 
-    int32_t event_variable_table[21]; 
-    // Used to track in-game settings, and has a byte to play the unlock cutscene for a styler upgrade.
+    // Generally, the event_variable_table can be thought of as chapter-specific scratch paper.
+    int32_t event_variable_table[21];
+    // Used to track in-game settings, and has a byte to play the unlock cutscene for a styler
+    // upgrade.
     int32_t settings_variable_table[31];
-    // Unknown, but debug prints seem to suggest these relate to quests. Or something else that begins with q...
+    // Unknown, but debug prints seem to suggest these relate to quests. Or something else that
+    // begins with q...
     int32_t quest_variable_table[11];
 };
 
 ASSERT_SIZE(struct settings_and_variables, 252);
 
-// This struct is equivalent the the above event_variable_table, but with definitions instead of being an arbitrary table of ints.
+// This struct is equivalent the the above event_variable_table, but with definitions instead of
+// being an arbitrary table of ints.
 struct event_variables {
-    int32_t subchapter_progression; // 0x00: Seems to increase linearly, or to the nearest multiple of 10. Sub-sub-chapters perhaps?
-    int32_t scrach_paper[20]; // 0x04: Varies wildly by subchapter. 
+    int32_t subchapter_progression; // 0x00: Seems to increase linearly, or to the nearest multiple
+                                    // of 10. Sub-sub-chapters perhaps?
+    int32_t scrach_paper[20];       // 0x04: Varies wildly by subchapter.
 };
 
 ASSERT_SIZE(struct event_variables, 84);
 
-// This struct is equivalent the the above settings_variable_table, but with definitions instead of being an arbitrary table of ints.
+// This struct is equivalent the the above settings_variable_table, but with definitions instead of
+// being an arbitrary table of ints.
 struct settings_variables {
     int32_t unk_setting_0x0;
-    int32_t window_border; // 0x4: Determines what color the textbox border will be. 
-    int32_t text_speed; // 0x8: 0x03 for slow, 0x02 for medium, 0x01 for fast. No other values seem to have an impact. :(
-    // If non-zero, opening the styler upgrade menu will unlock a new styler upgrade. 
+    int32_t window_border; // 0x4: Determines what color the textbox border will be.
+    int32_t text_speed; // 0x8: 0x03 for slow, 0x02 for medium, 0x01 for fast. No other values seem
+                        // to have an impact. :(
+    // If non-zero, opening the styler upgrade menu will unlock a new styler upgrade.
     enum styler_unlock_upgrade_type styler_upgrade_interrupt; // 0xC
     // Incremented by the cutscene produced by the above field!
     int32_t num_styler_upgrades; // 0x10
-    int32_t unk_settings[26]; // 0x14
+    int32_t unk_settings[26];    // 0x14
 };
 
 ASSERT_SIZE(struct settings_variables, 124);
 
-// Nothing is known about quest variables at this time. 
-
+// Nothing is known about quest variables at this time.
 
 #include "ranger_data.h"
 
@@ -1412,21 +1418,21 @@ ASSERT_SIZE(struct save_header, 28);
 struct save_data {
     struct ranger_data ranger_data_struct; // 0x0
     // Of the 30 pokemon slots, only the first 8 of each group are stored in the save file...
-    struct pokemon_data party_group_0[8]; // 0x8804
-    struct pokemon_data party_group_1[8]; // 0x88C4
-    struct pokemon_data party_group_2[8]; // 0x8984
-    struct following_npc follower_1;      // 0x8A44
-    struct following_npc follower_2;      // 0x8A7C
+    struct pokemon_data party_group_0[8];         // 0x8804
+    struct pokemon_data party_group_1[8];         // 0x88C4
+    struct pokemon_data party_group_2[8];         // 0x8984
+    struct following_npc follower_1;              // 0x8A44
+    struct following_npc follower_2;              // 0x8A7C
     struct mission_quest_data mission_quest_data; // 0x8AB4
-    // Consists of event flags, 
-    struct settings_and_variables settings_and_variables;  // 0x8B08
-    undefined unk_field_0x8c04[96];               // 0x8C04: Permanent home is 0x210C1C0
-    undefined unk_field_0x8c64[2048];             // 0x8C64: Permanent home is 0x210C228
-    undefined unk_field_0x9464[4];                // 0x9464: Permanent home is 0x208B5C0
-    undefined unk_field_0x9468[8];                // 0x9468: Permanent home is 0x20AF5E4
-    undefined unk_field_0x9470[8];                // 0x9470: Permanent home is 0x20AF5F8
-    undefined unk_field_0x9478[8];                // 0x9478: Permanent home is 0x20AF60C
-    int16_t ranger_net_completion_bits;           // 0x9480:
+    // Consists of event flags,
+    struct settings_and_variables settings_and_variables; // 0x8B08
+    undefined unk_field_0x8c04[96];                       // 0x8C04: Permanent home is 0x210C1C0
+    undefined unk_field_0x8c64[2048];                     // 0x8C64: Permanent home is 0x210C228
+    undefined unk_field_0x9464[4];                        // 0x9464: Permanent home is 0x208B5C0
+    undefined unk_field_0x9468[8];                        // 0x9468: Permanent home is 0x20AF5E4
+    undefined unk_field_0x9470[8];                        // 0x9470: Permanent home is 0x20AF5F8
+    undefined unk_field_0x9478[8];                        // 0x9478: Permanent home is 0x20AF60C
+    int16_t ranger_net_completion_bits;                   // 0x9480:
     undefined unk_field_0x9482;
     undefined unk_field_0x9483;
 };
