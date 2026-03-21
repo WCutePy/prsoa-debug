@@ -151,7 +151,7 @@ arm9:
         Enables or disabled partner assists for the battle in the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: 1 if partner assist unlocked, 0 if not. 
+        r1: 1 if partner assist unlocked, 0 if not.
     - name: GetPartnerGaugeCurrent
       address:
         NA: 0x2010978
@@ -160,7 +160,7 @@ arm9:
         
         r0: battle_combatants pointer
         r1: int32_t
-    - name: BattleGetPartnerGaugeMax
+    - name: BattleSetPartnerGaugeMax
       address:
         NA: 0x2010980
       description: |-
@@ -193,7 +193,7 @@ arm9:
         
         r0: battle_combatants pointer
         r1: enemy form_id 
-        r2: unknown uint32_t 
+        r2: unknown uint32_t
     - name: BattleSetArenaGraphicId
       address:
         NA: 0x2010A70
@@ -250,7 +250,7 @@ arm9:
         Stores whether or not the player can view the party for poke-assists during the battle in the battle_combatants struct. 
         
         r0: battle_combatants pointer
-        r1: 1 to allow viewing the party, 0 to disable. 
+        r1: 1 to allow viewing the party, 0 to disable.
     - name: BattleSetCanFleeStatus
       address:
         NA: 0x2010AD8
@@ -265,7 +265,7 @@ arm9:
       description: |-
         Stores whether or not a boss fight HP bar should show up during the battle in the battle_combatants struct. 
         May have other effects pertaining to boss fight mechanics.
-
+        
         r0: battle_combatants pointer
         r1: 1 to show a HP bar, 0 otherwise.
     - name: BattleSetUnkField0x52
@@ -463,7 +463,7 @@ arm9:
       description: |-
         Retrieves a bitfield determining whether other fields have been set from the battle_combatants struct.
         Only certain fields, such as bgm, weather, and arena graphic actually have a flag in this bitfield.
-
+        
         r0: battle_combatants pointer
     - name: BattleGetUnkField0x54
       address:
