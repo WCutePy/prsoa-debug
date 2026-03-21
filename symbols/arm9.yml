@@ -117,14 +117,14 @@ arm9:
       address:
         NA: 0x2010868
       description: |-
-        [MANUAL DESCRIPTION]
+        initializes the battle_combatants struct before a battle.
         
         r0: battle_combatants pointer
     - name: BattleSetUnkField0x0
       address:
         NA: 0x201094C
       description: |-
-        [MANUAL DESCRIPTION]
+        Assigns field 0x0 of the battle_combatants struct to the pointer to some other struct. 
         
         r0: battle_combatants pointer
         r1: int32_t pointer
@@ -132,7 +132,7 @@ arm9:
       address:
         NA: 0x2010954
       description: |-
-        [MANUAL DESCRIPTION]
+        Sets the current HP of the ranger in the battle_combatants struct.
         
         r0: battle_combatants pointer
         r1: int8_t
@@ -140,7 +140,7 @@ arm9:
       address:
         NA: 0x201095C
       description: |-
-        [MANUAL DESCRIPTION]
+        Sets the styler level in the battle_combatants struct.
         
         r0: battle_combatants pointer
         r1: int8_t
@@ -148,25 +148,23 @@ arm9:
       address:
         NA: 0x2010964
       description: |-
-        [MANUAL DESCRIPTION]
+        Enables or disabled partner assists for the battle in the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: int32_t
+        r1: 1 if partner assist unlocked, 0 if not. 
     - name: GetPartnerGaugeCurrent
       address:
         NA: 0x2010978
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the current partner assist gauge in the battle_combatants struct.
         
         r0: battle_combatants pointer
         r1: int32_t
     - name: BattleGetPartnerGaugeMax
       address:
-        NA:
-          - 0x2010980
-          - 0x2010B58
+        NA: 0x2010980
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the maximum for the partner assist gauge in the battle_combatants struct.
         
         r0: battle_combatants pointer
         r1: int32_t
@@ -174,7 +172,7 @@ arm9:
       address:
         NA: 0x2010988
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores an index determining how much the partner assist gauge fills in the battle_combatants struct. 
         
         r0: battle_combatants pointer
         r1: int32_t
@@ -182,99 +180,99 @@ arm9:
       address:
         NA: 0x2010990
       description: |-
-        [MANUAL DESCRIPTION]
+        Adds a recruited pokemon to the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: int16_t 
-        r2: int8_t
+        r1: form_id 
+        r2: party_slot_status
     - name: BattleTryAddNewEnemyForm
       address:
         NA: 0x20109C0
       description: |-
-        [MANUAL DESCRIPTION]
+        Attempts to add an enemy form to the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: uint32_t 
-        r2: uint32_t
+        r1: enemy form_id 
+        r2: unknown uint32_t 
     - name: BattleSetArenaGraphicId
       address:
         NA: 0x2010A70
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the index of the background for the battle in the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: int8_t
+        r1: Arena Graphic index
     - name: BattleSetWeatherEffectId
       address:
         NA:
           - 0x2010A84
           - 0x2010BB8
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the index of the weather effect for the battle in the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: int8_t
+        r1: Weather Effect index
     - name: BattleSetSequenceScriptId
       address:
         NA: 0x2010A98
       description: |-
-        [MANUAL DESCRIPTION]
-        
+        Stores the index of the sequence script .fsb file id to be run on battle start in the battle_combatants struct.
         r0: battle_combatants pointer
-        r1: int8_t
+        r1: sequence script id
     - name: BattleSetTutorialScriptId
       address:
         NA: 0x2010AA0
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the index of the tutorial script .fsb file id to be run on battle start in the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: int8_t
+        r1: tutorial script id
     - name: BattleSetStartScriptId
       address:
         NA: 0x2010AA8
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the index of the start script .fsb file id to be run on battle start in the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: int8_t
+        r1: start script id
     - name: BattleSetBgmId
       address:
         NA: 0x2010AB0
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the index of the bgm to play on battle start in the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: int8_t
+        r1: bgm id
     - name: BattleSetViewPartyStatus
       address:
         NA: 0x2010AC4
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores whether or not the player can view the party for poke-assists during the battle in the battle_combatants struct. 
         
         r0: battle_combatants pointer
-        r1: int32_t
+        r1: 1 to allow viewing the party, 0 to disable. 
     - name: BattleSetCanFleeStatus
       address:
         NA: 0x2010AD8
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores whether or not the player can flee during the battle in the battle_combatants struct. 
         
         r0: battle_combatants pointer
-        r1: int32_t
+        r1: 1 to allow fleeing, 0 otherwise.
     - name: BattleSetBossFightStatus
       address:
         NA: 0x2010AEC
       description: |-
-        [MANUAL DESCRIPTION]
-        
+        Stores whether or not a boss fight HP bar should show up during the battle in the battle_combatants struct. 
+        May have other effects pertaining to boss fight mechanics.
+
         r0: battle_combatants pointer
-        r1: int32_t
+        r1: 1 to show a HP bar, 0 otherwise.
     - name: BattleSetUnkField0x52
       address:
         NA: 0x2010B00
       description: |-
-        [MANUAL DESCRIPTION]
+        Sets an as of yet unknown field of the battle_combatants struct.
         
         r0: battle_combatants pointer
         r1: int8_t
@@ -282,7 +280,7 @@ arm9:
       address:
         NA: 0x2010B08
       description: |-
-        [MANUAL DESCRIPTION]
+        Sets an as of yet unknown field of the battle_combatants struct.
         
         r0: battle_combatants pointer
         r1: int8_t
@@ -290,187 +288,195 @@ arm9:
       address:
         NA: 0x2010B10
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the current trainer gender and styler type (which determines the player appearance) in the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: int16_t
+        r1: lowest bit is player gender, all others are styler type.
     - name: BattleGetUnkField0x0
       address:
         NA: 0x2010B24
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves field 0x0 of the battle_combatants struct, which is the pointer to some other struct.
         
         r0: battle_combatants pointer
     - name: BattleGetCurrentHp
       address:
         NA: 0x2010B2C
       description: |-
-        [MANUAL DESCRIPTION]
+        Gets the current HP of the ranger from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetStylerLevel
       address:
         NA: 0x2010B34
       description: |-
-        [MANUAL DESCRIPTION]
+        Gets the styler level from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleCanPartnerUsePokeAssist
       address:
         NA: 0x2010B3C
       description: |-
-        [MANUAL DESCRIPTION]
+        Checks if partner assists for the battle are enabled or disabled from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetPartnerGaugeCurrent
       address:
         NA: 0x2010B50
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the current partner assist gauge from the battle_combatants struct.
+        
+        r0: battle_combatants pointer
+    - name: BattleGetPartnerGaugeMax
+      address:
+        NA: 0x2010B58
+      description: |-
+        Retrieves the maximum for the partner assist gauge in the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetPartnerGaugeFillRate
       address:
         NA: 0x2010B60
       description: |-
-        [MANUAL DESCRIPTION]
+        Gets an index determining how much the partner assist gauge fills from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetNumEnemyForms
       address:
         NA: 0x2010B68
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the number of unique enemy forms there are in the battle. There will always be 4 or less.
         
         r0: battle_combatants pointer
     - name: BattleGetEnemyFormId
       address:
         NA: 0x2010B70
       description: |-
-        [MANUAL DESCRIPTION]
+        Gets the enemy form_id of a specific slot from the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: int32_t
+        r1: enemy slot index
     - name: BattleGetEnemyCount
       address:
         NA: 0x2010B7C
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the total number of actual enemies from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetUnkEnemyData0x41
       address:
         NA: 0x2010B84
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves an unknown property of enemy pokemon from the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: int32_t
+        r1: enemy slot index
     - name: BattleGetPartyPokemonCount
       address:
         NA: 0x2010B90
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the number of party pokemon in the battle from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetPartyFormIds
       address:
         NA: 0x2010B98
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the form_id of a party pokemon from the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: int32_t
-    - name: BattleGetPokeAssistDataById
+        r1: party slot index
+    - name: BattleGetPartySlotStatusesById
       address:
         NA: 0x2010BA4
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the slot_status_field of a party pokemon from the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: int32_t
+        r1: party slot index
     - name: BattleGetArenaGraphicId
       address:
         NA: 0x2010BB0
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the arena graphic id from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetSequenceScriptId
       address:
         NA: 0x2010BC0
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the sequence script id from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetTutorialScriptId
       address:
         NA: 0x2010BC8
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the tutorial script id from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetStartScriptId
       address:
         NA: 0x2010BD0
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the start script id from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetBgmId
       address:
         NA: 0x2010BD8
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the battle bgm from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetViewPartyStatus
       address:
         NA: 0x2010BE0
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves whether or not the party is accessible for the battle from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetCanFleeStatus
       address:
         NA: 0x2010BF4
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves whether or not the player can flee the battle from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetBossFightStatus
       address:
         NA: 0x2010C08
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves whether or not a boss health bar should be shown from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetUnkField0x52
       address:
         NA: 0x2010C1C
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves a currently unknown field from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetFieldAllocBits
       address:
         NA: 0x2010C24
       description: |-
-        [MANUAL DESCRIPTION]
-        
+        Retrieves a bitfield determining whether other fields have been set from the battle_combatants struct.
+        Only certain fields, such as bgm, weather, and arena graphic actually have a flag in this bitfield.
+
         r0: battle_combatants pointer
     - name: BattleGetUnkField0x54
       address:
         NA: 0x2010C2C
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves a currently unknown field from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetGenderAndUniform
       address:
         NA: 0x2010C34
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the current gender and uniform for the player from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: function_stub_02010cec
@@ -526,18 +532,18 @@ arm9:
       address:
         NA: 0x2015520
       description: |-
-        [MANUAL DESCRIPTION]
+        Searches the team for a specific form_id, and returns the pokemon_data struct pointer if a match is found.
         
-        r0: ranger_data_old pointer
-        r1: int32_t
+        r0: ranger_data pointer
+        r1: form_id
     - name: MaybeHandleStylerLevelUp
       address:
         NA: 0x20160B8
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to check if the styler has leveled up, and if so, process that level-up. More analysis is needed.
         
-        r0: struct 
-        r1: uint32_t
+        r0: ranger_data pointer
+        r1: styler_level
     - name: UpdatePlayTime
       address:
         NA: 0x201668C
@@ -566,10 +572,10 @@ arm9:
       address:
         NA: 0x2016C14
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to retrieve the current level of a styler_upgrade slot.  
         
-        r0: struct 
-        r1: int32_t
+        r0: ranger_data pointer
+        r1: styler upgrade index
     - name: SetPlayerExp
       address:
         NA: 0x2016D4C
@@ -670,27 +676,27 @@ arm9:
       address:
         NA: 0x2016EF0
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to set the partner_poke_assists record, but only if larger? More research is needed.
         
-        r0: struct 
-        r1: int32_t 
-        r2: uint32_t
+        r0: ranger_data pointer
+        r1: partner index 
+        r2: value to assign
     - name: IncrementPartnerPokeAssistsBySpecies
       address:
         NA: 0x2016F18
       description: |-
-        [MANUAL DESCRIPTION]
+        If the form_id matches a valid partner, will increment that partner's Poke Assists by some amount. Otherwise, will do nothing.
         
-        r0: struct 
-        r1: int16_t 
-        r2: int32_t
+        r0: ranger_data pointer
+        r1: form_id
+        r2: amount to increment by
     - name: MaybeGetBestPartnerRecord
       address:
         NA: 0x2016F7C
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to retrieve the best partner record from the ranger_data->ranger_records struct.
         
-        r0: struct
+        r0: ranger_data pointer
     - name: SetCaptureLineLenRecord
       address:
         NA: 0x2017020
@@ -929,63 +935,63 @@ arm9:
       address:
         NA: 0x202F23C
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to assign a specified bgm id to a static battle_combatants structure in memory. 
         
-        r0: undefined4 pointer
+        r0: pointer to bgm id.
     - name: BattleSetUnkField0x49Safe
       address:
         NA: 0x202F268
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to assign a currently unknown field to a static battle_combatants structure in memory.
         
         r0: undefined4 pointer
     - name: BattleDisableFleeing
       address:
         NA: 0x202F2D8
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to disable fleeing in a static battle_combatants structure in memory.
         
         No params.
     - name: BattleSetUnkField0x54Safe
       address:
         NA: 0x202F348
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to assign a currently unknown field to a static battle_combatants structure in memory.
         
         r0: undefined4 pointer
-    - name: BattleSetUnkField0x4bSafe
+    - name: BattleSetSequenceScriptIdSafe
       address:
         NA: 0x202F374
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to assign a sequence script id to a static battle_combatants structure in memory.
         
-        r0: undefined4 pointer
-    - name: BattleSetUnkField0x4cSafe
+        r0: sequence script id pointer
+    - name: BattleSetTutorialScriptIdSafe
       address:
         NA: 0x202F3A0
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to assign a tutorial script id to a static battle_combatants structure in memory.
         
-        r0: undefined4 pointer
-    - name: BattleSetUnkField0x4dSafe
+        r0: tutorial script id pointer
+    - name: BattleSetStartScriptIdSafe
       address:
         NA: 0x202F3CC
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to assign a start script id to a static battle_combatants structure in memory.
         
-        r0: undefined4 pointer
+        r0: start script id pointer
     - name: BattleSetStylerLevelSafe
       address:
         NA: 0x202F3F8
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to assign the styler level to a static battle_combatants structure in memory.
         
-        r0: undefined4 pointer
+        r0: styler level pointer
     - name: BattleAddPartyPokemonSafe
       address:
         NA: 0x202F424
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to add party pokemon to a static battle_combatants structure in memory.
         
         r0: undefined4 pointer
     - name: GetRangerStylerRank
@@ -1027,28 +1033,28 @@ arm9:
       address:
         NA: 0x2032148
       description: |-
-        [MANUAL DESCRIPTION]
+        Enables slot status bit 2 on a pokemon. This seems to only be enabled on pokemon who cannot be released, such as doduo mid-ride, or your partner.
         
         r0: pokemon_data pointer
     - name: DisableSlotStatusBit2
       address:
         NA: 0x2032174
       description: |-
-        [MANUAL DESCRIPTION]
+        Disables slot status bit 2 on a pokemon. This seems to only be enabled on pokemon who cannot be released, such as doduo mid-ride, or your partner.
         
         r0: pokemon_data pointer
     - name: EnableSlotStatusBit1
       address:
         NA: 0x20321A0
       description: |-
-        [MANUAL DESCRIPTION]
+        Enables slot status bit 1 on a pokemon. This seems to hide the pokemon from the release menu entirely, and is only known to be used by the partner.
         
         r0: pokemon_data pointer
     - name: DisableSlotStatusBit1
       address:
         NA: 0x20321CC
       description: |-
-        [MANUAL DESCRIPTION]
+        Disables slot status bit 1 on a pokemon. This seems to hide the pokemon from the release menu entirely, and is only known to be used by the partner.
         
         r0: pokemon_data pointer
     - name: BitorPartnerPokemonStatus
@@ -1165,13 +1171,11 @@ arm9:
         No params.
     - name: GetPartnerIndexFromFormID
       address:
-        NA:
-          - 0x2035088
-          - 0x2035240
+        NA: 0x2035088
       description: |-
-        [MANUAL DESCRIPTION]
+        Converts a form_id to the corresponding partner index, if possible.
         
-        r0: int16_t
+        r0: form_id
     - name: function_stub_020358fc
       address:
         NA: 0x20358FC

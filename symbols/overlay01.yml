@@ -17,7 +17,7 @@ overlay1:
       address:
         NA: 0x211F11C
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to be called once per frame, and switches to one of the other FrameUpdate functions below based on the current_battle_state.
         
         r0: battle_struct pointer
         r1: undefined4 
@@ -27,14 +27,14 @@ overlay1:
       address:
         NA: 0x211F3CC
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to handle the display and removal of the graphic that appears at the start of each battle.
         
         r0: battle_struct pointer
     - name: BattleActiveFrameUpdate
       address:
         NA: 0x211F404
       description: |-
-        [MANUAL DESCRIPTION]
+        Is running for the main segment of the battle, with enemy pokemon moving around.
         
         r0: battle_struct pointer
         r1: undefined4 
@@ -44,28 +44,28 @@ overlay1:
       address:
         NA: 0x211F9D8
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to handle the display and selection of the "Would you like to abandon the attempt" menu on fleeing a battle.
         
         r0: battle_struct pointer
     - name: BattleViewPartyFrameUpdate
       address:
         NA: 0x211FA90
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to handle the display of the party during a battle, as well as displaying poke-assist information and such.
         
         r0: battle_struct pointer
     - name: BattleHandleWinFrameUpdate
       address:
         NA: 0x211FB88
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to handle winning the battle, displaying exp, capture rank, etc.
         
         r0: battle_struct pointer
     - name: BattleHandleLossFrameUpdate
       address:
         NA: 0x211FC38
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to handle losing the battle, and ensuring the player game overs after the fight.
         
         r0: battle_struct pointer
         r1: undefined4 
@@ -75,14 +75,14 @@ overlay1:
       address:
         NA: 0x211FCE0
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to run as the screen fades out to end the battle.
         
         r0: battle_struct pointer
     - name: RegisterInBrowserFrameUpdate
       address:
         NA: 0x2120694
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to handle registering newly caught pokemon in the browser at the end of a fight.
         
         r0: battle_struct pointer
         r1: undefined4 
@@ -92,22 +92,22 @@ overlay1:
       address:
         NA: 0x21208BC
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to handle exclusively the victory jingle at the end of a fight, before exp is displayed.
         
         r0: battle_struct pointer
     - name: FreeBattlePokemonSlot
       address:
         NA: 0x2122CA4
       description: |-
-        [MANUAL DESCRIPTION]
+        Removes and pops a party pokemon slot within a battle. Likely happens naturally after a poke assist.
         
         r0: battle_struct pointer
-        r1: uint32_t
+        r1: slot index to remove
     - name: UpdateBrowserLifetimeCaughtAndMore
       address:
         NA: 0x2122DB4
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to update the lifetime caught fields of the browser in RANGER_DATA, and handle other similar bookkeeping. More research needed.
         
         r0: battle_struct pointer
         r1: undefined4 

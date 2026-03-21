@@ -598,7 +598,7 @@ overlay0:
       address:
         NA: 0x214F488
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to be a debug function that prints partner poke assist record data.
         
         r0: int32_t 
         r1: undefined4 
@@ -685,7 +685,7 @@ overlay0:
       address:
         NA: 0x214F99C
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the poke assist record for the current partner from RANGER_DATA. 
         
         No params.
     - name: function_stub_overlay_00_0215061c
