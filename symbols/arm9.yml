@@ -1380,7 +1380,7 @@ arm9:
         
         No params.
 
-    - name: GetPartnerIndexFromFormID
+    - name: GetPartnerIndexFromFormId
       address:
         NA: 0x2035088
       description: |-
