@@ -3269,7 +3269,7 @@ struct trigger_spawn_nibbles {
     enum map_nibble trigger_47 : 4;
 };
 
-ASSERT_SIZE(struct trigger_spawn_nibbless, 24);
+ASSERT_SIZE(struct trigger_spawn_nibbles, 24);
 
 struct pokemon_spawn_nibbles {
     enum map_nibble pokemon_00 : 4;
