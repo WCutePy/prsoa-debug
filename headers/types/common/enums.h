@@ -130,8 +130,12 @@ enum capture_rank { RANK_S = 0b00, RANK_A = 0b01, RANK_B = 0b10, RANK_C = 0b11 }
 
 enum partner_unlock_flag { PARTNER_UNLOCKED = 0b1, PARTNER_NOT_UNLOCKED = 0b0 };
 
-enum map_nibble { MAP_NIBBLE_UNUSED = 0b00, MAP_NIBBLE_LOCKED = 0b01, MAP_NIBBLE_UNK_0x2, MAP_NIBBLE_UNLOCKED = 0b11};
-
+enum map_nibble {
+    MAP_NIBBLE_UNUSED = 0b00,
+    MAP_NIBBLE_LOCKED = 0b01,
+    MAP_NIBBLE_UNK_0x2,
+    MAP_NIBBLE_UNLOCKED = 0b11
+};
 
 enum species_status {
     STATUS_NOT_SEEN = 0,

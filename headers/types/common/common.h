@@ -90,7 +90,7 @@ struct ranger_core_data {
     undefined field31_0x23;
     int16_t player_face_direction;
     // This seems to mess with pathing and collision when edited. Copied to caught pokemon?
-    int16_t player_collision_data; 
+    int16_t player_collision_data;
     int32_t current_styler_exp;
     int32_t current_player_exp;
 };
@@ -111,7 +111,8 @@ struct pokemon_data {
     int x_coordinate;
     int y_coordinate;
     int16_t face_angle;
-    int16_t collision_data; // This is copied from the field of the same name in ranger_core_data. It seems to mess with pathing and collision when edited.
+    int16_t collision_data; // This is copied from the field of the same name in ranger_core_data.
+                            // It seems to mess with pathing and collision when edited.
 };
 
 ASSERT_SIZE(struct pokemon_data, 24);
@@ -3344,7 +3345,6 @@ struct npc_spawn_nibbles {
 };
 
 ASSERT_SIZE(struct npc_spawn_nibbles, 16);
-
 
 struct target_destroyed_nibbles {
     enum map_nibble target_00 : 4;

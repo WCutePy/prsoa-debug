@@ -6,11 +6,13 @@
 
 struct ranger_data {
     struct ranger_core_data core_data;
-    struct trigger_spawn_nibbles map_triggers[441]; // This is really 441 sets of 48 nibbles. One for each map!
+    struct trigger_spawn_nibbles
+        map_triggers[441]; // This is really 441 sets of 48 nibbles. One for each map!
     struct pokemon_spawn_nibbles pokemon_spawns[441]; // This is really 441 sets of 32 nibbles!
-    struct npc_spawn_nibbles npc_spawns[441]; // This is really 441 sets of 32 nibbles!
-    struct target_destroyed_nibbles targets_destroyed[441]; // This is really 441 sets of 32 nibbles!
-    undefined4 field4_0x7c38;               // Related to battle result somehow...
+    struct npc_spawn_nibbles npc_spawns[441];         // This is really 441 sets of 32 nibbles!
+    struct target_destroyed_nibbles
+        targets_destroyed[441]; // This is really 441 sets of 32 nibbles!
+    undefined4 field4_0x7c38;   // Related to battle result somehow...
     struct ranger_pokedex pokedex;
     struct ranger_glossary glossary;
     undefined4 field5_0x7f60;
