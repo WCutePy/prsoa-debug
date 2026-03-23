@@ -1,3 +1,5 @@
+#ifndef HEADERS_FUNCTIONS_ARM9_H_
+#define HEADERS_FUNCTIONS_ARM9_H_
 void _start(void);
 void ret_02000b98(void);
 void ret_02000b9c(void);
@@ -279,6 +281,8 @@ void Ctrdgi_RestoreAccessCycle(struct ctrdg_rom_cycle* r);
 void Ctrdgi_LockByProcessor(uint16_t lock_id, struct ctrdg_lock_by_proc* info);
 void Ctrdgi_UnlockByProcessor(uint16_t lock_id, struct ctrdg_lock_by_proc* info);
 void Ctrdgi_SendtoPxi(uint32_t data);
+// If declaring these builtins causes issues, you can disable them
+#ifndef PRSOA_NO_BUILTIN
 int32_t abs(int32_t x);
 void ret_020794d4(void);
 int32_t mbtowc(wchar_t* pwc, const char* s, size_t n);
@@ -298,6 +302,8 @@ char* strncpy(char* dest, const char* src, size_t n);
 char* strcat(char* dest, const char* src);
 int32_t strcmp(const char* s1, const char* s2);
 int32_t strncmp(const char* s1, const char* s2, size_t n);
+char* strchr(const char* string, int32_t c);
+char* strstr(const char* haystack, const char* needle);
 void ret_0207f910(void);
 void ret_0207f9c0(void);
 double _dadd(double a, double b);
@@ -324,3 +330,6 @@ unsigned long long _s32_div_f(int dividend, int divisor);
 void ret_02081c00(void);
 void ret_02082e20(void);
 void ret_02083544(void);
+#endif
+
+#endif
