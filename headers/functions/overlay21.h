@@ -1,5 +1,6 @@
 #ifndef HEADERS_FUNCTIONS_OVERLAY21_H_
 #define HEADERS_FUNCTIONS_OVERLAY21_H_
+
 void ret_02120764(void);
 void ret_02120bcc(void);
 void ret_02121384(void);
@@ -12,4 +13,5 @@ void ret_02121e90(void);
 void ret_02121f18(void);
 void ret_02121fb8(void);
 void ret_02122720(void);
+
 #endif

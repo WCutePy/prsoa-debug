@@ -1,5 +1,6 @@
 #ifndef HEADERS_FUNCTIONS_OVERLAY03_H_
 #define HEADERS_FUNCTIONS_OVERLAY03_H_
+
 void ret_02120118(void);
 void ret_02120744(void);
 void ret_02121430(void);
