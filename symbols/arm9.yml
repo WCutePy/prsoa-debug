@@ -616,10 +616,8 @@ arm9:
       description: |-
         Seems to be a debug print function. Accepts standard C string formatting.
         
-        r0: Debug String pointer
-        r1: undefined4
-        r2: undefined4
-        r3: undefined4
+        r0: format
+        ...: variadic
     - name: AssignPartnerMoods
       address:
         NA: 0x20167B4
@@ -991,10 +989,8 @@ arm9:
       description: |-
         Identical to DebugPrint, but seems to be primarily used for error messages.
         
-        r0: Debug String pointer
-        r1: undefined4
-        r2: undefined4
-        r3: undefined4
+        r0: format
+        ...: variadic
     - name: CopyStringToRangerDebugBuffer
       address:
         NA:
@@ -1374,10 +1370,8 @@ arm9:
       description: |-
         Called by DebugPrint and DebugPrintError; all(?) debug messages pass through here.
         
-        r0: undefined4
-        r1: undefined4
-        r2: undefined4
-        r3: undefined4
+        r0: format
+        r1: ap
     - name: DebugPrintInternalVeneer
       address:
         NA: 0x2044334
@@ -1386,10 +1380,8 @@ arm9:
         
         See https://developer.arm.com/documentation/dui0474/k/image-structure-and-generation/linker-generated-veneers/what-is-a-veneer-
         
-        r0: undefined4
-        r1: undefined4
-        r2: undefined4
-        r3: undefined4
+        r0: format
+        r1: ap
     - name: ret_02046d3c
       address:
         NA: 0x2046D3C

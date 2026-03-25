@@ -17,6 +17,7 @@ void ret_02126984(void);
 void ret_0212d978(void);
 void ret_0213201c(void);
 void ret_02132020(void);
+int InitWfc(void);
 void ret_0213e00c(void);
 int SocketVeneer(int _domain, int _type, int _protocol);
 int32_t CloseVeneer(int32_t fd);
