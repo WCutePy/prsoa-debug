@@ -1302,6 +1302,9 @@ enum mount_species {
     MOUNT_TORKOAL = 0x7
     // Mounts beyond 7 use MOUNT_NONE, but still prevent entering buildings.
 };
-
+// This is usually stored as 8-bit integer
+#pragma pack(push, 1)
+ENUM_8_BIT(mount_species);
+#pragma pack(pop)
 
 #endif
