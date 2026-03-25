@@ -125,6 +125,13 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: InitWfc
+      address:
+        NA: 0x213270C
+      description: |-
+        Just a guess. Repeatedly calling this eventually results in a DNS query for conntest.nintendowifi.net and allows for use of the socket functions.
+        
+        return: status?
     - name: ret_0213e00c
       address:
         NA: 0x213E00C
