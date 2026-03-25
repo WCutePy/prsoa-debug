@@ -1290,11 +1290,10 @@ enum form_id {
 ENUM_16_BIT(form_id);
 #pragma pack(pop)
 
-
 enum mount_species {
     MOUNT_NONE = 0x0,
     MOUNT_SCUBA = 0x1, // The player will be scuba diving. Can still enter buildings!
-    MOUNT_DODUO = 0x2, 
+    MOUNT_DODUO = 0x2,
     MOUNT_EMPOLEON = 0x3,
     MOUNT_FLOATZEL = 0x4,
     MOUNT_STARAPTOR = 0x5, // Normally only used mid-flight
