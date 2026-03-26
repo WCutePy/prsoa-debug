@@ -43,13 +43,10 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: MainGameLoop
+    - name: NitroMain
       address:
         NA: 0x2000C6C
-      description: |-
-        The arm9 loop that the entire game runs on. 
-        
-        No params.
+      description: "Entrypoint into NitroSDK, the DS devkit library."
     - name: ret_0200120c
       address:
         NA: 0x200120C

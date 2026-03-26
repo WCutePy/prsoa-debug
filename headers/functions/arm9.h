@@ -3,7 +3,7 @@
 void _start(void);
 void ret_02000b98(void);
 void ret_02000b9c(void);
-void MainGameLoop(void);
+void NitroMain(void);
 void ret_0200120c(void);
 void* MaybeMemAlloc(undefined4 param_1);
 void LoadOverlay(int overlay, bool param_2);
