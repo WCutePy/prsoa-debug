@@ -58,7 +58,7 @@ overlay3:
         
         r0: ov_03_unk_struct_2 pointer
         r1: megastruct pointer
-    - name: ret_02121D0C
+    - name: ret_02121d0c
       address:
         NA: 0x2121D0C
       description: |-
@@ -72,7 +72,7 @@ overlay3:
         One of many entry points of overlay_03, tasked with creating an overlay struct.
         
         r0: ov_03_unk_struct_3 pointer
-    - name: ret_02122D40
+    - name: ret_02122d40
       address:
         NA: 0x2122D40
       description: |-
