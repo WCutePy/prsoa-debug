@@ -1,6 +1,8 @@
 #ifndef HEADERS_FUNCTIONS_OVERLAY05_H_
 #define HEADERS_FUNCTIONS_OVERLAY05_H_
 
+struct ov_05_unk_struct* Overlay5EntryPoint(struct ov_05_unk_struct* param_1,
+                                            struct megastruct* param_2);
 void ret_0211ce0c(void);
 void ret_0211ead4(void);
 void ret_0211ead8(void);

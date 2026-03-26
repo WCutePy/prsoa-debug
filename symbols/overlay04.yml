@@ -13,6 +13,14 @@ overlay4:
     JP: 0xF80
   description: Seems to be responsible for plot narration?
   functions:
+    - name: Overlay4EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        The sole entry point of overlay_04, tasked with creating the respective overlay struct.
+        
+        r0: ov_04_unk_struct pointer
+        r1: megastruct pointer
     - name: ret_0211d560
       address:
         NA: 0x211D560

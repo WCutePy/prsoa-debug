@@ -13,6 +13,14 @@ overlay5:
     JP: 0x43E0
   description: Seems to be active when viewing the styler status menu.
   functions:
+    - name: Overlay5EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        The sole entry point of overlay_05, tasked with creating the respective overlay struct.
+        
+        r0: ov_05_unk_struct pointer
+        r1: megastruct pointer
     - name: ret_0211ce0c
       address:
         NA: 0x211CE0C

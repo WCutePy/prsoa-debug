@@ -13,6 +13,14 @@ overlay9:
     JP: 0x15A0
   description: Seems to be loaded when flying on Staraptor.
   functions:
+    - name: Overlay9EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        The sole entry point of overlay_09, tasked with creating the respective overlay struct.
+        
+        r0: ov_09_unk_struct pointer
+        r1: megastruct pointer
     - name: ret_0211cc2c
       address:
         NA: 0x211CC2C

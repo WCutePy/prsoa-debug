@@ -13,6 +13,14 @@ overlay11:
     JP: 0x4D520
   description: Unknown.
   functions:
+    - name: Overlay11EntryPoint0
+      address:
+        NA: 0x211C9E0
+      description: |-
+        One of many entry points of overlay_11, tasked with creating an overlay struct.
+        
+        r0: ov_11_unk_struct_0 pointer
+        r1: megastruct pointer
     - name: ret_0211d860
       address:
         NA: 0x211D860
@@ -20,6 +28,13 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Overlay11EntryPoint1
+      address:
+        NA: 0x211DEF8
+      description: |-
+        One of many entry points of overlay_11, tasked with creating an overlay struct.
+        
+        r0: ov_11_unk_struct_1 pointer
     - name: ret_0211df48
       address:
         NA: 0x211DF48
@@ -111,6 +126,13 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Overlay11EntryPoint2
+      address:
+        NA: 0x21319EC
+      description: |-
+        One of many entry points of overlay_11, tasked with creating an overlay struct.
+        
+        r0: ov_11_unk_struct_2 pointer
     - name: ret_0213201c
       address:
         NA: 0x213201C

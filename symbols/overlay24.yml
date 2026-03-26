@@ -13,6 +13,13 @@ overlay24:
     JP: 0x940
   description: Unknown. Seems to read Ranger Net Mission Data when called.
   functions:
+    - name: Overlay24EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        The sole entry point of overlay_24, tasked with creating the respective overlay struct.
+        
+        r0: ov_24_unk_struct pointer
     - name: ret_0211d008
       address:
         NA: 0x211D008

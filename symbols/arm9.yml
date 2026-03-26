@@ -43,6 +43,10 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: NitroMain
+      address:
+        NA: 0x2000C6C
+      description: "Entrypoint into NitroSDK, the DS devkit library."
     - name: ret_0200120c
       address:
         NA: 0x200120C
@@ -50,6 +54,16 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: MaybeMemAlloc
+      address:
+        NA:
+          - 0x2001458
+          - 0x2002258
+      description: |-
+        Seems to allocate memory, returning a pointer to the newly allocated memory.
+        
+        r0: num bytes to allocate
+        return: pointer to allocated memory
     - name: LoadOverlay
       address:
         NA: 0x2001488
@@ -65,7 +79,7 @@ arm9:
         Called when changing the game state. Always tries to load an overlay, and usually ends up calling the entrypoint function for that overlay afterwards.
         
         r0: New game state
-        r1: Unknown
+        r1: megastruct ptr
         return: Unknown pointer
     - name: ret_02001eb4
       address:
@@ -165,6 +179,20 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: InitMegastruct
+      address:
+        NA: 0x200FB50
+      description: |-
+        Seems to initialize a megastruct, assigning most static pointers and allocating memory for the various places they point to.
+        
+        r0: megastruct pointer
+    - name: GetMegastructPointer
+      address:
+        NA: 0x201001C
+      description: |-
+        Retrieves a megastruct pointer.
+        
+        return: megastruct pointer
     - name: ret_02010448
       address:
         NA: 0x2010448
@@ -566,7 +594,7 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: zero_pokemon_data
+    - name: ZeroPokemonData
       address:
         NA: 0x20150B8
       description: |-
@@ -587,6 +615,13 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: MaybeInitRangerData
+      address:
+        NA: 0x2015198
+      description: |-
+        Seems to initialize ranger_data? Needs further analysis.
+        
+        r0: ranger_data_old pointer
     - name: RetrievePokemonByFormId
       address:
         NA: 0x2015520
@@ -595,6 +630,87 @@ arm9:
         
         r0: ranger_data pointer
         r1: form_id
+    - name: RetrievePokemonDataFromTable
+      address:
+        NA: 0x20155FC
+      description: |-
+        Retrieves a pokemon_data pointer from a specified slot of the current party.
+        
+        r0: ranger_data ptr 
+        r1: slot index
+        return: pokemon_data pointer
+    - name: IsTriggerSpawnNibbleUnlocked
+      address:
+        NA: 0x2015690
+      description: |-
+        Checks if a trigger nibble is 3 or more. In-game, this allows the trigger to spawn.
+        
+        r0: ranger_data ptr
+        r1: nibble_index
+        r2: room_id
+    - name: UnlockTriggerSpawnNibble
+      address:
+        NA: 0x2015714
+      description: |-
+        Sets a trigger nibble to 3. In-game, this allows the trigger to spawn.
+        
+        r0: ranger_data ptr
+        r1: nibble_index
+        r2: room_id
+    - name: EnableTriggerSpawnNibble
+      address:
+        NA: 0x201577C
+      description: |-
+        Enables the least significant bit of a trigger nibble. In-game, this is true if the trigger could exist on the map.
+        
+        r0: ranger_data ptr
+        r1: nibble_index 
+        r2: room_id
+    - name: UnlockPokemonSpawnNibble
+      address:
+        NA: 0x2015A3C
+      description: |-
+        Checks if a pokemon nibble is 3 or more. In-game, this allows the pokemon to spawn.
+        
+        r0: ranger_data ptr
+        r1: nibble_index 
+        r2: room_id
+    - name: EnablePokemonSpawnNibble
+      address:
+        NA: 0x2015AAC
+      description: |-
+        Enables the least significant bit of a pokemon nibble. In-game, this is true if the pokemon could exist on the map.
+        
+        r0: ranger_data ptr
+        r1: nibble_index 
+        r2: room_id
+    - name: IsNpcSpawnNibbleUnlocked
+      address:
+        NA: 0x2015B1C
+      description: |-
+        Checks if an NPC nibble is 3 or more. In-game, this allows the NPC to spawn.
+        
+        r0: ranger_data ptr
+        r1: nibble_index
+        r2: room_id
+    - name: UnlockNpcSpawnNibble
+      address:
+        NA: 0x2015B98
+      description: |-
+        Sets an NPC nibble to 3. In-game, this allows the NPC to spawn.
+        
+        r0: ranger_data ptr
+        r1: nibble_index 
+        r2: room_id
+    - name: EnableNpcSpawnNibble
+      address:
+        NA: 0x2015C08
+      description: |-
+        Enables the least significant bit of an NPC nibble. In-game, this is true if the NPC could exist on the map.
+        
+        r0: ranger_data ptr
+        r1: nibble_index
+        r2: room_id
     - name: MaybeHandleStylerLevelUp
       address:
         NA: 0x20160B8
@@ -665,7 +781,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-    - name: SetconversationsRecord
+    - name: SetConversationsRecord
       address:
         NA: 0x2016DD0
       description: |-
@@ -673,7 +789,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-    - name: AddconversationsRecord
+    - name: AddConversationsRecord
       address:
         NA: 0x2016DEC
       description: |-

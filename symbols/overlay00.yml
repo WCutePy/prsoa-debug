@@ -13,6 +13,14 @@ overlay0:
     JP: 0x5E740
   description: "Likely controls the \"ground\" mode for overworlds and cutscenes."
   functions:
+    - name: Overlay0EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        The sole entry point of overlay_00, tasked with creating the respective overlay struct.
+        
+        r0: ov_00_unk_struct pointer
+        r1: megastruct pointer
     - name: ret_0211e958
       address:
         NA: 0x211E958
@@ -321,6 +329,13 @@ overlay0:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: TryMountPokemon
+      address:
+        NA: 0x214A138
+      description: |-
+        Seems to handle mounting a specified pokemon. Seems to take a pokemon_data pointer.
+        
+        r0: pokemon_data pointer
     - name: ret_0214b6f0
       address:
         NA: 0x214B6F0

@@ -1,5 +1,6 @@
 #ifndef HEADERS_FUNCTIONS_OVERLAY01_H_
 #define HEADERS_FUNCTIONS_OVERLAY01_H_
+struct battle_struct* Overlay1EntryPoint(struct battle_struct* param_1, struct megastruct* param_2);
 undefined4 BattleStateManager(struct battle_struct* param_1, undefined4 param_2, int param_3,
                               int* param_4);
 undefined4 BattleBannerGraphicFrameUpdate(struct battle_struct* param_1);
