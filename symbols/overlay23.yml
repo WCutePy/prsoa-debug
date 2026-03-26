@@ -13,6 +13,13 @@ overlay23:
     JP: 0x28C0
   description: Seems to display Ranger Records.
   functions:
+    - name: Overlay23EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ov_23_unk_struct pointer
     - name: ret_0211d0bc
       address:
         NA: 0x211D0BC

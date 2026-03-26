@@ -12,7 +12,14 @@ overlay19:
     NA: 0x1C80
     JP: 0x1C80
   description: "Seems to be used right after selecting \"new game.\" Controls player gender selection, maybe more?"
-  functions: []
+  functions:
+    - name: Overlay19EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ov_19_unk_struct pointer
   data:
     - name: OV19_STATIC_INITIALIZER
       address:

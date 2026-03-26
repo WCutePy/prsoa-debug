@@ -13,6 +13,14 @@ overlay28:
     JP: 0x1320
   description: Seems to be loaded in the Map menu option.
   functions:
+    - name: Overlay28EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ov_28_unk_struct pointer
+        r1: megastruct pointer
     - name: ret_0211cc8c
       address:
         NA: 0x211CC8C

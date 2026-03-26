@@ -13,6 +13,14 @@ overlay1:
     JP: 0x25D40
   description: Likely controls battles.
   functions:
+    - name: Overlay1EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: battle_struct pointer
+        r1: megastruct pointer
     - name: BattleStateManager
       address:
         NA: 0x211F11C

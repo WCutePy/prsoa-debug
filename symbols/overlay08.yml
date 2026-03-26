@@ -12,7 +12,15 @@ overlay8:
     NA: 0x1CA0
     JP: 0x1CA0
   description: Seems to be loaded in the Missions menu option.
-  functions: []
+  functions:
+    - name: Overlay8EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ov_08_unk_struct pointer
+        r1: megastruct pointer
   data:
     - name: OV8_STATIC_INITIALIZER
       address:

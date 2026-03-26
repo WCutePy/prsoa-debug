@@ -13,6 +13,13 @@ overlay25:
     JP: 0x3340
   description: Seems to play the credits when called.
   functions:
+    - name: Overlay25EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ov_25_unk_struct pointer
     - name: ret_0211ceec
       address:
         NA: 0x211CEEC

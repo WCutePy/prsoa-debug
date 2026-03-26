@@ -1,5 +1,6 @@
 #ifndef HEADERS_FUNCTIONS_OVERLAY00_H_
 #define HEADERS_FUNCTIONS_OVERLAY00_H_
+struct ov_00_unk_struct * Overlay0EntryPoint(struct ov_00_unk_struct *param_1,struct megastruct*param_2);
 void ret_0211e958(void);
 void ret_02125334(void);
 void ret_021266ac(void);
@@ -44,6 +45,7 @@ void ret_02149a74(void);
 void ret_02149a78(void);
 void ret_02149e58(void);
 void ret_02149e5c(void);
+undefined4 TryMountPokemon(pokemon_data *param_1);
 void ret_0214b6f0(void);
 void ret_0214b6f4(void);
 void ret_0214b93c(void);
@@ -86,8 +88,11 @@ void SetPartner17Status(bool param_1);
 int8_t GetActiveQuestId(void);
 int8_t GetActiveMissionId(void);
 void DebugPrintAllScriptVars(void);
-undefined* DebugPrintPartnerPokemonPokeAssists(int param_1, undefined4 param_2, undefined4 param_3,
-                                               undefined4 param_4);
+undefined* DebugPrintPartnerPokemonPokeAssists(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
+undefined8 get_capture_lin_len_record_simple(void);
+void set_capture_line_len_record_simple(int param_1);
+int32_t get_num_loops_record_simple(void);
+void set_num_loops_record_simple(undefined4 param_1);
 int16_t GetPokemonCapturedRecordSimple(void);
 void SetPokemonCapturedRecordSimple(undefined2 param_1);
 int16_t GetPokemonFledRecordSimple(void);

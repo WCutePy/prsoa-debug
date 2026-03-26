@@ -12,7 +12,15 @@ overlay6:
     NA: 0x1380
     JP: 0x13A0
   description: Seems to be loaded in the Settings menu option.
-  functions: []
+  functions:
+    - name: Overlay6EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ov_06_unk_struct pointer
+        r1: megastruct pointer
   data:
     - name: OV6_STATIC_INITIALIZER
       address:

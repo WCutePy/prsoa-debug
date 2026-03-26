@@ -13,6 +13,13 @@ overlay27:
     JP: 0x4CC0
   description: Seems to be loaded in the Quests menu option.
   functions:
+    - name: Overlay27EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ov_27_unk_struct pointer
     - name: ret_0211cbf8
       address:
         NA: 0x211CBF8

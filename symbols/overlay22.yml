@@ -13,6 +13,13 @@ overlay22:
     JP: 0x5240
   description: Seems to be loaded in the Glossary menu option.
   functions:
+    - name: Overlay22EntryPoint
+      address:
+        NA: 0x211C9E0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ov_22_unk_struct pointer
     - name: ret_0211cd7c
       address:
         NA: 0x211CD7C
