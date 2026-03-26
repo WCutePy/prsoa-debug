@@ -1764,6 +1764,19 @@ arm9:
         r2: size of buffer
         r3: flags
         return: number of bytes sent, or a negative value representing an error
+    - name: sendto
+      address:
+        NA: 0x2049680
+      description: |-
+        Sends a message to a connectionless socket.
+        
+        r0: socket file descriptor
+        r1: source buffer
+        r2: size of buffer
+        r3: flags
+        stack[0]: target address
+        stack[1]: length of target address
+        return: number of bytes sent, or a negative value representing an error
     - name: CloseVeneer
       address:
         NA: 0x2049710
