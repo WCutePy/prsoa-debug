@@ -50,8 +50,7 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: 
-    
+    - name: LoadOverlay
       address:
         NA: 0x2001488
       description: |-
