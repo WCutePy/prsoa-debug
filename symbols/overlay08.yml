@@ -21,6 +21,13 @@ overlay8:
         
         r0: ov_08_unk_struct pointer
         r1: megastruct pointer
+    - name: ret_0211cfb0
+      address:
+        NA: 0x211CFB0
+      description: |-
+        Does nothing but return. Likely a debug hook for a nearby function.
+        
+        No params.
   data:
     - name: OV8_STATIC_INITIALIZER
       address:
