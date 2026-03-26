@@ -81,9 +81,9 @@ void ret_020117ac(void);
 void ZeroPokemonData(struct pokemon_data *param_1);
 void ret_02015108(void);
 void ret_02015120(void);
-void MaybeInitRangerData(ranger_data_old *param_1);
-pokemon_data * RetrievePokemonByFormId(ranger_data_old *param_1,int form_id);
-pokemon_data * RetrievePokemonDataFromTable(struct ranger_data *param_1,int param_2);
+void MaybeInitRangerData(struct ranger_data_old *param_1);
+struct pokemon_data * RetrievePokemonByFormId(struct ranger_data_old *param_1,int form_id);
+struct pokemon_data * RetrievePokemonDataFromTable(struct ranger_data *param_1,int param_2);
 undefined4 IsTriggerSpawnNibbleUnlocked(struct ranger_data *param_1,int param_2,enum room_id param_3);
 void UnlockTriggerSpawnNibble(struct ranger_data *param_1,int param_2,enum room_id param_3);
 void EnableTriggerSpawnNibble(struct ranger_data *param_1,int param_2,enum room_id param_3);
@@ -210,7 +210,7 @@ int32_t recv(int32_t sockfd, void* buf, size_t size, int32_t flags);
 int32_t recvfrom(int32_t sockfd, void* buf, size_t size, int32_t flags, struct sockaddr_in* addr,
                  int32_t addr_len);
 int32_t send(int32_t sockfd, const void* buf, size_t size, int32_t flags);
-ssize_t sendto(int _fd,void *_buf,size_t _n,int _flags,sockaddr *_addr,socklen_t _addr_len);
+ssize_t sendto(int _fd,void *_buf,size_t _n,int _flags,sockaddr *_addr,socklen _addr_len);
 int CloseVeneer(int _fd);
 void ret_02049d08(void);
 void ret_0205fc98(void);
@@ -360,4 +360,6 @@ void _u32_div_not_0_f(uint param_1,uint param_2);
 void ret_02081c00(void);
 void ret_02082e20(void);
 void ret_02083544(void);
+#endif
+
 #endif
