@@ -165,7 +165,7 @@ undefined4 DisableSlotStatusBit2(struct pokemon_data* param_1);
 undefined4 EnableSlotStatusBit1(struct pokemon_data* param_1);
 undefined4 DisableSlotStatusBit1(struct pokemon_data* param_1);
 undefined4 BitorPartnerPokemonStatus(uint32_t* param_1);
-uint BitandPartnerPokemonStatus(uint *param_1);
+uint32_t BitandPartnerPokemonStatus(uint32_t *param_1);
 int8_t GetPartnerPokemonMood(int *param_1);
 void ret_02032a44(void);
 void ret_0203331c(void);
@@ -210,7 +210,6 @@ int32_t recv(int32_t sockfd, void* buf, size_t size, int32_t flags);
 int32_t recvfrom(int32_t sockfd, void* buf, size_t size, int32_t flags, struct sockaddr_in* addr,
                  int32_t addr_len);
 int32_t send(int32_t sockfd, const void* buf, size_t size, int32_t flags);
-ssize_t sendto(int _fd,void *_buf,size_t _n,int _flags,sockaddr *_addr,socklen _addr_len);
 int CloseVeneer(int _fd);
 void ret_02049d08(void);
 void ret_0205fc98(void);
@@ -355,8 +354,8 @@ unsigned long long _ll_udiv(unsigned long long dividend, unsigned long long divi
 unsigned long long _ull_mod(unsigned long long dividend, unsigned long long divisor);
 long long _ll_mul(long long a, long long b);
 unsigned long long _s32_div_f(int dividend, int divisor);
-void _u32_div_f(uint param_1,uint param_2);
-void _u32_div_not_0_f(uint param_1,uint param_2);
+void _u32_div_f(uint32_t param_1,uint32_t param_2);
+void _u32_div_not_0_f(uint32_t param_1,uint32_t param_2);
 void ret_02081c00(void);
 void ret_02082e20(void);
 void ret_02083544(void);
