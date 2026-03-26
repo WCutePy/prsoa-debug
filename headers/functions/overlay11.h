@@ -1,1 +1,66 @@
-// Oops, I forgot to disassemble this one! Will do alongside the rest of arm9 later! - Lappy
+#ifndef HEADERS_FUNCTIONS_OVERLAY11_H_
+#define HEADERS_FUNCTIONS_OVERLAY11_H_
+
+void ret_0211d860(void);
+void ret_0211df48(void);
+void ret_0211df4c(void);
+void ret_0211df50(void);
+void ret_0211df58(void);
+void ret_0211df5c(void);
+void ret_0211df60(void);
+void ret_021245a4(void);
+void ret_02126964(void);
+void ret_02126968(void);
+void ret_0212697c(void);
+void ret_02126980(void);
+void ret_02126984(void);
+void ret_0212d978(void);
+void ret_0213201c(void);
+void ret_02132020(void);
+int InitWfc(void);
+void ret_0213e00c(void);
+int SocketVeneer(int _domain, int _type, int _protocol);
+int32_t CloseVeneer(int32_t fd);
+void ret_02147dbc(void);
+void ret_021481a0(void);
+void ret_02148518(void);
+void ret_02148958(void);
+void ret_02148e88(void);
+void ret_021492a8(void);
+void ret_021492ac(void);
+void ret_02149538(void);
+void ret_02149758(void);
+void ret_021499ec(void);
+void ret_02149c8c(void);
+void ret_02149f44(void);
+void ret_0214a308(void);
+void ret_0214a30c(void);
+void ret_0214a660(void);
+void ret_0214aba8(void);
+void ret_0214af68(void);
+void ret_0214ca98(void);
+void ret_0214d80c(void);
+void ret_0214e2b4(void);
+void ret_02150a60(void);
+void ret_02150a64(void);
+void ret_02150cbc(void);
+void ret_021510d4(void);
+void ret_0215148c(void);
+void ret_021517a8(void);
+void ret_02151d30(void);
+void ret_0215232c(void);
+void ret_02153088(void);
+void ret_02153660(void);
+void ret_02153664(void);
+void ret_02153668(void);
+void ret_021538e0(void);
+void ret_02153c2c(void);
+void ret_02153c30(void);
+void ret_02153dcc(void);
+void ret_021540ac(void);
+void ret_0215446c(void);
+void ret_0215e1f4(void);
+void ret_021626e0(void);
+void ret_02162734(void);
+
+#endif

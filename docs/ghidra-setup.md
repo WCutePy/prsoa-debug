@@ -1,4 +1,4 @@
-# Setting up Ghidra for _Pokémon Mystery Dungeon: Shadows of Almia_
+# Setting up Ghidra for _Pokémon Ranger: Shadows of Almia_
 Properly setting up a Ghidra environment for _Shadows of Almia_ can be tricky if you don't do it right. This guide walks you through the whole process, assuming you've already installed Ghidra and just have an SoA ROM file.
 
 Steps in this guide were originally written for Ghidra 10.1.1, but shouldn't vary significantly between Ghidra versions. There's one exception: **Ghidra 10.2 had a bug that broke the ARMv5 disassembler, so don't use it.** However, the bug was fixed in Ghidra 10.2.1, so using this version or later should be fine.

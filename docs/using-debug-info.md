@@ -14,7 +14,7 @@
   - [No$GBA](#nogba)
 
 ## Ghidra
-Ghidra can load both symbols and C source code. These instructions assume a specific Ghidra setup. See the preceding steps in [Setting up Ghidra for _Pokémon Mystery Dungeon: Shadows of Almia_](ghidra-setup.md) first.
+Ghidra can load both symbols and C source code. These instructions assume a specific Ghidra setup. See the preceding steps in [Setting up Ghidra for _Pokémon Ranger: Shadows of Almia_](ghidra-setup.md) first.
 
 ### Symbols
 There are two options for importing `prsoa-debug` symbols into Ghidra: with the built-in import script (easier) or with a custom one from `prsoa-debug` (better). Using the built-in script requires slightly less setup, but won't import symbol descriptions, whereas the custom `prsoa-debug` importer will create plate comments containing the symbol descriptions. The two options are otherwise equivalent.
