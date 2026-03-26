@@ -11,7 +11,7 @@ struct megastruct {
     void* unk_struct_unsized_0xc; // Pointer to a struct of unknown size.
     int field7_0x10;
     void* unk_struct_size_0x2c_0; // May be a pair of struct pointers.
-    void* unk_struct_size_0x2c_1;
+    void* unk_struct_size_0x30;
     void* unk_struct_size_0x54;
     int field11_0x20;
     // Supposedly a cache of some kind. Unsure what type it uses, but it's 1024 bytes long.
