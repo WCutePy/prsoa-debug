@@ -62,7 +62,8 @@ arm9:
       description: |-
         Seems to allocate memory, returning a pointer to the newly allocated memory.
         
-        r0: num bytes to allocate.
+        r0: num bytes to allocate
+        return: pointer to allocated memory
     - name: LoadOverlay
       address:
         NA: 0x2001488
@@ -191,7 +192,7 @@ arm9:
       description: |-
         Retrieves a megastruct pointer.
         
-        No params.
+        return: megastruct pointer
     - name: ret_02010448
       address:
         NA: 0x2010448
@@ -637,6 +638,7 @@ arm9:
         
         r0: ranger_data ptr 
         r1: slot index
+        return: pokemon_data pointer
     - name: IsTriggerSpawnNibbleUnlocked
       address:
         NA: 0x2015690
