@@ -17,7 +17,7 @@ overlay23:
       address:
         NA: 0x211C9E0
       description: |-
-        [MANUAL DESCRIPTION]
+        The sole entry point of overlay_23, tasked with creating the respective overlay struct.
         
         r0: ov_23_unk_struct pointer
     - name: ret_0211d0bc

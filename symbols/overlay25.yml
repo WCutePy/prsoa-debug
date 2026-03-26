@@ -17,7 +17,7 @@ overlay25:
       address:
         NA: 0x211C9E0
       description: |-
-        [MANUAL DESCRIPTION]
+        The sole entry point of overlay_25, tasked with creating the respective overlay struct.
         
         r0: ov_25_unk_struct pointer
     - name: ret_0211ceec

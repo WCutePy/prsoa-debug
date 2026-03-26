@@ -17,7 +17,7 @@ overlay1:
       address:
         NA: 0x211C9E0
       description: |-
-        [MANUAL DESCRIPTION]
+        The sole entry point of overlay_01, tasked with creating the respective overlay struct.
         
         r0: battle_struct pointer
         r1: megastruct pointer

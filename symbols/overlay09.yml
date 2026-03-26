@@ -17,7 +17,7 @@ overlay9:
       address:
         NA: 0x211C9E0
       description: |-
-        [MANUAL DESCRIPTION]
+        The sole entry point of overlay_09, tasked with creating the respective overlay struct.
         
         r0: ov_09_unk_struct pointer
         r1: megastruct pointer

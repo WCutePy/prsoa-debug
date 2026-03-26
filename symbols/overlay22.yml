@@ -17,7 +17,7 @@ overlay22:
       address:
         NA: 0x211C9E0
       description: |-
-        [MANUAL DESCRIPTION]
+        The sole entry point of overlay_22, tasked with creating the respective overlay struct.
         
         r0: ov_22_unk_struct pointer
     - name: ret_0211cd7c

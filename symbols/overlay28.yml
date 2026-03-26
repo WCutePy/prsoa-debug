@@ -17,7 +17,7 @@ overlay28:
       address:
         NA: 0x211C9E0
       description: |-
-        [MANUAL DESCRIPTION]
+        The sole entry point of overlay_28, tasked with creating the respective overlay struct.
         
         r0: ov_28_unk_struct pointer
         r1: megastruct pointer

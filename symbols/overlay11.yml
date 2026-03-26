@@ -17,7 +17,7 @@ overlay11:
       address:
         NA: 0x211C9E0
       description: |-
-        [MANUAL DESCRIPTION]
+        One of many entry points of overlay_11, tasked with creating an overlay struct.
         
         r0: ov_11_unk_struct_0 pointer
         r1: megastruct pointer
@@ -33,7 +33,7 @@ overlay11:
       address:
         NA: 0x211DEF8
       description: |-
-        [MANUAL DESCRIPTION]
+        One of many entry points of overlay_11, tasked with creating an overlay struct.
         
         r0: ov_11_unk_struct_1 pointer
 
@@ -144,7 +144,7 @@ overlay11:
       address:
         NA: 0x21319EC
       description: |-
-        [MANUAL DESCRIPTION]
+        One of many entry points of overlay_11, tasked with creating an overlay struct.
         
         r0: ov_11_unk_struct_2 pointer
 

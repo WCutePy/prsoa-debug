@@ -17,7 +17,7 @@ overlay19:
       address:
         NA: 0x211C9E0
       description: |-
-        [MANUAL DESCRIPTION]
+        The sole entry point of overlay_19, tasked with creating the respective overlay struct.
         
         r0: ov_19_unk_struct pointer
   data:

@@ -17,7 +17,7 @@ overlay3:
       address:
         NA: 0x211C9E0
       description: |-
-        [MANUAL DESCRIPTION]
+        One of many entry points of overlay_03, tasked with creating an overlay struct.
         
         r0: ov_03_unk_struct_0 pointer
         r1: megastruct pointer
@@ -39,7 +39,7 @@ overlay3:
       address:
         NA: 0x2120ACC
       description: |-
-        [MANUAL DESCRIPTION]
+        One of many entry points of overlay_03, tasked with creating an overlay struct.
         
         r0: ov_03_unk_struct_1 pointer
         r1: megastruct pointer
@@ -54,7 +54,7 @@ overlay3:
       address:
         NA: 0x212144C
       description: |-
-        [MANUAL DESCRIPTION]
+        One of many entry points of overlay_03, tasked with creating an overlay struct.
         
         r0: ov_03_unk_struct_2 pointer
         r1: megastruct pointer
@@ -69,7 +69,7 @@ overlay3:
       address:
         NA: 0x2121D28
       description: |-
-        [MANUAL DESCRIPTION]
+        One of many entry points of overlay_03, tasked with creating an overlay struct.
         
         r0: ov_03_unk_struct_3 pointer
     - name: ret_02122D40
@@ -83,7 +83,7 @@ overlay3:
       address:
         NA: 0x212404C
       description: |-
-        [MANUAL DESCRIPTION]
+        One of many entry points of overlay_03, tasked with creating an overlay struct.
         
         r0: ov_03_unk_struct_4 pointer
         r1: undefined4 

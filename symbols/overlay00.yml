@@ -17,7 +17,7 @@ overlay0:
       address:
         NA: 0x211C9E0
       description: |-
-        [MANUAL DESCRIPTION]
+        The sole entry point of overlay_00, tasked with creating the respective overlay struct.
         
         r0: ov_00_unk_struct pointer
         r1: megastruct pointer
@@ -377,7 +377,7 @@ overlay0:
       address:
         NA: 0x214A138
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to handle mounting a specified pokemon. Seems to take a pokemon_data pointer.
         
         r0: pokemon_data pointer
 
