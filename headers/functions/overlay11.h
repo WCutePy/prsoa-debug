@@ -1,9 +1,10 @@
 #ifndef HEADERS_FUNCTIONS_OVERLAY11_H_
 #define HEADERS_FUNCTIONS_OVERLAY11_H_
 
-struct ov_11_unk_struct_0 * Overlay11EntryPoint0(struct ov_11_unk_struct_0 *param_1,struct megastruct *param_2);
+struct ov_11_unk_struct_0* Overlay11EntryPoint0(struct ov_11_unk_struct_0* param_1,
+                                                struct megastruct* param_2);
 void ret_0211d860(void);
-struct ov_11_unk_struct_1 * Overlay11EntryPoint1(struct ov_11_unk_struct_1 *param_1);
+struct ov_11_unk_struct_1* Overlay11EntryPoint1(struct ov_11_unk_struct_1* param_1);
 void ret_0211df48(void);
 void ret_0211df4c(void);
 void ret_0211df50(void);
@@ -17,7 +18,7 @@ void ret_0212697c(void);
 void ret_02126980(void);
 void ret_02126984(void);
 void ret_0212d978(void);
-struct ov_11_unk_struct_2 * Overlay11EntryPoint2(struct ov_11_unk_struct_2 *param_1);
+struct ov_11_unk_struct_2* Overlay11EntryPoint2(struct ov_11_unk_struct_2* param_1);
 void ret_0213201c(void);
 void ret_02132020(void);
 int InitWfc(void);

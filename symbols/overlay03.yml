@@ -88,7 +88,7 @@ overlay3:
         r0: ov_03_unk_struct_4 pointer
         r1: undefined4 
         r2: undefined4 
-        r3: undefined4 
+        r3: undefined4
     - name: ret_021242f0
       address:
         NA: 0x21242F0

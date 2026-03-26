@@ -18,7 +18,6 @@ arm9:
     
     Speaking generally, this is the program run by the Nintendo DS's main ARM946E-S CPU, which handles all gameplay mechanisms and graphics rendering.
   functions:
-
     - name: _start
       address:
         EU: 0x2000800
@@ -30,7 +29,6 @@ arm9:
         Once the entry function reaches the end, a constant containing the address to NitroMain is loaded into a register (r1), and a `bx` branch will jump to NitroMain.
         
         No params.
-
     - name: ret_02000b98
       address:
         NA: 0x2000B98
@@ -38,7 +36,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02000b9c
       address:
         NA: 0x2000B9C
@@ -77,7 +74,6 @@ arm9:
         
         r0: Overlay number
         r1: Some bool, skips certain code if false
-
     - name: SetGameState
       address:
         NA: 0x2001568
@@ -87,7 +83,6 @@ arm9:
         r0: New game state
         r1: megastruct ptr
         return: Unknown pointer
-
     - name: ret_02001eb4
       address:
         NA: 0x2001EB4
@@ -95,7 +90,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02001ecc
       address:
         NA: 0x2001ECC
@@ -103,7 +97,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0200372c
       address:
         NA: 0x200372C
@@ -111,7 +104,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0200396c
       address:
         NA: 0x200396C
@@ -119,7 +111,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02003984
       address:
         NA: 0x2003984
@@ -134,7 +125,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02007cc0
       address:
         NA: 0x2007CC0
@@ -142,7 +132,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02008ed8
       address:
         NA: 0x2008ED8
@@ -150,7 +139,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0200bbc0
       address:
         NA: 0x200BBC0
@@ -158,7 +146,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0200bbc4
       address:
         NA: 0x200BBC4
@@ -166,7 +153,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0200c404
       address:
         NA: 0x200C404
@@ -174,7 +160,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0200d414
       address:
         NA: 0x200D414
@@ -182,7 +167,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0200ee10
       address:
         NA: 0x200EE10
@@ -190,7 +174,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0200fa58
       address:
         NA: 0x200FA58
@@ -212,7 +195,6 @@ arm9:
         Retrieves a megastruct pointer.
         
         No params.
-
     - name: ret_02010448
       address:
         NA: 0x2010448
@@ -220,7 +202,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: InitializeBattlePokemonFields
       address:
         NA: 0x2010868
@@ -228,7 +209,6 @@ arm9:
         initializes the battle_combatants struct before a battle.
         
         r0: battle_combatants pointer
-
     - name: BattleSetUnkField0x0
       address:
         NA: 0x201094C
@@ -237,7 +217,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: int32_t pointer
-
     - name: BattleSetCurrentHp
       address:
         NA: 0x2010954
@@ -246,7 +225,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: int8_t
-
     - name: BattleSetStylerLevel
       address:
         NA: 0x201095C
@@ -255,7 +233,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: int8_t
-
     - name: BattleSetPartnerAssistUnlockStatus
       address:
         NA: 0x2010964
@@ -264,7 +241,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: 1 if partner assist unlocked, 0 if not.
-
     - name: GetPartnerGaugeCurrent
       address:
         NA: 0x2010978
@@ -273,7 +249,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: int32_t
-
     - name: BattleSetPartnerGaugeMax
       address:
         NA: 0x2010980
@@ -282,7 +257,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: int32_t
-
     - name: BattleSetPartnerGaugeFillRate
       address:
         NA: 0x2010988
@@ -291,7 +265,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: int32_t
-
     - name: BattleAddPartyPokemon
       address:
         NA: 0x2010990
@@ -301,7 +274,6 @@ arm9:
         r0: battle_combatants pointer
         r1: form_id 
         r2: party_slot_status
-
     - name: BattleTryAddNewEnemyForm
       address:
         NA: 0x20109C0
@@ -311,7 +283,6 @@ arm9:
         r0: battle_combatants pointer
         r1: enemy form_id 
         r2: unknown uint32_t
-
     - name: BattleSetArenaGraphicId
       address:
         NA: 0x2010A70
@@ -320,7 +291,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: Arena Graphic index
-
     - name: BattleSetWeatherEffectId
       address:
         NA:
@@ -331,7 +301,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: Weather Effect index
-
     - name: BattleSetSequenceScriptId
       address:
         NA: 0x2010A98
@@ -339,7 +308,6 @@ arm9:
         Stores the index of the sequence script .fsb file id to be run on battle start in the battle_combatants struct.
         r0: battle_combatants pointer
         r1: sequence script id
-
     - name: BattleSetTutorialScriptId
       address:
         NA: 0x2010AA0
@@ -348,7 +316,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: tutorial script id
-
     - name: BattleSetStartScriptId
       address:
         NA: 0x2010AA8
@@ -357,7 +324,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: start script id
-
     - name: BattleSetBgmId
       address:
         NA: 0x2010AB0
@@ -366,7 +332,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: bgm id
-
     - name: BattleSetViewPartyStatus
       address:
         NA: 0x2010AC4
@@ -375,7 +340,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: 1 to allow viewing the party, 0 to disable.
-
     - name: BattleSetCanFleeStatus
       address:
         NA: 0x2010AD8
@@ -384,7 +348,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: 1 to allow fleeing, 0 otherwise.
-
     - name: BattleSetBossFightStatus
       address:
         NA: 0x2010AEC
@@ -394,7 +357,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: 1 to show a HP bar, 0 otherwise.
-
     - name: BattleSetUnkField0x52
       address:
         NA: 0x2010B00
@@ -403,7 +365,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: int8_t
-
     - name: BattleSetUnkField0x54
       address:
         NA: 0x2010B08
@@ -412,7 +373,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: int8_t
-
     - name: BattleSetGenderAndUniform
       address:
         NA: 0x2010B10
@@ -421,7 +381,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: lowest bit is player gender, all others are styler type.
-
     - name: BattleGetUnkField0x0
       address:
         NA: 0x2010B24
@@ -429,7 +388,6 @@ arm9:
         Retrieves field 0x0 of the battle_combatants struct, which is the pointer to some other struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetCurrentHp
       address:
         NA: 0x2010B2C
@@ -437,7 +395,6 @@ arm9:
         Gets the current HP of the ranger from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetStylerLevel
       address:
         NA: 0x2010B34
@@ -445,7 +402,6 @@ arm9:
         Gets the styler level from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleCanPartnerUsePokeAssist
       address:
         NA: 0x2010B3C
@@ -453,7 +409,6 @@ arm9:
         Checks if partner assists for the battle are enabled or disabled from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetPartnerGaugeCurrent
       address:
         NA: 0x2010B50
@@ -461,7 +416,6 @@ arm9:
         Retrieves the current partner assist gauge from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetPartnerGaugeMax
       address:
         NA: 0x2010B58
@@ -469,7 +423,6 @@ arm9:
         Retrieves the maximum for the partner assist gauge in the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetPartnerGaugeFillRate
       address:
         NA: 0x2010B60
@@ -477,7 +430,6 @@ arm9:
         Gets an index determining how much the partner assist gauge fills from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetNumEnemyForms
       address:
         NA: 0x2010B68
@@ -485,7 +437,6 @@ arm9:
         Retrieves the number of unique enemy forms there are in the battle. There will always be 4 or less.
         
         r0: battle_combatants pointer
-
     - name: BattleGetEnemyFormId
       address:
         NA: 0x2010B70
@@ -494,7 +445,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: enemy slot index
-
     - name: BattleGetEnemyCount
       address:
         NA: 0x2010B7C
@@ -502,7 +452,6 @@ arm9:
         Retrieves the total number of actual enemies from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetUnkEnemyData0x41
       address:
         NA: 0x2010B84
@@ -511,7 +460,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: enemy slot index
-
     - name: BattleGetPartyPokemonCount
       address:
         NA: 0x2010B90
@@ -519,7 +467,6 @@ arm9:
         Retrieves the number of party pokemon in the battle from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetPartyFormIds
       address:
         NA: 0x2010B98
@@ -528,7 +475,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: party slot index
-
     - name: BattleGetPartySlotStatusesById
       address:
         NA: 0x2010BA4
@@ -537,7 +483,6 @@ arm9:
         
         r0: battle_combatants pointer
         r1: party slot index
-
     - name: BattleGetArenaGraphicId
       address:
         NA: 0x2010BB0
@@ -545,7 +490,6 @@ arm9:
         Retrieves the arena graphic id from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetSequenceScriptId
       address:
         NA: 0x2010BC0
@@ -553,7 +497,6 @@ arm9:
         Retrieves the sequence script id from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetTutorialScriptId
       address:
         NA: 0x2010BC8
@@ -561,7 +504,6 @@ arm9:
         Retrieves the tutorial script id from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetStartScriptId
       address:
         NA: 0x2010BD0
@@ -569,7 +511,6 @@ arm9:
         Retrieves the start script id from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetBgmId
       address:
         NA: 0x2010BD8
@@ -577,7 +518,6 @@ arm9:
         Retrieves the battle bgm from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetViewPartyStatus
       address:
         NA: 0x2010BE0
@@ -585,7 +525,6 @@ arm9:
         Retrieves whether or not the party is accessible for the battle from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetCanFleeStatus
       address:
         NA: 0x2010BF4
@@ -593,7 +532,6 @@ arm9:
         Retrieves whether or not the player can flee the battle from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetBossFightStatus
       address:
         NA: 0x2010C08
@@ -601,7 +539,6 @@ arm9:
         Retrieves whether or not a boss health bar should be shown from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetUnkField0x52
       address:
         NA: 0x2010C1C
@@ -609,7 +546,6 @@ arm9:
         Retrieves a currently unknown field from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetFieldAllocBits
       address:
         NA: 0x2010C24
@@ -618,7 +554,6 @@ arm9:
         Only certain fields, such as bgm, weather, and arena graphic actually have a flag in this bitfield.
         
         r0: battle_combatants pointer
-
     - name: BattleGetUnkField0x54
       address:
         NA: 0x2010C2C
@@ -626,7 +561,6 @@ arm9:
         Retrieves a currently unknown field from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: BattleGetGenderAndUniform
       address:
         NA: 0x2010C34
@@ -634,7 +568,6 @@ arm9:
         Retrieves the current gender and uniform for the player from the battle_combatants struct.
         
         r0: battle_combatants pointer
-
     - name: ret_02010cec
       address:
         NA: 0x2010CEC
@@ -642,7 +575,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ZeroQuestBody
       address:
         NA: 0x201135C
@@ -650,7 +582,6 @@ arm9:
         Zeroes the body struct of a quest struct.
         
         r0: quest pointer
-
     - name: ZeroQuestFooter
       address:
         NA: 0x2011384
@@ -658,7 +589,6 @@ arm9:
         Zeroes the footer struct of a quest struct.
         
         r0: quest pointer
-
     - name: ret_020117ac
       address:
         NA: 0x20117AC
@@ -666,7 +596,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ZeroPokemonData
       address:
         NA: 0x20150B8
@@ -674,7 +603,6 @@ arm9:
         Zeroes an entire pokemon_data struct.
         
         r0: pokemon_data pointer
-
     - name: ret_02015108
       address:
         NA: 0x2015108
@@ -682,7 +610,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02015120
       address:
         NA: 0x2015120
@@ -697,7 +624,6 @@ arm9:
         Seems to initialize ranger_data? Needs further analysis.
         
         r0: ranger_data_old pointer
-
     - name: RetrievePokemonByFormId
       address:
         NA: 0x2015520
@@ -722,7 +648,7 @@ arm9:
         
         r0: ranger_data ptr
         r1: nibble_index
-        r2: room_id 
+        r2: room_id
     - name: UnlockTriggerSpawnNibble
       address:
         NA: 0x2015714
@@ -731,7 +657,7 @@ arm9:
         
         r0: ranger_data ptr
         r1: nibble_index
-        r2: room_id 
+        r2: room_id
     - name: EnableTriggerSpawnNibble
       address:
         NA: 0x201577C
@@ -740,7 +666,7 @@ arm9:
         
         r0: ranger_data ptr
         r1: nibble_index 
-        r2: room_id 
+        r2: room_id
     - name: UnlockPokemonSpawnNibble
       address:
         NA: 0x2015A3C
@@ -749,7 +675,7 @@ arm9:
         
         r0: ranger_data ptr
         r1: nibble_index 
-        r2: room_id 
+        r2: room_id
     - name: EnablePokemonSpawnNibble
       address:
         NA: 0x2015AAC
@@ -758,7 +684,7 @@ arm9:
         
         r0: ranger_data ptr
         r1: nibble_index 
-        r2: room_id 
+        r2: room_id
     - name: IsNpcSpawnNibbleUnlocked
       address:
         NA: 0x2015B1C
@@ -767,7 +693,7 @@ arm9:
         
         r0: ranger_data ptr
         r1: nibble_index
-        r2: room_id 
+        r2: room_id
     - name: UnlockNpcSpawnNibble
       address:
         NA: 0x2015B98
@@ -776,7 +702,7 @@ arm9:
         
         r0: ranger_data ptr
         r1: nibble_index 
-        r2: room_id 
+        r2: room_id
     - name: EnableNpcSpawnNibble
       address:
         NA: 0x2015C08
@@ -785,8 +711,7 @@ arm9:
         
         r0: ranger_data ptr
         r1: nibble_index
-        r2: room_id 
-
+        r2: room_id
     - name: MaybeHandleStylerLevelUp
       address:
         NA: 0x20160B8
@@ -795,7 +720,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: styler_level
-
     - name: UpdatePlayTime
       address:
         NA: 0x201668C
@@ -803,7 +727,6 @@ arm9:
         Copies the most recent play_time struct over the backup.
         
         r0: ranger_data pointer
-
     - name: DebugPrint
       address:
         NA: 0x2016794
@@ -812,7 +735,6 @@ arm9:
         
         r0: format
         ...: variadic
-
     - name: AssignPartnerMoods
       address:
         NA: 0x20167B4
@@ -820,7 +742,6 @@ arm9:
         Seems to assign the mood of each of the 17 pokemon partners. Details unknown.
         
         r0: ranger_data pointer
-
     - name: GetStylerUpgradeById
       address:
         NA: 0x2016C14
@@ -829,7 +750,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: styler upgrade index
-
     - name: SetPlayerExp
       address:
         NA: 0x2016D4C
@@ -838,7 +758,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: value to assign
-
     - name: AddPlayerExp
       address:
         NA: 0x2016D64
@@ -847,7 +766,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: value to assign
-
     - name: SetMaxStepsRecord
       address:
         NA: 0x2016D88
@@ -856,7 +774,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-
     - name: AddMaxStepsRecord
       address:
         NA: 0x2016DA4
@@ -865,7 +782,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-
     - name: SetConversationsRecord
       address:
         NA: 0x2016DD0
@@ -874,7 +790,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-
     - name: AddConversationsRecord
       address:
         NA: 0x2016DEC
@@ -883,7 +798,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-
     - name: SetTargetsCheckedRecord
       address:
         NA: 0x2016E18
@@ -892,7 +806,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-
     - name: AddTargetsCheckedRecord
       address:
         NA: 0x2016E34
@@ -901,7 +814,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-
     - name: SetGameSavesRecord
       address:
         NA: 0x2016E60
@@ -910,7 +822,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-
     - name: AddGameSavesRecord
       address:
         NA: 0x2016E7C
@@ -919,7 +830,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-
     - name: SetPokemonRidesRecord
       address:
         NA: 0x2016EA8
@@ -928,7 +838,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-
     - name: AddPokemonRidesRecord
       address:
         NA: 0x2016EC4
@@ -937,7 +846,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-
     - name: SetPartnerPokemonBestnessIfGreaterByIndex
       address:
         NA: 0x2016EF0
@@ -947,7 +855,6 @@ arm9:
         r0: ranger_data pointer
         r1: partner index 
         r2: value to assign
-
     - name: IncrementPartnerPokeAssistsBySpecies
       address:
         NA: 0x2016F18
@@ -957,7 +864,6 @@ arm9:
         r0: ranger_data pointer
         r1: form_id
         r2: amount to increment by
-
     - name: MaybeGetBestPartnerRecord
       address:
         NA: 0x2016F7C
@@ -965,7 +871,6 @@ arm9:
         Seems to retrieve the best partner record from the ranger_data->ranger_records struct.
         
         r0: ranger_data pointer
-
     - name: SetCaptureLineLenRecord
       address:
         NA: 0x2017020
@@ -974,7 +879,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-
     - name: AddCaptureLineLenRecord
       address:
         NA: 0x201703C
@@ -983,7 +887,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-
     - name: SetNumLoopsRecord
       address:
         NA: 0x2017068
@@ -992,7 +895,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: uint
-
     - name: AddNumLoopsRecord
       address:
         NA: 0x2017084
@@ -1001,7 +903,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: int
-
     - name: SetPokemonCapturedRecord
       address:
         NA: 0x20170B0
@@ -1010,7 +911,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: int16_t
-
     - name: AddPokemonCapturedRecord
       address:
         NA: 0x20170D0
@@ -1019,7 +919,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: short
-
     - name: SetFledPokemonRecord
       address:
         NA: 0x2017100
@@ -1028,7 +927,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: int16_t
-
     - name: AddFledPokemonRecord
       address:
         NA: 0x2017120
@@ -1037,7 +935,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: short
-
     - name: SetPokeAssistsUsedRecord
       address:
         NA: 0x2017150
@@ -1046,7 +943,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: int16_t
-
     - name: AddPokeAssistsUsedRecord
       address:
         NA: 0x2017170
@@ -1055,7 +951,6 @@ arm9:
         
         r0: ranger_data pointer
         r1: short
-
     - name: ZeroSettingsAndVariables
       address:
         NA: 0x2018E1C
@@ -1063,7 +958,6 @@ arm9:
         Zero an entire settings_and_variables struct.
         
         r0: settings_and_variables pointer
-
     - name: ZeroEventVariables
       address:
         NA: 0x2018E30
@@ -1071,7 +965,6 @@ arm9:
         Zero the event_variables table of a settings_and_variables struct.
         
         r0: settings_and_variables pointer
-
     - name: SetEventVariable
       address:
         NA: 0x2018E4C
@@ -1081,7 +974,6 @@ arm9:
         r0: settings_and_variables pointer
         r1: index
         r2: value
-
     - name: GetEventVariable
       address:
         NA: 0x2018E54
@@ -1090,7 +982,6 @@ arm9:
         
         r0: settings_and_variables pointer
         r1: index
-
     - name: ZeroQuestVariables
       address:
         NA: 0x2018E5C
@@ -1098,7 +989,6 @@ arm9:
         Zero the quest_variables table of a settings_and_variables struct.
         
         r0: settings_and_variables pointer
-
     - name: SetQuestVariable
       address:
         NA: 0x2018E7C
@@ -1108,7 +998,6 @@ arm9:
         r0: settings_and_variables pointer
         r1: index
         r2: value
-
     - name: GetQuestVariable
       address:
         NA: 0x2018E88
@@ -1117,7 +1006,6 @@ arm9:
         
         r0: settings_and_variables pointer
         r1: index
-
     - name: SetSettingsVariable
       address:
         NA: 0x201926C
@@ -1127,7 +1015,6 @@ arm9:
         r0: settings_and_variables pointer
         r1: index
         r2: value
-
     - name: GetSettingsVariable
       address:
         NA: 0x2019278
@@ -1136,7 +1023,6 @@ arm9:
         
         r0: settings_and_variables pointer
         r1: index
-
     - name: ret_0201a40c
       address:
         NA: 0x201A40C
@@ -1144,7 +1030,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_020222c8
       address:
         NA: 0x20222C8
@@ -1152,7 +1037,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_020222cc
       address:
         NA: 0x20222CC
@@ -1160,7 +1044,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_020222d0
       address:
         NA: 0x20222D0
@@ -1168,7 +1051,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_020222d4
       address:
         NA: 0x20222D4
@@ -1176,7 +1058,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02022710
       address:
         NA: 0x2022710
@@ -1184,7 +1065,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_020228c0
       address:
         NA: 0x20228C0
@@ -1192,7 +1072,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_020237e0
       address:
         NA: 0x20237E0
@@ -1200,7 +1079,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02029778
       address:
         NA: 0x2029778
@@ -1208,7 +1086,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0202a5f8
       address:
         NA: 0x202A5F8
@@ -1216,7 +1093,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0202d394
       address:
         NA: 0x202D394
@@ -1224,7 +1100,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: DebugPrintError
       address:
         NA: 0x202E1F0
@@ -1233,7 +1108,6 @@ arm9:
         
         r0: format
         ...: variadic
-
     - name: CopyStringToRangerDebugBuffer
       address:
         NA:
@@ -1243,7 +1117,6 @@ arm9:
         Copies a text string to the debug buffer in RANGER_DATA.
         
         r0: pointer to pointer of text string to copy.
-
     - name: BattleSetBgmIdSafe
       address:
         NA: 0x202F23C
@@ -1251,7 +1124,6 @@ arm9:
         Seems to assign a specified bgm id to a static battle_combatants structure in memory. 
         
         r0: pointer to bgm id.
-
     - name: BattleSetUnkField0x49Safe
       address:
         NA: 0x202F268
@@ -1259,7 +1131,6 @@ arm9:
         Seems to assign a currently unknown field to a static battle_combatants structure in memory.
         
         r0: undefined4 pointer
-
     - name: BattleDisableFleeing
       address:
         NA: 0x202F2D8
@@ -1267,7 +1138,6 @@ arm9:
         Seems to disable fleeing in a static battle_combatants structure in memory.
         
         No params.
-
     - name: BattleSetUnkField0x54Safe
       address:
         NA: 0x202F348
@@ -1275,7 +1145,6 @@ arm9:
         Seems to assign a currently unknown field to a static battle_combatants structure in memory.
         
         r0: undefined4 pointer
-
     - name: BattleSetSequenceScriptIdSafe
       address:
         NA: 0x202F374
@@ -1283,7 +1152,6 @@ arm9:
         Seems to assign a sequence script id to a static battle_combatants structure in memory.
         
         r0: sequence script id pointer
-
     - name: BattleSetTutorialScriptIdSafe
       address:
         NA: 0x202F3A0
@@ -1291,7 +1159,6 @@ arm9:
         Seems to assign a tutorial script id to a static battle_combatants structure in memory.
         
         r0: tutorial script id pointer
-
     - name: BattleSetStartScriptIdSafe
       address:
         NA: 0x202F3CC
@@ -1299,7 +1166,6 @@ arm9:
         Seems to assign a start script id to a static battle_combatants structure in memory.
         
         r0: start script id pointer
-
     - name: BattleSetStylerLevelSafe
       address:
         NA: 0x202F3F8
@@ -1307,7 +1173,6 @@ arm9:
         Seems to assign the styler level to a static battle_combatants structure in memory.
         
         r0: styler level pointer
-
     - name: BattleAddPartyPokemonSafe
       address:
         NA: 0x202F424
@@ -1315,7 +1180,6 @@ arm9:
         Seems to add party pokemon to a static battle_combatants structure in memory.
         
         r0: undefined4 pointer
-
     - name: GetRangerStylerRank
       address:
         NA: 0x202FA54
@@ -1323,7 +1187,6 @@ arm9:
         Retrieves the current styler rank from RANGER_DATA.
         
         No params.
-
     - name: GetRangerStylerType
       address:
         NA: 0x202FA68
@@ -1331,7 +1194,6 @@ arm9:
         Retrieves the current styler type from RANGER_DATA.
         
         No params.
-
     - name: GetStylerLevelSafe
       address:
         NA: 0x202FEA4
@@ -1339,7 +1201,6 @@ arm9:
         Retrieves the current styler level from RANGER_DATA.
         
         No params.
-
     - name: GetRangerMaxHpSafe
       address:
         NA: 0x202FF08
@@ -1347,7 +1208,6 @@ arm9:
         Retrieves the ranger max HP from RANGER_DATA.
         
         No params.
-
     - name: GetRangerCurrentHpSafe
       address:
         NA: 0x202FF20
@@ -1355,7 +1215,6 @@ arm9:
         Retrieves the current ranger HP from RANGER_DATA.
         
         No params.
-
     - name: EnableSlotStatusBit2
       address:
         NA: 0x2032148
@@ -1363,7 +1222,6 @@ arm9:
         Enables slot status bit 2 on a pokemon. This seems to only be enabled on pokemon who cannot be released, such as doduo mid-ride, or your partner.
         
         r0: pokemon_data pointer
-
     - name: DisableSlotStatusBit2
       address:
         NA: 0x2032174
@@ -1371,7 +1229,6 @@ arm9:
         Disables slot status bit 2 on a pokemon. This seems to only be enabled on pokemon who cannot be released, such as doduo mid-ride, or your partner.
         
         r0: pokemon_data pointer
-
     - name: EnableSlotStatusBit1
       address:
         NA: 0x20321A0
@@ -1379,7 +1236,6 @@ arm9:
         Enables slot status bit 1 on a pokemon. This seems to hide the pokemon from the release menu entirely, and is only known to be used by the partner.
         
         r0: pokemon_data pointer
-
     - name: DisableSlotStatusBit1
       address:
         NA: 0x20321CC
@@ -1387,7 +1243,6 @@ arm9:
         Disables slot status bit 1 on a pokemon. This seems to hide the pokemon from the release menu entirely, and is only known to be used by the partner.
         
         r0: pokemon_data pointer
-
     - name: BitorPartnerPokemonStatus
       address:
         NA: 0x20327B8
@@ -1395,7 +1250,6 @@ arm9:
         Bitwise OR on the partner status bitfield in RANGER_DATA.
         
         r0: pointer to value to bitor with.
-
     - name: BitandPartnerPokemonStatus
       address:
         NA: 0x20327DC
@@ -1403,7 +1257,6 @@ arm9:
         Bitwise AND on the partner status bitfield in RANGER_DATA
         
         r0: pointer to value to bitand with.
-
     - name: GetPartnerPokemonMood
       address:
         NA: 0x2032804
@@ -1411,7 +1264,6 @@ arm9:
         Retrieves the mood of a specified partner by index.
         
         r0: pointer to partner index
-
     - name: ret_02032a44
       address:
         NA: 0x2032A44
@@ -1419,7 +1271,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0203331c
       address:
         NA: 0x203331C
@@ -1427,7 +1278,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02033388
       address:
         NA: 0x2033388
@@ -1435,7 +1285,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_020333d8
       address:
         NA: 0x20333D8
@@ -1443,7 +1292,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02033440
       address:
         NA: 0x2033440
@@ -1451,7 +1299,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0203365c
       address:
         NA: 0x203365C
@@ -1459,7 +1306,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: DisableActiveTimersAndMore
       address:
         NA: 0x20337EC
@@ -1467,7 +1313,6 @@ arm9:
         Resets the timer fields in RANGER_DATA, but seems to do something else too.
         
         No params.
-
     - name: InitTimerType1
       address:
         NA: 0x203381C
@@ -1475,7 +1320,6 @@ arm9:
         Begins a timer of type 1 by initializing relevant fields in RANGER_DATA.
         
         r0: pointer to the timer duration, in frames.
-
     - name: InitTimerType2
       address:
         NA: 0x2033844
@@ -1483,7 +1327,6 @@ arm9:
         Begins a timer of type 2 by initializing relevant fields in RANGER_DATA.
         
         r0: pointer to the timer 2 "duration", in frames.
-
     - name: SetTimerTypeNone
       address:
         NA: 0x203386C
@@ -1491,7 +1334,6 @@ arm9:
         Sets only the timer type field in RANGER_DATA to 0.
         
         No params.
-
     - name: SetTimerType1
       address:
         NA: 0x2033884
@@ -1499,7 +1341,6 @@ arm9:
         Sets only the timer type field in RANGER_DATA to 1.
         
         No params.
-
     - name: SetTimerType2
       address:
         NA: 0x20338A0
@@ -1507,7 +1348,6 @@ arm9:
         Sets only the timer type field in RANGER_DATA to 2.
         
         No params.
-
     - name: GetTimer1Duration
       address:
         NA: 0x20338FC
@@ -1515,7 +1355,6 @@ arm9:
         Retrieves the current timer 1 duration in frames, from RANGER_DATA.
         
         No params.
-
     - name: SetTimer1Duration
       address:
         NA: 0x2033918
@@ -1523,7 +1362,6 @@ arm9:
         Sets only the current timer 1 duration in RANGER_DATA.
         
         r0: pointer to the duration of the timer in frames.
-
     - name: TimerIsActive
       address:
         NA: 0x2033934
@@ -1531,7 +1369,6 @@ arm9:
         Returns true if the timer type is 1 or 2, but not 0.
         
         No params.
-
     - name: IncrementPokemonRidesRecord
       address:
         NA: 0x2033B50
@@ -1539,7 +1376,6 @@ arm9:
         Increments the pokemon_rides_record field of RANGER_DATA->ranger_records. 
         
         No params.
-
     - name: GetGameSavesRecordSafe
       address:
         NA: 0x2033C30
@@ -1547,7 +1383,6 @@ arm9:
         Retrieves the game_saves_record from RANGER_DATA->ranger_records.
         
         No params.
-
     - name: GetPartnerIndexFromFormId
       address:
         NA: 0x2035088
@@ -1562,7 +1397,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02035fe4
       address:
         NA: 0x2035FE4
@@ -1570,7 +1404,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0203e930
       address:
         NA: 0x203E930
@@ -1578,7 +1411,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0204078c
       address:
         NA: 0x204078C
@@ -1586,7 +1418,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0204129c
       address:
         NA: 0x204129C
@@ -1594,7 +1425,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02041920
       address:
         NA: 0x2041920
@@ -1602,7 +1432,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02043124
       address:
         NA: 0x2043124
@@ -1610,7 +1439,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02043128
       address:
         NA: 0x2043128
@@ -1618,7 +1446,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_020439c4
       address:
         NA: 0x20439C4
@@ -1626,7 +1453,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_020439c8
       address:
         NA: 0x20439C8
@@ -1634,7 +1460,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02044144
       address:
         NA: 0x2044144
@@ -1642,7 +1467,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02044148
       address:
         NA: 0x2044148
@@ -1650,7 +1474,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_020441ac
       address:
         NA: 0x20441AC
@@ -1658,7 +1481,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: DebugPrintInternal
       address:
         NA: 0x20442CC
@@ -1667,7 +1489,6 @@ arm9:
         
         r0: format
         r1: ap
-
     - name: DebugPrintInternalVeneer
       address:
         NA: 0x2044334
@@ -1678,7 +1499,6 @@ arm9:
         
         r0: format
         r1: ap
-
     - name: ret_02046d3c
       address:
         NA: 0x2046D3C
@@ -1686,7 +1506,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: close
       address:
         NA: 0x2048C1C
@@ -1695,7 +1514,6 @@ arm9:
         
         r0: file descriptor
         return: 0 on success, or a negative value representing an error
-
     - name: socket
       address:
         NA: 0x20494F4
@@ -1706,7 +1524,6 @@ arm9:
         r1: family
         r2: protocol
         return: socket file descriptor on success, negative value indicating error otherwise
-
     - name: bind
       address:
         NA: 0x2049520
@@ -1716,7 +1533,6 @@ arm9:
         r0: socket file descriptor
         r1: address
         return: 0 on success, or a negative value representing an error
-
     - name: connect
       address:
         NA: 0x204954C
@@ -1726,7 +1542,6 @@ arm9:
         r0: socket file descriptor
         r1: address
         return: 0 on success, or a negative value representing an error
-
     - name: recv
       address:
         NA: 0x20495A8
@@ -1738,7 +1553,6 @@ arm9:
         r2: size of buffer
         r3: flags
         return: number of bytes read, or a negative value representing an error
-
     - name: recvfrom
       address:
         NA: 0x20495CC
@@ -1752,7 +1566,6 @@ arm9:
         stack[0]: destination address; can be NULL
         stack[1]: length of destination address
         return: number of bytes read, or a negative value representing an error
-
     - name: send
       address:
         NA: 0x204965C
@@ -1787,7 +1600,6 @@ arm9:
         
         r0: file descriptor
         return: 0 on success, or a negative value representing an error
-
     - name: ret_02049d08
       address:
         NA: 0x2049D08
@@ -1795,7 +1607,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0205fc98
       address:
         NA: 0x205FC98
@@ -1803,7 +1614,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0205fcb8
       address:
         NA: 0x205FCB8
@@ -1811,7 +1621,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0206129c
       address:
         NA: 0x206129C
@@ -1819,15 +1628,12 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: GX_Init
       address:
         NA: 0x20612A0
-
     - name: GX_InitGxState
       address:
         NA: 0x20615AC
-
     - name: ret_020647a0
       address:
         NA: 0x20647A0
@@ -1835,19 +1641,15 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: OS_InitIrqTable
       address:
         NA: 0x20648AC
-
     - name: OS_SetIrqFunction
       address:
         NA: 0x20648C4
-
     - name: OS_SetIrqMask
       address:
         NA: 0x2064A68
-
     - name: OS_EnableIrqMask
       address:
         NA: 0x2064A94
@@ -1855,107 +1657,81 @@ arm9:
         Use unknown.
         
         r0: uint
-
     - name: OS_DisableIrqMask
       address:
         NA: 0x2064AC4
-
     - name: OS_ResetRequestIrqMask
       address:
         NA: 0x2064AF4
-
     - name: OS_SetIrqStackChecker
       address:
         NA: 0x2064B20
-
     - name: OS_InitLock
       address:
         NA: 0x2064B54
-
     - name: OS_LockByWord
       address:
         NA: 0x2064C6C
-
     - name: OS_UnlockByWord
       address:
         NA: 0x2064CF0
-
     - name: OS_UnlockCartridge
       address:
         NA: 0x2064D8C
-
     - name: OS_UnlockCartridgeVeneer
       address:
         NA: 0x2064DAC
-
     - name: OS_GetLockID
       address:
         NA: 0x2064E78
-
     - name: OSi_InsertLinkToQueue
       address:
         NA: 0x2064FC0
-
     - name: OSi_InsertThreadToList
       address:
         NA: 0x20650F0
-
     - name: OS_RescheduleThread
       address:
         NA: 0x2065198
-
     - name: OS_InitThread
       address:
         NA: 0x2065260
-
     - name: OS_SleepThread
       address:
         NA: 0x206569C
-
     - name: OS_WakeupThreadDirect
       address:
         NA: 0x2065754
-
     - name: OS_SetSwitchThreadCallback
       address:
         NA: 0x20659F0
-
     - name: OSi_IdleThreadProc
       address:
         NA: 0x2065A18
-
     - name: OS_SetThreadDestructor
       address:
         NA: 0x2065A90
-
     - name: OS_SaveContext
       address:
         NA: 0x2065B1C
-
     - name: OS_LoadContext
       address:
         NA: 0x2065B68
-
     - name: OS_InitMutex
       address:
         NA: 0x2065E44
-
     - name: DC_FlushAll
       address:
         NA: 0x206606C
-
     - name: DC_InvalidateRange
       address:
         NA: 0x20660A0
-
     - name: DC_FlushRange
       address:
         NA: 0x20660D8
-
     - name: OSi_WaitVCount0
       address:
         NA: 0x2066130
-
     - name: OS_Init
       address:
         NA: 0x2066150
@@ -1963,47 +1739,36 @@ arm9:
         Use unknown.
         
         No params.
-
     - name: OS_InitArena
       address:
         NA: 0x2066198
-
     - name: OS_InitArenaEx
       address:
         NA: 0x206629C
-
     - name: OS_GetInitArenaLo
       address:
         NA: 0x2066414
-
     - name: OS_SetArenaHi
       address:
         NA: 0x20664BC
-
     - name: OS_SetArenaLo
       address:
         NA: 0x20664D0
-
     - name: OS_SetProtectionRegion1
       address:
         NA: 0x2066598
-
     - name: OS_SetProtectionRegion2
       address:
         NA: 0x20665A0
-
     - name: OS_InitException
       address:
         NA: 0x20665A8
-
     - name: OSi_ExceptionHandler
       address:
         NA: 0x2066618
-
     - name: OS_InitVAlarm
       address:
         NA: 0x2066DE4
-
     - name: OS_DisableInterrupts
       address:
         NA: 0x2067364
@@ -2012,7 +1777,6 @@ arm9:
         pmdsky-debug: EnableIrqFlag
         
         return: Old value of cpsr & 0x80 (0x80 if interrupts were already disabled, 0x0 if they were enabled)
-
     - name: OS_RestoreInterrupts
       address:
         NA: 0x2067378
@@ -2022,11 +1786,9 @@ arm9:
         
         r0: Value to set the flag to (0x80 to set it, which disables interrupts; 0x0 to unset it, which enables interrupts)
         return: Old value of cpsr & 0x80 (0x80 if interrupts were disabled, 0x0 if they were enabled)
-
     - name: OS_InitReset
       address:
         NA: 0x20673FC
-
     - name: OS_GetMacAddress
       address:
         NA: 0x206756C
@@ -2034,7 +1796,6 @@ arm9:
         Gets the MAC address of the DS.
         
         r0: [output] MAC address pointer
-
     - name: OS_GetOwnerInfo
       address:
         NA: 0x2067588
@@ -2046,7 +1807,6 @@ arm9:
         pmdsky-debug: GetDsFirmwareUserSettings
         
         r0: [output] user_settings pointer
-
     - name: Math_CountLeadingZeros
       address:
         NA: 0x206760C
@@ -2055,11 +1815,9 @@ arm9:
         
         r0: x
         return: clz(x)
-
     - name: OSi_InitVramExclusive
       address:
         NA: 0x2067614
-
     - name: OS_Panic
       address:
         NA: 0x2067860
@@ -2070,7 +1828,6 @@ arm9:
         pmdsky-debug: WaitForever2
         
         No params.
-
     - name: OS_Halt
       address:
         NA: 0x2067870
@@ -2081,23 +1838,18 @@ arm9:
         pmdsky-debug: WaitForInterrupt
         
         No params.
-
     - name: MI_SetWramBank
       address:
         NA: 0x206787C
-
     - name: MI_DmaCopy16
       address:
         NA: 0x20679FC
-
     - name: MI_StopDma
       address:
         NA: 0x2067C2C
-
     - name: MIi_CheckDma0SourceAddress
       address:
         NA: 0x2067D2C
-
     - name: MIi_CpuClear16
       address:
         NA: 0x2067D80
@@ -2108,7 +1860,6 @@ arm9:
         r0: value
         r1: ptr
         r2: len (# bytes)
-
     - name: MIi_CpuCopy16
       address:
         NA: 0x2067DA8
@@ -2119,7 +1870,6 @@ arm9:
         r0: src
         r1: dest
         r2: len (# bytes)
-
     - name: MIi_CpuClear32
       address:
         NA: 0x2067DDC
@@ -2130,7 +1880,6 @@ arm9:
         r0: value
         r1: ptr
         r2: len (# bytes)
-
     - name: MIi_CpuCopy32
       address:
         NA: 0x2067DF8
@@ -2141,7 +1890,6 @@ arm9:
         r0: src
         r1: dest
         r2: len (# bytes)
-
     - name: MIi_CpuClearFast
       address:
         NA: 0x2067E20
@@ -2152,7 +1900,6 @@ arm9:
         r0: value
         r1: ptr
         r2: len (# bytes)
-
     - name: MIi_CpuCopyFast
       address:
         NA: 0x2067E7C
@@ -2163,7 +1910,6 @@ arm9:
         r0: src
         r1: dest
         r2: len (# bytes)
-
     - name: MI_CpuFill8
       address:
         NA: 0x2067F14
@@ -2177,7 +1923,6 @@ arm9:
         r0: ptr
         r1: value
         r2: len (# bytes)
-
     - name: MI_CpuCopy8
       address:
         NA: 0x2067FD0
@@ -2191,51 +1936,39 @@ arm9:
         r0: src
         r1: dest
         r2: n (# bytes)
-
     - name: MI_Init
       address:
         NA: 0x206842C
-
     - name: Snd_CalcChannelVolume
       address:
         NA: 0x20690F8
-
     - name: Pxi_Init
       address:
         NA: 0x206955C
-
     - name: Pxi_InitFifo
       address:
         NA: 0x2069568
-
     - name: Pxi_SetFifoRecvCallback
       address:
         NA: 0x2069668
-
     - name: Pxi_IsCallbackReady
       address:
         NA: 0x20696B4
-
     - name: Pxi_SendWordByFifo
       address:
         NA: 0x20696D8
-
     - name: Pxii_HandlerRecvFifoNotEmpty
       address:
         NA: 0x2069760
-
     - name: PMi_CallCallbackAndUnlock
       address:
         NA: 0x206D700
-
     - name: PM_Init
       address:
         NA: 0x206D740
-
     - name: PMi_CommonCallback
       address:
         NA: 0x206D7E4
-
     - name: PM_ForceToPowerOff
       address:
         NA: 0x206DC00
@@ -2243,43 +1976,33 @@ arm9:
         Powers off the system.
         
         return: ?
-
     - name: Cardi_InitCommon
       address:
         NA: 0x206EDDC
-
     - name: Card_Enable
       address:
         NA: 0x206EF14
-
     - name: Cardi_ReadFromCache
       address:
         NA: 0x206F740
-
     - name: Cardi_SetRomOp
       address:
         NA: 0x206F7CC
-
     - name: Cardi_ReadCard
       address:
         NA: 0x206FADC
-
     - name: Card_Init
       address:
         NA: 0x206FDB8
-
     - name: Cardi_OnFifoRecv
       address:
         NA: 0x206FE34
-
     - name: Cardi_TaskThread
       address:
         NA: 0x206FE68
-
     - name: Card_InitPulledOutCallback
       address:
         NA: 0x207000C
-
     - name: ret_0207484c
       address:
         NA: 0x207484C
@@ -2287,35 +2010,27 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: Ctrdgi_InitCommon
       address:
         NA: 0x2077D50
-
     - name: Ctrdgi_ChangeLatestAccessCycle
       address:
         NA: 0x2077F8C
-
     - name: Ctrdgi_RestoreAccessCycle
       address:
         NA: 0x2077FD4
-
     - name: Ctrdgi_LockByProcessor
       address:
         NA: 0x2078008
-
     - name: Ctrdgi_UnlockByProcessor
       address:
         NA: 0x2078064
-
     - name: Ctrdgi_SendtoPxi
       address:
         NA: 0x2078088
-
     - name: Ctrdg_Init
       address:
         NA: 0x207824C
-
     - name: abs
       address:
         NA: 0x20794C8
@@ -2324,7 +2039,6 @@ arm9:
         
         r0: x
         return: abs(x)
-
     - name: ret_020794d4
       address:
         NA: 0x20794D4
@@ -2332,7 +2046,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: mbtowc
       address:
         NA: 0x2079A64
@@ -2343,7 +2056,6 @@ arm9:
         r1: s
         r2: n
         return: number of consumed bytes, or -1 on failure
-
     - name: TryAssignByte
       address:
         NA: 0x2079A9C
@@ -2353,7 +2065,6 @@ arm9:
         r0: pointer
         r1: value
         return: true on success, false on failure
-
     - name: TryAssignByteWrapper
       address:
         NA: 0x2079AB0
@@ -2365,7 +2076,6 @@ arm9:
         r0: pointer
         r1: value
         return: true on success, false on failure
-
     - name: wcstombs
       address:
         NA: 0x2079B54
@@ -2376,7 +2086,6 @@ arm9:
         r1: src
         r2: n
         return: characters converted
-
     - name: memcpy
       address:
         NA: 0x2079BCC
@@ -2387,7 +2096,6 @@ arm9:
         r1: src
         r2: n
         return: dest
-
     - name: memmove
       address:
         NA: 0x2079BEC
@@ -2400,7 +2108,6 @@ arm9:
         r1: src
         r2: n
         return: dest
-
     - name: __vsprintf_internal_slice
       address:
         NA: 0x207B5D0
@@ -2414,7 +2121,6 @@ arm9:
         r2: format
         r3: ap
         return: number of characters printed, excluding the null-terminator
-
     - name: TryAppendToSlice
       address:
         NA: 0x207BE20
@@ -2425,7 +2131,6 @@ arm9:
         r1: buffer of data to append
         r2: number of bytes in the data buffer
         return: true
-
     - name: __vsprintf_internal
       address:
         NA: 0x207BF7C
@@ -2437,7 +2142,6 @@ arm9:
         r2: format
         r3: ap
         return: number of characters printed, excluding the null-terminator
-
     - name: vsprintf
       address:
         NA: 0x207BFE4
@@ -2448,7 +2152,6 @@ arm9:
         r1: format
         r2: ap
         return: number of characters printed, excluding the null-terminator
-
     - name: strlen
       address:
         NA: 0x207C1B0
@@ -2457,7 +2160,6 @@ arm9:
         
         r0: s
         return: length of s
-
     - name: strcpy
       address:
         NA: 0x207C1CC
@@ -2469,7 +2171,6 @@ arm9:
         r0: dest
         r1: src
         return: dest
-
     - name: strncpy
       address:
         NA: 0x207C294
@@ -2480,7 +2181,6 @@ arm9:
         r1: src
         r2: n
         return: dest
-
     - name: strcat
       address:
         NA: 0x207C2E4
@@ -2490,7 +2190,6 @@ arm9:
         r0: dest
         r1: src
         return: dest
-
     - name: strcmp
       address:
         NA: 0x207C314
@@ -2502,7 +2201,6 @@ arm9:
         r0: s1
         r1: s2
         return: comparison value
-
     - name: strncmp
       address:
         NA: 0x207C428
@@ -2513,7 +2211,6 @@ arm9:
         r1: s2
         r2: n
         return: comparison value
-
     - name: strchr
       address:
         NA: 0x207C45C
@@ -2523,7 +2220,6 @@ arm9:
         r0: string
         r1: c
         return: pointer to the located byte c, or null pointer if no match
-
     - name: strstr
       address:
         NA: 0x207C498
@@ -2533,7 +2229,6 @@ arm9:
         r0: haystack
         r1: needle
         return: pointer into haystack where needle starts, or null pointer if no match
-
     - name: ret_0207f910
       address:
         NA: 0x207F910
@@ -2541,7 +2236,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_0207f9c0
       address:
         NA: 0x207F9C0
@@ -2549,7 +2243,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: _dadd
       address:
         NA: 0x207FE5C
@@ -2565,7 +2258,6 @@ arm9:
         r2: b (low bits)
         r3: b (high bits)
         return: a + b
-
     - name: _ll_ufrom_d
       address:
         NA: 0x2080174
@@ -2578,7 +2270,6 @@ arm9:
         
         r0: double (low bits)
         r1: double (high bits)
-
     - name: _dmul
       address:
         NA: 0x2080200
@@ -2594,7 +2285,6 @@ arm9:
         r2: b (low bits)
         r3: b (high bits)
         return: a * b
-
     - name: _drsub
       address:
         NA: 0x2080564
@@ -2610,7 +2300,6 @@ arm9:
         r2: a (low bits)
         r3: a (high bits)
         return: a - b
-
     - name: _dsub
       address:
         NA: 0x208057C
@@ -2626,7 +2315,6 @@ arm9:
         r2: b (low bits)
         r3: b (high bits)
         return: a - b
-
     - name: _fadd
       address:
         NA: 0x2080930
@@ -2638,7 +2326,6 @@ arm9:
         r0: a
         r1: b
         return: a + b
-
     - name: _dls
       address:
         NA: 0x2080B54
@@ -2650,7 +2337,6 @@ arm9:
         r2: b (low bits)
         r3: b (high bits)
         return: a < b
-
     - name: _deq
       address:
         NA: 0x2080BF0
@@ -2662,7 +2348,6 @@ arm9:
         r2: b (low bits)
         r3: b (high bits)
         return: a == b
-
     - name: _fls
       address:
         NA: 0x2080C7C
@@ -2672,7 +2357,6 @@ arm9:
         r0: a
         r1: b
         return: a < b
-
     - name: _frdiv
       address:
         NA: 0x2080CD8
@@ -2684,7 +2368,6 @@ arm9:
         r0: divisor
         r1: dividend
         return: dividend / divisor
-
     - name: _fdiv
       address:
         NA: 0x2080CE4
@@ -2696,7 +2379,6 @@ arm9:
         r0: dividend
         r1: divisor
         return: dividend / divisor
-
     - name: _ffix
       address:
         NA: 0x208109C
@@ -2707,7 +2389,6 @@ arm9:
         
         r0: float
         return: (int)float
-
     - name: _fflt
       address:
         NA: 0x20810D0
@@ -2718,7 +2399,6 @@ arm9:
         
         r0: int
         return: (float)int
-
     - name: _fmul
       address:
         NA: 0x2081184
@@ -2730,7 +2410,6 @@ arm9:
         r0: a
         r1: b
         return: a * b
-
     - name: _fsub
       address:
         NA: 0x2081370
@@ -2742,7 +2421,6 @@ arm9:
         r0: a
         r1: b
         return: a - b
-
     - name: _ll_mod
       address:
         NA: 0x20815E8
@@ -2758,7 +2436,6 @@ arm9:
         r2: divisor (low bits)
         r3: divisor (high bits)
         return: dividend % divisor
-
     - name: _ll_sdiv
       address:
         NA: 0x20815F8
@@ -2774,7 +2451,6 @@ arm9:
         r2: divisor (low bits)
         r3: divisor (high bits)
         return: dividend / divisor
-
     - name: _ll_udiv
       address:
         NA: 0x20817A8
@@ -2790,7 +2466,6 @@ arm9:
         r2: divisor (low bits)
         r3: divisor (high bits)
         return: dividend / divisor
-
     - name: _ull_mod
       address:
         NA: 0x20817B4
@@ -2806,7 +2481,6 @@ arm9:
         r2: divisor (low bits)
         r3: divisor (high bits)
         return: dividend % divisor
-
     - name: _ll_mul
       address:
         NA: 0x20817F0
@@ -2822,7 +2496,6 @@ arm9:
         r2: b (low bits)
         r3: b (high bits)
         return: a * b
-
     - name: _s32_div_f
       address:
         NA: 0x2081810
@@ -2836,7 +2509,6 @@ arm9:
         r0: dividend
         r1: divisor
         return: (quotient) | (remainder << 32)
-
     - name: _u32_div_f
       address:
         NA: 0x2081A1C
@@ -2851,7 +2523,6 @@ arm9:
         r0: dividend
         r1: divisor
         return: (quotient) | (remainder << 32)
-
     - name: _u32_div_not_0_f
       address:
         NA: 0x2081A24
@@ -2864,7 +2535,6 @@ arm9:
         r0: dividend
         r1: divisor
         return: (quotient) | (remainder << 32)
-
     - name: ret_02081c00
       address:
         NA: 0x2081C00
@@ -2872,7 +2542,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02082e20
       address:
         NA: 0x2082E20
@@ -2880,14 +2549,13 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-
     - name: ret_02083544
       address:
         NA: 0x2083544
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
-        No params.  
+        No params.
   data:
     - name: SECURE
       address:
