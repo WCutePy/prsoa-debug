@@ -185,7 +185,6 @@ undefined4 TimerIsActive(void);
 undefined4 IncrementPokemonRidesRecord(void);
 int32_t GetGameSavesRecordSafe(void);
 undefined4 GetPartnerIndexFromFormId(enum form_id param_1);
-undefined4 GetPartnerIndexFromFormId(undefined4 param_1);
 void ret_020358fc(void);
 void ret_02035fe4(void);
 void ret_0203e930(void);

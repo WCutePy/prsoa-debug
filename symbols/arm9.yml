@@ -667,7 +667,7 @@ arm9:
         
         No params.
 
-    - name: zero_pokemon_data
+    - name: ZeroPokemonData
       address:
         NA: 0x20150B8
       description: |-
@@ -866,7 +866,7 @@ arm9:
         r0: ranger_data pointer
         r1: int
 
-    - name: SetconversationsRecord
+    - name: SetConversationsRecord
       address:
         NA: 0x2016DD0
       description: |-
@@ -875,7 +875,7 @@ arm9:
         r0: ranger_data pointer
         r1: uint
 
-    - name: AddconversationsRecord
+    - name: AddConversationsRecord
       address:
         NA: 0x2016DEC
       description: |-
