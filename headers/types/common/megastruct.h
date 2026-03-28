@@ -1,6 +1,16 @@
 #include "enums.h"
 #include "common.h"
 
+struct mega_substruct_1 {
+    undefined4 unk_field_0x0;
+    void* unk_struct_ptr_0x4; // Pointer to a struct of unknown size.
+    undefined2 unk_field_0x8;
+    undefined2 unk_field_0xa;
+    undefined2 unk_field_0xc;
+    undefined2 unk_field_0xe; 
+};
+ASSERT_SIZE(struct mega_substruct_1, 16);
+
 struct megastruct {
     undefined4 field0_0x0;
     undefined field1_0x4;
@@ -14,44 +24,20 @@ struct megastruct {
     void* unk_struct_size_0x30; // Seems to handle touch screen inputs
     void* unk_struct_size_0x54;
     int field11_0x20;
-    // Supposedly a cache of some kind. Unsure what type it uses, but it's 1024 bytes long.
-    undefined1 unk_cache_0x400[1024];
-    undefined4 field13_0x424[2]; // Likely bigger!
-    undefined field14_0x42c[30];
-    undefined2 field44_0x44a;
-    undefined field45_0x44c[6];
-    undefined2 field51_0x452;
-    undefined field52_0x454[6];
-    undefined2 field58_0x45a;
-    undefined field59_0x45c[6];
-    undefined2 field65_0x462;
-    undefined field66_0x464[960];
-    undefined2 unk_table_0[32][4];
-    undefined field1027_0x924[768];
-    void* unk_struct_size_0x4c;
-    void* unk_struct_size_0x4c_1;
+    // Supposedly a set of caches. Unsure what type it uses, but they're 1024 bytes long.
+    undefined1 unk_cashe_1[1024];
+    undefined1 unk_cache_2[1024];
+    undefined1 unk_cache_3[1024]; // This one is initialized differently than the others. Not sue why.
+    void* unk_struct_size_0x4c;   // Seems related to 2D and 3D background (?) display (2D Engine A, B, and 3D engine)
+    void* unk_struct_size_0x4c_1; // Seems related to 2D and 3D background (?) display (2D Engine A, B, and 3D engine)
     void* unk_struct_size_0x80;
     void* unk_struct_size_0x80_1;
-    undefined field1799_0xc34;
-    undefined field1800_0xc35;
-    undefined field1801_0xc36;
-    undefined field1802_0xc37;
-    void* unk_struct_unsized_0xc38; // Pointer to a struct of unknown size.
-    undefined field1804_0xc3c[12];
-    void* unk_struct_unsized_0xc48; // Pointer to a struct of unknown size.
-    undefined field1817_0xc4c[12];
-    void* unk_struct_unsized_0xc58; // Pointer to a struct of unknown size.
-    undefined field1830_0xc5c[12];
-    void* unk_struct_unsized_0xc68; // Pointer to a struct of unknown size.
-    undefined field1843_0xc6c[12];
-    void* unk_struct_unsized_0xc78; // Pointer to a struct of unknown size.
-    undefined field1856_0xc7c[12];
-    void* unk_struct_unsized_0xc88; // Pointer to a struct of unknown size.
-    undefined field1869_0xc8c[1960];
+    // This is likely a table of substructs. Not a clue what they do though!
+    struct mega_substruct_1 struct_table_0xc34[128];
     void* unk_struct_size_0x8;
     void* unk_struct_size_0x10;
     struct battle_combatants* battle_combatants_ptr;
-    undefined4 field3832_0x1440;
+    void* field3832_0x1440; // "Initialized" by 0x02010C3C, but isn't actually modified???
     undefined4* unk_struct_size_0x84;
     int32_t unk_int_0x1234;
     undefined4 field3835_0x144c;
@@ -64,10 +50,13 @@ struct megastruct {
     undefined4 field3842_0x1468;
     undefined field3843_0x146c[32];
     void* unk_struct_size_0x1ac;
+    // A pointer to this is present in the mission_quest_footer. Looks to be related to the message given before a quest is accepted.
+    // Has ties to "data/message/quest/quest%03d_mes"
     void* unk_struct_size_0x158;
     void* unk_struct_size_0x44;
     void* unk_struct_size_0x40;
-    void* unk_struct_size_0x1881C;
+    // A pointer to this is present in the mission_quest_footer. Might be related to quest script files "data/Script/quest/q%03d.fsb"
+    void* unk_struct_size_0x1881C; 
     struct mission_quest_data* mission_quest_data_ptr;
     struct ranger_data_old* ranger_data_ptr;
     undefined4 field3882_0x14a8;
@@ -75,13 +64,13 @@ struct megastruct {
     void* unk_struct_size_0x14;
     struct settings_and_variables* settings_vars_ptr;
     void* unk_struct_size_0x28;
-    void* unk_struct_size_0x1c;
-    void* unk_struct_size_0x1c_1;
-    int16_t* unk_struct_size_0xc7c;
-    int16_t* unk_struct_size_0xc7c_1;
-    struct field_data_bin* field_data_bin;
-    void* field3892_0x14d0[32];
-    undefined field3893_0x1550[128];
+    void* unk_struct_size_0x1c;    // Might be related to sound registers? See FUN_0200E2D4
+    void* unk_struct_size_0x1c_1;  // Might be related to sound registers? See FUN_0200E2D4
+    void* unk_struct_size_0xc7c;   // Seems related to 2D display (2D Engine A and B), See FUN_200E4A8.
+    void* unk_struct_size_0xc7c_1; // Seems related to 2D display (2D Engine A and B), See FUN_200E4A8.
+    void* field_data_bin_ptr; // Likely a pointer to a decompressed copy of fielddata.bin 
+    void* field3892_0x14d0[32]; // These appear to be functions for the below param_0s
+    int field3893_0x1550[32]; // These appear to be param_0 for the above functions
     undefined4 field4021_0x15d0;
     undefined4 field4022_0x15d4;
     void* unk_struct_size_0x58;
