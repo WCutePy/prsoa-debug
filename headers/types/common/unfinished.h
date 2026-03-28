@@ -1,14 +1,13 @@
 #include "enums.h"
 #include "common.h"
 #include "battle.h"
-#include "megastruct.h"
 
 struct ov_03_unk_struct_0 {
     void* field0_0x0;
     void* field1_0x4;
     struct megastruct* megastruct_ptr;
-    uint field3_0xc;
-    ushort field4_0x10;
+    unsigned int field3_0xc;
+    unsigned int16_t field4_0x10;
     undefined field5_0x12;
     undefined field6_0x13;
     undefined4 field7_0x14;
@@ -42,7 +41,7 @@ struct ov_03_unk_struct_0 {
     undefined4* field35_0x90;
     undefined field36_0x94;
     undefined field37_0x95;
-    ushort field38_0x96;
+    unsigned int16_t field38_0x96;
     undefined4 field39_0x98;
     undefined4 field40_0x9c;
     undefined4 field41_0xa0;
@@ -67,7 +66,7 @@ struct ov_03_unk_struct_0 {
     int* field60_0xec;
     int* field61_0xf0;
     int field62_0xf4;
-    byte field63_0xf8;
+    int8_t field63_0xf8;
     undefined field64_0xf9;
     undefined field65_0xfa;
     undefined field66_0xfb;
@@ -79,9 +78,9 @@ struct ov_03_unk_struct_1 {
     void* field0_0x0;
     undefined4 unk_struct_size_0x1ac;
     struct megastruct* megastruct_ptr;
-    ushort field3_0xc;
-    ushort field4_0xe;
-    ushort field5_0x10;
+    unsigned int16_t field3_0xc;
+    unsigned int16_t field4_0xe;
+    unsigned int16_t field5_0x10;
     undefined field6_0x12;
     undefined field7_0x13;
     undefined4 field8_0x14;
@@ -101,8 +100,8 @@ struct ov_03_unk_struct_2 {
     void* field0_0x0;
     void* unk_struct_size_0x1ac;
     struct megastruct* megastruct_ptr;
-    ushort field3_0xc;
-    ushort field4_0xe;
+    unsigned int16_t field3_0xc;
+    unsigned int16_t field4_0xe;
     undefined4 field5_0x10;
     undefined4 field6_0x14;
     undefined4 field7_0x18;
@@ -118,11 +117,11 @@ ASSERT_SIZE(struct ov_03_unk_struct_2, 56);
 
 struct ov_03_unk_struct_3 {
     void* field0_0x0;
-    byte field1_0x4;
-    byte field2_0x5;
+    int8_t field1_0x4;
+    int8_t field2_0x5;
     undefined1 field3_0x6;
     char field4_0x7;
-    byte field5_0x8;
+    int8_t field5_0x8;
     undefined field6_0x9;
     undefined field7_0xa;
     undefined field8_0xb;
@@ -179,6 +178,7 @@ struct ov_03_unk_struct_3 {
     int field298_0x1d8;
     int field299_0x1dc;
 };
+
 ASSERT_SIZE(struct ov_03_unk_struct_3, 480);
 
 struct ov_03_unk_struct_4 {
@@ -196,7 +196,7 @@ struct ov_03_unk_struct_4 {
     undefined field3641_0xe54[620];
     int field4261_0x10c0;
     undefined4 field4262_0x10c4[128][2];
-    uint field4263_0x14c4;
+    unsigned int field4263_0x14c4;
     undefined1 field4264_0x14c8;
     undefined1 field4265_0x14c9;
     undefined field4266_0x14ca;
@@ -292,7 +292,7 @@ struct ov_09_unk_struct {
 ASSERT_SIZE(struct ov_09_unk_struct, 12);
 
 struct ov_11_unk_struct_size_0x730 {
-    ushort field0_0x0;
+    unsigned int16_t field0_0x0;
     undefined2 field1_0x2;
     undefined field2_0x4;
     undefined field3_0x5;
@@ -324,11 +324,11 @@ struct ov_11_unk_struct_size_0x730 {
     undefined field29_0x31;
     undefined field30_0x32;
     undefined field31_0x33;
-    ushort field32_0x34;
+    unsigned int16_t field32_0x34;
     undefined field33_0x36;
     undefined field34_0x37;
     int field35_0x38;
-    byte field36_0x3c;
+    int8_t field36_0x3c;
     undefined field37_0x3d;
     undefined field38_0x3e;
     undefined field39_0x3f;

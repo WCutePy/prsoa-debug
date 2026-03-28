@@ -1,7 +1,6 @@
 #include "enums.h"
 #include "common.h"
 #include "battle.h"
-#include "megastruct.h"
 
 // All ov_06 functions that take parameters seem to take this as param_1.
 struct options_menu {
