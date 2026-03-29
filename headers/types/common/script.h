@@ -23,7 +23,7 @@ struct script_data {
     undefined field20_0x1f;
     undefined4 field21_0x20;
     undefined4 field22_0x24;
-    void *unk_struct_0xb8; // Unknown struct of size 0xb8.
+    void* unk_struct_0xb8;      // Unknown struct of size 0xb8.
     char subroutine_1_name[12]; // Not sure how subroutines 1 and 2 differ yet...
     undefined field25_0x38[552];
     int subroutine_1_is_active;
@@ -38,11 +38,11 @@ struct script_data {
 ASSERT_SIZE(struct script_data, 636);
 
 struct script_manager {
-    undefined4 *megastruct_field_0x14a8_ptr;
-    struct script_data *system_script_data_ptr;
-    struct script_data *area_script_data_ptr;
-    struct script_data *chapter_script_data_ptr;
-    struct script_data *quest_script_data_ptr;
+    undefined4* megastruct_field_0x14a8_ptr;
+    struct script_data* system_script_data_ptr;
+    struct script_data* area_script_data_ptr;
+    struct script_data* chapter_script_data_ptr;
+    struct script_data* quest_script_data_ptr;
     undefined4 unk_riding_pokemon_data; // Changes when riding doduo, among other things?
     undefined4 field6_0x18;
     undefined field7_0x1c;
@@ -73,7 +73,7 @@ struct script_manager {
     undefined field32_0x35;
     undefined field33_0x36;
     undefined field34_0x37;
-    void *unk_struct_0x3c_ptr; // Points to 0x3C...
+    void* unk_struct_0x3c_ptr; // Points to 0x3C...
     undefined field36_0x3c[100320];
 };
 ASSERT_SIZE(struct script_manager, 100380);

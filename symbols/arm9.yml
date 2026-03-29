@@ -610,7 +610,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: mission_quest_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: IsQuestAvailable
       address:
         NA: 0x20114F8
@@ -618,7 +618,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: mission_quest_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: MakeQuestNameVisible
       address:
         NA: 0x2011514
@@ -626,7 +626,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: mission_quest_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: HasClearedQuest
       address:
         NA: 0x2011528
@@ -634,7 +634,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: mission_quest_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: TryAcceptQuest
       address:
         NA: 0x2011540
@@ -642,7 +642,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: mission_quest_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: TryClearQuest
       address:
         NA: 0x20115A8
@@ -664,7 +664,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: mission_quest_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: ret_020117ac
       address:
         NA: 0x20117AC
@@ -1504,7 +1504,7 @@ arm9:
         r0: script_data pointer
         r1: char pointer
         r2: undefined4 
-        r3: undefined4 
+        r3: undefined4
     - name: SetScriptSubroutine2
       address:
         NA: 0x2033DC0
@@ -1514,7 +1514,7 @@ arm9:
         r0: script_data pointer
         r1: char pointer
         r2: undefined4 
-        r3: undefined4 
+        r3: undefined4
     - name: ZeroInitScriptData
       address:
         NA: 0x2033E50
@@ -1537,7 +1537,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: script_manager pointer
-        r1: int32_t 
+        r1: int32_t
     - name: TryInitAreaScript
       address:
         NA: 0x203401C
@@ -1547,7 +1547,7 @@ arm9:
         r0: script_manager pointer
         r1: int32_t 
         r2: undefined4 
-        r3: undefined4 
+        r3: undefined4
     - name: TryInitChapterScript
       address:
         NA: 0x2034084
@@ -1557,7 +1557,7 @@ arm9:
         r0: script_manager pointer
         r1: int32_t 
         r2: undefined4 
-        r3: undefined4 
+        r3: undefined4
     - name: TryInitQuestScript
       address:
         NA: 0x2034120
@@ -1565,7 +1565,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: script_manager pointer
-        r1: int32_t 
+        r1: int32_t
     - name: SetScriptSubroutine1ByName
       address:
         NA: 0x2034184
@@ -1583,7 +1583,7 @@ arm9:
         r0: script_manager pointer
         r1: char pointer
         r2: megastruct pointer
-        r3: undefined4 
+        r3: undefined4
     - name: ZeroInitSystemScriptData
       address:
         NA: 0x2034290
@@ -1619,7 +1619,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: script_manager pointer
-        r1: undefined4 
+        r1: undefined4
     - name: GetUnkRidingData
       address:
         NA: 0x203437C
@@ -1952,7 +1952,7 @@ arm9:
         r0: char pointer
         r1: char pointer
         r2: undefined4 
-        r3: undefined4 
+        r3: undefined4
     - name: OSi_InsertLinkToQueue
       address:
         NA: 0x2064FC0
