@@ -8,7 +8,7 @@ void ret_0200120c(void);
 void* MaybeMemAlloc(undefined4 param_1);
 void LoadOverlay(int overlay, bool param_2);
 undefined* SetGameState(int state, struct megastruct* param_2);
-void InitControllerInputs(controller_inputs *param_1);
+void InitControllerInputs(struct controller_inputs *param_1);
 void ret_02001eb4(void);
 void ret_02001ecc(void);
 void ret_0200372c(void);
@@ -209,7 +209,7 @@ int TryInitAreaScript(struct script_manager *param_1,int param_2,undefined4 para
 int TryInitChapterScript(struct script_manager *param_1,int param_2,undefined4 param_3,undefined4 param_4);
 void TryInitQuestScript(struct script_manager *param_1,int param_2);
 undefined4 SetScriptSubroutine1ByName(struct script_manager *param_1,char *param_2);
-void SetScriptSubroutine2ByName(struct script_manager *param_1,char *param_2,megastruct *param_3,undefined4 param_4);
+void SetScriptSubroutine2ByName(struct script_manager *param_1,char *param_2,struct megastruct *param_3,undefined4 param_4);
 void ZeroInitSystemScriptData(struct script_manager *param_1);
 void ZeroInitAreaScriptData(struct script_manager *param_1);
 void ZeroInitChapterScriptData(struct script_manager *param_1);

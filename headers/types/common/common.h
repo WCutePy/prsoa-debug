@@ -60,8 +60,8 @@ struct quest_body {
 ASSERT_SIZE(struct quest_body, 84);
 
 struct quest_footer {
-    undefined* unk_pointer_1;
-    undefined* unk_pointer_2;
+    undefined * unk_struct_size_0x158_ptr;
+    struct script_manager * script_manager_ptr;
 };
 ASSERT_SIZE(struct quest_footer, 8);
 
