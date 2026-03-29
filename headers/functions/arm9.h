@@ -243,7 +243,6 @@ int32_t recv(int32_t sockfd, void* buf, size_t size, int32_t flags);
 int32_t recvfrom(int32_t sockfd, void* buf, size_t size, int32_t flags, struct sockaddr_in* addr,
                  int32_t addr_len);
 int32_t send(int32_t sockfd, const void* buf, size_t size, int32_t flags);
-ssize_t sendto(int _fd,void *_buf,size_t _n,int _flags,sockaddr *_addr,socklen_t _addr_len);
 int CloseVeneer(int _fd);
 void ret_02049d08(void);
 void ret_0205fc98(void);
