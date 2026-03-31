@@ -2,5 +2,5 @@
 #define HEADERS_DATA_OVERLAY01_H_
 
 extern undefined4 OV1_STATIC_INITIALIZER;
-
+extern void* SYSCALL_PAGE_01_OV_01[95];
 #endif

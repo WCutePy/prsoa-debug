@@ -19,7 +19,19 @@ ram:
     TODO: ensure the length is actually correct.
   functions: []
   data:
-    - name: QUEST
+    - name: MISSION_QUEST_DATA_PTR
+      address:
+        NA: 0x20AF348
+    - name: MEGASTRUCT_PTR_RAM
+      address:
+        NA: 0x20AF358
+      description: "Pointer to the megastruct that lives in ram. There is another in arm9."
+    - name: RANGER_NET_MISSION_COMPLETION_BITS
+      address:
+        NA: 0x20AF598
+      description: "Ported from Nep's notes. Seems to be consistent with what it claims to be though. Type currently unknown"
+    - name: MISSION_QUEST_DATA
+    - alias: QUEST
       address:
         NA: 0x20B2638
       length:
@@ -31,3 +43,31 @@ ram:
       length:
         NA: 0x8B68
       description: "Likely a large portion of the save file, often called from memory from this particular offset. Likely larger in size than documented."
+    - name: PARTY_POKEMON_TABLES
+      address:
+        NA: 0x20BAEA4
+      length:
+        NA: 0x2D0
+      description: "A table of pokemon_data structs for all pokemon currently caught by the player. Includes land pokemon, sea pokemon, and a third unknown roster. Note: only slots 0-7 of each subtable are remembered in the save file!"
+    - name: FOLLOWING_NPC_TABLE
+      address:
+        NA: 0x20BB174
+      length:
+        NA: 0x70
+      description: "A table of following_npc structs for up to 2 NPCs following the player around."
+    - name: ARENA_GRAPHIC_ID
+      address:
+        NA: 0x20BB240
+      description: "Seems to be responsible for determining the background for battles and the release menu. Might be worth making an enum."
+    - name: SETTINGS_AND_VARIABLES
+      address:
+        NA: 0x210C0B0
+      length:
+        NA: 0xFC
+      description: "Seems to be a table of loose script variables for the main plot (Event), Settings (But there are only two settings???), and Quests (The Vientown signpost quest uses it, for unknown purposes)."
+    - name: SYSCALL_PAGE_PTRS
+      address:
+        NA: 0x210CED8
+      length:
+        NA: 0x100
+      description: "A table of pointers to pages of Syscall functions. Many pages seem to be unused, or are not currently written to ram."
