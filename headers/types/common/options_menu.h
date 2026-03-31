@@ -35,3 +35,5 @@ struct options_menu {
 };
 
 ASSERT_SIZE(struct options_menu, 140);
+
+#endif
