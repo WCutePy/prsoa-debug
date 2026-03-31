@@ -78,3 +78,5 @@ struct script_manager {
     undefined field36_0x3c[100320];
 };
 ASSERT_SIZE(struct script_manager, 100380);
+
+#endif
