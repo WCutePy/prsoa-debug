@@ -85,7 +85,7 @@ arm9:
       address:
         NA: 0x2001C04
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to initialize what we believe to be the struct that stores player inputs. 
         
         r0: controller_inputs pointer
     - name: ret_02001eb4
