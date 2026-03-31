@@ -28,6 +28,16 @@ overlay0:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Overlay00PreEntryPoint
+      address:
+        NA: 0x2124BD4
+      description: |-
+        Seems to run immediately before the actual entry point. Called by SetGameState.
+        
+        r0: undefined4 
+        r1: megastruct pointer
+        r2: undefined4 
+        r3: undefined4 
     - name: ret_02125334
       address:
         NA: 0x2125334

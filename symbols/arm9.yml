@@ -566,6 +566,13 @@ arm9:
         Retrieves the current gender and uniform for the player from the battle_combatants struct.
         
         r0: battle_combatants pointer
+    - name: InitBattleExports
+      address:
+        NA: 0x2010CCC
+      description: |-
+        
+        
+        r0: battle_exports pointer
     - name: ret_02010cec
       address:
         NA: 0x2010CEC
@@ -573,6 +580,13 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: ZeroBattleExports
+      address:
+        NA: 0x2010D04
+      description: |-
+        
+        
+        r0: battle_exports pointer
     - name: ZeroQuestBody
       address:
         NA: 0x201135C
@@ -1130,6 +1144,13 @@ arm9:
         Seems to assign a currently unknown field to a static battle_combatants structure in memory.
         
         r0: undefined4 pointer
+    - name: GetBattleResultSafe
+      address:
+        NA: 0x202F2B4
+      description: |-
+        
+        
+        No params.
     - name: BattleDisableFleeing
       address:
         NA: 0x202F2D8
@@ -1179,6 +1200,22 @@ arm9:
         Seems to add party pokemon to a static battle_combatants structure in memory.
         
         r0: undefined4 pointer
+    - name: AddEnemyFormToEncounter
+      address:
+        NA:
+          - 0x202F458
+          - 0x2122FEC
+      description: |-
+        
+        
+        r0: uint32_t pointer
+    - name: BattleSetBossFightStatusSafe
+      address:
+        NA: 0x202F4E8
+      description: |-
+        
+        
+        No params.
     - name: GetRangerStylerRank
       address:
         NA: 0x202FA54
