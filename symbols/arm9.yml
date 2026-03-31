@@ -1310,9 +1310,9 @@ arm9:
       address:
         NA: 0x20316CC
       description: |-
-       Retrieves the active quest id, using a pointer to MISSION_QUEST_DATA.
-        
-        No params.
+        Retrieves the active quest id, using a pointer to MISSION_QUEST_DATA.
+         
+         No params.
     - name: TryBackOutOfQuestSafe
       address:
         NA: 0x20316E8
