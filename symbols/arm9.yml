@@ -2582,6 +2582,7 @@ arm9:
         NA: 0x200
       description: "The 0th page of functions callable by the SysCall script opcode. 128 function pointers long."
     - name: MEGASTRUCT_PTR_ARM9
-      address: 0x208F304
+      address:
+        NA: 0x208F304
       description: "Pointer to the megastruct that lives in arm9. There is another in ram."
     
