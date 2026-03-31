@@ -1442,7 +1442,7 @@ struct battle_exports {
     int8_t num_pokemon_caught; // Created by Rename Structure Field action
     undefined field17_0x59; // Likely padding
     int16_t caught_form_ids[8];
-    enum capture_rank current_capture_rank;
+    struct capture_rank_8 current_capture_rank;
     undefined1 can_partner_poke_assist; // Created by Rename Structure Field action
     int8_t party_pokemon;
     int8_t poke_assists_used[8];

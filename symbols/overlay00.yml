@@ -28,6 +28,16 @@ overlay0:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: AddEnemyFormToEncounterType2
+      address:
+        NA: 0x2122FEC
+      description: |-
+        Seems to add an enemy form to an encounter that's about to occur, modifying both the battle_combatants and the battle_exports struct.
+        Unknown how it differs from AddEnemyFormToEncounterType1.
+        r0: ov_00_unk_struct pointer
+        r1: maybe form_id pointer? Might be packed with other info.
+        r2: upper 3 nibbles of something???
+        r3: lower 3 nibbles of something???
     - name: Overlay00PreEntryPoint
       address:
         NA: 0x2124BD4

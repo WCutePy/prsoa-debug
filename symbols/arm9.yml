@@ -1200,14 +1200,12 @@ arm9:
         Seems to add party pokemon to a static battle_combatants structure in memory.
         
         r0: undefined4 pointer
-    - name: AddEnemyFormToEncounter
+    - name: AddEnemyFormToEncounterType1
       address:
-        NA:
-          - 0x202F458
-          - 0x2122FEC
+        NA: 0x202F458
       description: |-
         Seems to add an enemy form to an encounter that's about to occur, modifying both the battle_combatants and the battle_exports struct.
-        
+        Unknown how it differs from AddEnemyFormToEncounterType2.
         r0: maybe form_id pointer? Might be packed with other info.
     - name: BattleSetBossFightStatusSafe
       address:
