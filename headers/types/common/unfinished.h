@@ -1,3 +1,6 @@
+#ifndef HEADERS_TYPES_COMMON_UNFINISHED_H_
+#define HEADERS_TYPES_COMMON_UNFINISHED_H_
+
 #include "enums.h"
 #include "common.h"
 #include "battle.h"
