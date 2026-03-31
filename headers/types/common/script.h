@@ -1,4 +1,5 @@
-
+#ifndef HEADERS_TYPES_COMMON_SCRIPT_H_
+#define HEADERS_TYPES_COMMON_SCRIPT_H_
 struct script_data {
     char script_file_name[12];
     undefined field1_0xc;
