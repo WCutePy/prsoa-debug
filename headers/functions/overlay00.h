@@ -3,8 +3,10 @@
 struct ov_00_unk_struct* Overlay0EntryPoint(struct ov_00_unk_struct* param_1,
                                             struct megastruct* param_2);
 void ret_0211e958(void);
-void AddEnemyFormToEncounterType2(struct ov_00_unk_struct *param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
-void Overlay00PreEntryPoint(undefined4 param_1,struct megastruct *param_2,undefined4 param_3,undefined4 param_4);
+void AddEnemyFormToEncounterType2(
+    struct ov_00_unk_struct* param_1, undefined4 param_2, undefined4 param_3,
+    undefined4 param_4) void Overlay00PreEntryPoint(undefined4 param_1, struct megastruct* param_2,
+                                                    undefined4 param_3, undefined4 param_4);
 void ret_02125334(void);
 void ret_021266ac(void);
 void ret_021266b0(void);

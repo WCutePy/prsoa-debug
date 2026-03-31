@@ -47,7 +47,7 @@ overlay0:
         r0: undefined4 
         r1: megastruct pointer
         r2: undefined4 
-        r3: undefined4 
+        r3: undefined4
     - name: ret_02125334
       address:
         NA: 0x2125334
