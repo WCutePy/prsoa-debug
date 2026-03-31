@@ -1094,3 +1094,5 @@ struct ov_28_unk_struct {
     undefined4 field2_0x8;
 };
 ASSERT_SIZE(struct ov_28_unk_struct, 12);
+
+#endif
