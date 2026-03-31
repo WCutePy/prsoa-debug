@@ -2574,15 +2574,14 @@ arm9:
         NA: 0x208CE10
       length:
         NA: 0x5E8
-      description: "The 2nd page of functions callable by the SysCall script opcode. 378 function pointers long."    
+      description: The 2nd page of functions callable by the SysCall script opcode. 378 function pointers long.
     - name: SYSCALL_PAGE_0
       address:
         NA: 0x208E334
       length:
         NA: 0x200
-      description: "The 0th page of functions callable by the SysCall script opcode. 128 function pointers long."
+      description: The 0th page of functions callable by the SysCall script opcode. 128 function pointers long.
     - name: MEGASTRUCT_PTR_ARM9
       address:
         NA: 0x208F304
-      description: "Pointer to the megastruct that lives in arm9. There is another in ram."
-    
+      description: Pointer to the megastruct that lives in arm9. There is another in ram.

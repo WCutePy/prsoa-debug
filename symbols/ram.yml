@@ -25,7 +25,7 @@ ram:
     - name: MEGASTRUCT_PTR_RAM
       address:
         NA: 0x20AF358
-      description: "Pointer to the megastruct that lives in ram. There is another in arm9."
+      description: Pointer to the megastruct that lives in ram. There is another in arm9.
     - name: RANGER_NET_MISSION_COMPLETION_BITS
       address:
         NA: 0x20AF598
@@ -53,11 +53,11 @@ ram:
         NA: 0x20BB174
       length:
         NA: 0x70
-      description: "A table of following_npc structs for up to 2 NPCs following the player around."
+      description: A table of following_npc structs for up to 2 NPCs following the player around.
     - name: ARENA_GRAPHIC_ID
       address:
         NA: 0x20BB240
-      description: "Seems to be responsible for determining the background for battles and the release menu. Might be worth making an enum."
+      description: Seems to be responsible for determining the background for battles and the release menu. Might be worth making an enum.
     - name: SETTINGS_AND_VARIABLES
       address:
         NA: 0x210C0B0
