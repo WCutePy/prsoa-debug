@@ -31,7 +31,6 @@ ram:
         NA: 0x20AF598
       description: "Ported from Nep's notes. Seems to be consistent with what it claims to be though. Type currently unknown"
     - name: MISSION_QUEST_DATA
-    - alias: QUEST
       address:
         NA: 0x20B2638
       length:
