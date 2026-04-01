@@ -1724,7 +1724,7 @@ arm9:
         Is a SysCall Function.
 
         r0: script stack pointer, interpreted as params.
-    - name: BitandPartnerPokemonStatus
+    - name: SysCallBitandPartnerPokemonStatus
       address:
         NA: 0x20327DC
       description: |-
@@ -1732,7 +1732,7 @@ arm9:
         Is a SysCall Function.
 
         r0: script stack pointer, interpreted as params.
-    - name: GetPartnerPokemonMood
+    - name: SysCallGetPartnerPokemonMood
       address:
         NA: 0x2032804
       description: |-
