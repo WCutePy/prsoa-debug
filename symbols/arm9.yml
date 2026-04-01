@@ -1572,7 +1572,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SysCallSetRangerHP
+    - name: SysCallSetRangerCurrentHp
       address:
         NA: 0x202FEC0
       description: |-
@@ -1582,7 +1582,7 @@ arm9:
         r1: undefined4 
         r2: undefined4 
         r3: undefined4 
-    - name: SysCallRangerMaxHp
+    - name: SysCallGetRangerMaxHp
       address:
         NA: 0x202FF08
       description: |-

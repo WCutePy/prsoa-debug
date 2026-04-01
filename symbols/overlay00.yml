@@ -643,6 +643,13 @@ overlay0:
         Returns the index of the currently active mission.
         
         No params.
+    - name: DebugGrabFileNameAndMsgId
+      address:
+        NA: 0x214DDBC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: DebugPrintAllScriptVars
       address:
         NA: 0x214E24C
