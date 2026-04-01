@@ -134,6 +134,33 @@ overlay1:
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
+    - name: SysCallPrintTextboxByBattleMessageId1
+      address:
+        NA: 0x212B170
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallPrintTextboxByBattleMessageId2
+      address:
+        NA: 0x212B1AC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallGetTextboxStatusOv1
+      address:
+        NA: 0x212B1E4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallCloseTextboxBattle
+      address:
+        NA: 0x212B204
+      description: |-
+        [MANUAL DESCRIPTION]
+        
         No params.
     - name: ret_0212c028
       address:
