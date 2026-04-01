@@ -6,7 +6,7 @@
 #include "util.h"
 #include "enums.h"
 #include "battle.h"
-
+#include "script.h"
 // Parameters used by the NitroSDK to read the ROM.
 struct start_module_params {
     void* autoload_list;
@@ -60,8 +60,8 @@ struct quest_body {
 ASSERT_SIZE(struct quest_body, 84);
 
 struct quest_footer {
-    undefined* unk_pointer_1;
-    undefined* unk_pointer_2;
+    undefined* unk_struct_size_0x158_ptr;
+    struct script_manager* script_manager_ptr;
 };
 ASSERT_SIZE(struct quest_footer, 8);
 
@@ -1657,11 +1657,12 @@ struct save_data {
     struct settings_and_variables settings_and_variables; // 0x8B08
     undefined unk_field_0x8c04[96];                       // 0x8C04: Permanent home is 0x210C1C0
     struct battle_init battle_init;                       // 0x8C64: Permanent home is 0x210C228
-    undefined unk_field_0x9464[4];                        // 0x9464: Permanent home is 0x208B5C0
-    undefined unk_field_0x9468[8];                        // 0x9468: Permanent home is 0x20AF5E4
-    undefined unk_field_0x9470[8];                        // 0x9470: Permanent home is 0x20AF5F8
-    undefined unk_field_0x9478[8];                        // 0x9478: Permanent home is 0x20AF60C
-    int16_t ranger_net_completion_bits;                   // 0x9480
+    // 0x9464: Seems to always be 0x1F2E3D4C. If it isn't, the save file is treated as corrupt!
+    int unk_field_0x9464;
+    undefined unk_field_0x9468[8];      // 0x9468: Permanent home is 0x20AF5E4
+    undefined unk_field_0x9470[8];      // 0x9470: Permanent home is 0x20AF5F8
+    undefined unk_field_0x9478[8];      // 0x9478: Permanent home is 0x20AF60C
+    int16_t ranger_net_completion_bits; // 0x9480
     undefined unk_field_0x9482;
     undefined unk_field_0x9483;
 };
