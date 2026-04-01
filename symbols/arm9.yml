@@ -2391,13 +2391,9 @@ arm9:
         r1: source
         r2: maybe num bytes? 
         r3: undefined4
-    - name: Maybe_OSi_GetUnusedThreadId
+    - name: OSi_GetUnusedThreadId
       address:
         NA: 0x2064FA8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OSi_InsertLinkToQueue
       address:
         NA: 0x2064FC0
@@ -2410,25 +2406,12 @@ arm9:
     - name: OS_InitThread
       address:
         NA: 0x2065260
-    - name: Maybe_OS_CreateThread
+    - name: OS_CreateThread
       address:
         NA: 0x20653B8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: thread pointer
-        r1: undefined4 
-        r2: uint32_t 
-        r3: void pointer
-        stack[0]: int32_t 
-        stack[1]: int32_t 
     - name: Maybe_OS_JoinThread
       address:
         NA: 0x2065658
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: thread pointer
     - name: OS_SleepThread
       address:
         NA: 0x206569C
@@ -2468,10 +2451,6 @@ arm9:
     - name: OS_Init
       address:
         NA: 0x2066150
-      description: |-
-        Use unknown.
-        
-        No params.
     - name: OS_InitArena
       address:
         NA: 0x2066198
