@@ -36,7 +36,7 @@ struct textbox_data {
     undefined4 field14_0x4c;
     // 0: Finished Printing, 1: Actively Printing, 2: Resuming From Page Transition, 3: Page Transition, 5: Awaiting textbox close. 9: Yes-No Menu active
     int textbox_print_status; 
-    uint is_custom_text_speed;
+    int is_custom_text_speed;
     int is_auto_advance_text_on;
     int auto_advance_text_delay;
     int auto_advance_text_timer;
