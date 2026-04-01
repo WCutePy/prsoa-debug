@@ -1888,9 +1888,14 @@ arm9:
         Seems to zero initialize a script_data struct. 
         
         r0: script_data pointer
-    - name: AllocateQuestDataPtrsAndMore
+    - name: InitScriptManager
       address:
         NA: 0x2033F04
+      description: |-
+        Seems to initialize a script_manager struct from the ground up. 
+        
+        r0: script_manager pointer
+        r1: undefined4 pointer
     - name: TryInitSystemScript
       address:
         NA: 0x2033F90
