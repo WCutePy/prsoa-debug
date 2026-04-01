@@ -1154,3 +1154,39 @@ overlay0:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 0.
+    - name: SYSCALL_PAGE_11_OV_00
+      address:
+        NA: 0x21751F4
+      length:
+        NA: 0x8
+      description: "The 11th page of functions callable by the SysCall script opcode. 2 function pointers long. May have undefined behavior if overlay_00 is not active, as SYSCALL_PAGE_PTRS points to this address regardless of whether the overlay is active."
+    - name: SYSCALL_PAGE_12_OV_00
+      address:
+        NA: 0x21751F4
+      length:
+        NA: 0xC
+      description: "The 12th page of functions callable by the SysCall script opcode. 3 function pointers long. May have undefined behavior if overlay_00 is not active, as SYSCALL_PAGE_PTRS points to this address regardless of whether the overlay is active."
+    - name: SYSCALL_PAGE_13_OV_00
+      address:
+        NA: 0x21751F4
+      length:
+        NA: 0x10
+      description: "The 13th page of functions callable by the SysCall script opcode. 4 function pointers long. May have undefined behavior if overlay_00 is not active, as SYSCALL_PAGE_PTRS points to this address regardless of whether the overlay is active."
+    - name: SYSCALL_PAGE_14_OV_00
+      address:
+        NA: 0x21751F4
+      length:
+        NA: 0x18
+      description: "The 14th page of functions callable by the SysCall script opcode. 6 function pointers long. May have undefined behavior if overlay_00 is not active, as SYSCALL_PAGE_PTRS points to this address regardless of whether the overlay is active."
+    - name: SYSCALL_PAGE_16_OV_00
+      address:
+        NA: 0x21751F4
+      length:
+        NA: 0x10
+      description: "The 16th page of functions callable by the SysCall script opcode. 4 function pointers long. May have undefined behavior if overlay_00 is not active, as SYSCALL_PAGE_PTRS points to this address regardless of whether the overlay is active. Note: This is not a typo, page 15 is further down in the overlay."
+    - name: SYSCALL_PAGE_15_OV_00
+      address:
+        NA: 0x217525C
+      length:
+        NA: 0x18
+      description: "The 15th page of functions callable by the SysCall script opcode. 6 function pointers long. May have undefined behavior if overlay_00 is not active, as SYSCALL_PAGE_PTRS points to this address regardless of whether the overlay is active."

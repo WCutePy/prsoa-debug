@@ -32,5 +32,6 @@
 #include "overlay27.h"
 #include "overlay28.h"
 #include "overlay29.h"
+#include "ram.h"
 
 #endif

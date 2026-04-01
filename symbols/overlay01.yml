@@ -251,3 +251,9 @@ overlay1:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 1.
+    - name: SYSCALL_PAGE_01_OV_01
+      address:
+        NA: 0x2141038
+      length:
+        NA: 0x18
+      description: "The 1st page of functions callable by the SysCall script opcode. 95 function pointers long. May have undefined behavior if overlay_01 is not active, as SYSCALL_PAGE_PTRS points to this address regardless of whether the overlay is active."

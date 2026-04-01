@@ -17,9 +17,9 @@ overlay6:
       address:
         NA: 0x211C9E0
       description: |-
-        The sole entry point of overlay_06, tasked with creating the respective overlay struct.
+        Initializes an options_menu struct, prepping it for use in the rest of overlay_06.
         
-        r0: ov_06_unk_struct pointer
+        r0: options_menu pointer
         r1: megastruct pointer
   data:
     - name: OV6_STATIC_INITIALIZER
