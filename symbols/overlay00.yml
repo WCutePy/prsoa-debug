@@ -647,7 +647,7 @@ overlay0:
       address:
         NA: 0x214DDBC
       description: |-
-        [MANUAL DESCRIPTION]
+        Returns a pointer to a string "%s - %d" containing the current textbox script_kind and message_id. Eg: "BAT - 27"
         
         No params.
     - name: DebugPrintAllScriptVars

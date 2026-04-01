@@ -22,7 +22,7 @@ void ret_02123770(void);
 void ret_021293d4(void);
 undefined4 SysCallPrintTextboxByBattleMessageId1(undefined4 *param_1);
 undefined4 SysCallPrintTextboxByBattleMessageId2(undefined4 *param_1);
-void SysCallGetTextboxStatusOv1(void);
+void SysCallIsTextboxPrintingBattle(void);
 undefined4 SysCallCloseTextboxBattle(void);
 void ret_0212c028(void);
 void ret_0212e524(void);
