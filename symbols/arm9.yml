@@ -144,6 +144,163 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: GetTextboxStatus
+      address:
+        NA: 0x2009ECC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+    - name: CloseTextbox
+      address:
+        NA: 0x2009FB0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+        r1: int32_t 
+        r2: int32_t 
+    - name: MaybeIsPlayerPressingTextbox
+      address:
+        NA: 0x200A97C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+    - name: IsPlayerHoldingButtonsTextbox
+      address:
+        NA: 0x200A9C0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+    - name: SetCustomTextSpeed
+      address:
+        NA: 0x200AA04
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+        r1: int32_t 
+    - name: SetDefaultTextSpeed
+      address:
+        NA: 0x200AA14
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+    - name: EnableAutoAdvanceTextWithDelay
+      address:
+        NA: 0x200AA28
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+        r1: int32_t 
+    - name: DisableAutoAdvanceText
+      address:
+        NA: 0x200AA38
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+    - name: EnableAutoCloseTextWithDelay
+      address:
+        NA: 0x200AA48
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+        r1: int32_t 
+    - name: DisableAutoCloseText
+      address:
+        NA: 0x200AA58
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+    - name: PrintTextboxById
+      address:
+        NA: 0x200AA84
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+        stack[0]: undefined4 
+        stack[1]: undefined4 
+    - name: PrintTextboxBySystemMessageId
+      address:
+        NA: 0x200AD34
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+        r1: uint32_t 
+        r2: int32_t 
+        r3: int32_t 
+        stack[0]: undefined4 
+    - name: PrintTextboxByAreaMessageId
+      address:
+        NA: 0x200AF74
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+        r1: uint32_t 
+        r2: int32_t 
+        r3: int32_t 
+        stack[0]: undefined4 
+    - name: PrintTextboxByChapterMessageId
+      address:
+        NA: 0x200B1D0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+        r1: uint32_t 
+        r2: int32_t 
+        r3: int32_t 
+        stack[0]: undefined4 
+    - name: PrintTextboxByQuestMessageId
+      address:
+        NA: 0x200B410
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+        r1: uint32_t 
+        r2: int32_t 
+        r3: int32_t 
+        stack[0]: undefined4 
+    - name: PrintTextboxByBattleMessageId
+      address:
+        NA: 0x200B640
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+        r1: uint32_t 
+        r2: int32_t 
+        r3: int32_t 
+        stack[0]: undefined4 
+    - name: TryCloseTextbox
+      address:
+        NA: 0x200B6A4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
+        r1: undefined4 
+    - name: GetYesNoMenuResult
+      address:
+        NA: 0x200B6D4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
     - name: ret_0200bbc0
       address:
         NA: 0x200BBC0
@@ -1191,6 +1348,76 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: SysCallPrintTextbox
+      address:
+        NA: 0x202C86C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallGetTextboxStatus
+      address:
+        NA: 0x202C8B0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallCloseTextbox
+      address:
+        NA: 0x202C8D0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallSetCustomTextSpeed
+      address:
+        NA: 0x202C928
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallSetDefaultTextSpeed
+      address:
+        NA: 0x202C950
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallEnableAutoAdvanceTextWithDelay
+      address:
+        NA: 0x202C974
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallDisableAutoAdvanceText
+      address:
+        NA: 0x202C99C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallEnableAutoCloseTextWithDelay
+      address:
+        NA: 0x202C9C0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallDisableAutoCloseText
+      address:
+        NA: 0x202C9E8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallGetYesNoMenuResult
+      address:
+        NA: 0x202CA54
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: ret_0202d394
       address:
         NA: 0x202D394
@@ -1215,25 +1442,28 @@ arm9:
         Copies a text string to the debug buffer in RANGER_DATA.
         
         r0: pointer to pointer of text string to copy.
-    - name: BattleSetBgmIdSafe
+    - name: SysCallBattleSetBgmId
       address:
         NA: 0x202F23C
       description: |-
         Seems to assign a specified bgm id to a static battle_combatants structure in memory. 
+        [MANUAL DESCRIPTION]
         
-        r0: pointer to bgm id.
-    - name: BattleSetUnkField0x49Safe
+        r0: undefined4 pointer
+    - name: SysCallSetArenaGraphicId
       address:
         NA: 0x202F268
       description: |-
         Seems to assign a currently unknown field to a static battle_combatants structure in memory.
+        [MANUAL DESCRIPTION]
         
         r0: undefined4 pointer
-    - name: GetBattleResultSafe
+    - name: SysCallGetBattleResult
       address:
         NA: 0x202F2B4
       description: |-
         Seems to retrieve the results of the battle from megastruct->battle_exports.
+        [MANUAL DESCRIPTION]
         
         No params.
     - name: BattleDisableFleeing
@@ -1243,46 +1473,52 @@ arm9:
         Seems to disable fleeing in a static battle_combatants structure in memory.
         
         No params.
-    - name: BattleSetUnkField0x54Safe
+    - name: SysCallBattleSetUnkField0x54
       address:
         NA: 0x202F348
       description: |-
         Seems to assign a currently unknown field to a static battle_combatants structure in memory.
+        [MANUAL DESCRIPTION]
         
         r0: undefined4 pointer
-    - name: BattleSetSequenceScriptIdSafe
+    - name: SysCallBattleSetSequenceScriptId
       address:
         NA: 0x202F374
       description: |-
         Seems to assign a sequence script id to a static battle_combatants structure in memory.
+        [MANUAL DESCRIPTION]
         
-        r0: sequence script id pointer
-    - name: BattleSetTutorialScriptIdSafe
+        r0: undefined4 pointer
+    - name: SysCallBattleSetTutorialScriptId
       address:
         NA: 0x202F3A0
       description: |-
         Seems to assign a tutorial script id to a static battle_combatants structure in memory.
+        [MANUAL DESCRIPTION]
         
-        r0: tutorial script id pointer
-    - name: BattleSetStartScriptIdSafe
+        r0: undefined4 pointer
+    - name: SysCallBattleSetStartScriptId
       address:
         NA: 0x202F3CC
       description: |-
         Seems to assign a start script id to a static battle_combatants structure in memory.
+        [MANUAL DESCRIPTION]
         
-        r0: start script id pointer
-    - name: BattleSetStylerLevelSafe
+        r0: undefined4 pointer
+    - name: SysCallBattleSetStylerLevel
       address:
         NA: 0x202F3F8
       description: |-
         Seems to assign the styler level to a static battle_combatants structure in memory.
+        [MANUAL DESCRIPTION]
         
-        r0: styler level pointer
-    - name: BattleAddPartyPokemonSafe
+        r0: undefined4 pointer
+    - name: SysCallBattleAddPartyPokemon
       address:
         NA: 0x202F424
       description: |-
         Seems to add party pokemon to a static battle_combatants structure in memory.
+        [MANUAL DESCRIPTION]
         
         r0: undefined4 pointer
     - name: AddEnemyFormToEncounterType1
@@ -1292,11 +1528,26 @@ arm9:
         Seems to add an enemy form to an encounter that's about to occur, modifying both the battle_combatants and the battle_exports struct.
         Unknown how it differs from AddEnemyFormToEncounterType2.
         r0: maybe form_id pointer? Might be packed with other info.
-    - name: BattleSetBossFightStatusSafe
+    - name: SysCallBattleSetGenderAndUniform
+      address:
+        NA: 0x202F4BC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallBattleSetBossFightStatus
       address:
         NA: 0x202F4E8
       description: |-
         Seems to set the boss fight status for a static battle_combatants structure in memory.
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallGetPlayerGender
+      address:
+        NA: 0x202FA44
+      description: |-
+        [MANUAL DESCRIPTION]
         
         No params.
     - name: GetRangerStylerRank
@@ -1313,48 +1564,106 @@ arm9:
         Retrieves the current styler type from RANGER_DATA.
         
         No params.
-    - name: GetStylerLevelSafe
+    - name: SysCallGetStylerLevel
       address:
         NA: 0x202FEA4
       description: |-
         Retrieves the current styler level from RANGER_DATA.
+        [MANUAL DESCRIPTION]
         
         No params.
-    - name: GetRangerMaxHpSafe
+    - name: SysCallSetRangerHP
+      address:
+        NA: 0x202FEC0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+    - name: SysCallRangerMaxHp
       address:
         NA: 0x202FF08
       description: |-
         Retrieves the ranger max HP from RANGER_DATA.
+        [MANUAL DESCRIPTION]
         
         No params.
-    - name: GetRangerCurrentHpSafe
+    - name: SysCallGetRangerCurrentHp
       address:
         NA: 0x202FF20
       description: |-
         Retrieves the current ranger HP from RANGER_DATA.
+        [MANUAL DESCRIPTION]
         
         No params.
-    - name: TryClearQuestSafe
+    - name: SysCallGetActiveMissionId
+      address:
+        NA: 0x20313E8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallTryClearQuest
       address:
         NA: 0x2031684
       description: |-
         Same as TryClearQuest, using a pointer to MISSION_QUEST_DATA.
+        [MANUAL DESCRIPTION]
         
         No params.
-    - name: GetActiveQuestIdSafe
+    - name: SysCallShouldShowQuestName
+      address:
+        NA: 0x20316A8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallGetActiveQuestId
       address:
         NA: 0x20316CC
       description: |-
         Retrieves the active quest id, using a pointer to MISSION_QUEST_DATA.
-         
-         No params.
-    - name: TryBackOutOfQuestSafe
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallTryBackOutOfQuest
       address:
         NA: 0x20316E8
       description: |-
         Same as TryBackOutOfQuest, using a pointer to MISSION_QUEST_DATA.
+        [MANUAL DESCRIPTION]
         
         No params.
+    - name: SysCallTryUnlockQuest
+      address:
+        NA: 0x203170C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallIsQuestAvailable
+      address:
+        NA: 0x2031734
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallMakeQuestNameVisible
+      address:
+        NA: 0x2031758
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
+    - name: SysCallHasClearedQuest
+      address:
+        NA: 0x2031780
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
     - name: GetChapterNumber
       address:
         NA: 0x20319CC
@@ -1362,6 +1671,20 @@ arm9:
         Retrieves the current chapter number from MISSION_QUEST_DATA.
         
         No params.
+    - name: SysCallGetQuestVariable
+      address:
+        NA: 0x2031C00
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallSetQuestVariable
+      address:
+        NA: 0x2031C24
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
     - name: EnableSlotStatusBit2
       address:
         NA: 0x2032148
@@ -1411,6 +1734,13 @@ arm9:
         Retrieves the mood of a specified partner by index.
         
         r0: pointer to partner index
+    - name: SysCallBattleSetPartnerGaugeFillRate
+      address:
+        NA: 0x2032828
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
     - name: ret_02032a44
       address:
         NA: 0x2032A44
@@ -1523,11 +1853,12 @@ arm9:
         Increments the pokemon_rides_record field of RANGER_DATA->ranger_records. 
         
         No params.
-    - name: GetGameSavesRecordSafe
+    - name: SysCallGetGameSavesRecord
       address:
         NA: 0x2033C30
       description: |-
         Retrieves the game_saves_record from RANGER_DATA->ranger_records.
+        [MANUAL DESCRIPTION]
         
         No params.
     - name: SetScriptSubroutine1
@@ -1788,6 +2119,78 @@ arm9:
         
         r0: format
         r1: ap
+    - name: SetSysCallPage
+      address:
+        NA: 0x2044B38
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: void pointer
+    - name: SysCallReturnZero
+      address:
+        NA: 0x2046618
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallPrintStr
+      address:
+        NA: 0x2046620
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+    - name: SysCallDebugPrintf
+      address:
+        NA:
+          - 0x204663C
+          - 0x2046654
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+    - name: SysCallBitAndUpper5Nibbles
+      address:
+        NA: 0x20468F0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+    - name: SysCallAbs
+      address:
+        NA: 0x2046904
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
+    - name: SysCallBitlshift0xC
+      address:
+        NA: 0x2046914
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
+    - name: SysCallBitrShift0xC
+      address:
+        NA: 0x2046920
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
+    - name: SysCallStrLen
+      address:
+        NA: 0x204692C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
     - name: ret_02046d3c
       address:
         NA: 0x2046D3C
@@ -1983,6 +2386,13 @@ arm9:
         r1: source
         r2: maybe num bytes? 
         r3: undefined4
+    - name: Maybe_OSi_GetUnusedThreadId
+      address:
+        NA: 0x2064FA8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: OSi_InsertLinkToQueue
       address:
         NA: 0x2064FC0
@@ -1995,6 +2405,25 @@ arm9:
     - name: OS_InitThread
       address:
         NA: 0x2065260
+    - name: Maybe_OS_CreateThread
+      address:
+        NA: 0x20653B8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: thread pointer
+        r1: undefined4 
+        r2: uint32_t 
+        r3: void pointer
+        stack[0]: int32_t 
+        stack[1]: int32_t 
+    - name: Maybe_OS_JoinThread
+      address:
+        NA: 0x2065658
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: thread pointer
     - name: OS_SleepThread
       address:
         NA: 0x206569C
