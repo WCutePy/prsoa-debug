@@ -41,7 +41,7 @@ struct megastruct {
     void* unk_struct_size_0x10;
     struct battle_combatants* battle_combatants_ptr;
     void* field3832_0x1440; // "Initialized" by 0x02010C3C, but isn't actually modified???
-    undefined4* unk_struct_size_0x84;
+    struct battle_exports* battle_exports_ptr;
     int32_t unk_int_0x1234;
     undefined4 field3835_0x144c;
     undefined4 field3836_0x1450;

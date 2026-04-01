@@ -1421,6 +1421,43 @@ struct battle_init {
 
 ASSERT_SIZE(struct battle_init, 2048);
 
+// This is primarily used to export battle data between overlays. Overlay_02 frequently reads this
+// struct from the megastruct.
+struct battle_exports {
+    void* unk_fun_ptr_0x0;
+    int8_t current_player_hp;
+    undefined field2_0x5; // Likely padding
+    undefined field3_0x6;
+    undefined field4_0x7;
+    int battle_result; // 1 = loss, 3 = flee, 2 and 4 still unknown. Will continue to research.
+    int8_t
+        invincibility_frame_mode; // When 0 or 2, seems normal. If 1, collision is active the
+                                  // instant the battle ends. May be used for battles in cutscenes
+    undefined field7_0xd;         // Likely padding
+    undefined field8_0xe;
+    undefined field9_0xf;
+    int partner_assist_gauge;
+    int8_t num_pokemon_encountered; // Created by Rename Structure Field action
+    undefined field12_0x15;         // Likely padding
+    undefined field13_0x16;
+    undefined field14_0x17;
+    int unk_enemy_fields_0x18[2][8]; // might be room_id and something else smooshed together?
+    int8_t num_pokemon_caught;       // Created by Rename Structure Field action
+    undefined field17_0x59;          // Likely padding
+    int16_t caught_form_ids[8];
+    struct capture_rank_8 current_capture_rank;
+    undefined1 can_partner_poke_assist; // Created by Rename Structure Field action
+    int8_t party_pokemon;
+    int8_t poke_assists_used[8];
+    undefined field23_0x75; // Likely padding
+    undefined field24_0x76;
+    undefined field25_0x77;
+    int total_lines_made;
+    int total_loops_made;
+    int exp_gained;
+};
+ASSERT_SIZE(struct battle_exports, 132);
+
 struct battle_combatants {
     int* unk_struct_ptr_0x0;
     int8_t current_hp;

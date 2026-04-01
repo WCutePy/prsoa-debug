@@ -127,6 +127,10 @@ ENUM_8_BIT(battle_result);
 #pragma pack(pop)
 
 enum capture_rank { RANK_S = 0b00, RANK_A = 0b01, RANK_B = 0b10, RANK_C = 0b11 };
+// This is usually stored as an 8-bit integer
+#pragma pack(push, 1)
+ENUM_8_BIT(capture_rank);
+#pragma pack(pop)
 
 enum partner_unlock_flag { PARTNER_UNLOCKED = 0b1, PARTNER_NOT_UNLOCKED = 0b0 };
 

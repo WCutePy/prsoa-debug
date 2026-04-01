@@ -573,6 +573,13 @@ arm9:
         Retrieves the current gender and uniform for the player from the battle_combatants struct.
         
         r0: battle_combatants pointer
+    - name: InitBattleExports
+      address:
+        NA: 0x2010CCC
+      description: |-
+        Initializes a battle_exports struct, and assigns a function pointer to field_0x0.
+        
+        r0: battle_exports pointer
     - name: ret_02010cec
       address:
         NA: 0x2010CEC
@@ -580,6 +587,13 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: ZeroBattleExports
+      address:
+        NA: 0x2010D04
+      description: |-
+        Zeroes the entirety of a battle_exports struct, except for the function pointer at field_0x0.
+        
+        r0: battle_exports pointer
     - name: ZeroQuestBody
       address:
         NA: 0x201135C
@@ -1215,6 +1229,13 @@ arm9:
         Seems to assign a currently unknown field to a static battle_combatants structure in memory.
         
         r0: undefined4 pointer
+    - name: GetBattleResultSafe
+      address:
+        NA: 0x202F2B4
+      description: |-
+        Seems to retrieve the results of the battle from megastruct->battle_exports.
+        
+        No params.
     - name: BattleDisableFleeing
       address:
         NA: 0x202F2D8
@@ -1264,6 +1285,20 @@ arm9:
         Seems to add party pokemon to a static battle_combatants structure in memory.
         
         r0: undefined4 pointer
+    - name: AddEnemyFormToEncounterType1
+      address:
+        NA: 0x202F458
+      description: |-
+        Seems to add an enemy form to an encounter that's about to occur, modifying both the battle_combatants and the battle_exports struct.
+        Unknown how it differs from AddEnemyFormToEncounterType2.
+        r0: maybe form_id pointer? Might be packed with other info.
+    - name: BattleSetBossFightStatusSafe
+      address:
+        NA: 0x202F4E8
+      description: |-
+        Seems to set the boss fight status for a static battle_combatants structure in memory.
+        
+        No params.
     - name: GetRangerStylerRank
       address:
         NA: 0x202FA54
