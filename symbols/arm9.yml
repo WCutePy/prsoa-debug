@@ -2409,7 +2409,7 @@ arm9:
     - name: OS_CreateThread
       address:
         NA: 0x20653B8
-    - name: Maybe_OS_JoinThread
+    - name: OS_JoinThread
       address:
         NA: 0x2065658
     - name: OS_SleepThread
