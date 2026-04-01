@@ -131,9 +131,7 @@ overlay1:
     - name: ret_021293d4
       address:
         NA: 0x21293D4
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
+      description: Does nothing but return. Likely a debug hook for a nearby function.
     - name: SysCallPrintTextboxByBattleMessageId1
       address:
         NA: 0x212B170

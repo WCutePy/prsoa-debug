@@ -159,7 +159,7 @@ arm9:
         
         r0: textbox_data pointer
         r1: int32_t 
-        r2: int32_t 
+        r2: int32_t
     - name: IsPlayerPressingTextbox
       address:
         NA: 0x200A97C
@@ -230,7 +230,7 @@ arm9:
         r2: message id
         r3: undefined4 
         stack[0]: undefined4 
-        stack[1]: undefined4 
+        stack[1]: undefined4
     - name: PrintTextboxBySystemMessageId
       address:
         NA: 0x200AD34
@@ -241,7 +241,7 @@ arm9:
         r1: message id
         r2: int32_t 
         r3: int32_t 
-        stack[0]: undefined4 
+        stack[0]: undefined4
     - name: PrintTextboxByAreaMessageId
       address:
         NA: 0x200AF74
@@ -252,7 +252,7 @@ arm9:
         r1: message id
         r2: int32_t 
         r3: int32_t 
-        stack[0]: undefined4 
+        stack[0]: undefined4
     - name: PrintTextboxByChapterMessageId
       address:
         NA: 0x200B1D0
@@ -263,7 +263,7 @@ arm9:
         r1: message id
         r2: int32_t 
         r3: int32_t 
-        stack[0]: undefined4 
+        stack[0]: undefined4
     - name: PrintTextboxByQuestMessageId
       address:
         NA: 0x200B410
@@ -274,7 +274,7 @@ arm9:
         r1: message id
         r2: int32_t 
         r3: int32_t 
-        stack[0]: undefined4 
+        stack[0]: undefined4
     - name: PrintTextboxByBattleMessageId
       address:
         NA: 0x200B640
@@ -285,7 +285,7 @@ arm9:
         r1: message id
         r2: int32_t 
         r3: int32_t 
-        stack[0]: undefined4 
+        stack[0]: undefined4
     - name: TryCloseTextbox
       address:
         NA: 0x200B6A4
@@ -293,7 +293,7 @@ arm9:
         Attempts to close a textbox, but only if it is done printing.
         
         r0: textbox_data pointer
-        r1: undefined4 
+        r1: undefined4
     - name: GetYesNoMenuResult
       address:
         NA: 0x200B6D4
@@ -1471,7 +1471,7 @@ arm9:
       description: |-
         Seems to disable fleeing in a static battle_combatants structure in memory.
         Is a SysCall Function.
-
+        
         No params.
     - name: SysCallBattleSetUnkField0x54
       address:
@@ -1558,7 +1558,7 @@ arm9:
       description: |-
         Retrieves the current styler rank from RANGER_DATA.
         Is a SysCall Function.
-
+        
         No params.
     - name: SysCallGetRangerStylerType
       address:
@@ -1566,7 +1566,7 @@ arm9:
       description: |-
         Retrieves the current styler type from RANGER_DATA.
         Is a SysCall Function.
-
+        
         No params.
     - name: SysCallGetStylerLevel
       address:
@@ -1690,7 +1690,7 @@ arm9:
       description: |-
         Enables slot status bit 2 on a pokemon. This seems to only be enabled on pokemon who cannot be released, such as doduo mid-ride, or your partner.
         Is a SysCall Function.
-
+        
         r0: script stack pointer, interpreted as params.
     - name: SysCallDisableSlotStatusBit2
       address:
@@ -1698,7 +1698,7 @@ arm9:
       description: |-
         Disables slot status bit 2 on a pokemon. This seems to only be enabled on pokemon who cannot be released, such as doduo mid-ride, or your partner.
         Is a SysCall Function.
-
+        
         r0: script stack pointer, interpreted as params.
     - name: SysCallEnableSlotStatusBit1
       address:
@@ -1706,7 +1706,7 @@ arm9:
       description: |-
         Enables slot status bit 1 on a pokemon. This seems to hide the pokemon from the release menu entirely, and is only known to be used by the partner.
         Is a SysCall Function.
-
+        
         r0: script stack pointer, interpreted as params.
     - name: SysCallDisableSlotStatusBit1
       address:
@@ -1714,7 +1714,7 @@ arm9:
       description: |-
         Disables slot status bit 1 on a pokemon. This seems to hide the pokemon from the release menu entirely, and is only known to be used by the partner.
         Is a SysCall Function.
-
+        
         r0: script stack pointer, interpreted as params.
     - name: SysCallBitorPartnerPokemonStatus
       address:
@@ -1722,7 +1722,7 @@ arm9:
       description: |-
         Bitwise OR on the partner status bitfield in RANGER_DATA.
         Is a SysCall Function.
-
+        
         r0: script stack pointer, interpreted as params.
     - name: SysCallBitandPartnerPokemonStatus
       address:
@@ -1730,7 +1730,7 @@ arm9:
       description: |-
         Bitwise AND on the partner status bitfield in RANGER_DATA.
         Is a SysCall Function.
-
+        
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetPartnerPokemonMood
       address:
@@ -1738,14 +1738,14 @@ arm9:
       description: |-
         Retrieves the mood of a specified partner by index.
         Is a SysCall Function.
-
+        
         r0: script stack pointer, interpreted as params.
     - name: SysCallBattleSetPartnerGaugeFillRate
       address:
         NA: 0x2032828
       description: |-
         Is a SysCall Function.
-
+        
         r0: script stack pointer, interpreted as params.
     - name: ret_02032a44
       address:
@@ -2153,7 +2153,7 @@ arm9:
         r0: script stack pointer, interpreted as params.
         r1: undefined4 
         r2: undefined4 
-        r3: undefined4 
+        r3: undefined4
     - name: SysCallDebugPrintf
       address:
         NA:
@@ -2165,7 +2165,7 @@ arm9:
         r0: script stack pointer, interpreted as params.
         r1: undefined4 
         r2: undefined4 
-        r3: undefined4 
+        r3: undefined4
     - name: SysCallBitAndUpper5Nibbles
       address:
         NA: 0x20468F0
