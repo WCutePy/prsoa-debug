@@ -1789,56 +1789,56 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: DisableActiveTimersAndMore
+    - name: SysCallDisableActiveTimersAndMore
       address:
         NA: 0x20337EC
       description: |-
         SysCall Function That resets the timer fields in RANGER_DATA, but seems to do something else too.
         
         No params.
-    - name: InitTimerType1
+    - name: SysCallInitTimerType1
       address:
         NA: 0x203381C
       description: |-
         SysCall Function That begins a timer of type 1 by initializing relevant fields in RANGER_DATA.
         
         r0: script stack pointer, interpreted as params.
-    - name: InitTimerType2
+    - name: SysCallInitTimerType2
       address:
         NA: 0x2033844
       description: |-
         SysCall Function That begins a timer of type 2 by initializing relevant fields in RANGER_DATA.
         
         r0: script stack pointer, interpreted as params.
-    - name: SetTimerTypeNone
+    - name: SysCallSetTimerTypeNone
       address:
         NA: 0x203386C
       description: |-
         SysCall Function That sets only the timer type field in RANGER_DATA to 0.
         
         No params.
-    - name: SetTimerType1
+    - name: SysCallSetTimerType1
       address:
         NA: 0x2033884
       description: |-
         SysCall Function That sets only the timer type field in RANGER_DATA to 1.
         
         No params.
-    - name: SetTimerType2
+    - name: SysCallSetTimerType2
       address:
         NA: 0x20338A0
       description: |-
         SysCall Function That sets only the timer type field in RANGER_DATA to 2.
         
         No params.
-    - name: GetTimer1Duration
+    - name: SysCallGetTimer1Duration
       address:
         NA: 0x20338FC
       description: |-
         SysCall Function That retrieves the current timer 1 duration in frames, from RANGER_DATA.
         
         No params.
-    - name: SetTimer1Duration
+    - name: SysCallSetTimer1Duration
       address:
         NA: 0x2033918
       description: |-
