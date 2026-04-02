@@ -1334,6 +1334,15 @@ arm9:
         Retrieves the current ranger HP from RANGER_DATA.
         
         No params.
+    - name: CopyLoadingZoneExitToMem
+      address:
+        NA: 0x2030B40
+      description: |-
+          Receives a struct with room and position information to spawn the player to. It also receives the orientation.
+          It writes this information to a constant struct in memory, this is used to load the player into the new map.
+        
+        r0: loading_zone_exit_pos
+        r1: direction
     - name: TryClearQuestSafe
       address:
         NA: 0x2031684
