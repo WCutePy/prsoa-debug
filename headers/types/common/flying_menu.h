@@ -17,3 +17,5 @@ struct fly_destination {
 };
 
 ASSERT_SIZE(struct fly_destination, 16);
+
+#endif

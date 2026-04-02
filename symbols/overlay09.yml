@@ -33,7 +33,7 @@ overlay9:
         NA: 0x211D89C
       description: |-
         Appears to retrieve the index of the FLY_DESTINATIONS_TABLE the player is about to fly to. There appears to be additional logic for edgecases regarding the current chapter...
-
+        
         r0: unknown struct size 0x58 pointer
         r1: unknown int16_t
     - name: SetFlyDestinationData
@@ -41,7 +41,7 @@ overlay9:
         NA: 0x211D8F8
       description: |-
         Seems responsible for retrieving player coordinates and room_id from the FLY_DESTINATIONS_TABLE, and storing them in FLY_TELEPORT_DESTINATION_ROOM and FLY_TELEPORT_DESTINATION_COORDS.
-       
+        
         r0: unknown struct size 0x58 pointer
         r1: unknown int16_t
   data:
@@ -60,4 +60,4 @@ overlay9:
         NA: 0x211DCAC
       length:
         NA: 0x280
-      description: A table of fly_destination structs, which determine where the player ends up after flying on Staraptor.
+      description: "A table of fly_destination structs, which determine where the player ends up after flying on Staraptor."
