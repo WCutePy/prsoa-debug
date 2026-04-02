@@ -109,7 +109,7 @@ struct ranger_data_old {
     undefined4 field53_0x8b70;
     struct room_id_16 fly_teleport_destination_room; // Overlaps with FLY_TELEPORT_DESTINATION_ROOM
     int16_t fly_teleport_destination_coordinates[2]; // Overlaps with FLY_TELEPORT_DESTINATION_COORDS
-    undefined4 field57_0x8b7c;
+    undefined2 field57_0x8b7e;
     undefined4 field58_0x8b80;
     undefined4 field59_0x8b84;
     undefined4 field60_0x8b88;
