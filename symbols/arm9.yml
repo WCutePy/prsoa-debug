@@ -1431,7 +1431,8 @@ arm9:
       description: |-
         Identical to DebugPrint, but seems to be primarily used for error messages.
         
-        r0: script stack pointer, interpreted as params.
+        r0: format
+        ...: variadic
     - name: SysCallCopyStringToRangerDebugBuffer
       address:
         NA:
