@@ -53,7 +53,7 @@ void ret_02149e5c(void);
 undefined4 TryMountPokemon(struct pokemon_data* param_1);
 enum room_id SysCallGetFlyTeleportDestinationRoom(void);
 int16_t SysCallGetFlyGetFlyTeleportXCoord(void);
-int16_t SysCallGetFlyGetFlyTeleportYCoord(void); 
+int16_t SysCallGetFlyGetFlyTeleportYCoord(void);
 void ret_0214b6f0(void);
 void ret_0214b6f4(void);
 void ret_0214b93c(void);
