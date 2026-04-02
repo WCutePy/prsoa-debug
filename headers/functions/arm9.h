@@ -178,6 +178,7 @@ int32_t GetRangerStylerType(void);
 undefined GetStylerLevelSafe(void);
 int8_t GetRangerMaxHpSafe(void);
 int8_t GetRangerCurrentHpSafe(void);
+undefined4 CopyLoadingZoneExitToMem(loading_zone_exit_pos *final_location, int direction);
 undefined4 TryClearQuestSafe(void);
 int8_t GetActiveQuestIdSafe(void);
 undefined4 TryBackOutOfQuestSafe(void);
