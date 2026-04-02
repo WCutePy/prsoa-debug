@@ -178,6 +178,7 @@ int32_t GetRangerStylerType(void);
 undefined GetStylerLevelSafe(void);
 int8_t GetRangerMaxHpSafe(void);
 int8_t GetRangerCurrentHpSafe(void);
+void SysCallSetPlayerSpawnData(void *param_1,int param_2);
 undefined4 TryClearQuestSafe(void);
 int8_t GetActiveQuestIdSafe(void);
 undefined4 TryBackOutOfQuestSafe(void);

@@ -2,5 +2,5 @@
 #define HEADERS_DATA_OVERLAY09_H_
 
 extern undefined4 OV9_STATIC_INITIALIZER;
-
+extern fly_destination FLY_DESTINATIONS_TABLE[40];
 #endif

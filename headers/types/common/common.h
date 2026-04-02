@@ -7,6 +7,8 @@
 #include "enums.h"
 #include "battle.h"
 #include "script.h"
+#include "flying_menu.h"
+
 // Parameters used by the NitroSDK to read the ROM.
 struct start_module_params {
     void* autoload_list;
