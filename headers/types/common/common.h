@@ -8,6 +8,8 @@
 #include "battle.h"
 #include "script.h"
 #include "flying_menu.h"
+#include "options_menu.h"
+#include "unfinished.h"
 
 // Parameters used by the NitroSDK to read the ROM.
 struct start_module_params {
