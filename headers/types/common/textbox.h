@@ -1,3 +1,5 @@
+#ifndef HEADERS_TYPES_COMMON_TEXTBOX_H_
+#define HEADERS_TYPES_COMMON_TEXTBOX_H_
 
 struct textbox_subdata {
     undefined4 field0_0x0;
@@ -88,3 +90,5 @@ struct textbox_data {
     int message_id;
 };
 ASSERT_SIZE(struct textbox_data, 344);
+
+#endif
