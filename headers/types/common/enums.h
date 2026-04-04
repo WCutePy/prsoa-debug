@@ -112,12 +112,13 @@ enum battle_state {
 };
 
 enum team_and_assists {
-    TNA_OUTDOORS_MAIN = 0, // By default, this is on. Doduo and Staraptor work as expected.
-    TNA_UNDERWATER_OCEAN = 1, // Causes water physics, and a swap to the ocean team!
+    TNA_OUTDOORS_MAIN = 0,       // By default, this is on. Doduo and Staraptor work as expected.
+    TNA_UNDERWATER_OCEAN = 1,    // Causes water physics, and a swap to the ocean team!
     TNA_INDOOR_DUNGEON_MAIN = 2, // Cannot fly nor ride doduo. CAN teleport!
-    TNA_INDOORS_MAIN = 3, // Cannot fly, ride doduo, nor teleport!
-    TNA_SPECIAL_MAIN = 4, // Spawns only the partner or no allies, may vary by map.
-    TNA_RANGER_NET = 5, // Likely only used for ranger net missions? Uses the third team slot, which is spooky... 
+    TNA_INDOORS_MAIN = 3,        // Cannot fly, ride doduo, nor teleport!
+    TNA_SPECIAL_MAIN = 4,        // Spawns only the partner or no allies, may vary by map.
+    TNA_RANGER_NET =
+        5, // Likely only used for ranger net missions? Uses the third team slot, which is spooky...
 };
 // This is usually stored as an 8-bit integer
 #pragma pack(push, 1)
@@ -125,14 +126,13 @@ ENUM_8_BIT(team_and_assists);
 #pragma pack(pop)
 
 enum post_battle_state {
-    PBS_CAUGHT = 0x0, // Seems to work like normal.
-    PBS_UNK_0x1 = 0x1, // Freezes the player in place after the battle. Unclear why.
-    PBS_FLED = 0x2, // Player has invincibility frames to run from the foe
-    PBS_UNK_0x3 = 0x3, // Freezes identically to UNK_0x1. No invincibility frames though...
+    PBS_CAUGHT = 0x0,         // Seems to work like normal.
+    PBS_UNK_0x1 = 0x1,        // Freezes the player in place after the battle. Unclear why.
+    PBS_FLED = 0x2,           // Player has invincibility frames to run from the foe
+    PBS_UNK_0x3 = 0x3,        // Freezes identically to UNK_0x1. No invincibility frames though...
     PBS_NEVER_GOT_THRU = 0x4, // "Your feelings never got through to [species]" and it runs away.
-    PBS_UNK_0x5 = 0x5, // Plays the text for 0x4, then freezes identically to 0x1. 
+    PBS_UNK_0x5 = 0x5,        // Plays the text for 0x4, then freezes identically to 0x1.
 };
-
 
 enum capture_rank { RANK_S = 0b00, RANK_A = 0b01, RANK_B = 0b10, RANK_C = 0b11 };
 // This is usually stored as an 8-bit integer
