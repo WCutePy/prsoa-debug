@@ -124,7 +124,7 @@ struct ranger_data_old {
     // Only the first 8 slots of each group are actually remembered in the save file!
     // Table 0: Land Pokemon
     // Table 1: Ocean Pokemon
-    // Table 2: Unknown, but likely Ranger Net Pokemon
+    // Table 2: Capture Arena Pokemon
     struct pokemon_data recruited_pokemon_tables_backup[3][10];
     struct following_npc follower_1_backup;
     struct following_npc follower_2_backup;
