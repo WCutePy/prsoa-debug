@@ -117,7 +117,8 @@ enum team_and_assists {
     TNA_INDOOR_DUNGEON_MAIN = 2, // Cannot fly nor ride doduo. CAN teleport!
     TNA_INDOORS_MAIN = 3,        // Cannot fly, ride doduo, nor teleport!
     TNA_SPECIAL_MAIN = 4,        // Spawns only the partner or no allies, may vary by map.
-    TNA_CAPTURE_ARENA = 5,       // Seems to be used for the capture arena, and thus uses the third team slot.
+    TNA_CAPTURE_ARENA =
+        5, // Seems to be used for the capture arena, and thus uses the third team slot.
 };
 // This is usually stored as an 8-bit integer
 #pragma pack(push, 1)
