@@ -1,7 +1,6 @@
 #ifndef HEADERS_DATA_ARM9_H_
 #define HEADERS_DATA_ARM9_H_
 
-
 extern void* DISPLAY_ENGINE_BG_CONTROL_PTRS[2][4];
 extern int16_t SINE_COSINE_TABLE[4096][2];
 extern int16_t ARCTAN32_TABLE[130];
