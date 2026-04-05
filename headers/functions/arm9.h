@@ -173,6 +173,7 @@ undefined4 BattleSetStylerLevelSafe(undefined4* param_1);
 undefined4 BattleAddPartyPokemonSafe(undefined4* param_1);
 void AddEnemyFormToEncounterType1(undefined4* param_1);
 undefined4 BattleSetBossFightStatusSafe(void);
+undefined4 SysCallSetScriptSubroutine2ByName(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
 int8_t GetRangerStylerRank(void);
 int32_t GetRangerStylerType(void);
 undefined GetStylerLevelSafe(void);

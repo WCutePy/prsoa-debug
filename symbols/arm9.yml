@@ -1304,14 +1304,7 @@ arm9:
         SysCall Function for SetScriptSubroutine2ByName.
         
         r0: script stack pointer, interpreted as params.
-        r3: undefined4 
-    - name: SysCallGetPlayerGender
-      address:
-        NA: 0x202FA44
-      description: |-
-        SysCall Function that returns the player's gender.
-        
-        No params.
+        r3: undefined4
     - name: GetRangerStylerRank
       address:
         NA: 0x202FA54
