@@ -2172,7 +2172,7 @@ arm9:
         NA: 0x205FE08
       description: |-
         Likely a library function.
-    - name: MTX_Identity33
+    - name: Mtx_Identity33
       address:
         NA: 0x205FE14
     - name: MatrixRotZ
@@ -2180,10 +2180,10 @@ arm9:
         NA: 0x205FE38
       description: |-
         Likely a library function.
-    - name: MTX_Identity
+    - name: Mtx_Identity
       address:
         NA: 0x205FE50
-    - name: MTX_TransApply
+    - name: Mtx_TransApply
       address:
         NA: 0x205FE7C
     - name: ScaleMatrix
@@ -2191,7 +2191,7 @@ arm9:
         NA: 0x205FF54
       description: |-
         Likely a library function.
-    - name: MTX_RotZ
+    - name: Mtx_RotZ
       address:
         NA: 0x2060078
     - name: FixedPoint4x4MatrixMultiply
@@ -2199,7 +2199,7 @@ arm9:
         NA: 0x206009C
       description: |-
         Likely a library function.
-    - name: MTX_Ortho
+    - name: Mtx_Ortho
       address:
         NA: 0x2060700
     - name: FixedPointDivide32
