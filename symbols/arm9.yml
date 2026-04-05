@@ -2866,6 +2866,26 @@ arm9:
         NA: 0x800
         JP: 0x800
       description: "The header of the DS cartridge secure area. See https://problemkaputt.de/gbatek.htm#dscartridgesecurearea"
+    - name: DISPLAY_ENGINE_BG_CONTROL_PTRS
+      address:
+        NA: 0x2084FC8
+      length:
+        NA: 0x20
+    - name: SINE_COSINE_TABLE
+      address: 
+        NA: 0x20850AC
+      length:
+        NA: 0x4000
+    - name: ARCTAN32_TABLE
+      address:
+        NA: 0x20890AC
+      length:
+        NA: 0x104
+    - name: ARCTAN16_TABLE
+      address:
+        NA: 0x20891B0
+      length:
+        NA: 0x104
     - name: S_VOLUME_TABLE
       address:
         NA: 0x2089B24
