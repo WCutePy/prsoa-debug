@@ -9,6 +9,7 @@ extern struct ranger_data RANGER_DATA;
 extern struct pokemon_data PARTY_POKEMON_TABLES[3][10];
 extern struct following_npc FOLLOWING_NPC_TABLE[2];
 int ARENA_GRAPHIC_ID;
+extern struct lcrng_state LCRNG_STATE;
 extern struct settings_and_variables SETTINGS_AND_VARIABLES;
 extern void** SYSCALL_PAGE_PTRS[64];
 #endif

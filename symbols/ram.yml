@@ -64,6 +64,12 @@ ram:
       length:
         NA: 0xFC
       description: "Seems to be a table of loose script variables for the main plot (Event), Settings (But there are only two settings???), and Quests (The Vientown signpost quest uses it, for unknown purposes)."
+    - name: LCRNG_STATE
+      address:
+        NA: 0x210CEC8
+      length:
+        NA: 0xC
+      description: "Tracks the current LCRNG state, add, and mult. Observed Mult: 0x5D588B65, Observed Add: 0x269EC3."
     - name: SYSCALL_PAGE_PTRS
       address:
         NA: 0x210CED8
