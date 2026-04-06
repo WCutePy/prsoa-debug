@@ -525,10 +525,10 @@ void Cardi_OnFifoRecv(enum pxi_fifo_tag tag, uint32_t data, bool err);
 void Cardi_TaskThread(void);
 bool Cardi_Request(undefined4* param_1, int param_2, int param_3);
 void Card_InitPulledOutCallback(void);
-void Cardi_PulLedOutCallback(undefined4 param_1, unsigned int param_2);
-undefined4 Card_IsPulLedOut(void);
-void Card_TerminateForPulLedOut(void);
-void Cardi_CheckPulLedOutCore(int param_1);
+void Cardi_PulledOutCallback(undefined4 param_1, unsigned int param_2);
+undefined4 Card_IsPulledOut(void);
+void Card_TerminateForPulledOut(void);
+void Cardi_CheckPulledOutCore(int param_1);
 void Cardi_SendtoPxi(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                      undefined4 param_4);
 void ret_0207484c(void);
