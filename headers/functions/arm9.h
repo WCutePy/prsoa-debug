@@ -330,7 +330,7 @@ int OSi_RemoveSpecifiedLinkFromQueue(int* param_1, int param_2);
 int OSi_RemoveMutexLinkFromQueue(int* param_1);
 void OSi_InsertThreadToList(struct thread* thread);
 void OSi_RemoveThreadFromList(int param_1);
-void OS_RescheduleThread(void);
+void OSi_RescheduleThread(void);
 void OS_InitThread(void);
 undefined4 OS_IsThreadAvailable(void);
 void OS_CreateThread(struct thread* param_1, undefined4 param_2, uint32_t param_3, void* param_4,
@@ -643,7 +643,7 @@ undefined4 Ctrdg_IsOptionCartridge(void);
 int8_t Ctrdgi_GetModuleInfoAddr(void);
 undefined4 Ctrdg_IsNumberID(void);
 undefined4 Ctrdg_IsAgbCartridge(void);
-undefined4 CTRDG_IsAgbCartridgePulledOut(void);
+undefined4 Ctrdg_IsAgbCartridgePulledOut(void);
 undefined2 Ctrdgi_IsAgbCartridgeAtInit(void);
 undefined4 Ctrdg_IsExisting(void);
 void Ctrdgi_ChangeLatestAccessCycle(void* r);
