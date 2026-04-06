@@ -301,9 +301,7 @@ arm9:
         r1: Arena Graphic index
     - name: BattleSetWeatherEffectId
       address:
-        NA:
-          - 0x2010A84
-          - 0x2010BB8
+        NA: 0x2010A84
       description: |-
         Stores the index of the weather effect for the battle in the battle_combatants struct.
         
@@ -496,6 +494,13 @@ arm9:
         NA: 0x2010BB0
       description: |-
         Retrieves the arena graphic id from the battle_combatants struct.
+        
+        r0: battle_combatants pointer
+    - name: BattleGetWeatherEffectId
+      address:
+        NA: 0x2010BB8
+      description: |-
+        Retrieves the index of the weather effect from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetSequenceScriptId
@@ -3095,15 +3100,9 @@ arm9:
     - name: Ctrdgi_InitCommon
       address:
         NA: 0x2077D50
-    - name: CTRDG_IsOptionCartridge
+    - name: Ctrdg_IsOptionCartridge
       address:
-        NA:
-          - 0x2077DB0
-          - 0x2077E38
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
+        NA: 0x2077DB0
     - name: Ctrdgi_GetModuleInfoAddr
       address:
         NA: 0x2077DD8
@@ -3113,7 +3112,7 @@ arm9:
     - name: Ctrdg_IsAgbCartridge
       address:
         NA: 0x2077E14
-    - name: Ctrdg_IsOptionCartridge
+    - name: CTRDG_IsAgbCartridgePulledOut
       address:
         NA: 0x2077E38
     - name: Ctrdgi_IsAgbCartridgeAtInit
@@ -3137,98 +3136,45 @@ arm9:
     - name: Ctrdgi_SendtoPxi
       address:
         NA: 0x2078088
-    - name: CTRDGi_AccessCommon
+    - name: Ctrdgi_AccessCommon
       address:
         NA: 0x20780F0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: undefined4 
-        r2: undefined4 pointer
-        r3: uint32_t 
-    - name: CTRDG_IsEnabled
+    - name: Ctrdg_IsEnabled
       address:
         NA: 0x20781D0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: CTRDG_Enable
+    - name: Ctrdg_Enable
       address:
         NA: 0x20781E0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-    - name: CTRDG_CheckEnabled
+    - name: Ctrdg_CheckEnabled
       address:
         NA: 0x2078228
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: Ctrdg_Init
       address:
         NA: 0x207824C
-    - name: CTRDGi_InitModuleInfo
+    - name: Ctrdgi_InitModuleInfo
       address:
         NA: 0x2078300
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: CTRDGi_CallbackForInitModuleInfo
+    - name: Ctrdgi_CallbackForInitModuleInfo
       address:
         NA: 0x20784F4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint32_t 
-    - name: CTRDGi_PulledOutCallback
+    - name: Ctrdgi_PulledOutCallback
       address:
         NA: 0x2078520
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint32_t 
-    - name: CTRDG_TerminateForPulledOut
+    - name: Ctrdg_TerminateForPulledOut
       address:
         NA: 0x207857C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: CTRDGi_CallbackForSetPhi
+    - name: Ctrdgi_CallbackForSetPhi
       address:
         NA: 0x2078590
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: CTRDGi_InitTaskThread
+    - name: Ctrdgi_InitTaskThread
       address:
         NA: 0x20785A4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: thread pointer
-    - name: CTRDGi_InitTaskInfo
+    - name: Ctrdgi_InitTaskInfo
       address:
         NA: 0x2078630
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-    - name: CTRDGi_IsTaskBusy
+    - name: Ctrdgi_IsTaskBusy
       address:
         NA: 0x2078644
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: abs
       address:
         NA: 0x20794C8
