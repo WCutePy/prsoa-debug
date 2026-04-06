@@ -1916,276 +1916,105 @@ arm9:
     - name: MaybeLinearInterpolationInit
       address:
         NA: 0x205FD64
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: undefined4 
-        r2: undefined4 
     - name: MaybeLinearInterpolationProgress
       address:
         NA: 0x205FD8C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
     - name: MaybeLinearInterpolationUpdate
       address:
         NA: 0x205FDC0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: MaybeCheckIfLinearInterpolationMeetsThreshold
       address:
         NA: 0x205FDD8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: MTX_Identity22_
       address:
         NA: 0x205FDF0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
     - name: MTX_Scale22_
       address:
         NA: 0x205FE08
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: undefined4 
-        r2: undefined4 
     - name: MTX_Identity33_
       address:
         NA: 0x205FE14
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
     - name: MTX_RotZ33_
       address:
         NA: 0x205FE38
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: int32_t 
-        r2: undefined4 
     - name: MTX_Identity44_
       address:
         NA: 0x205FE50
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
     - name: MTX_TransApply44
       address:
         NA: 0x205FE7C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
-        r1: int32_t pointer
-        r2: int32_t 
-        r3: int32_t 
-        stack[0]: int32_t 
     - name: MTX_ScaleApply44
       address:
         NA: 0x205FF54
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t pointer
-        r1: uint32_t pointer
-        r2: int32_t 
-        r3: int32_t 
-        stack[0]: int32_t 
     - name: MTX_RotZ44_
       address:
         NA: 0x2060078
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: int32_t 
-        r2: undefined4 
     - name: FixedPoint4x4MatrixMultiply
       address:
         NA: 0x206009C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint32_t 
-        r2: uint32_t 
-        r3: undefined4 
     - name: MTX_OrthoW
       address:
         NA: 0x2060700
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: int32_t 
-        r3: int32_t 
-        stack[0]: int32_t 
-        stack[1]: int32_t 
-        stack[2]: uint32_t 
-        stack[3]: int32_t pointer
     - name: FixedPointDivide32
       address:
         NA: 0x2060908
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: Divide32HighBy32Low
       address:
         NA: 0x2060918
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: GetFixedPointReciprocal
       address:
         NA: 0x2060944
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: Sqrt32
       address:
         NA: 0x2060954
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: InverseSqrt
       address:
         NA: 0x2060988
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: Division64Return
       address:
         NA: 0x20609F0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: FixedPointDivision32Return
       address:
         NA: 0x2060A14
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: InitFixedPointReciprocal
       address:
         NA: 0x2060A4C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: InitSqrt32High
       address:
         NA: 0x2060A7C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: GetSqrtResultUpper
       address:
         NA: 0x2060AC0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: InitDivision32HighBy32Low
       address:
         NA: 0x2060AEC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: Divide32By32Quotient
       address:
         NA: 0x2060B14
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: Divide32by32Remainder
       address:
         NA: 0x2060B50
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: TaylorExpandFixedPointSin
       address:
         NA: 0x2060B8C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: int32_t 
     - name: TaylorExpandFixedPointCos
       address:
         NA: 0x2060C74
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: int32_t 
     - name: GetFixedPointSinCos
       address:
         NA: 0x2060D40
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
     - name: GetFixedPointCosSin
       address:
         NA: 0x2060DD8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
     - name: GetFixedPointArcTanFromTable
       address:
         NA: 0x2060E6C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: GetFixedPointArcTan2FromTable
       address:
         NA: 0x2060F3C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: ArcTan2FromTable16
       address:
         NA: 0x20610F4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: ret_0206129c
       address:
         NA: 0x206129C
@@ -2199,44 +2028,21 @@ arm9:
     - name: GX_SetVCountEqVal
       address:
         NA: 0x20613EC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
     - name: GX_HBlankIntr
       address:
         NA: 0x2061414
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint16_t 
     - name: GX_VBlankIntr
       address:
         NA: 0x2061448
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint16_t 
     - name: GX_InitGxState
       address:
         NA: 0x20615AC
     - name: G3_LoadMtx44
       address:
         NA: 0x2062F64
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_WaitIrq
       address:
         NA: 0x206472C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint32_t 
     - name: ret_020647a0
       address:
         NA: 0x20647A0
@@ -2287,17 +2093,9 @@ arm9:
     - name: OS_LockCard
       address:
         NA: 0x2064E08
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: OS_UnlockCard
       address:
         NA: 0x2064E24
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: OS_GetLockID
       address:
         NA: 0x2064E78
@@ -2314,10 +2112,6 @@ arm9:
     - name: Maybe_OSi_GetUnusedThreadId
       address:
         NA: 0x2064FA8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OSi_InsertLinkToQueue
       address:
         NA: 0x2064FC0
@@ -2333,22 +2127,9 @@ arm9:
     - name: Maybe_OS_CreateThread
       address:
         NA: 0x20653B8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: thread pointer
-        r1: undefined4 
-        r2: uint32_t 
-        r3: void pointer
-        stack[0]: int32_t 
-        stack[1]: int32_t 
     - name: Maybe_OS_JoinThread
       address:
         NA: 0x2065658
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: thread pointer
     - name: OS_SleepThread
       address:
         NA: 0x206569C
@@ -2376,17 +2157,9 @@ arm9:
     - name: DC_InvalidateAll
       address:
         NA: 0x2066034
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: DC_Store_All
       address:
         NA: 0x2066040
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: DC_FlushAll
       address:
         NA: 0x206606C
@@ -2396,36 +2169,18 @@ arm9:
     - name: DC_StoreRange
       address:
         NA: 0x20660BC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: int32_t 
     - name: DC_FlushRange
       address:
         NA: 0x20660D8
     - name: DC_WaitWriteBufferEmpty
       address:
         NA: 0x20660FC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: IC_InvalidateAll
       address:
         NA: 0x2066108
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: IC_InvalidateRange
       address:
         NA: 0x2066114
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: int32_t 
     - name: OSi_WaitVCount0
       address:
         NA: 0x2066130
@@ -2445,24 +2200,12 @@ arm9:
     - name: OS_GetArenaHi
       address:
         NA: 0x2066308
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: OS_GetArenaLo
       address:
         NA: 0x206631C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: OS_GetInitArenaHi
       address:
         NA: 0x2066330
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: OS_GetInitArenaLo
       address:
         NA: 0x2066414
@@ -2475,41 +2218,18 @@ arm9:
     - name: OS_AllocFromArenaLo
       address:
         NA: 0x20664E4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: int32_t 
     - name: OS_GetDTCMAddress
       address:
         NA: 0x2066550
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_EnableProtectionUnit
       address:
         NA: 0x2066564
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_DisableProtectionUnit
       address:
         NA: 0x2066574
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_SetDPermissionsForProtectionRegion
       address:
         NA: 0x2066584
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: uint32_t 
     - name: OS_SetProtectionRegion1
       address:
         NA: 0x2066598
@@ -2525,170 +2245,72 @@ arm9:
     - name: OSi_GetAndDisplayContext
       address:
         NA: 0x206669C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: OSi_SetExContext
       address:
         NA: 0x20666B0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: OSi_DisplayExContext
       address:
         NA: 0x2066740
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_InitTick
       address:
         NA: 0x20667F8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_IsTickAvailable
       address:
         NA: 0x2066870
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OSi_CountUpTick
       address:
         NA: 0x2066880
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_GetTick
       address:
         NA: 0x20668E8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_GetTickLo
       address:
         NA: 0x2066988
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_InitVAlarm
       address:
         NA: 0x2066DE4
     - name: OS_EndVAlarm
       address:
         NA: 0x2066E2C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OSi_InsertVAlarm
       address:
         NA: 0x2066E54
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: OSi_AppendVAlarm
       address:
         NA: 0x2066ED0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: OSi_DetachVAlarm
       address:
         NA: 0x2066F08
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: OS_CreateVAlarm
       address:
         NA: 0x2066F40
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
     - name: OS_SetVAlarm
       address:
         NA: 0x2066F54
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
-        r1: int32_t 
-        r2: undefined2 
-        r3: int32_t 
-        stack[0]: int32_t 
     - name: OS_SetPeriodicVAlarm
       address:
         NA: 0x2066FE0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
-        r1: int32_t 
-        r2: undefined2 
-        r3: int32_t 
-        stack[0]: int32_t 
     - name: OSi_SetNextVAlarm
       address:
         NA: 0x206706C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: OS_CancelVAlarm
       address:
         NA: 0x20670AC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
     - name: OS_CancelAllVAlarms
       address:
         NA: 0x20670F4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OSi_VAlarmHandler
       address:
         NA: 0x206714C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OSi_CompareVCount
       address:
         NA: 0x20672C4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: int32_t 
     - name: OSi_GetVFrame
       address:
         NA: 0x2067310
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: OS_EnableInterrupts
       address:
         NA: 0x2067350
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_DisableInterrupts
       address:
         NA: 0x2067364
@@ -2709,70 +2331,33 @@ arm9:
     - name: OS_EnableInterrupts_IrqAndFiq
       address:
         NA: 0x2067390
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_RestoreInterrupts_IrqAndFiq
       address:
         NA: 0x20673A4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_GetCpsrIrq
       address:
         NA: 0x20673BC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_GetProcMode
       address:
         NA: 0x20673C8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_SpinWait
       address:
         NA: 0x20673D4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
     - name: OS_WaitVBlankIntr
       address:
         NA: 0x20673E0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_InitReset
       address:
         NA: 0x20673FC
     - name: OSi_CommonCallback
       address:
         NA: 0x2067450
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint32_t 
     - name: OSi_SendToPxi
       address:
         NA: 0x2067484
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint16_t 
     - name: OS_ResetSystem
       address:
         NA: 0x20674B0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: OS_GetMacAddress
       address:
         NA: 0x206756C
@@ -2805,19 +2390,9 @@ arm9:
     - name: OSi_TryLockVram
       address:
         NA: 0x2067648
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint16_t 
-        r1: uint16_t 
     - name: OSi_UnlockVram
       address:
         NA: 0x2067708
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint16_t 
-        r1: uint16_t 
     - name: OS_Panic
       address:
         NA: 0x2067860
@@ -2844,33 +2419,12 @@ arm9:
     - name: MI_DmaFill32
       address:
         NA: 0x206788C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: uint32_t 
     - name: MI_DmaSend32
       address:
         NA: 0x206790C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: uint32_t 
     - name: MI_DmaFill16
       address:
         NA: 0x206797C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: uint32_t 
     - name: MI_DmaCopy16
       address:
         NA: 0x20679FC
@@ -2880,11 +2434,6 @@ arm9:
     - name: MIi_CheckAnotherAutoDMA
       address:
         NA: 0x2067CA8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint32_t 
     - name: MIi_CheckDma0SourceAddress
       address:
         NA: 0x2067D2C
@@ -2951,19 +2500,9 @@ arm9:
     - name: MI_Copy36B
       address:
         NA: 0x2067ED4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: undefined4 pointer
     - name: MI_Copy48B
       address:
         NA: 0x2067EF0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: undefined4 pointer
     - name: MI_CpuFill8
       address:
         NA: 0x2067F14
@@ -2993,21 +2532,9 @@ arm9:
     - name: MI_SwapWord
       address:
         NA: 0x2068150
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 pointer
     - name: MIi_CardDmaCopy32
       address:
         NA: 0x20683B8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: int32_t 
     - name: MI_Init
       address:
         NA: 0x206842C
@@ -3035,90 +2562,36 @@ arm9:
     - name: TP_Init
       address:
         NA: 0x206CE80
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: TP_GetUserInfo
       address:
         NA: 0x206CEF8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined pointer
     - name: TP_SetCalibrateParam
       address:
         NA: 0x206CF8C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int16_t pointer
     - name: TP_GetLatestIndexInAuto
       address:
         NA: 0x206D330
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: TP_CalcCalibrateParam
       address:
         NA: 0x206D340
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined2 pointer
-        r1: undefined2 pointer
-        r2: uint32_t 
-        r3: uint32_t 
-        stack[0]: uint16_t 
-        stack[1]: uint16_t 
-        stack[2]: uint16_t 
-        stack[3]: uint16_t 
-        stack[4]: uint16_t 
     - name: TP_GetCalibratedPoint
       address:
         NA: 0x206D52C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint16_t pointer
-        r1: uint16_t pointer
     - name: TP_WaitBusy
       address:
         NA: 0x206D650
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint16_t 
     - name: TP_CheckBusy
       address:
         NA: 0x206D668
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint16_t 
     - name: PMi_Lock
       address:
         NA: 0x206D67C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: PMi_WaitBusy
       address:
         NA: 0x206D6B8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: PMi_DummyCallback
       address:
         NA: 0x206D6F8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 pointer
     - name: PMi_CallCallbackAndUnlock
       address:
         NA: 0x206D700
@@ -3131,85 +2604,30 @@ arm9:
     - name: PMi_SendSleepStart
       address:
         NA: 0x206D8AC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: uint32_t 
     - name: PM_SendUtilityCommandAsync
       address:
         NA: 0x206D940
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: undefined4 
-        r2: undefined4 
     - name: PMi_ReadRegisterAsync
       address:
         NA: 0x206D9A0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: PMi_ReadRegister
       address:
         NA: 0x206DA0C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint16_t 
-        r1: uint16_t pointer
     - name: PMi_SetLEDAsync
       address:
         NA: 0x206DA34
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
     - name: PMi_SetLED
       address:
         NA: 0x206DA88
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: int32_t 
     - name: PM_SetBackLightAsync
       address:
         NA: 0x206DAB0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: undefined4 
-        r3: undefined4 
     - name: PM_SetBackLight
       address:
         NA: 0x206DB2C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
     - name: PM_ForceToPowerOffAsync
       address:
         NA: 0x206DB54
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: PM_ForceToPowerOff
       address:
         NA: 0x206DC00
@@ -3220,467 +2638,182 @@ arm9:
     - name: PM_GetBackLight
       address:
         NA: 0x206DC28
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t pointer
-        r1: uint32_t pointer
-        r2: undefined4 
-        r3: uint32_t 
     - name: PMi_SendPxiData
       address:
         NA: 0x206DC84
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: PM_GoSleepMode
       address:
         NA: 0x206DCB0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: uint16_t 
-        r2: uint16_t 
-        r3: undefined4 
     - name: PMi_SetLCDPower
       address:
         NA: 0x206DEE0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: int32_t 
-        r3: int32_t 
     - name: PM_SetLCDPower
       address:
         NA: 0x206DFB4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: PM_GetLCDPower
       address:
         NA: 0x206DFD4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: PMi_SendLEDPatternCommandAsync
       address:
         NA: 0x206DFF0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: undefined4 
-        r2: undefined4 
     - name: PMi_SendLEDPatternCommand
       address:
         NA: 0x206E038
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: int32_t 
     - name: PM_GetLEDPatternAsync
       address:
         NA:
           - 0x206E060
           - 0x206E0A8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
     - name: PMi_PrependList
       address:
         NA: 0x206E0D0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
-        r1: int32_t 
     - name: PMi_AppendList
       address:
         NA: 0x206E0E4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
-        r1: int32_t 
     - name: PMi_DeleteList
       address:
         NA: 0x206E130
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
-        r1: int32_t 
-        r2: int32_t 
-        r3: int32_t 
     - name: PMi_ExecuteList
       address:
         NA: 0x206E178
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
     - name: PM_PrependPreSleepCallback
       address:
         NA: 0x206E1A0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: PM_AppendPostSleepCallback
       address:
         NA: 0x206E1B8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: PM_DeletePreSleepCallback
       address:
         NA: 0x206E1D0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: PM_DeletePostSleepCallback
       address:
         NA: 0x206E1E8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: RTC_Init
       address:
         NA: 0x206E200
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: RTC_GetDateAsync
       address:
         NA: 0x206E26C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
     - name: RTC_GetDate
       address:
         NA: 0x206E2DC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: RTC_GetTimeAsync
       address:
         NA: 0x206E314
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
     - name: RTC_GetTime
       address:
         NA: 0x206E388
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: RTC_GetDateTimeAsync
       address:
         NA: 0x206E3C0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: RTC_GetDateTime
       address:
         NA: 0x206E43C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: RtcCommonCallback
       address:
         NA: 0x206E474
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint32_t 
-        r2: int32_t 
-        r3: undefined4 
     - name: RtcBCD2HEX
       address:
         NA: 0x206E9C4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
     - name: RtcGetResultCallback
       address:
         NA: 0x206EA34
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: RtcWaitBusy
       address:
         NA: 0x206EA44
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: RTCi_ReadRawDateTimeAsync
       address:
         NA: 0x206EA5C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: RTCi_ReadRawDateAsync
       address:
         NA: 0x206EA6C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: RTCi_ReadRawTimeAsync
       address:
         NA: 0x206EA7C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: RTCi_WriteRawStatus2Async
       address:
         NA: 0x206EA8C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: RtcSendPxiCommand
       address:
         NA: 0x206EA9C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: RTC_ConvertDateToDay
       address:
         NA: 0x206EAC4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t pointer
     - name: RTCi_ConvertTimeToSecond
       address:
         NA: 0x206EB58
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
     - name: RTC_ConvertDateTimeToSecond
       address:
         NA: 0x206EB70
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
     - name: RTC_GetDayOfWeek
       address:
         NA: 0x206EBD4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
     - name: CARDi_SetTask
       address:
         NA: 0x206EC90
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: CARDi_LockResource
       address:
         NA: 0x206ECCC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: CARDi_UnlockResource
       address:
         NA: 0x206ED50
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: Cardi_InitCommon
       address:
         NA: 0x206EDDC
     - name: CARD_IsEnabled
       address:
         NA: 0x206EEEC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARD_CheckEnabled
       address:
         NA: 0x206EEFC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: Card_Enable
       address:
         NA: 0x206EF14
     - name: CARDi_WaitAsync
       address:
         NA: 0x206EF24
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARDi_TryWaitAsync
       address:
         NA: 0x206EF70
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARD_IsAvailable
       address:
         NA: 0x206EF8C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARD_LockRom
       address:
         NA: 0x206EFA0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: CARD_UnlockRom
       address:
         NA: 0x206EFBC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: CARD_LockBackup
       address:
         NA: 0x206EFD8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: CARDi_RequestStreamCommandCore
       address:
         NA: 0x206F2E0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
     - name: CARDi_RequestStreamCommand
       address:
         NA: 0x206F4B8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
-        stack[0]: undefined4 
-        stack[1]: int32_t 
-        stack[2]: undefined4 
-        stack[3]: undefined4 
-        stack[4]: undefined4 
     - name: CARD_GetCurrentBackupType
       address:
         NA: 0x206F5A0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARD_GetBackupTotalSize
       address:
         NA: 0x206F5B4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARD_GetBackupSectorSize
       address:
         NA: 0x206F5C8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARD_GetBackupPageSize
       address:
         NA: 0x206F5DC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARD_IdentifyBackup
       address:
         NA: 0x206F5F0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: CARD_WaitBackupAsync
       address:
         NA: 0x206F728
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARD_TryWaitBackupAsync
       address:
         NA: 0x206F734
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: Cardi_ReadFromCache
       address:
         NA: 0x206F740
@@ -3690,74 +2823,33 @@ arm9:
     - name: CARDi_SetCardDma
       address:
         NA: 0x206F82C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARDi_OnReadCard
       address:
         NA: 0x206F880
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARDi_TryReadCardDma
       address:
         NA: 0x206F950
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: Cardi_ReadCard
       address:
         NA: 0x206FADC
     - name: CARDi_ReadRomIDCore
       address:
         NA: 0x206FBCC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: CARDi_ReadRomSyncCore
       address:
         NA: 0x206FC28
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARDi_ReadRom
       address:
         NA: 0x206FCC0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: int32_t 
-        r2: undefined4 
-        r3: undefined4 
-        stack[0]: undefined4 
-        stack[1]: undefined4 
-        stack[2]: int32_t 
     - name: Card_Init
       address:
         NA: 0x206FDB8
     - name: CARD_WaitRomAsync
       address:
         NA: 0x206FE1C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARDi_GetRomAccessor
       address:
         NA: 0x206FE28
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: Cardi_OnFifoRecv
       address:
         NA: 0x206FE34
@@ -3767,54 +2859,24 @@ arm9:
     - name: CARDi_Request
       address:
         NA: 0x206FEB8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: int32_t 
-        r2: int32_t 
     - name: Card_InitPulledOutCallback
       address:
         NA: 0x207000C
     - name: CARDi_PulledOutCallback
       address:
         NA: 0x2070038
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint32_t 
     - name: CARD_IsPulledOut
       address:
         NA: 0x207008C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARD_TerminateForPulledOut
       address:
         NA: 0x207009C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CARDi_CheckPulledOutCore
       address:
         NA: 0x2070128
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: CARDi_SendtoPxi
       address:
         NA: 0x2070188
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: ret_0207484c
       address:
         NA: 0x207484C
@@ -3828,45 +2890,21 @@ arm9:
     - name: CTRDGi_GetModuleInfoAddr
       address:
         NA: 0x2077DD8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CTRDG_IsNumberID
       address:
         NA: 0x2077DF0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CTRDG_IsAgbCartridge
       address:
         NA: 0x2077E14
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CTRDG_IsOptionCartridge
       address:
         NA: 0x2077E38
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CTRDGi_IsAgbCartridgeAtInit
       address:
         NA: 0x2077E5C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: CTRDG_IsExisting
       address:
         NA: 0x2077E80
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: Ctrdgi_ChangeLatestAccessCycle
       address:
         NA: 0x2077F8C
