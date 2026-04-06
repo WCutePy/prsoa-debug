@@ -546,6 +546,7 @@ undefined4 PMi_SendLedPatternCommandAsync(unsigned int param_1, undefined4 param
 int PMi_SendLedPatternCommand(undefined4 param_1, undefined4 param_2, undefined4 param_3,
                               int param_4);
 undefined4 PM_GetLedPatternAsync(undefined4 param_1, undefined4 param_2, undefined4 param_3);
+undefined4 PM_GetLedPatternAsync(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void PMi_PrependList(int* param_1, int param_2);
 void PMi_AppendList(int* param_1, int param_2);
 void PMi_DeleteList(int* param_1, int param_2, int param_3, int param_4);
