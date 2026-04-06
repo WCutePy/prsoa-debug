@@ -2126,7 +2126,7 @@ arm9:
     - name: OSi_RemoveThreadFromList
       address:
         NA: 0x2065150
-    - name: OS_RescheduleThread
+    - name: OSi_RescheduleThread
       address:
         NA: 0x2065198
     - name: OS_InitThread
@@ -3112,7 +3112,7 @@ arm9:
     - name: Ctrdg_IsAgbCartridge
       address:
         NA: 0x2077E14
-    - name: CTRDG_IsAgbCartridgePulledOut
+    - name: Ctrdg_IsAgbCartridgePulledOut
       address:
         NA: 0x2077E38
     - name: Ctrdgi_IsAgbCartridgeAtInit
