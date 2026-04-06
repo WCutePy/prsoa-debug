@@ -1980,7 +1980,7 @@ arm9:
     - name: G3_LoadMtx43
       address:
         NA: 0x2062F80
-    - name: G3i_OrthoW_
+    - name: G3i_OrthoW
       address:
         NA: 0x2063438
     - name: G3_LoadTexMtxTexCoord
@@ -2661,13 +2661,13 @@ arm9:
     - name: MI_Init
       address:
         NA: 0x206842C
-    - name: SND_SetupAlarm
+    - name: Snd_SetupAlarm
       address:
         NA: 0x20685C4
-    - name: PushCommand_impl
+    - name: PushCommand_Impl
       address:
         NA: 0x20687B0
-    - name: SND_Init
+    - name: Snd_Init
       address:
         NA: 0x20687F4
     - name: SNDi_LockMutex
@@ -2676,43 +2676,43 @@ arm9:
     - name: SNDi_UnlockMutex
       address:
         NA: 0x2068840
-    - name: SND_CommandInit
+    - name: Snd_CommandInit
       address:
         NA: 0x2068854
-    - name: SND_RecvCommandReply
+    - name: Snd_RecvCommandReply
       address:
         NA: 0x2068928
-    - name: SND_AllocCommand
+    - name: Snd_AllocCommand
       address:
         NA: 0x2068A38
-    - name: SND_PushCommand
+    - name: Snd_PushCommand
       address:
         NA: 0x2068AC0
-    - name: SND_FlushCommand
+    - name: Snd_FlushCommand
       address:
         NA: 0x2068AF8
-    - name: SND_WaitForCommandProc
+    - name: Snd_WaitForCommandProc
       address:
         NA: 0x2068CB4
-    - name: SND_GetCurrentCommandTag
+    - name: Snd_GetCurrentCommandTag
       address:
         NA: 0x2068D20
-    - name: SND_IsFinishedCommandTag
+    - name: Snd_IsFinishedCommandTag
       address:
         NA: 0x2068D4C
-    - name: SND_CountFreeCommand
+    - name: Snd_CountFreeCommand
       address:
         NA: 0x2068D9C
-    - name: SND_CountReservedCommand
+    - name: Snd_CountReservedCommand
       address:
         NA: 0x2068DD8
-    - name: SND_CountWaitingCommand
+    - name: Snd_CountWaitingCommand
       address:
         NA: 0x2068E14
     - name: PxiFifoCallback
       address:
         NA: 0x2068E30
-    - name: InitPXI
+    - name: InitPxi
       address:
         NA: 0x2068E54
     - name: RequestCommandProc
@@ -2724,7 +2724,7 @@ arm9:
     - name: IsCommandAvailable
       address:
         NA: 0x2068F24
-    - name: SND_AlarmInit
+    - name: Snd_AlarmInit
       address:
         NA: 0x2068F64
     - name: SNDi_SetAlarmHandler
@@ -2838,10 +2838,6 @@ arm9:
     - name: PM_ForceToPowerOff
       address:
         NA: 0x206DC00
-      description: |-
-        Powers off the system.
-        
-        return: ?
     - name: PM_GetBackLight
       address:
         NA: 0x206DC28
@@ -2866,10 +2862,10 @@ arm9:
     - name: PMi_SendLedPatternCommand
       address:
         NA: 0x206E038
-    - name: PM_GetLedPatternAsync
+    - name: Pm_GetLedPatternAsync
       address:
         NA: 0x206E060
-    - name: PM_GetLEDPattern
+    - name: Pm_GetLedPattern
       address:
         NA: 0x206E0A8
     - name: PMi_PrependList
