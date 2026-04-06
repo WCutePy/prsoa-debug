@@ -2838,6 +2838,10 @@ arm9:
     - name: PM_ForceToPowerOff
       address:
         NA: 0x206DC00
+      description: |-
+        Powers off the system.
+        
+        return: ?
     - name: PM_GetBackLight
       address:
         NA: 0x206DC28
@@ -3091,6 +3095,15 @@ arm9:
     - name: Ctrdgi_InitCommon
       address:
         NA: 0x2077D50
+    - name: CTRDG_IsOptionCartridge
+      address:
+        NA:
+          - 0x2077DB0
+          - 0x2077E38
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: Ctrdgi_GetModuleInfoAddr
       address:
         NA: 0x2077DD8
@@ -3124,9 +3137,98 @@ arm9:
     - name: Ctrdgi_SendtoPxi
       address:
         NA: 0x2078088
+    - name: CTRDGi_AccessCommon
+      address:
+        NA: 0x20780F0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+        r1: undefined4 
+        r2: undefined4 pointer
+        r3: uint32_t 
+    - name: CTRDG_IsEnabled
+      address:
+        NA: 0x20781D0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: CTRDG_Enable
+      address:
+        NA: 0x20781E0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: CTRDG_CheckEnabled
+      address:
+        NA: 0x2078228
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: Ctrdg_Init
       address:
         NA: 0x207824C
+    - name: CTRDGi_InitModuleInfo
+      address:
+        NA: 0x2078300
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: CTRDGi_CallbackForInitModuleInfo
+      address:
+        NA: 0x20784F4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: uint32_t 
+    - name: CTRDGi_PulledOutCallback
+      address:
+        NA: 0x2078520
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: uint32_t 
+    - name: CTRDG_TerminateForPulledOut
+      address:
+        NA: 0x207857C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: CTRDGi_CallbackForSetPhi
+      address:
+        NA: 0x2078590
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: CTRDGi_InitTaskThread
+      address:
+        NA: 0x20785A4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: thread pointer
+    - name: CTRDGi_InitTaskInfo
+      address:
+        NA: 0x2078630
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+    - name: CTRDGi_IsTaskBusy
+      address:
+        NA: 0x2078644
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
     - name: abs
       address:
         NA: 0x20794C8
