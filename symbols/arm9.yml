@@ -1925,34 +1925,34 @@ arm9:
     - name: MaybeCheckIfLinearInterpolationMeetsThreshold
       address:
         NA: 0x205FDD8
-    - name: MTX_Identity22_
+    - name: Mtx_Identity22_
       address:
         NA: 0x205FDF0
-    - name: MTX_Scale22_
+    - name: Mtx_Scale22_
       address:
         NA: 0x205FE08
-    - name: MTX_Identity33_
+    - name: Mtx_Identity33_
       address:
         NA: 0x205FE14
-    - name: MTX_RotZ33_
+    - name: Mtx_RotZ33_
       address:
         NA: 0x205FE38
-    - name: MTX_Identity44_
+    - name: Mtx_Identity44_
       address:
         NA: 0x205FE50
-    - name: MTX_TransApply44
+    - name: Mtx_TransApply44
       address:
         NA: 0x205FE7C
-    - name: MTX_ScaleApply44
+    - name: Mtx_ScaleApply44
       address:
         NA: 0x205FF54
-    - name: MTX_RotZ44_
+    - name: Mtx_RotZ44_
       address:
         NA: 0x2060078
     - name: FixedPoint4x4MatrixMultiply
       address:
         NA: 0x206009C
-    - name: MTX_OrthoW
+    - name: Mtx_OrthoW
       address:
         NA: 0x2060700
     - name: FixedPointDivide32
@@ -2124,12 +2124,6 @@ arm9:
     - name: OS_InitThread
       address:
         NA: 0x2065260
-    - name: Maybe_OS_CreateThread
-      address:
-        NA: 0x20653B8
-    - name: Maybe_OS_JoinThread
-      address:
-        NA: 0x2065658
     - name: OS_SleepThread
       address:
         NA: 0x206569C
@@ -2218,7 +2212,7 @@ arm9:
     - name: OS_AllocFromArenaLo
       address:
         NA: 0x20664E4
-    - name: OS_GetDTCMAddress
+    - name: OS_GetDtcmAddress
       address:
         NA: 0x2066550
     - name: OS_EnableProtectionUnit
@@ -2613,10 +2607,10 @@ arm9:
     - name: PMi_ReadRegister
       address:
         NA: 0x206DA0C
-    - name: PMi_SetLEDAsync
+    - name: PMi_SetLedAsync
       address:
         NA: 0x206DA34
-    - name: PMi_SetLED
+    - name: PMi_SetLed
       address:
         NA: 0x206DA88
     - name: PM_SetBackLightAsync
@@ -2644,22 +2638,22 @@ arm9:
     - name: PM_GoSleepMode
       address:
         NA: 0x206DCB0
-    - name: PMi_SetLCDPower
+    - name: PMi_SetLcdPower
       address:
         NA: 0x206DEE0
-    - name: PM_SetLCDPower
+    - name: PM_SetLcdPower
       address:
         NA: 0x206DFB4
-    - name: PM_GetLCDPower
+    - name: PM_GetLcdPower
       address:
         NA: 0x206DFD4
-    - name: PMi_SendLEDPatternCommandAsync
+    - name: PMi_SendLedPatternCommandAsync
       address:
         NA: 0x206DFF0
-    - name: PMi_SendLEDPatternCommand
+    - name: PMi_SendLedPatternCommand
       address:
         NA: 0x206E038
-    - name: PM_GetLEDPatternAsync
+    - name: PM_GetLedPatternAsync
       address:
         NA:
           - 0x206E060
@@ -2688,31 +2682,31 @@ arm9:
     - name: PM_DeletePostSleepCallback
       address:
         NA: 0x206E1E8
-    - name: RTC_Init
+    - name: Rtc_Init
       address:
         NA: 0x206E200
-    - name: RTC_GetDateAsync
+    - name: Rtc_GetDateAsync
       address:
         NA: 0x206E26C
-    - name: RTC_GetDate
+    - name: Rtc_GetDate
       address:
         NA: 0x206E2DC
-    - name: RTC_GetTimeAsync
+    - name: Rtc_GetTimeAsync
       address:
         NA: 0x206E314
-    - name: RTC_GetTime
+    - name: Rtc_GetTime
       address:
         NA: 0x206E388
-    - name: RTC_GetDateTimeAsync
+    - name: Rtc_GetDateTimeAsync
       address:
         NA: 0x206E3C0
-    - name: RTC_GetDateTime
+    - name: Rtc_GetDateTime
       address:
         NA: 0x206E43C
     - name: RtcCommonCallback
       address:
         NA: 0x206E474
-    - name: RtcBCD2HEX
+    - name: RtcBcd2Hex
       address:
         NA: 0x206E9C4
     - name: RtcGetResultCallback
@@ -2721,97 +2715,97 @@ arm9:
     - name: RtcWaitBusy
       address:
         NA: 0x206EA44
-    - name: RTCi_ReadRawDateTimeAsync
+    - name: Rtci_ReadRawDateTimeAsync
       address:
         NA: 0x206EA5C
-    - name: RTCi_ReadRawDateAsync
+    - name: Rtci_ReadRawDateAsync
       address:
         NA: 0x206EA6C
-    - name: RTCi_ReadRawTimeAsync
+    - name: Rtci_ReadRawTimeAsync
       address:
         NA: 0x206EA7C
-    - name: RTCi_WriteRawStatus2Async
+    - name: Rtci_WriteRawStatus2Async
       address:
         NA: 0x206EA8C
     - name: RtcSendPxiCommand
       address:
         NA: 0x206EA9C
-    - name: RTC_ConvertDateToDay
+    - name: Rtc_ConvertDateToDay
       address:
         NA: 0x206EAC4
-    - name: RTCi_ConvertTimeToSecond
+    - name: Rtci_ConvertTimeToSecond
       address:
         NA: 0x206EB58
-    - name: RTC_ConvertDateTimeToSecond
+    - name: Rtc_ConvertDateTimeToSecond
       address:
         NA: 0x206EB70
-    - name: RTC_GetDayOfWeek
+    - name: Rtc_GetDayOfWeek
       address:
         NA: 0x206EBD4
-    - name: CARDi_SetTask
+    - name: Cardi_SetTask
       address:
         NA: 0x206EC90
-    - name: CARDi_LockResource
+    - name: Cardi_LockResource
       address:
         NA: 0x206ECCC
-    - name: CARDi_UnlockResource
+    - name: Cardi_UnlockResource
       address:
         NA: 0x206ED50
     - name: Cardi_InitCommon
       address:
         NA: 0x206EDDC
-    - name: CARD_IsEnabled
+    - name: Card_IsEnabled
       address:
         NA: 0x206EEEC
-    - name: CARD_CheckEnabled
+    - name: Card_CheckEnabled
       address:
         NA: 0x206EEFC
     - name: Card_Enable
       address:
         NA: 0x206EF14
-    - name: CARDi_WaitAsync
+    - name: Cardi_WaitAsync
       address:
         NA: 0x206EF24
-    - name: CARDi_TryWaitAsync
+    - name: Cardi_TryWaitAsync
       address:
         NA: 0x206EF70
-    - name: CARD_IsAvailable
+    - name: Card_IsAvailable
       address:
         NA: 0x206EF8C
-    - name: CARD_LockRom
+    - name: Card_LockRom
       address:
         NA: 0x206EFA0
-    - name: CARD_UnlockRom
+    - name: Card_UnlockRom
       address:
         NA: 0x206EFBC
-    - name: CARD_LockBackup
+    - name: Card_LockBackup
       address:
         NA: 0x206EFD8
-    - name: CARDi_RequestStreamCommandCore
+    - name: Cardi_RequestStreamCommandCore
       address:
         NA: 0x206F2E0
-    - name: CARDi_RequestStreamCommand
+    - name: Cardi_RequestStreamCommand
       address:
         NA: 0x206F4B8
-    - name: CARD_GetCurrentBackupType
+    - name: Card_GetCurrentBackupType
       address:
         NA: 0x206F5A0
-    - name: CARD_GetBackupTotalSize
+    - name: Card_GetBackupTotalSize
       address:
         NA: 0x206F5B4
-    - name: CARD_GetBackupSectorSize
+    - name: Card_GetBackupSectorSize
       address:
         NA: 0x206F5C8
-    - name: CARD_GetBackupPageSize
+    - name: Card_GetBackupPageSize
       address:
         NA: 0x206F5DC
-    - name: CARD_IdentifyBackup
+    - name: Card_IdentifyBackup
       address:
         NA: 0x206F5F0
-    - name: CARD_WaitBackupAsync
+    - name: Card_WaitBackupAsync
       address:
         NA: 0x206F728
-    - name: CARD_TryWaitBackupAsync
+    - name: Card_TryWaitBackupAsync
       address:
         NA: 0x206F734
     - name: Cardi_ReadFromCache
@@ -2820,34 +2814,34 @@ arm9:
     - name: Cardi_SetRomOp
       address:
         NA: 0x206F7CC
-    - name: CARDi_SetCardDma
+    - name: Cardi_SetCardDma
       address:
         NA: 0x206F82C
-    - name: CARDi_OnReadCard
+    - name: Cardi_OnReadCard
       address:
         NA: 0x206F880
-    - name: CARDi_TryReadCardDma
+    - name: Cardi_TryReadCardDma
       address:
         NA: 0x206F950
     - name: Cardi_ReadCard
       address:
         NA: 0x206FADC
-    - name: CARDi_ReadRomIDCore
+    - name: Cardi_ReadRomIDCore
       address:
         NA: 0x206FBCC
-    - name: CARDi_ReadRomSyncCore
+    - name: Cardi_ReadRomSyncCore
       address:
         NA: 0x206FC28
-    - name: CARDi_ReadRom
+    - name: Cardi_ReadRom
       address:
         NA: 0x206FCC0
     - name: Card_Init
       address:
         NA: 0x206FDB8
-    - name: CARD_WaitRomAsync
+    - name: Card_WaitRomAsync
       address:
         NA: 0x206FE1C
-    - name: CARDi_GetRomAccessor
+    - name: Cardi_GetRomAccessor
       address:
         NA: 0x206FE28
     - name: Cardi_OnFifoRecv
@@ -2856,25 +2850,25 @@ arm9:
     - name: Cardi_TaskThread
       address:
         NA: 0x206FE68
-    - name: CARDi_Request
+    - name: Cardi_Request
       address:
         NA: 0x206FEB8
-    - name: Card_InitPulledOutCallback
+    - name: Card_InitPulLedOutCallback
       address:
         NA: 0x207000C
-    - name: CARDi_PulledOutCallback
+    - name: Cardi_PulLedOutCallback
       address:
         NA: 0x2070038
-    - name: CARD_IsPulledOut
+    - name: Card_IsPulLedOut
       address:
         NA: 0x207008C
-    - name: CARD_TerminateForPulledOut
+    - name: Card_TerminateForPulLedOut
       address:
         NA: 0x207009C
-    - name: CARDi_CheckPulledOutCore
+    - name: Cardi_CheckPulLedOutCore
       address:
         NA: 0x2070128
-    - name: CARDi_SendtoPxi
+    - name: Cardi_SendtoPxi
       address:
         NA: 0x2070188
     - name: ret_0207484c
@@ -2887,22 +2881,22 @@ arm9:
     - name: Ctrdgi_InitCommon
       address:
         NA: 0x2077D50
-    - name: CTRDGi_GetModuleInfoAddr
+    - name: Ctrdgi_GetModuleInfoAddr
       address:
         NA: 0x2077DD8
-    - name: CTRDG_IsNumberID
+    - name: Ctrdg_IsNumberID
       address:
         NA: 0x2077DF0
-    - name: CTRDG_IsAgbCartridge
+    - name: Ctrdg_IsAgbCartridge
       address:
         NA: 0x2077E14
-    - name: CTRDG_IsOptionCartridge
+    - name: Ctrdg_IsOptionCartridge
       address:
         NA: 0x2077E38
-    - name: CTRDGi_IsAgbCartridgeAtInit
+    - name: Ctrdgi_IsAgbCartridgeAtInit
       address:
         NA: 0x2077E5C
-    - name: CTRDG_IsExisting
+    - name: Ctrdg_IsExisting
       address:
         NA: 0x2077E80
     - name: Ctrdgi_ChangeLatestAccessCycle
