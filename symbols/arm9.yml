@@ -2670,10 +2670,10 @@ arm9:
     - name: Snd_Init
       address:
         NA: 0x20687F4
-    - name: SNDi_LockMutex
+    - name: Sndi_LockMutex
       address:
         NA: 0x206882C
-    - name: SNDi_UnlockMutex
+    - name: Sndi_UnlockMutex
       address:
         NA: 0x2068840
     - name: Snd_CommandInit
@@ -2727,10 +2727,10 @@ arm9:
     - name: Snd_AlarmInit
       address:
         NA: 0x2068F64
-    - name: SNDi_SetAlarmHandler
+    - name: Sndi_SetAlarmHandler
       address:
         NA: 0x2068FB4
-    - name: SNDi_CallAlarmHandler
+    - name: Sndi_CallAlarmHandler
       address:
         NA: 0x2068FE4
     - name: Snd_CalcChannelVolume
@@ -2862,10 +2862,10 @@ arm9:
     - name: PMi_SendLedPatternCommand
       address:
         NA: 0x206E038
-    - name: Pm_GetLedPatternAsync
+    - name: PM_GetLedPatternAsync
       address:
         NA: 0x206E060
-    - name: Pm_GetLedPattern
+    - name: PM_GetLedPattern
       address:
         NA: 0x206E0A8
     - name: PMi_PrependList
