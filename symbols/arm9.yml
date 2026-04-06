@@ -1013,7 +1013,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: short
-    - name: SetFLedPokemonRecord
+    - name: SetFledPokemonRecord
       address:
         NA: 0x2017100
       description: |-
@@ -1021,7 +1021,7 @@ arm9:
         
         r0: ranger_data pointer
         r1: int16_t
-    - name: AddFLedPokemonRecord
+    - name: AddFledPokemonRecord
       address:
         NA: 0x2017120
       description: |-
@@ -1239,7 +1239,7 @@ arm9:
         Seems to retrieve the results of the battle from megastruct->battle_exports.
         
         No params.
-    - name: BattLedisableFleeing
+    - name: BattleDisableFleeing
       address:
         NA: 0x202F2D8
       description: |-
