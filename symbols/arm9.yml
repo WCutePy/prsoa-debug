@@ -1962,12 +1962,72 @@ arm9:
     - name: GX_VBlankIntr
       address:
         NA: 0x2061448
+    - name: GX_DispOff
+      address:
+        NA: 0x206147C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DispOn
+      address:
+        NA: 0x20614B8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_SetGraphicsMode
+      address:
+        NA: 0x2061500
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint16_t 
+        r1: uint32_t 
+        r2: int32_t 
     - name: GX_InitGxState
       address:
         NA: 0x20615AC
     - name: G3_LoadMtx44
       address:
         NA: 0x2062F64
+    - name: G3_LoadMtx43
+      address:
+        NA: 0x2062F80
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G3i_OrthoW_
+      address:
+        NA: 0x2063438
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: int32_t 
+        r2: int32_t 
+        r3: int32_t 
+        stack[0]: int32_t 
+        stack[1]: int32_t 
+        stack[2]: uint32_t 
+        stack[3]: int32_t 
+        stack[4]: int32_t pointer
+    - name: G3_LoadTexMtxTexCoord
+      address:
+        NA: 0x206349C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: GX_SendFifo64B
+      address:
+        NA: 0x2064710
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+        r1: undefined4 pointer
     - name: OS_WaitIrq
       address:
         NA: 0x206472C
@@ -1984,6 +2044,31 @@ arm9:
     - name: OS_SetIrqFunction
       address:
         NA: 0x20648C4
+    - name: OS_GetIrqFunction
+      address:
+        NA: 0x206494C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
+    - name: OSi_EnterDmaCallback
+      address:
+        NA: 0x20649D8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: undefined4 
+        r2: undefined4 
+    - name: OSi_EnterTimerCallback
+      address:
+        NA: 0x2064A20
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: undefined4 
+        r2: undefined4 
     - name: OS_SetIrqMask
       address:
         NA: 0x2064A68
@@ -2006,27 +2091,113 @@ arm9:
     - name: OS_InitLock
       address:
         NA: 0x2064B54
+    - name: OSi_DoLockByWord
+      address:
+        NA: 0x2064C20
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
     - name: OS_LockByWord
       address:
         NA: 0x2064C6C
+    - name: OSi_DoUnlockByWord
+      address:
+        NA: 0x2064C7C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
+        r1: undefined4 pointer
+        r2: voidpointer pointer
+        r3: int32_t 
     - name: OS_UnlockByWord
       address:
         NA: 0x2064CF0
+    - name: OSi_DoTryLockByWord
+      address:
+        NA: 0x2064D00
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: voidpointer pointer
+        r3: int32_t 
+    - name: OS_LockCartridge
+      address:
+        NA: 0x2064D6C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
     - name: OS_UnlockCartridge
       address:
         NA: 0x2064D8C
     - name: OS_UnlockCartridgeVeneer
       address:
         NA: 0x2064DAC
+    - name: OS_TryLockCartridge
+      address:
+        NA: 0x2064DB8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+    - name: OSi_LockCardID
+      address:
+        NA: 0x2064DD8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OSi_UnlockCardID
+      address:
+        NA: 0x2064DF0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: OS_LockCard
       address:
         NA: 0x2064E08
     - name: OS_UnlockCard
       address:
         NA: 0x2064E24
+    - name: OSi_AllocateCardBus
+      address:
+        NA: 0x2064E40
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OSi_FreeCardBus
+      address:
+        NA: 0x2064E58
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OS_ReadOwnerOfLockWord
+      address:
+        NA: 0x2064E70
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
     - name: OS_GetLockID
       address:
         NA: 0x2064E78
+    - name: OS_ReleaseLockID
+      address:
+        NA: 0x2064EE0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
     - name: MaybeCopyFileName
       address:
         NA: 0x2064F28
@@ -2043,39 +2214,279 @@ arm9:
     - name: OSi_InsertLinkToQueue
       address:
         NA: 0x2064FC0
+    - name: OSi_RemoveLinkFromQueue
+      address:
+        NA: 0x2065038
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
+    - name: OSi_RemoveSpecifiedLinkFromQueue
+      address:
+        NA: 0x206506C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
+        r1: int32_t 
+    - name: OSi_RemoveMutexLinkFromQueue
+      address:
+        NA: 0x20650C0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
     - name: OSi_InsertThreadToList
       address:
         NA: 0x20650F0
+    - name: OSi_RemoveThreadFromList
+      address:
+        NA: 0x2065150
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
     - name: OS_RescheduleThread
       address:
         NA: 0x2065198
     - name: OS_InitThread
       address:
         NA: 0x2065260
+    - name: OS_IsThreadAvailable
+      address:
+        NA: 0x20653A8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OS_CreateThread
+      address:
+        NA: 0x20653B8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: thread pointer
+        r1: undefined4 
+        r2: uint32_t 
+        r3: void pointer
+        stack[0]: int32_t 
+        stack[1]: int32_t 
+    - name: OS_ExitThread
+      address:
+        NA: 0x20654B4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OSi_ExitThread_ArgSpecified
+      address:
+        NA: 0x20654D4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+        r1: uint32_t 
+        r2: undefined4 
+        r3: undefined4 
+    - name: OSi_ExitThread
+      address:
+        NA: 0x2065530
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OSi_ExitThread_Destroy
+      address:
+        NA: 0x2065568
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OS_DestroyThread
+      address:
+        NA: 0x20655C4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: OSi_CancelThreadAlarmForSleep
+      address:
+        NA: 0x2065640
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: OS_JoinThread
+      address:
+        NA: 0x2065658
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: thread pointer
+    - name: OS_IsThreadTerminated
+      address:
+        NA: 0x2065688
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
     - name: OS_SleepThread
       address:
         NA: 0x206569C
+    - name: OS_WakeupThread
+      address:
+        NA: 0x20656EC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
     - name: OS_WakeupThreadDirect
       address:
         NA: 0x2065754
+    - name: OS_SelectThread
+      address:
+        NA: 0x206577C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+    - name: OS_RescheduleThread
+      address:
+        NA: 0x20657A4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OS_SetThreadPriority
+      address:
+        NA: 0x2065878
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined pointer
+        r1: int32_t 
+    - name: OS_GetThreadPriority
+      address:
+        NA: 0x2065920
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: OS_Sleep
+      address:
+        NA: 0x2065928
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
+    - name: OSi_SleepAlarmCallback
+      address:
+        NA: 0x20659D0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
     - name: OS_SetSwitchThreadCallback
       address:
         NA: 0x20659F0
     - name: OSi_IdleThreadProc
       address:
         NA: 0x2065A18
+    - name: OS_DisableScheduler
+      address:
+        NA: 0x2065A28
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OS_EnableScheduler
+      address:
+        NA: 0x2065A5C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: OS_SetThreadDestructor
       address:
         NA: 0x2065A90
+    - name: OS_InitContext
+      address:
+        NA: 0x2065A98
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+        r1: int32_t 
+        r2: int32_t 
     - name: OS_SaveContext
       address:
         NA: 0x2065B1C
     - name: OS_LoadContext
       address:
         NA: 0x2065B68
+    - name: OS_IsRunOnEmulator
+      address:
+        NA: 0x2065BAC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OS_GetConsoleType
+      address:
+        NA: 0x2065BB4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: OS_InitMutex
       address:
         NA: 0x2065E44
+    - name: OS_LockMutex
+      address:
+        NA: 0x2065E5C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+        r1: int32_t 
+    - name: OS_UnlockMutex
+      address:
+        NA: 0x2065EE0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: OSi_UnlockAllMutex
+      address:
+        NA: 0x2065F3C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: OS_TryLockMutex
+      address:
+        NA: 0x2065F78
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: OSi_EnqueueTail
+      address:
+        NA: 0x2065FEC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: int32_t 
+    - name: OSi_DequeueItem
+      address:
+        NA: 0x2066010
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: int32_t 
     - name: DC_InvalidateAll
       address:
         NA: 0x2066034
@@ -2173,6 +2584,27 @@ arm9:
     - name: OSi_DisplayExContext
       address:
         NA: 0x2066740
+    - name: OSi_DisplayExContext_Helper
+      address:
+        NA: 0x2066790
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OSi_SetTimerReserved
+      address:
+        NA: 0x20667BC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
+    - name: OSi_UnsetTimerReserved
+      address:
+        NA: 0x20667D8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
     - name: OS_InitTick
       address:
         NA: 0x20667F8
@@ -2188,6 +2620,85 @@ arm9:
     - name: OS_GetTickLo
       address:
         NA: 0x2066988
+    - name: OSi_SetTimer
+      address:
+        NA: 0x2066998
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+    - name: OS_InitAlarm
+      address:
+        NA: 0x2066A24
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OS_EndAlarm
+      address:
+        NA: 0x2066A64
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OS_IsAlarmAvailable
+      address:
+        NA: 0x2066AA4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OS_CreateAlarm
+      address:
+        NA: 0x2066AB4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: OSi_InsertAlarm
+      address:
+        NA: 0x2066AC4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: undefined4 
+        r2: undefined4 
+    - name: OS_SetAlarm
+      address:
+        NA: 0x2066BF0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
+        r1: undefined4 
+        r2: undefined4 
+        r3: int32_t 
+        stack[0]: int32_t 
+    - name: OS_CancelAlarm
+      address:
+        NA: 0x2066C5C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
+    - name: OSi_AlarmHandler
+      address:
+        NA: 0x2066CE4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+    - name: OSi_ArrangeTimer
+      address:
+        NA: 0x2066CF4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: OS_InitVAlarm
       address:
         NA: 0x2066DE4
@@ -2315,6 +2826,13 @@ arm9:
     - name: OSi_UnlockVram
       address:
         NA: 0x2067708
+    - name: OS_GetLowEntropyData
+      address:
+        NA: 0x2067790
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
     - name: OS_Panic
       address:
         NA: 0x2067860
@@ -2460,6 +2978,185 @@ arm9:
     - name: MI_Init
       address:
         NA: 0x206842C
+    - name: SND_SetupAlarm
+      address:
+        NA: 0x20685C4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+        stack[0]: undefined4 
+    - name: PushCommand_impl
+      address:
+        NA: 0x20687B0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+        stack[0]: undefined4 
+    - name: SND_Init
+      address:
+        NA: 0x20687F4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SNDi_LockMutex
+      address:
+        NA: 0x206882C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+    - name: SNDi_UnlockMutex
+      address:
+        NA: 0x2068840
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SND_CommandInit
+      address:
+        NA: 0x2068854
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SND_RecvCommandReply
+      address:
+        NA: 0x2068928
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
+    - name: SND_AllocCommand
+      address:
+        NA: 0x2068A38
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
+    - name: SND_PushCommand
+      address:
+        NA: 0x2068AC0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SND_FlushCommand
+      address:
+        NA: 0x2068AF8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
+    - name: SND_WaitForCommandProc
+      address:
+        NA: 0x2068CB4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+    - name: SND_GetCurrentCommandTag
+      address:
+        NA: 0x2068D20
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SND_IsFinishedCommandTag
+      address:
+        NA: 0x2068D4C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
+    - name: SND_CountFreeCommand
+      address:
+        NA: 0x2068D9C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SND_CountReservedCommand
+      address:
+        NA: 0x2068DD8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SND_CountWaitingCommand
+      address:
+        NA: 0x2068E14
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: PxiFifoCallback
+      address:
+        NA: 0x2068E30
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+    - name: InitPXI
+      address:
+        NA: 0x2068E54
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: RequestCommandProc
+      address:
+        NA: 0x2068EB4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: AllocCommand
+      address:
+        NA: 0x2068EDC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: IsCommandAvailable
+      address:
+        NA: 0x2068F24
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SND_AlarmInit
+      address:
+        NA: 0x2068F64
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SNDi_SetAlarmHandler
+      address:
+        NA: 0x2068FB4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: undefined4 
+        r2: undefined4 
+    - name: SNDi_CallAlarmHandler
+      address:
+        NA: 0x2068FE4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
     - name: Snd_CalcChannelVolume
       address:
         NA: 0x20690F8
@@ -2490,6 +3187,37 @@ arm9:
     - name: TP_SetCalibrateParam
       address:
         NA: 0x206CF8C
+    - name: TP_RequestSamplingAsync
+      address:
+        NA: 0x206D0B4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: TP_WaitRawResult
+      address:
+        NA: 0x206D148
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined2 pointer
+    - name: TP_RequestAutoSamplingStartAsync
+      address:
+        NA: 0x206D198
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
+        r1: uint32_t 
+        r2: undefined4 
+        r3: uint32_t 
+    - name: TP_RequestSetStabilityAsync
+      address:
+        NA: 0x206D298
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: TP_GetLatestIndexInAuto
       address:
         NA: 0x206D330
