@@ -79,7 +79,7 @@ arm9:
       address:
         NA: 0x2001568
       description: |-
-        Called when changing the game state. Always tries to load an overlay, and usually ends up calling the entrypoint function for that overlay afterwards.
+        CalLed when changing the game state. Always tries to load an overlay, and usually ends up calling the entrypoint function for that overlay afterwards.
         
         r0: New game state
         r1: megastruct ptr
@@ -245,7 +245,7 @@ arm9:
       address:
         NA: 0x2010964
       description: |-
-        Enables or disabled partner assists for the battle in the battle_combatants struct.
+        Enables or disabLed partner assists for the battle in the battle_combatants struct.
         
         r0: battle_combatants pointer
         r1: 1 if partner assist unlocked, 0 if not.
@@ -414,7 +414,7 @@ arm9:
       address:
         NA: 0x2010B3C
       description: |-
-        Checks if partner assists for the battle are enabled or disabled from the battle_combatants struct.
+        Checks if partner assists for the battle are enabLed or disabLed from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetPartnerGaugeCurrent
@@ -678,7 +678,7 @@ arm9:
       address:
         NA: 0x2011630
       description: |-
-        Checks if a specifiec quest name should be revealed to the player.
+        Checks if a specifiec quest name should be reveaLed to the player.
         
         r0: mission_quest_data pointer
         r1: quest id
@@ -810,7 +810,7 @@ arm9:
       address:
         NA: 0x20160B8
       description: |-
-        Seems to check if the styler has leveled up, and if so, process that level-up. More analysis is needed.
+        Seems to check if the styler has leveLed up, and if so, process that level-up. More analysis is needed.
         
         r0: ranger_data pointer
         r1: styler_level
@@ -1013,19 +1013,19 @@ arm9:
         
         r0: ranger_data pointer
         r1: short
-    - name: SetFledPokemonRecord
+    - name: SetFLedPokemonRecord
       address:
         NA: 0x2017100
       description: |-
-        Writes to the fled_pokemon_record field of ranger_data->ranger_records.
+        Writes to the fLed_pokemon_record field of ranger_data->ranger_records.
         
         r0: ranger_data pointer
         r1: int16_t
-    - name: AddFledPokemonRecord
+    - name: AddFLedPokemonRecord
       address:
         NA: 0x2017120
       description: |-
-        Adds to the ranger_data->ranger_records.fled_pokemon_record field, then returns the result.
+        Adds to the ranger_data->ranger_records.fLed_pokemon_record field, then returns the result.
         
         r0: ranger_data pointer
         r1: short
@@ -1239,7 +1239,7 @@ arm9:
         Seems to retrieve the results of the battle from megastruct->battle_exports.
         
         No params.
-    - name: BattleDisableFleeing
+    - name: BattLedisableFleeing
       address:
         NA: 0x202F2D8
       description: |-
@@ -1369,14 +1369,14 @@ arm9:
       address:
         NA: 0x2032148
       description: |-
-        Enables slot status bit 2 on a pokemon. This seems to only be enabled on pokemon who cannot be released, such as doduo mid-ride, or your partner.
+        Enables slot status bit 2 on a pokemon. This seems to only be enabLed on pokemon who cannot be released, such as doduo mid-ride, or your partner.
         
         r0: pokemon_data pointer
     - name: DisableSlotStatusBit2
       address:
         NA: 0x2032174
       description: |-
-        Disables slot status bit 2 on a pokemon. This seems to only be enabled on pokemon who cannot be released, such as doduo mid-ride, or your partner.
+        Disables slot status bit 2 on a pokemon. This seems to only be enabLed on pokemon who cannot be released, such as doduo mid-ride, or your partner.
         
         r0: pokemon_data pointer
     - name: EnableSlotStatusBit1
@@ -1777,7 +1777,7 @@ arm9:
       address:
         NA: 0x20442CC
       description: |-
-        Called by DebugPrint and DebugPrintError; all(?) debug messages pass through here.
+        CalLed by DebugPrint and DebugPrintError; all(?) debug messages pass through here.
         
         r0: format
         r1: ap
@@ -1913,31 +1913,19 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: MaybeLinearInterpolationInit
-      address:
-        NA: 0x205FD64
-    - name: MaybeLinearInterpolationProgress
-      address:
-        NA: 0x205FD8C
-    - name: MaybeLinearInterpolationUpdate
-      address:
-        NA: 0x205FDC0
-    - name: MaybeCheckIfLinearInterpolationMeetsThreshold
-      address:
-        NA: 0x205FDD8
-    - name: Mtx_Identity22_
+    - name: Mtx_Identity22
       address:
         NA: 0x205FDF0
-    - name: Mtx_Scale22_
+    - name: Mtx_Scale22
       address:
         NA: 0x205FE08
-    - name: Mtx_Identity33_
+    - name: Mtx_Identity33
       address:
         NA: 0x205FE14
-    - name: Mtx_RotZ33_
+    - name: Mtx_RotZ33
       address:
         NA: 0x205FE38
-    - name: Mtx_Identity44_
+    - name: Mtx_Identity44
       address:
         NA: 0x205FE50
     - name: Mtx_TransApply44
@@ -1946,7 +1934,7 @@ arm9:
     - name: Mtx_ScaleApply44
       address:
         NA: 0x205FF54
-    - name: Mtx_RotZ44_
+    - name: Mtx_RotZ44
       address:
         NA: 0x2060078
     - name: FixedPoint4x4MatrixMultiply
@@ -1955,66 +1943,6 @@ arm9:
     - name: Mtx_OrthoW
       address:
         NA: 0x2060700
-    - name: FixedPointDivide32
-      address:
-        NA: 0x2060908
-    - name: Divide32HighBy32Low
-      address:
-        NA: 0x2060918
-    - name: GetFixedPointReciprocal
-      address:
-        NA: 0x2060944
-    - name: Sqrt32
-      address:
-        NA: 0x2060954
-    - name: InverseSqrt
-      address:
-        NA: 0x2060988
-    - name: Division64Return
-      address:
-        NA: 0x20609F0
-    - name: FixedPointDivision32Return
-      address:
-        NA: 0x2060A14
-    - name: InitFixedPointReciprocal
-      address:
-        NA: 0x2060A4C
-    - name: InitSqrt32High
-      address:
-        NA: 0x2060A7C
-    - name: GetSqrtResultUpper
-      address:
-        NA: 0x2060AC0
-    - name: InitDivision32HighBy32Low
-      address:
-        NA: 0x2060AEC
-    - name: Divide32By32Quotient
-      address:
-        NA: 0x2060B14
-    - name: Divide32by32Remainder
-      address:
-        NA: 0x2060B50
-    - name: TaylorExpandFixedPointSin
-      address:
-        NA: 0x2060B8C
-    - name: TaylorExpandFixedPointCos
-      address:
-        NA: 0x2060C74
-    - name: GetFixedPointSinCos
-      address:
-        NA: 0x2060D40
-    - name: GetFixedPointCosSin
-      address:
-        NA: 0x2060DD8
-    - name: GetFixedPointArcTanFromTable
-      address:
-        NA: 0x2060E6C
-    - name: GetFixedPointArcTan2FromTable
-      address:
-        NA: 0x2060F3C
-    - name: ArcTan2FromTable16
-      address:
-        NA: 0x20610F4
     - name: ret_0206129c
       address:
         NA: 0x206129C
@@ -2109,7 +2037,7 @@ arm9:
         r1: source
         r2: maybe num bytes? 
         r3: undefined4
-    - name: Maybe_OSi_GetUnusedThreadId
+    - name: OSi_GetUnusedThreadId
       address:
         NA: 0x2064FA8
     - name: OSi_InsertLinkToQueue
@@ -2312,7 +2240,7 @@ arm9:
         Disables processor interrupts by setting the i flag in the program status register (cpsr).
         pmdsky-debug: EnableIrqFlag
         
-        return: Old value of cpsr & 0x80 (0x80 if interrupts were already disabled, 0x0 if they were enabled)
+        return: Old value of cpsr & 0x80 (0x80 if interrupts were already disabLed, 0x0 if they were enabLed)
     - name: OS_RestoreInterrupts
       address:
         NA: 0x2067378
@@ -2321,7 +2249,7 @@ arm9:
         pmdsky-debug: SetIrqFlag
         
         r0: Value to set the flag to (0x80 to set it, which disables interrupts; 0x0 to unset it, which enables interrupts)
-        return: Old value of cpsr & 0x80 (0x80 if interrupts were disabled, 0x0 if they were enabled)
+        return: Old value of cpsr & 0x80 (0x80 if interrupts were disabLed, 0x0 if they were enabLed)
     - name: OS_EnableInterrupts_IrqAndFiq
       address:
         NA: 0x2067390
@@ -2393,7 +2321,7 @@ arm9:
       description: |-
         Calls OS_DisableInterrupts and OS_Halt in an infinite loop.
         
-        This is called on fatal errors to hang the program indefinitely.
+        This is calLed on fatal errors to hang the program indefinitely.
         pmdsky-debug: WaitForever2
         
         No params.
@@ -2425,7 +2353,7 @@ arm9:
     - name: MI_StopDma
       address:
         NA: 0x2067C2C
-    - name: MIi_CheckAnotherAutoDMA
+    - name: MIi_CheckAnotherAutoDma
       address:
         NA: 0x2067CA8
     - name: MIi_CheckDma0SourceAddress
@@ -2475,7 +2403,7 @@ arm9:
       address:
         NA: 0x2067E20
       description: |-
-        Does the same thing as MIi_CpuClear32, except the implementation uses an unrolled loop that sets 8 values per iteration, taking advantage of the stmia instruction.
+        Does the same thing as MIi_CpuClear32, except the implementation uses an unrolLed loop that sets 8 values per iteration, taking advantage of the stmia instruction.
         pmdsky-debug: ArrayFill32Fast
         
         r0: value
@@ -2485,7 +2413,7 @@ arm9:
       address:
         NA: 0x2067E7C
       description: |-
-        Does the same thing as MIi_CpuCopy32, except the implementation uses an unrolled loop that copies 8 values per iteration, taking advantage of the ldmia/stmia instructions.
+        Does the same thing as MIi_CpuCopy32, except the implementation uses an unrolLed loop that copies 8 values per iteration, taking advantage of the ldmia/stmia instructions.
         pmdsky-debug: ArrayCopy32Fast
         
         r0: src
@@ -2826,7 +2754,7 @@ arm9:
     - name: Cardi_ReadCard
       address:
         NA: 0x206FADC
-    - name: Cardi_ReadRomIDCore
+    - name: Cardi_ReadRomIdCore
       address:
         NA: 0x206FBCC
     - name: Cardi_ReadRomSyncCore
@@ -2853,7 +2781,7 @@ arm9:
     - name: Cardi_Request
       address:
         NA: 0x206FEB8
-    - name: Card_InitPulLedOutCallback
+    - name: Card_InitPulledOutCallback
       address:
         NA: 0x207000C
     - name: Cardi_PulLedOutCallback
@@ -3416,7 +3344,7 @@ arm9:
         Subsidiary function to _u32_div_f. Skips the initial check for divisor == 0.
         
         The return value is a 64-bit integer, with the quotient (dividend / divisor) in the lower 32 bits and the remainder (dividend % divisor) in the upper 32 bits. In accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return), this means that the quotient is returned in r0 and the remainder is returned in r1.
-        This function appears to only be called internally.
+        This function appears to only be calLed internally.
         
         r0: dividend
         r1: divisor
