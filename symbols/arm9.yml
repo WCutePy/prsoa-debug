@@ -32,10 +32,6 @@ arm9:
     - name: MIi_UncompressBackward
       address:
         NA: 0x2000970
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: ret_02000b98
       address:
         NA: 0x2000B98
@@ -1806,28 +1802,12 @@ arm9:
     - name: Wvr_StartUpAsync
       address:
         NA: 0x2046948
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: undefined4 
     - name: Wvr_TerminateAsync
       address:
         NA: 0x2046B84
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
     - name: WvrReceiveCallback
       address:
         NA: 0x2046C64
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint32_t 
     - name: ret_02046d3c
       address:
         NA: 0x2046D3C
@@ -1983,122 +1963,51 @@ arm9:
     - name: FX_Div
       address:
         NA: 0x2060908
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: FX_DivFx64c
       address:
         NA: 0x2060918
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: FX_Inv
       address:
         NA: 0x2060944
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FX_Sqrt
       address:
         NA: 0x2060954
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FX_InvSqrt
       address:
         NA: 0x2060988
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FX_GetInvResultFx64c
       address:
         NA: 0x20609F0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: FX_GetDivResult
       address:
         NA: 0x2060A14
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: FX_InvAsync
       address:
         NA: 0x2060A4C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FX_SqrtAsync
       address:
         NA: 0x2060A7C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FX_GetSqrtResult
       address:
         NA: 0x2060AC0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: FX_DivAsync
       address:
         NA: 0x2060AEC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: FX_DivS32
       address:
         NA: 0x2060B14
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: FX_ModS32
       address:
         NA: 0x2060B50
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: FX_Atan
       address:
         NA: 0x2060E6C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FX_Atan2
       address:
         NA: 0x2060F3C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: FX_Atan2Idx
       address:
         NA: 0x20610F4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: ret_0206129c
       address:
         NA: 0x206129C
@@ -2127,21 +2036,12 @@ arm9:
     - name: GX_SetGraphicsMode
       address:
         NA: 0x2061500
-    - name: GXS_SetGraphicsMode
+    - name: GXs_SetGraphicsMode
       address:
         NA: 0x2061568
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
     - name: GXx_SetMasterBrightness
       address:
         NA: 0x2061584
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint16_t pointer
-        r1: int32_t 
     - name: GX_InitGxState
       address:
         NA: 0x20615AC
@@ -2154,84 +2054,36 @@ arm9:
     - name: G3X_Init
       address:
         NA: 0x2062F9C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: G3X_Reset
       address:
         NA: 0x20630A8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: G3X_ClearFifo
       address:
         NA: 0x2063114
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: G3X_InitMtxStack
       address:
         NA: 0x206313C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: G3X_ResetMtxStack
       address:
         NA: 0x20631D4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: G3X_SetToonTable
       address:
         NA: 0x2063264
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: G3X_SetClearColor
       address:
         NA: 0x206327C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: int32_t 
-        r2: undefined2 
-        r3: int32_t 
-        stack[0]: int32_t 
     - name: G3X_InitTable
       address:
         NA: 0x20632A4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: G3X_GetMtxStackLevelPV
       address:
         NA: 0x2063344
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t pointer
     - name: G3X_GetMtxStackLevelPJ
       address:
         NA: 0x2063374
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t pointer
     - name: GXi_NopClearFifo128
       address:
         NA: 0x20633A4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
     - name: G3i_OrthoW
       address:
         NA: 0x2063438
@@ -2241,21 +2093,9 @@ arm9:
     - name: GXi_DmaCopy16
       address:
         NA: 0x2063550
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: uint32_t 
     - name: GXi_DmaCopy32Async
       address:
         NA: 0x20643EC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: int32_t 
-        r2: undefined4 
     - name: GX_SendFifo64B
       address:
         NA: 0x2064710
@@ -2445,10 +2285,6 @@ arm9:
     - name: OS_YieldThread
       address:
         NA: 0x20657C0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: OS_SetThreadPriority
       address:
         NA: 0x2065878
@@ -2494,48 +2330,18 @@ arm9:
     - name: OS_InitMessageQueue
       address:
         NA: 0x2065BCC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: undefined4 
-        r2: undefined4 
     - name: OS_SendMessage
       address:
         NA: 0x2065BF4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: uint32_t 
     - name: OS_ReceiveMessage
       address:
         NA: 0x2065C88
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 pointer
-        r2: uint32_t 
     - name: OS_JamMessage
       address:
         NA: 0x2065D2C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: uint32_t 
     - name: OS_ReadMessage
       address:
         NA: 0x2065DC8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 pointer
-        r2: uint32_t 
     - name: OS_InitMutex
       address:
         NA: 0x2065E44
@@ -2876,34 +2682,12 @@ arm9:
     - name: MI_DmaFill32Async
       address:
         NA: 0x2067A68
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: uint32_t 
-        stack[0]: voidpointer pointer
-        stack[1]: undefined4 
     - name: MI_DmaCopy32Async
       address:
         NA: 0x2067B2C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: uint32_t 
-        stack[0]: voidpointer pointer
-        stack[1]: undefined4 
     - name: MI_WaitDma
       address:
         NA: 0x2067BC4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: MI_StopDma
       address:
         NA: 0x2067C2C
@@ -3089,88 +2873,36 @@ arm9:
     - name: Sndi_GetFinishedCommandTag
       address:
         NA: 0x2069054
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: Sndi_InitSharedWork
       address:
         NA: 0x206907C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
     - name: Snd_CalcChannelVolume
       address:
         NA: 0x20690F8
     - name: Snd_AssignWaveArc
       address:
         NA: 0x2069168
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: int32_t 
     - name: Snd_DestroyBank
       address:
         NA: 0x2069234
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
     - name: Snd_DestroyWaveArc
       address:
         NA: 0x20692CC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
     - name: Snd_GetFirstInstDataPos
       address:
         NA: 0x2069314
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
     - name: Snd_GetNextInstData
       address:
         NA: 0x2069334
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined2 pointer
-        r2: uint32_t pointer
     - name: Snd_GetWaveDataCount
       address:
         NA: 0x20694E4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: Snd_SetWaveDataAddress
       address:
         NA: 0x20694EC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: undefined4 
     - name: Snd_GetWaveDataAddress
       address:
         NA: 0x2069520
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: Pxi_Init
       address:
         NA: 0x206955C
@@ -3192,569 +2924,207 @@ arm9:
     - name: FSi_ReleaseCommand
       address:
         NA: 0x2069878
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
-        r1: int32_t 
     - name: FSi_TranslateCommand
       address:
         NA: 0x20698D4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint32_t 
     - name: FSi_StrNICmp
       address:
         NA: 0x2069A64
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: uint32_t 
     - name: FSi_ReadTable
       address:
         NA: 0x2069AB4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
-        r1: undefined4 
-        r2: int32_t 
-        r3: undefined4 
     - name: FSi_SeekDirDirect
       address:
         NA: 0x2069B74
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined2 
     - name: FSi_ReadFileCommand
       address:
         NA: 0x2069BA8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FSi_WriteFileCommand
       address:
         NA: 0x2069BD4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FSi_SeekDirCommand
       address:
         NA: 0x2069C00
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FSi_ReadDirCommand
       address:
         NA: 0x2069C98
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FSi_FindPathCommand
       address:
         NA: 0x2069DC4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: FSi_GetPathCommand
       address:
         NA: 0x2069FA8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: FSi_OpenFileFastCommand
       address:
         NA: 0x206A354
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: FSi_OpenFileDirectCommand
       address:
         NA: 0x206A3D4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FSi_CloseFileCommand
       address:
         NA: 0x206A3FC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: FSi_GetPackedName
       address:
         NA: 0x206A404
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: FSi_ReadMemCallback
       address:
         NA: 0x206A45C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 pointer
-        r2: int32_t 
-        r3: uint32_t 
     - name: FSi_WriteMemCallback
       address:
         NA: 0x206A478
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 pointer
-        r2: int32_t 
-        r3: uint32_t 
     - name: FSi_ReadMemoryCore
       address:
         NA: 0x206A498
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 pointer
-        r2: undefined4 pointer
-        r3: uint32_t 
     - name: FSi_NextCommand
       address:
         NA: 0x206A4B0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: FSi_ExecuteAsyncCommand
       address:
         NA: 0x206A6C4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FSi_ExecuteSyncCommand
       address:
         NA: 0x206A758
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FSi_SendCommand
       address:
         NA: 0x206A79C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
-        r1: uint32_t 
     - name: FS_InitArchive
       address:
         NA: 0x206A940
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int8_t pointer
     - name: FS_FindArchive
       address:
         NA: 0x206A96C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: FS_RegisterArchiveName
       address:
         NA: 0x206A9AC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: undefined4 
-        r2: undefined4 
     - name: FS_ReleaseArchiveName
       address:
         NA: 0x206AA60
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
     - name: FS_LoadArchive
       address:
         NA: 0x206AAE4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
-        stack[0]: undefined4 
-        stack[1]: undefined4 
-        stack[2]: undefined pointer
-        stack[3]: undefined pointer
     - name: FS_UnloadArchive
       address:
         NA: 0x206AB54
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FS_LoadArchiveTables
       address:
         NA: 0x206AC14
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: uint32_t 
     - name: FS_UnloadArchiveTables
       address:
         NA: 0x206AD38
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FS_SuspendArchive
       address:
         NA: 0x206ADC4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FS_ResumeArchive
       address:
         NA: 0x206AE60
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FS_SetArchiveProc
       address:
         NA: 0x206AED0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: int32_t 
     - name: FS_NotifyArchiveAsyncEnd
       address:
         NA: 0x206AEF0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
     - name: FS_Init
       address:
         NA: 0x206AF74
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: FS_InitFile
       address:
         NA: 0x206AF9C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
     - name: FSi_FindPath
       address:
         NA: 0x206AFC4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: char pointer
-        r2: undefined4 
-        r3: int32_t 
     - name: FSi_ReadFileCore
       address:
         NA: 0x206B108
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: int32_t 
-        r3: int32_t 
     - name: FS_ConvertPathToFileID
       address:
         NA: 0x206B184
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: FS_OpenFileDirect
       address:
         NA: 0x206B1C4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
-        stack[0]: undefined4 
     - name: FS_OpenFileFast
       address:
         NA: 0x206B20C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: undefined4 
     - name: FS_OpenFile
       address:
         NA: 0x206B27C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: FS_CloseFile
       address:
         NA: 0x206B2C4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FS_WaitAsync
       address:
         NA: 0x206B300
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FS_CancelFile
       address:
         NA: 0x206B3C0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FS_ReadFile
       address:
         NA: 0x206B408
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: FS_SeekFile
       address:
         NA: 0x206B418
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: int32_t 
     - name: FS_ChangeDir
       address:
         NA: 0x206B484
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: FSi_OnRomReadDone
       address:
         NA: 0x206B4DC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: FSi_ReadRomCallback
       address:
         NA: 0x206B500
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: FSi_WriteDummyCallback
       address:
         NA: 0x206B548
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: FSi_RomArchiveProc
       address:
         NA: 0x206B550
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: int32_t 
     - name: FSi_ReadDummyCallback
       address:
         NA: 0x206B5BC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: FSi_EmptyArchiveProc
       address:
         NA: 0x206B5C4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: FSi_InitRom
       address:
         NA: 0x206B5CC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-    - name: FS_SetDefaultDMA
+    - name: FS_SetDefaultDma
       address:
         NA: 0x206B714
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: FSi_GetOverlayBinarySize
       address:
         NA: 0x206B764
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FS_ClearOverlayImage
       address:
         NA: 0x206B780
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FS_GetOverlayFileID
       address:
         NA: 0x206B7BC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: int32_t 
     - name: FSi_LoadOverlayInfoCore
       address:
         NA: 0x206B7E4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: int32_t 
-        r3: undefined4 
-        stack[0]: int32_t 
-        stack[1]: uint32_t 
-        stack[2]: int32_t 
-        stack[3]: uint32_t 
     - name: FS_LoadOverlayInfo
       address:
         NA: 0x206B8DC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: int32_t 
-        r2: int32_t 
-        r3: undefined4 
     - name: FS_LoadOverlayImage
       address:
         NA: 0x206B9D8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: FSi_CompareOverlayDigest
       address:
         NA: 0x206BA68
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
     - name: FS_StartOverlay
       address:
         NA: 0x206BAFC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t pointer
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: FS_EndOverlay
       address:
         NA: 0x206BBF0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: FS_UnloadOverlayImage
       address:
         NA: 0x206BCE0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: FS_LoadOverlay
       address:
         NA: 0x206BCF0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
     - name: FS_UnloadOverlay
       address:
         NA: 0x206BD44
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
     - name: TP_Init
       address:
         NA: 0x206CE80
@@ -3996,20 +3366,12 @@ arm9:
     - name: Card_LockBackup
       address:
         NA: 0x206EFD8
-    - name: CARD_UnlockBackup
+    - name: Card_UnlockBackup
       address:
         NA: 0x206EFE8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-    - name: CARDi_IdentifyBackupCore
+    - name: Cardi_IdentifyBackupCore
       address:
         NA: 0x206F010
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
     - name: Cardi_RequestStreamCommandCore
       address:
         NA: 0x206F2E0
@@ -4103,777 +3465,282 @@ arm9:
     - name: WM_Init
       address:
         NA: 0x20701D8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: WmInitCore
       address:
         NA: 0x2070204
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
-        r1: uint32_t 
-        r2: undefined4 
     - name: WM_Finish
       address:
         NA: 0x20703E8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WMi_SetCallbackTable
       address:
         NA: 0x2070458
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
     - name: WmGetCommandBuffer4Arm7
       address:
         NA: 0x2070470
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WMi_SendCommand
       address:
         NA: 0x20704C8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined2 
-        r1: uint32_t 
-        r2: undefined4 
-        r3: undefined4 
     - name: WMi_SendCommandDirect
       address:
         NA: 0x2070574
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: uint32_t 
     - name: WMi_GetSystemWork
       address:
         NA: 0x20705E4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WMi_CheckInitialized
       address:
         NA: 0x20705F4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WMi_CheckIdle
       address:
         NA: 0x2070610
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WMi_CheckStateEx
       address:
         NA: 0x2070658
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: WmReceiveFifo
       address:
         NA: 0x20706EC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint16_t pointer
-        r2: int32_t 
     - name: WmClearFifoRecvFlag
       address:
         NA: 0x2070A98
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WMi_GetStatusAddress
       address:
         NA: 0x2070AB4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WM_GetAid
       address:
         NA: 0x2070AD8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WM_GetConnectedAids
       address:
         NA: 0x2070B08
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: WMi_GetMPReadyAids
+    - name: WMi_GetMpReadyAids
       address:
         NA: 0x2070B38
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WM_SetIndCallback
       address:
         NA: 0x2070B80
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: WM_SetPortCallback
       address:
         NA: 0x2070BC4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: voidpointer pointer
-        r2: undefined4 
-        r3: undefined4 
     - name: WM_ReadStatus
       address:
         NA: 0x2070C9C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-    - name: WM_GetMPSendBufferSize
+    - name: WM_GetMpSendBufferSize
       address:
         NA: 0x2070CE8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: WM_GetMPReceiveBufferSize
+    - name: WM_GetMpReceiveBufferSize
       address:
         NA: 0x2070D54
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: WM_ReadMPData
+    - name: WM_ReadMpData
       address:
         NA: 0x2070E18
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint32_t 
-        r2: undefined4 
-        r3: undefined4 
     - name: WM_GetAllowedChannel
       address:
         NA: 0x2070EFC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WM_GetLinkLevel
       address:
         NA: 0x2070F1C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WM_GetDispersionBeaconPeriod
       address:
         NA: 0x2070FAC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WM_GetDispersionScanPeriod
       address:
         NA: 0x207103C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WM_GetOtherElements
       address:
         NA: 0x20710D0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: uint16_t pointer
-        r2: undefined4 
-        r3: undefined4 
     - name: WM_GetNextTgid
       address:
         NA: 0x2071228
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WMi_EnableEx
       address:
         NA: 0x207129C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: WM_Disable
       address:
         NA: 0x20712FC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: WM_PowerOn
       address:
         NA: 0x207133C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: WM_PowerOff
       address:
         NA: 0x207137C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: WMi_InitializeEx
       address:
         NA: 0x20713BC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
     - name: WM_Reset
       address:
         NA: 0x2071418
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: WM_End
       address:
         NA: 0x2071450
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: WM_SetParentParameter
       address:
         NA: 0x2071490
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: int32_t pointer
-        r2: undefined4 
-        r3: undefined4 
     - name: WmCheckParentParameter
       address:
         NA: 0x207156C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: WMi_StartParentEx
       address:
         NA: 0x20715BC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: WM_StartParent
       address:
         NA: 0x2071618
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: WM_EndParent
       address:
         NA: 0x2071628
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: WM_StartScan
       address:
         NA: 0x2071668
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: int32_t pointer
-        r2: undefined4 
-        r3: undefined4 
     - name: WM_StartScanEx
       address:
         NA: 0x2071754
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: int32_t pointer
     - name: WM_EndScan
       address:
         NA: 0x20718A4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: WM_StartConnectEx
       address:
         NA: 0x20718E4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint16_t pointer
-        r2: undefined4 pointer
-        r3: undefined4 
-        stack[0]: undefined2 
     - name: WM_Disconnect
       address:
         NA: 0x20719B0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint32_t 
     - name: WM_DisconnectChildren
       address:
         NA: 0x2071A98
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint32_t 
-    - name: WMi_StartMP
+    - name: WMi_StartMp
       address:
         NA: 0x2071B24
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: uint32_t 
-        r3: undefined4 
-        stack[0]: uint16_t 
-        stack[1]: undefined4 
-    - name: WM_StartMPEx
+    - name: WM_StartMpEx
       address:
         NA: 0x2071C94
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
-        stack[0]: undefined2 
-        stack[1]: int32_t 
-        stack[2]: undefined2 
-        stack[3]: undefined1 
-        stack[4]: undefined1 
-        stack[5]: int32_t 
-        stack[6]: undefined1 
-    - name: WM_StartMP
+    - name: WM_StartMp
       address:
         NA: 0x2071D38
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
-        stack[0]: undefined2 
-        stack[1]: undefined2 
-    - name: WM_SetMPDataToPortEx
+    - name: WM_SetMpDataToPortEx
       address:
         NA: 0x2071DA0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: int32_t 
-        r3: uint32_t 
-    - name: WM_EndMP
+    - name: WM_EndMp
       address:
         NA: 0x2071EDC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: WM_StartDCF
       address:
         NA: 0x2071F4C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: int32_t 
-        r2: uint32_t 
     - name: WM_SetDCFData
       address:
         NA: 0x2071FEC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 pointer
-        r2: undefined4 
-        r3: uint32_t 
     - name: WM_EndDCF
       address:
         NA: 0x20720B8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: WM_StartDataSharing
       address:
         NA: 0x2072124
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: uint32_t 
-        r2: int32_t 
-        r3: int16_t 
-        stack[0]: int32_t 
     - name: WM_EndDataSharing
       address:
         NA: 0x2072378
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: WM_StepDataSharing
       address:
         NA: 0x20723C0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: int32_t 
     - name: WmDataSharingSetDataCallback
       address:
         NA: 0x2072708
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: WmDataSharingReceiveCallback_Parent
       address:
         NA: 0x20727E0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: WmDataSharingReceiveCallback_Child
       address:
         NA: 0x207290C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: WmDataSharingReceiveData
       address:
         NA: 0x2072A00
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint32_t 
-        r2: int32_t 
-        r3: undefined4 
     - name: WmDataSharingSendDataSet
       address:
         NA: 0x2072ACC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: undefined4 
-        r3: undefined4 
     - name: WM_GetSharedDataAddress
       address:
         NA: 0x2072C20
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint16_t pointer
-        r2: uint32_t 
-        r3: undefined4 
     - name: WmGetSharedDataAddress
       address:
         NA: 0x2072C74
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint32_t 
-        r2: int32_t 
-        r3: uint32_t 
     - name: WM_StartKeySharing
       address:
         NA: 0x2072CA4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
     - name: WM_EndKeySharing
       address:
         NA: 0x2072CC0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: WM_SetWepKey
       address:
         NA: 0x2072CCC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint32_t 
-        r2: int32_t 
     - name: WM_SetWepKeyEx
       address:
         NA: 0x2072D40
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint32_t 
-        r2: undefined4 
-        r3: int32_t 
     - name: WM_SetGameInfo
       address:
         NA: 0x2072DBC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: int32_t 
-        r2: uint32_t 
     - name: WM_SetBeaconIndication
       address:
         NA: 0x2072E74
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: uint32_t 
     - name: WM_SetLifeTime
       address:
         NA: 0x2072EC4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
     - name: WM_MeasureChannel
       address:
         NA: 0x2072F24
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined2 
-        r2: undefined2 
-        r3: undefined2 
-        stack[0]: undefined2 
     - name: MB_CommSetParentStateCallback
       address:
         NA: 0x2072F9C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: MB_CommGetChildUser
       address:
         NA: 0x2072FC4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: MB_CommIsBootable
       address:
         NA: 0x2073048
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: MB_CommResponseRequest
       address:
         NA: 0x207309C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
     - name: MBi_CommChangeParentState
       address:
         NA: 0x207317C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
     - name: MBi_CommChangeParentStateCallbackOnly
       address:
         NA: 0x20731C8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_CommParentCallback
       address:
         NA: 0x20731F0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined2 pointer
-        r2: undefined4 
-        r3: uint32_t 
     - name: MBi_CommParentRecvDataPerChild
       address:
         NA: 0x2073690
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint32_t 
-        r2: undefined4 
-        r3: undefined4 
     - name: MBi_CommParentRecvData
       address:
         NA: 0x2073B74
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: MBi_CommParentSendMsg
       address:
         NA: 0x2073C20
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined1 
-        r1: undefined4 
     - name: MBi_CommParentSendDLFileInfo
       address:
         NA: 0x2073C60
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_ReloadCache
       address:
         NA: 0x2073DF8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: MBi_CommParentSendBlock
       address:
         NA: 0x2073E98
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_CommParentSendData
       address:
         NA: 0x2074134
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_calc_sendblock
       address:
         NA: 0x20742B4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
     - name: MBi_calc_nextsendblock
       address:
         NA: 0x2074330
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: uint32_t 
     - name: IsChildAidValid
       address:
         NA: 0x2074340
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
     - name: MBi_CommCallParentError
       address:
         NA: 0x207435C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined2 
-        r2: undefined4 
-        r3: undefined4 
     - name: MB_GetSegmentLength
       address:
         NA: 0x2074374
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: MB_ReadSegment
       address:
         NA: 0x20743F4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined1 pointer
-        r1: undefined4 pointer
-        r2: uint32_t 
-        r3: undefined4 
     - name: ret_0207484c
       address:
         NA: 0x207484C
@@ -4884,530 +3751,200 @@ arm9:
     - name: MBi_ReadSegmentHeader
       address:
         NA: 0x2074850
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t pointer
-        r1: uint32_t 
-        r2: uint32_t 
-        r3: int32_t 
     - name: MB_RegisterFile
       address:
         NA:
           - 0x20748C8
           - 0x20776B0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: undefined4 
-        r3: undefined4 
     - name: MBi_MakeDownloadFileInfo
       address:
         NA: 0x2074B58
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: int32_t 
     - name: MBi_SetSegmentInfo
       address:
         NA: 0x2074BCC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t pointer
-        r2: int32_t pointer
-        r3: int32_t pointer
     - name: MBi_MakeBlockInfoTable
       address:
         NA: 0x2074D44
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: MBi_get_blockinfo
       address:
         NA: 0x2074E10
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t pointer
-        r1: int32_t 
-        r2: uint32_t 
-        r3: int32_t 
     - name: MBi_IsAbleToRecv
       address:
         NA: 0x2074EC4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint32_t 
-        r2: int32_t 
     - name: IsAbleToLoad
       address:
         NA: 0x2074F70
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: uint32_t 
-        r2: uint32_t 
     - name: MBi_BlockHeaderEnd
       address:
         NA: 0x207503C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
     - name: MBi_calc_cksum
       address:
         NA: 0x2075074
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint16_t pointer
-        r1: int32_t 
     - name: MBi_MakeGameInfo
       address:
         NA: 0x20750C0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int16_t pointer
-        r1: int32_t 
-        r2: int32_t 
     - name: MBi_ReadIconInfo
       address:
         NA: 0x20751B0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: int32_t 
     - name: MB_UpdateGameInfoMember
       address:
         NA: 0x2075250
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
-        r2: uint32_t 
-        r3: undefined2 
     - name: mystrlen
       address:
         NA: 0x20752C0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int16_t pointer
     - name: MB_AddGameInfo
       address:
         NA: 0x20752E8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: MB_InitSendGameInfoStatus
       address:
         NA: 0x207532C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_ClearSendStatus
       address:
         NA: 0x2075358
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MB_SendGameInfoBeacon
       address:
         NA: 0x207537C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
     - name: MBi_ReadyBeaconSendStatus
       address:
         NA: 0x2075408
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_InitSendFixedBeacon
       address:
         NA: 0x20754A8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_SendFixedBeacon
       address:
         NA: 0x20754FC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: int8_t 
-        r3: undefined4 
     - name: MBi_InitSendVolatBeacon
       address:
         NA: 0x2075660
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_SendVolatBeacon
       address:
         NA: 0x2075690
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: int8_t 
     - name: changeScanChannel
       address:
         NA: 0x20758FC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: MBi_IsSendEnabled
       address:
         NA: 0x207596C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_OnInitializeDone
       address:
         NA: 0x20759CC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_EndCommon
       address:
         NA: 0x2075A1C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: MBi_ParentCallback
       address:
         NA: 0x2075A60
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint16_t pointer
     - name: MBi_ChildPortCallback
       address:
         NA: 0x2076214
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: MBi_ChildCallback
       address:
         NA: 0x2076284
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint16_t pointer
     - name: MBi_GetBeaconPeriodDispersion
       address:
         NA: 0x2076AB0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MB_Init
       address:
         NA: 0x2076B18
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 pointer
-        r2: undefined4 
-        r3: int32_t 
-        stack[0]: undefined2 
     - name: MBi_IsCommSizeValid
       address:
         NA: 0x2076CFC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: uint32_t 
-        r2: int32_t 
     - name: MB_SetParentCommParam
       address:
         NA: 0x2076D6C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
     - name: MBi_StartCommon
       address:
         NA: 0x2076E04
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_StartParentCore
       address:
         NA: 0x2076ED8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined2 
     - name: MB_StartParent
       address:
         NA: 0x20770BC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_CallReset
       address:
         NA: 0x20770E0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_CommEnd
       address:
         NA: 0x2077124
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MB_End
       address:
         NA: 0x20771B8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MB_DisconnectChild
       address:
         NA: 0x20771F4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: MBi_GetLastFountParent
       address:
         NA: 0x2077380
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined2 
     - name: MBi_GetParentBssDesc
       address:
         NA: 0x2077390
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
-        stack[0]: undefined2 
-    - name: MBi_SendMP
+    - name: MBi_SendMp
       address:
         NA: 0x20773DC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: undefined2 
-        r2: undefined2 
     - name: MBi_GetGgid
       address:
         NA: 0x20774BC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_GetTgid
       address:
         NA: 0x20774D0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_GetAttribute
       address:
         NA: 0x20774E4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_IsStarted
       address:
         NA: 0x2077544
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_CheckWmErrcode
       address:
         NA: 0x2077564
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined2 
-        r1: int32_t 
     - name: MBi_InitCache
       address:
         NA: 0x207759C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: MBi_AttachCacheBuffer
       address:
         NA: 0x20775B0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
-        stack[0]: undefined4 
     - name: MBi_ReadFromCache
       address:
         NA: 0x2077618
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: int32_t 
-        r2: undefined4 pointer
-        r3: uint32_t 
     - name: MBi_InitTaskThread
       address:
         NA: 0x20777C8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: thread pointer
-        r1: int32_t 
     - name: MBi_IsTaskAvailable
       address:
         NA: 0x2077848
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: MBi_InitTaskInfo
       address:
         NA: 0x2077864
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: MBi_IsTaskBusy
       address:
         NA: 0x2077878
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: MBi_SetTask
       address:
         NA: 0x2077890
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
-        r1: undefined4 
-        r2: undefined4 
-        r3: uint32_t 
     - name: MBi_EndTaskThread
       address:
         NA: 0x20779F4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
-    - name: MBi_SetChildMPMaxSize
+    - name: MBi_SetChildMpMaxSize
       address:
         NA: 0x2077A3C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: MBi_SetParentPieceBuffer
       address:
         NA: 0x2077A6C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
     - name: MBi_ClearParentPieceBuffer
       address:
         NA: 0x2077A8C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: MBi_MakeParentSendBuffer
       address:
         NA: 0x2077AD0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined1 pointer
-        r1: undefined1 pointer
     - name: MBi_SetRecvBufferFromChild
       address:
         NA: 0x2077B54
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: char pointer
-        r1: char pointer
-        r2: int32_t 
     - name: MBi_ReceiveRequestDataPiece
       address:
         NA: 0x2077C70
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: int32_t 
     - name: IsGetAllRequestData
       address:
         NA: 0x2077CFC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
     - name: Ctrdgi_InitCommon
       address:
         NA: 0x2077D50
@@ -5486,13 +4023,9 @@ arm9:
     - name: Ctrdgi_IsTaskBusy
       address:
         NA: 0x2078644
-    - name: MATH_CountPopulation
+    - name: Math_CountPopulation
       address:
         NA: 0x2078734
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
     - name: abs
       address:
         NA: 0x20794C8
