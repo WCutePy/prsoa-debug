@@ -18,75 +18,6 @@ arm9:
     
     Speaking generally, this is the program run by the Nintendo DS's main ARM946E-S CPU, which handles all gameplay mechanisms and graphics rendering.
   functions:
-    - name: OSi_DoResetSystem
-      address:
-        NA: 0x1FF81E4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: OSi_DoBoot
-      address:
-        NA: 0x1FF8218
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: OSi_CpuClear32
-      address:
-        NA: 0x1FF82E4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
-        r1: undefined4 pointer
-        r2: int32_t 
-    - name: OSi_ReloadRomData
-      address:
-        NA: 0x1FF8300
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: OSi_ReadCardRom32
-      address:
-        NA: 0x1FF83A8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
-        r1: int32_t 
-        r2: int32_t 
-    - name: MIi_DmaSetParams
-      address:
-        NA: 0x1FF8480
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
-    - name: MIi_DmaSetParams_wait
-      address:
-        NA: 0x1FF84C0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
-    - name: MIi_DmaSetParams_wait_src32
-      address:
-        NA: 0x1FF8554
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
     - name: _start
       address:
         EU: 0x2000800
@@ -1872,7 +1803,7 @@ arm9:
         
         r0: format
         r1: ap
-    - name: WVR_StartUpAsync
+    - name: Wvr_StartUpAsync
       address:
         NA: 0x2046948
       description: |-
@@ -1881,7 +1812,7 @@ arm9:
         r0: int32_t 
         r1: int32_t 
         r2: undefined4 
-    - name: WVR_TerminateAsync
+    - name: Wvr_TerminateAsync
       address:
         NA: 0x2046B84
       description: |-
@@ -3155,7 +3086,7 @@ arm9:
     - name: Sndi_CallAlarmHandler
       address:
         NA: 0x2068FE4
-    - name: SNDi_GetFinishedCommandTag
+    - name: Sndi_GetFinishedCommandTag
       address:
         NA: 0x2069054
       description: |-
@@ -3165,7 +3096,7 @@ arm9:
         r1: undefined4 
         r2: undefined4 
         r3: undefined4 
-    - name: SNDi_InitSharedWork
+    - name: Sndi_InitSharedWork
       address:
         NA: 0x206907C
       description: |-
@@ -3175,7 +3106,7 @@ arm9:
     - name: Snd_CalcChannelVolume
       address:
         NA: 0x20690F8
-    - name: SND_AssignWaveArc
+    - name: Snd_AssignWaveArc
       address:
         NA: 0x2069168
       description: |-
@@ -3184,7 +3115,7 @@ arm9:
         r0: int32_t 
         r1: int32_t 
         r2: int32_t 
-    - name: SND_DestroyBank
+    - name: Snd_DestroyBank
       address:
         NA: 0x2069234
       description: |-
@@ -3192,7 +3123,7 @@ arm9:
         
         r0: int32_t 
         r1: undefined4 
-    - name: SND_DestroyWaveArc
+    - name: Snd_DestroyWaveArc
       address:
         NA: 0x20692CC
       description: |-
@@ -3200,14 +3131,14 @@ arm9:
         
         r0: int32_t 
         r1: undefined4 
-    - name: SND_GetFirstInstDataPos
+    - name: Snd_GetFirstInstDataPos
       address:
         NA: 0x2069314
       description: |-
         [MANUAL DESCRIPTION]
         
         r0: undefined4 pointer
-    - name: SND_GetNextInstData
+    - name: Snd_GetNextInstData
       address:
         NA: 0x2069334
       description: |-
@@ -3216,14 +3147,14 @@ arm9:
         r0: int32_t 
         r1: undefined2 pointer
         r2: uint32_t pointer
-    - name: SND_GetWaveDataCount
+    - name: Snd_GetWaveDataCount
       address:
         NA: 0x20694E4
       description: |-
         [MANUAL DESCRIPTION]
         
         r0: int32_t 
-    - name: SND_SetWaveDataAddress
+    - name: Snd_SetWaveDataAddress
       address:
         NA: 0x20694EC
       description: |-
@@ -3232,7 +3163,7 @@ arm9:
         r0: int32_t 
         r1: int32_t 
         r2: undefined4 
-    - name: SND_GetWaveDataAddress
+    - name: Snd_GetWaveDataAddress
       address:
         NA: 0x2069520
       description: |-
@@ -4282,21 +4213,21 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WM_GetAID
+    - name: WM_GetAid
       address:
         NA: 0x2070AD8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WM_GetConnectedAIDs
+    - name: WM_GetConnectedAids
       address:
         NA: 0x2070B08
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WMi_GetMPReadyAIDs
+    - name: WMi_GetMPReadyAids
       address:
         NA: 0x2070B38
       description: |-
@@ -4727,7 +4658,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WM_SetWEPKey
+    - name: WM_SetWepKey
       address:
         NA: 0x2072CCC
       description: |-
@@ -4736,7 +4667,7 @@ arm9:
         r0: undefined4 
         r1: uint32_t 
         r2: int32_t 
-    - name: WM_SetWEPKeyEx
+    - name: WM_SetWepKeyEx
       address:
         NA: 0x2072D40
       description: |-

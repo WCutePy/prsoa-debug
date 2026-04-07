@@ -1,0 +1,50 @@
+itcm:
+  versions:
+    - EU
+    - NA
+    - JP
+    - EU-ITCM
+    - NA-ITCM
+    - JP-ITCM
+  address:
+    NA: 0x208F300
+    EU-ITCM: 0x1FF8000
+    NA-ITCM: 0x1FF8000
+    JP-ITCM: 0x1FF8000
+  length:
+    NA: 0x4000
+    NA-ITCM: 0x4000
+  description: |-
+    The instruction TCM (tightly-coupled memory) and the corresponding region in the ARM9 binary.
+    
+    The ITCM is a special area of low-latency memory meant for performance-critical routines. It's similar to an instruction cache, but more predictable. See the ARMv5 Architecture Reference Manual, Chapter B7 (https://developer.arm.com/documentation/ddi0100/i).
+    
+    The Nintendo DS ITCM region is located at 0x0-0x7FFF in memory, but the 32 KiB segment is mirrored throughout the 16 MiB block from 0x0-0x1FFFFFF. So far, Pokemon Ranger: Shadows of Almia code seems to reference only the mirror at 0x1FF8000, the closest one to main memory.
+    
+    In Shadows of Almia, a portion of the ITCM is believed to be static. While not yet confirmed, it seems to be copied from a portion of the Arm9 binary, after which that portion is repurposed. 
+  functions:
+    - name: OSi_DoResetSystem
+      address:
+        NA: 0x1FF81E4
+    - name: OSi_DoBoot
+      address:
+        NA: 0x1FF8218
+    - name: OSi_CpuClear32
+      address:
+        NA: 0x1FF82E4
+    - name: OSi_ReloadRomData
+      address:
+        NA: 0x1FF8300
+    - name: OSi_ReadCardRom32
+      address:
+        NA: 0x1FF83A8
+    - name: MIi_DmaSetParams
+      address:
+        NA: 0x1FF8480
+    - name: MIi_DmaSetParams_wait
+      address:
+        NA: 0x1FF84C0
+    - name: MIi_DmaSetParams_wait_src32
+      address:
+        NA: 0x1FF8554
+  data: []
