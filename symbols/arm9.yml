@@ -2927,7 +2927,7 @@ arm9:
     - name: FSi_TranslateCommand
       address:
         NA: 0x20698D4
-    - name: FSi_StrNICmp
+    - name: FSi_StrNiCmp
       address:
         NA: 0x2069A64
     - name: FSi_ReadTable
@@ -3618,13 +3618,13 @@ arm9:
     - name: WM_EndMp
       address:
         NA: 0x2071EDC
-    - name: WM_StartDCF
+    - name: WM_StartDcf
       address:
         NA: 0x2071F4C
-    - name: WM_SetDCFData
+    - name: WM_SetDcfData
       address:
         NA: 0x2071FEC
-    - name: WM_EndDCF
+    - name: WM_EndDcf
       address:
         NA: 0x20720B8
     - name: WM_StartDataSharing
@@ -3711,7 +3711,7 @@ arm9:
     - name: MBi_CommParentSendMsg
       address:
         NA: 0x2073C20
-    - name: MBi_CommParentSendDLFileInfo
+    - name: MBi_CommParentSendDlfileInfo
       address:
         NA: 0x2073C60
     - name: MBi_ReloadCache
@@ -3723,10 +3723,10 @@ arm9:
     - name: MBi_CommParentSendData
       address:
         NA: 0x2074134
-    - name: MBi_calc_sendblock
+    - name: MBi_Calc_Sendblock
       address:
         NA: 0x20742B4
-    - name: MBi_calc_nextsendblock
+    - name: MBi_Calc_Nextsendblock
       address:
         NA: 0x2074330
     - name: IsChildAidValid
@@ -3765,7 +3765,7 @@ arm9:
     - name: MBi_MakeBlockInfoTable
       address:
         NA: 0x2074D44
-    - name: MBi_get_blockinfo
+    - name: MBi_Get_Blockinfo
       address:
         NA: 0x2074E10
     - name: MBi_IsAbleToRecv
@@ -3777,7 +3777,7 @@ arm9:
     - name: MBi_BlockHeaderEnd
       address:
         NA: 0x207503C
-    - name: MBi_calc_cksum
+    - name: MBi_Calc_Cksum
       address:
         NA: 0x2075074
     - name: MBi_MakeGameInfo
@@ -3819,7 +3819,7 @@ arm9:
     - name: MBi_SendVolatBeacon
       address:
         NA: 0x2075690
-    - name: changeScanChannel
+    - name: ChangeScanChannel
       address:
         NA: 0x20758FC
     - name: MBi_IsSendEnabled
