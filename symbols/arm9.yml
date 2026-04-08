@@ -2125,7 +2125,7 @@ arm9:
     - name: GX_DisableBankForClearImage
       address:
         NA: 0x206260C
-    - name: GX_DisableBankForARM7
+    - name: GX_DisableBankForArm7
       address:
         NA: 0x2062620
     - name: GX_DisableBankForLcdc
@@ -2500,7 +2500,7 @@ arm9:
     - name: OS_VsPrintf
       address:
         NA: 0x2064F50
-    - name: OS_SNPrintf
+    - name: OS_SnPrintf
       address:
         NA: 0x2064F68
     - name: OS_VsNPrintf
