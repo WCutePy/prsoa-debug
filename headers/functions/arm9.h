@@ -1112,8 +1112,8 @@ void Ctrdgi_RestoreAccessCycle(void* r);
 void Ctrdgi_LockByProcessor(uint16_t lock_id, void* info);
 void Ctrdgi_UnlockByProcessor(uint16_t lock_id, void* info);
 void Ctrdgi_SendtoPxi(uint32_t data);
-bool Ctrdgi_AccessCommon(undefined4* param_1, undefined4 param_2, undefined4* param_3,
-                         unsigned int param_4);
+bool CTRDG_Read8(undefined4 param_1,undefined4 param_2);
+bool Ctrdgi_AccessCommon(undefined4* param_1, undefined4 param_2, undefined4* param_3, unsigned int param_4);
 undefined4 Ctrdg_IsEnabled(void);
 void Ctrdg_Enable(int param_1);
 void Ctrdg_CheckEnabled(void);
