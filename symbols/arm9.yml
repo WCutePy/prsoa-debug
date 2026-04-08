@@ -1916,6 +1916,42 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: GX_LoadBG2Scr
+      address:
+        NA:
+          - 0x2057298
+          - 0x2063988
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_LoadBG3Scr
+      address:
+        NA:
+          - 0x20572A4
+          - 0x2063A48
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GXS_LoadBG2Scr
+      address:
+        NA:
+          - 0x2057398
+          - 0x20639E8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GXS_LoadBG3Scr
+      address:
+        NA:
+          - 0x20573A4
+          - 0x2063AA8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: ret_0205fc98
       address:
         NA: 0x205FC98
@@ -2045,6 +2081,361 @@ arm9:
     - name: GX_InitGxState
       address:
         NA: 0x20615AC
+    - name: GX_VRAMCNT_SetLCDC
+      address:
+        NA: 0x206160C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
+    - name: GX_SetBankForBGExtPltt
+      address:
+        NA: 0x2061AA4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: GX_SetBankForOBJExtPltt
+      address:
+        NA: 0x2061BA4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: GX_SetBankForLCDC
+      address:
+        NA: 0x20620F0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint16_t 
+    - name: GX_SetBankForSubBG
+      address:
+        NA: 0x2062110
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: GX_SetBankForSubOBJ
+      address:
+        NA: 0x20621B8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: GX_SetBankForSubBGExtPltt
+      address:
+        NA: 0x2062228
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: GX_SetBankForSubOBJExtPltt
+      address:
+        NA: 0x20622A8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: GX_ResetBankForBGExtPltt
+      address:
+        NA: 0x2062384
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_ResetBankForOBJExtPltt
+      address:
+        NA: 0x20623A8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_ResetBankForSubBGExtPltt
+      address:
+        NA: 0x2062444
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_ResetBankForSubOBJExtPltt
+      address:
+        NA: 0x206246C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: disableBankForX_
+      address:
+        NA: 0x2062494
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint16_t pointer
+    - name: GX_DisableBankForBG
+      address:
+        NA: 0x2062574
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DisableBankForOBJ
+      address:
+        NA: 0x2062588
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DisableBankForBGExtPltt
+      address:
+        NA: 0x206259C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DisableBankForOBJExtPltt
+      address:
+        NA: 0x20625C0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DisableBankForTex
+      address:
+        NA: 0x20625E4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DisableBankForTexPltt
+      address:
+        NA: 0x20625F8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DisableBankForClearImage
+      address:
+        NA: 0x206260C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DisableBankForARM7
+      address:
+        NA: 0x2062620
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DisableBankForLCDC
+      address:
+        NA: 0x2062634
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DisableBankForSubBG
+      address:
+        NA: 0x2062648
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DisableBankForSubOBJ
+      address:
+        NA: 0x206265C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DisableBankForSubBGExtPltt
+      address:
+        NA: 0x2062670
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_DisableBankForSubOBJExtPltt
+      address:
+        NA: 0x2062698
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_GetBankForBG
+      address:
+        NA: 0x20626C0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_GetBankForOBJ
+      address:
+        NA: 0x20626D0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_GetBankForBGExtPltt
+      address:
+        NA: 0x20626E0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2_GetBG0ScrPtr
+      address:
+        NA: 0x20626F0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2S_GetBG0ScrPtr
+      address:
+        NA: 0x2062724
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2_GetBG1ScrPtr
+      address:
+        NA: 0x2062744
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2S_GetBG1ScrPtr
+      address:
+        NA: 0x2062778
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2_GetBG2ScrPtr
+      address:
+        NA: 0x2062798
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2S_GetBG2ScrPtr
+      address:
+        NA: 0x206281C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2_GetBG3ScrPtr
+      address:
+        NA: 0x2062890
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2S_GetBG3ScrPtr
+      address:
+        NA: 0x2062914
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2_GetBG0CharPtr
+      address:
+        NA: 0x2062988
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2S_GetBG0CharPtr
+      address:
+        NA: 0x20629BC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2_GetBG1CharPtr
+      address:
+        NA: 0x20629DC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2S_GetBG1CharPtr
+      address:
+        NA: 0x2062A10
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2_GetBG2CharPtr
+      address:
+        NA: 0x2062A30
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2S_GetBG2CharPtr
+      address:
+        NA: 0x2062A80
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2_GetBG3CharPtr
+      address:
+        NA: 0x2062AC0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2S_GetBG3CharPtr
+      address:
+        NA: 0x2062B18
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: G2x_SetBGyAffine
+      address:
+        NA: 0x2062B60
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+        r1: int32_t pointer
+        r2: int32_t 
+        r3: int32_t 
+        stack[0]: int32_t 
+        stack[1]: int32_t 
+    - name: G2x_SetBlendAlpha
+      address:
+        NA: 0x2062C10
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+        r1: uint32_t 
+        r2: int32_t 
+        r3: uint32_t 
+        stack[0]: int32_t 
+    - name: G2x_SetBlendBrightness
+      address:
+        NA: 0x2062C2C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint16_t pointer
+        r1: uint16_t 
+        r2: int32_t 
+    - name: G2x_ChangeBlendBrightness
+      address:
+        NA: 0x2062C54
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint16_t pointer
+        r1: int32_t 
     - name: G3_LoadMtx44
       address:
         NA: 0x2062F64
@@ -2093,6 +2484,274 @@ arm9:
     - name: GXi_DmaCopy16
       address:
         NA: 0x2063550
+    - name: GXS_LoadBGPltt
+      address:
+        NA: 0x20635A4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: int32_t 
+        r2: uint32_t 
+        r3: undefined4 
+    - name: GX_LoadOBJPltt
+      address:
+        NA: 0x20635FC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: int32_t 
+        r2: uint32_t 
+        r3: undefined4 
+    - name: GXS_LoadOBJPltt
+      address:
+        NA: 0x2063654
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: int32_t 
+        r2: uint32_t 
+        r3: undefined4 
+    - name: GX_LoadOAM
+      address:
+        NA: 0x20636AC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GXS_LoadOAM
+      address:
+        NA: 0x2063700
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: uint32_t 
+        r3: undefined4 
+    - name: GX_LoadOBJ
+      address:
+        NA: 0x2063758
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GXS_LoadOBJ
+      address:
+        NA: 0x20637B0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GX_LoadBG0Scr
+      address:
+        NA: 0x2063808
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GXS_LoadBG0Scr
+      address:
+        NA: 0x2063868
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GX_LoadBG1Scr
+      address:
+        NA: 0x20638C8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GXS_LoadBG1Scr
+      address:
+        NA: 0x2063928
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GX_LoadBG0Char
+      address:
+        NA: 0x2063B08
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GXS_LoadBG0Char
+      address:
+        NA: 0x2063B68
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GX_LoadBG1Char
+      address:
+        NA: 0x2063BC8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GXS_LoadBG1Char
+      address:
+        NA: 0x2063C28
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GX_LoadBG2Char
+      address:
+        NA: 0x2063C88
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GXS_LoadBG2Char
+      address:
+        NA: 0x2063CE8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GX_LoadBG3Char
+      address:
+        NA: 0x2063D48
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GXS_LoadBG3Char
+      address:
+        NA: 0x2063DA8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: uint32_t 
+    - name: GX_BeginLoadBGExtPltt
+      address:
+        NA: 0x2063E08
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_LoadBGExtPltt
+      address:
+        NA: 0x2063EA8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: undefined4 
+        r3: undefined4 
+    - name: GX_EndLoadBGExtPltt
+      address:
+        NA: 0x2063F18
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_BeginLoadOBJExtPltt
+      address:
+        NA: 0x2063F60
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GX_LoadOBJExtPltt
+      address:
+        NA: 0x2063FA8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: undefined4 
+    - name: GX_EndLoadOBJExtPltt
+      address:
+        NA: 0x2064014
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GXS_BeginLoadBGExtPltt
+      address:
+        NA: 0x2064058
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GXS_LoadBGExtPltt
+      address:
+        NA: 0x2064070
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: undefined4 
+    - name: GXS_EndLoadBGExtPltt
+      address:
+        NA: 0x20640D4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GXS_BeginLoadOBJExtPltt
+      address:
+        NA: 0x2064114
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GXS_LoadOBJExtPltt
+      address:
+        NA: 0x206412C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: int32_t 
+        r2: undefined4 
+    - name: GXS_EndLoadOBJExtPltt
+      address:
+        NA: 0x2064190
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: GXi_DmaCopy32Async
       address:
         NA: 0x20643EC
@@ -2107,6 +2766,69 @@ arm9:
         NA: 0x20647A0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
+        
+        No params.
+    - name: OSi_IrqCallback
+      address:
+        NA: 0x20647A4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+    - name: OSi_IrqDma0
+      address:
+        NA: 0x206482C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OSi_IrqDma1
+      address:
+        NA: 0x206483C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OSi_IrqDma2
+      address:
+        NA: 0x206484C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OSi_IrqDma3
+      address:
+        NA: 0x206485C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OSi_IrqTimer0
+      address:
+        NA: 0x206486C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OSi_IrqTimer1
+      address:
+        NA: 0x206487C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OSi_IrqTimer2
+      address:
+        NA: 0x206488C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: OSi_IrqTimer3
+      address:
+        NA: 0x206489C
+      description: |-
+        [MANUAL DESCRIPTION]
         
         No params.
     - name: OS_InitIrqTable
@@ -2210,6 +2932,35 @@ arm9:
         r1: source
         r2: maybe num bytes? 
         r3: undefined4
+    - name: OS_VSPrintf
+      address:
+        NA: 0x2064F50
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+    - name: OS_SNPrintf
+      address:
+        NA: 0x2064F68
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined1 pointer
+        r1: int32_t 
+        r2: int8_t pointer
+        r3: uint32_t 
+    - name: OS_VSNPrintf
+      address:
+        NA: 0x2064F90
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined1 pointer
+        r1: int32_t 
+        r2: int8_t pointer
+        r3: uint32_t pointer
     - name: OSi_GetUnusedThreadId
       address:
         NA: 0x2064FA8
@@ -2792,15 +3543,237 @@ arm9:
     - name: MI_SwapWord
       address:
         NA: 0x2068150
+    - name: MI_UncompressLZ8
+      address:
+        NA: 0x2068158
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+        r1: int8_t pointer
+    - name: MI_UncompressHuffman
+      address:
+        NA: 0x20681F4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+        r1: uint32_t pointer
+    - name: MI_UncompressRL8
+      address:
+        NA: 0x20682EC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+        r1: int8_t pointer
+    - name: MI_UnfilterDiff8
+      address:
+        NA: 0x2068358
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+        r1: int32_t 
     - name: MIi_CardDmaCopy32
       address:
         NA: 0x20683B8
     - name: MI_Init
       address:
         NA: 0x206842C
+    - name: SND_StopSeq
+      address:
+        NA: 0x2068444
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+    - name: SND_PrepareSeq
+      address:
+        NA: 0x2068464
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+    - name: SND_StartPreparedSeq
+      address:
+        NA: 0x206848C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+    - name: SND_SetPlayerTempoRatio
+      address:
+        NA: 0x20684AC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+    - name: SND_SetPlayerVolume
+      address:
+        NA: 0x20684C4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+    - name: SND_SetPlayerChannelPriority
+      address:
+        NA: 0x20684DC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+    - name: SND_SetTrackPan
+      address:
+        NA: 0x20684F4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+    - name: SND_SetTrackAllocatableChannel
+      address:
+        NA: 0x2068510
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+    - name: SND_StartTimer
+      address:
+        NA: 0x2068538
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+    - name: SND_StopTimer
+      address:
+        NA: 0x2068560
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: uint32_t 
+        r3: undefined4 
     - name: Snd_SetupAlarm
       address:
         NA: 0x20685C4
+    - name: SND_LockChannel
+      address:
+        NA: 0x2068604
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+    - name: SND_UnlockChannel
+      address:
+        NA: 0x2068624
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+    - name: SND_SetChannelVolume
+      address:
+        NA: 0x2068644
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+    - name: SND_SetChannelPan
+      address:
+        NA: 0x206866C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+    - name: SND_SetupChannelPcm
+      address:
+        NA: 0x206868C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
+        r1: int32_t 
+        r2: undefined4 
+        r3: int32_t 
+        stack[0]: uint32_t 
+        stack[1]: uint32_t 
+        stack[2]: int32_t 
+        stack[3]: int32_t 
+        stack[4]: int32_t 
+        stack[5]: int32_t 
+    - name: SND_InvalidateSeqData
+      address:
+        NA: 0x20686D8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+    - name: SND_InvalidateBankData
+      address:
+        NA: 0x20686F8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+    - name: SND_InvalidateWaveData
+      address:
+        NA: 0x2068718
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+    - name: SND_SetOutputSelector
+      address:
+        NA: 0x2068738
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+    - name: SNDi_SetPlayerParam
+      address:
+        NA: 0x2068760
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+    - name: SNDi_SetTrackParam
+      address:
+        NA: 0x2068788
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+        stack[0]: int32_t 
     - name: PushCommand_Impl
       address:
         NA: 0x20687B0
@@ -2864,12 +3837,26 @@ arm9:
     - name: Snd_AlarmInit
       address:
         NA: 0x2068F64
+    - name: SNDi_IncAlarmId
+      address:
+        NA: 0x2068F94
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
     - name: Sndi_SetAlarmHandler
       address:
         NA: 0x2068FB4
     - name: Sndi_CallAlarmHandler
       address:
         NA: 0x2068FE4
+    - name: SND_GetPlayerStatus
+      address:
+        NA: 0x2069028
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: Sndi_GetFinishedCommandTag
       address:
         NA: 0x2069054
@@ -3125,6 +4112,121 @@ arm9:
     - name: FS_UnloadOverlay
       address:
         NA: 0x206BD44
+    - name: MATH_MD5Init
+      address:
+        NA: 0x206BD90
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: MATH_MD5Update
+      address:
+        NA: 0x206BDD0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: undefined4 pointer
+        r2: uint32_t 
+    - name: MATH_MD5GetHash
+      address:
+        NA: 0x206BE98
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+        r1: int8_t pointer
+        r2: undefined4 
+        r3: undefined4 
+    - name: MATH_MD5Transform
+      address:
+        NA: 0x206BF50
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+    - name: DGT_Hash2Init
+      address:
+        NA: 0x206C304
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: DGT_Hash2Update
+      address:
+        NA: 0x206C354
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: undefined4 pointer
+        r2: uint32_t 
+        r3: undefined4 
+    - name: DGT_Hash2GetHash
+      address:
+        NA: 0x206C4A8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+        r1: undefined1 pointer
+        r2: undefined4 
+        r3: undefined4 
+    - name: DGT_Hash2CalcHmac
+      address:
+        NA: 0x206C6A4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+        stack[0]: undefined4 
+    - name: DGTi_CalcHmac
+      address:
+        NA: 0x206C738
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: int32_t 
+        r2: int32_t 
+        r3: int8_t pointer
+        stack[0]: int32_t 
+        stack[1]: int32_t pointer
+    - name: DGT_Hash2Transform
+      address:
+        NA: 0x206C904
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+        r1: uint32_t pointer
+        r2: int32_t 
+    - name: CP_SaveContext
+      address:
+        NA: 0x206CB84
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: CPi_RestoreContext
+      address:
+        NA: 0x206CBC4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: TPi_TpCallback
+      address:
+        NA: 0x206CC00
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: uint32_t 
+        r2: int32_t 
     - name: TP_Init
       address:
         NA: 0x206CE80
@@ -3948,6 +5050,15 @@ arm9:
     - name: Ctrdgi_InitCommon
       address:
         NA: 0x2077D50
+    - name: CTRDGi_IsBitIDAtInit
+      address:
+        NA:
+          - 0x2077D88
+          - 0x2077DD8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: Ctrdg_IsOptionCartridge
       address:
         NA: 0x2077DB0
@@ -3984,6 +5095,14 @@ arm9:
     - name: Ctrdgi_SendtoPxi
       address:
         NA: 0x2078088
+    - name: CTRDG_Read8
+      address:
+        NA: 0x20780D8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
     - name: Ctrdgi_AccessCommon
       address:
         NA: 0x20780F0
@@ -4026,6 +5145,123 @@ arm9:
     - name: Math_CountPopulation
       address:
         NA: 0x2078734
+    - name: MATHi_CRC16InitTableRev
+      address:
+        NA: 0x2078778
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint16_t pointer
+        r1: uint32_t 
+    - name: MATHi_CRC16UpdateRev
+      address:
+        NA: 0x20787BC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: uint16_t pointer
+        r2: int8_t pointer
+        r3: uint32_t 
+    - name: MATH_CalcCRC16
+      address:
+        NA: 0x20787FC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+        r3: uint32_t 
+    - name: STD_CopyString
+      address:
+        NA: 0x2078824
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: char pointer
+        r1: char pointer
+    - name: STD_CopyLStringZeroFill
+      address:
+        NA: 0x2078858
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: char pointer
+        r2: int32_t 
+    - name: STD_GetStringLength
+      address:
+        NA:
+          - 0x20788B8
+          - 0x2162820
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: char pointer
+    - name: STD_ConcatenateString
+      address:
+        NA: 0x20788E0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: char pointer
+    - name: STD_CompareString
+      address:
+        NA:
+          - 0x2078904
+          - 0x2078910
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: char pointer
+        r1: char pointer
+    - name: STD_CompareNString
+      address:
+        NA: 0x2078930
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t 
+        r1: int32_t 
+        r2: int32_t 
+    - name: string_put_char
+      address:
+        NA: 0x2078970
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
+        r1: undefined1 
+    - name: string_fill_char
+      address:
+        NA: 0x20789A0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+        r1: undefined1 
+        r2: uint32_t 
+    - name: string_put_string
+      address:
+        NA: 0x20789F4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+        r1: int32_t 
+        r2: uint32_t 
+    - name: OS_VSNPrintfEx
+      address:
+        NA: 0x2078A4C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined1 pointer
+        r1: int32_t 
+        r2: int8_t pointer
+        r3: uint32_t pointer
     - name: abs
       address:
         NA: 0x20794C8
