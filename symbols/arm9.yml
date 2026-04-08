@@ -2065,7 +2065,7 @@ arm9:
     - name: GX_InitGxState
       address:
         NA: 0x20615AC
-    - name: GX_VRAMCNT_SetLcdc
+    - name: GX_VRamCnt_SetLcdc
       address:
         NA: 0x206160C
     - name: GX_SetBankForBgExtPltt
@@ -2269,10 +2269,10 @@ arm9:
     - name: GXs_LoadObjPltt
       address:
         NA: 0x2063654
-    - name: GX_LoadOAM
+    - name: GX_LoadOam
       address:
         NA: 0x20636AC
-    - name: GXs_LoadOAM
+    - name: GXs_LoadOam
       address:
         NA: 0x2063700
     - name: GX_LoadObj
@@ -2497,13 +2497,13 @@ arm9:
         r1: source
         r2: maybe num bytes? 
         r3: undefined4
-    - name: OS_VSPrintf
+    - name: OS_VsPrintf
       address:
         NA: 0x2064F50
     - name: OS_SNPrintf
       address:
         NA: 0x2064F68
-    - name: OS_VSNPrintf
+    - name: OS_VsNPrintf
       address:
         NA: 0x2064F90
     - name: OSi_GetUnusedThreadId
@@ -4364,7 +4364,7 @@ arm9:
     - name: Ctrdgi_InitCommon
       address:
         NA: 0x2077D50
-    - name: Ctrdgi_IsBitIDAtInit
+    - name: Ctrdgi_IsBitIdAtInit
       address:
         NA: 0x2077D88
     - name: Ctrdg_IsOptionCartridge
@@ -4448,13 +4448,13 @@ arm9:
     - name: Math_CountPopulation
       address:
         NA: 0x2078734
-    - name: Mathi_CRC16InitTableRev
+    - name: Mathi_Crc16InitTableRev
       address:
         NA: 0x2078778
-    - name: Mathi_CRC16UpdateRev
+    - name: Mathi_Crc16UpdateRev
       address:
         NA: 0x20787BC
-    - name: Math_CalcCRC16
+    - name: Math_CalcCrc16
       address:
         NA: 0x20787FC
     - name: Std_CopyString
@@ -4486,7 +4486,7 @@ arm9:
     - name: string_put_string
       address:
         NA: 0x20789F4
-    - name: OS_VSNPrintfEx
+    - name: OS_VsNPrintfEx
       address:
         NA: 0x2078A4C
     - name: abs
