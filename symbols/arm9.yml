@@ -2065,40 +2065,40 @@ arm9:
     - name: GX_InitGxState
       address:
         NA: 0x20615AC
-    - name: GX_VRAMCNT_SetLCDC
+    - name: GX_VRAMCNT_SetLcdc
       address:
         NA: 0x206160C
     - name: GX_SetBankForBgExtPltt
       address:
         NA: 0x2061AA4
-    - name: GX_SetBankForOBJExtPltt
+    - name: GX_SetBankForObjExtPltt
       address:
         NA: 0x2061BA4
-    - name: GX_SetBankForLCDC
+    - name: GX_SetBankForLcdc
       address:
         NA: 0x20620F0
     - name: GX_SetBankForSubBg
       address:
         NA: 0x2062110
-    - name: GX_SetBankForSubOBJ
+    - name: GX_SetBankForSubObj
       address:
         NA: 0x20621B8
     - name: GX_SetBankForSubBgExtPltt
       address:
         NA: 0x2062228
-    - name: GX_SetBankForSubOBJExtPltt
+    - name: GX_SetBankForSubObjExtPltt
       address:
         NA: 0x20622A8
     - name: GX_ResetBankForBgExtPltt
       address:
         NA: 0x2062384
-    - name: GX_ResetBankForOBJExtPltt
+    - name: GX_ResetBankForObjExtPltt
       address:
         NA: 0x20623A8
     - name: GX_ResetBankForSubBgExtPltt
       address:
         NA: 0x2062444
-    - name: GX_ResetBankForSubOBJExtPltt
+    - name: GX_ResetBankForSubObjExtPltt
       address:
         NA: 0x206246C
     - name: DisableBankForX
@@ -2107,13 +2107,13 @@ arm9:
     - name: GX_DisableBankForBg
       address:
         NA: 0x2062574
-    - name: GX_DisableBankForOBJ
+    - name: GX_DisableBankForObj
       address:
         NA: 0x2062588
     - name: GX_DisableBankForBgExtPltt
       address:
         NA: 0x206259C
-    - name: GX_DisableBankForOBJExtPltt
+    - name: GX_DisableBankForObjExtPltt
       address:
         NA: 0x20625C0
     - name: GX_DisableBankForTex
@@ -2128,25 +2128,25 @@ arm9:
     - name: GX_DisableBankForARM7
       address:
         NA: 0x2062620
-    - name: GX_DisableBankForLCDC
+    - name: GX_DisableBankForLcdc
       address:
         NA: 0x2062634
     - name: GX_DisableBankForSubBg
       address:
         NA: 0x2062648
-    - name: GX_DisableBankForSubOBJ
+    - name: GX_DisableBankForSubObj
       address:
         NA: 0x206265C
     - name: GX_DisableBankForSubBgExtPltt
       address:
         NA: 0x2062670
-    - name: GX_DisableBankForSubOBJExtPltt
+    - name: GX_DisableBankForSubObjExtPltt
       address:
         NA: 0x2062698
     - name: GX_GetBankForBg
       address:
         NA: 0x20626C0
-    - name: GX_GetBankForOBJ
+    - name: GX_GetBankForObj
       address:
         NA: 0x20626D0
     - name: GX_GetBankForBgExtPltt
@@ -2263,10 +2263,10 @@ arm9:
     - name: GXs_LoadBgPltt
       address:
         NA: 0x20635A4
-    - name: GX_LoadOBJPltt
+    - name: GX_LoadObjPltt
       address:
         NA: 0x20635FC
-    - name: GXs_LoadOBJPltt
+    - name: GXs_LoadObjPltt
       address:
         NA: 0x2063654
     - name: GX_LoadOAM
@@ -2275,10 +2275,10 @@ arm9:
     - name: GXs_LoadOAM
       address:
         NA: 0x2063700
-    - name: GX_LoadOBJ
+    - name: GX_LoadObj
       address:
         NA: 0x2063758
-    - name: GXs_LoadOBJ
+    - name: GXs_LoadObj
       address:
         NA: 0x20637B0
     - name: GX_LoadBg0Scr
@@ -2326,13 +2326,13 @@ arm9:
     - name: GX_EndLoadBgExtPltt
       address:
         NA: 0x2063F18
-    - name: GX_BeginLoadOBJExtPltt
+    - name: GX_BeginLoadObjExtPltt
       address:
         NA: 0x2063F60
-    - name: GX_LoadOBJExtPltt
+    - name: GX_LoadObjExtPltt
       address:
         NA: 0x2063FA8
-    - name: GX_EndLoadOBJExtPltt
+    - name: GX_EndLoadObjExtPltt
       address:
         NA: 0x2064014
     - name: GXs_BeginLoadBgExtPltt
@@ -2344,13 +2344,13 @@ arm9:
     - name: GXs_EndLoadBgExtPltt
       address:
         NA: 0x20640D4
-    - name: GXs_BeginLoadOBJExtPltt
+    - name: GXs_BeginLoadObjExtPltt
       address:
         NA: 0x2064114
-    - name: GXs_LoadOBJExtPltt
+    - name: GXs_LoadObjExtPltt
       address:
         NA: 0x206412C
-    - name: GXs_EndLoadOBJExtPltt
+    - name: GXs_EndLoadObjExtPltt
       address:
         NA: 0x2064190
     - name: GXi_DmaCopy32Async
@@ -4364,7 +4364,7 @@ arm9:
     - name: Ctrdgi_InitCommon
       address:
         NA: 0x2077D50
-    - name: CTRDGi_IsBitIDAtInit
+    - name: Ctrdgi_IsBitIDAtInit
       address:
         NA: 0x2077D88
     - name: Ctrdg_IsOptionCartridge
@@ -4403,7 +4403,7 @@ arm9:
     - name: Ctrdgi_SendtoPxi
       address:
         NA: 0x2078088
-    - name: CTRDG_Read8
+    - name: Ctrdg_Read8
       address:
         NA: 0x20780D8
     - name: Ctrdgi_AccessCommon
@@ -4457,24 +4457,24 @@ arm9:
     - name: Math_CalcCRC16
       address:
         NA: 0x20787FC
-    - name: STD_CopyString
+    - name: Std_CopyString
       address:
         NA: 0x2078824
-    - name: STD_CopyLStringZeroFill
+    - name: Std_CopyLStringZeroFill
       address:
         NA: 0x2078858
-    - name: STD_GetStringLength
+    - name: Std_GetStringLength
       address:
         NA: 0x20788B8
-    - name: STD_ConcatenateString
+    - name: Std_ConcatenateString
       address:
         NA: 0x20788E0
-    - name: STD_CompareString
+    - name: Std_CompareString
       address:
         NA:
           - 0x2078904
           - 0x2078910
-    - name: STD_CompareNString
+    - name: Std_CompareNString
       address:
         NA: 0x2078930
     - name: string_put_char
