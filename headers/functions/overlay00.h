@@ -92,6 +92,7 @@ bool GetPartner17Status(void);
 void SetPartner17Status(bool param_1);
 int8_t GetActiveQuestId(void);
 int8_t GetActiveMissionId(void);
+undefined* DebugGrabFileNameAndMsgId(void);
 void DebugPrintAllScriptVars(void);
 undefined* DebugPrintPartnerPokemonPokeAssists(int param_1, undefined4 param_2, undefined4 param_3,
                                                undefined4 param_4);
