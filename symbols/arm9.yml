@@ -1916,6 +1916,40 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: GX_LoadBG0Char
+      address:
+        NA:
+          - 0x2057238
+          - 0x2063B08
+    - name: GX_LoadBG1Char
+      address:
+        NA:
+          - 0x2057244
+          - 0x2063BC8
+    - name: GX_LoadBG2Char
+      address:
+        NA:
+          - 0x2057250
+          - 0x2063C88
+    - name: GX_LoadBG3Char
+      address:
+        NA:
+          - 0x205725C
+          - 0x2063D48
+    - name: GX_LoadBG0Scr
+      address:
+        NA:
+          - 0x2057268
+          - 0x2063808
+    - name: GX_LoadBG1Scr
+      address:
+        NA:
+          - 0x2057274
+          - 0x20638C8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: GX_LoadBg2Scr
       address:
         NA:
@@ -1926,6 +1960,16 @@ arm9:
         NA:
           - 0x20572A4
           - 0x2063A48
+    - name: GX_LoadOBJPltt
+      address:
+        NA:
+          - 0x20572B0
+          - 0x20635FC
+    - name: GX_LoadBGPltt
+      address:
+        NA:
+          - 0x20572BC
+          - 0x2063550
     - name: GXs_LoadBg2Scr
       address:
         NA:
@@ -2068,12 +2112,30 @@ arm9:
     - name: GX_VRamCnt_SetLcdc
       address:
         NA: 0x206160C
+    - name: GX_SetBankForBG
+      address:
+        NA: 0x20616C4
+    - name: GX_SetBankForOBJ
+      address:
+        NA: 0x2061954
     - name: GX_SetBankForBgExtPltt
       address:
         NA: 0x2061AA4
     - name: GX_SetBankForObjExtPltt
       address:
         NA: 0x2061BA4
+    - name: GX_SetBankForTex
+      address:
+        NA: 0x2061C50
+    - name: GX_SetBankForTexPltt
+      address:
+        NA: 0x2061E28
+    - name: GX_SetBankForClearImage
+      address:
+        NA: 0x2061F10
+    - name: GX_SetBankForARM7
+      address:
+        NA: 0x2062044
     - name: GX_SetBankForLcdc
       address:
         NA: 0x20620F0
@@ -2089,12 +2151,39 @@ arm9:
     - name: GX_SetBankForSubObjExtPltt
       address:
         NA: 0x20622A8
+    - name: resetBankForX_
+      address:
+        NA: 0x2062328
+    - name: GX_ResetBankForBG
+      address:
+        NA: 0x206235C
+    - name: GX_ResetBankForOBJ
+      address:
+        NA: 0x2062370
     - name: GX_ResetBankForBgExtPltt
       address:
         NA: 0x2062384
     - name: GX_ResetBankForObjExtPltt
       address:
         NA: 0x20623A8
+    - name: GX_ResetBankForTex
+      address:
+        NA: 0x20623CC
+    - name: GX_ResetBankForTexPltt
+      address:
+        NA: 0x20623E0
+    - name: GX_ResetBankForClearImage
+      address:
+        NA: 0x20623F4
+    - name: GX_ResetBankForARM7
+      address:
+        NA: 0x2062408
+    - name: GX_ResetBankForSubBG
+      address:
+        NA: 0x206241C
+    - name: GX_ResetBankForSubOBJ
+      address:
+        NA: 0x2062430
     - name: GX_ResetBankForSubBgExtPltt
       address:
         NA: 0x2062444
@@ -2212,6 +2301,48 @@ arm9:
     - name: G2x_ChangeBlendBrightness
       address:
         NA: 0x2062C54
+    - name: G3C_Direct0
+      address:
+        NA: 0x2062C98
+    - name: G3C_Direct1
+      address:
+        NA: 0x2062CBC
+    - name: G3C_Direct2
+      address:
+        NA: 0x2062CD8
+    - name: G3C_UpdateGXDLInfo
+      address:
+        NA: 0x2062CFC
+    - name: G3C_PopMtx
+      address:
+        NA: 0x2062D58
+    - name: G3C_Color
+      address:
+        NA: 0x2062D7C
+    - name: G3C_TexCoord
+      address:
+        NA: 0x2062DA0
+    - name: G3C_Vtx
+      address:
+        NA: 0x2062DE4
+    - name: G3C_VtxXY
+      address:
+        NA: 0x2062E20
+    - name: G3C_PolygonAttr
+      address:
+        NA: 0x2062E54
+    - name: G3C_TexImageParam
+      address:
+        NA: 0x2062E94
+    - name: G3C_TexPlttBase
+      address:
+        NA: 0x2062EE8
+    - name: G3C_Begin
+      address:
+        NA: 0x2062F20
+    - name: G3C_End
+      address:
+        NA: 0x2062F44
     - name: G3_LoadMtx44
       address:
         NA: 0x2062F64
@@ -2353,9 +2484,36 @@ arm9:
     - name: GXs_EndLoadObjExtPltt
       address:
         NA: 0x2064190
+    - name: GX_BeginLoadTex
+      address:
+        NA: 0x20641D0
+    - name: GX_LoadTex
+      address:
+        NA: 0x206422C
+    - name: GX_EndLoadTex
+      address:
+        NA: 0x206436C
+    - name: GX_BeginLoadTexPltt
+      address:
+        NA: 0x20643B8
     - name: GXi_DmaCopy32Async
       address:
         NA: 0x20643EC
+    - name: GX_EndLoadTexPltt
+      address:
+        NA: 0x2064458
+    - name: GX_BeginLoadClearImage
+      address:
+        NA: 0x206449C
+    - name: GX_LoadClearImageColor
+      address:
+        NA: 0x206452C
+    - name: GX_LoadClearImageDepth
+      address:
+        NA: 0x2064594
+    - name: GX_EndLoadClearImage
+      address:
+        NA: 0x2064600
     - name: GX_SendFifo64B
       address:
         NA: 0x2064710
@@ -2506,6 +2664,9 @@ arm9:
     - name: OS_VsNPrintf
       address:
         NA: 0x2064F90
+    - name: OS_VSNPrintfExStub
+      address:
+        NA: 0x2064F9C
     - name: OSi_GetUnusedThreadId
       address:
         NA: 0x2064FA8

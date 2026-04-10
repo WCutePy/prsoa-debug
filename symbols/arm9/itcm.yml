@@ -44,6 +44,9 @@ itcm:
     - name: MIi_DmaSetParams_wait
       address:
         NA: 0x1FF84C0
+    - name: MI_SendGXCommand
+      address:
+        NA: 0x1FF85B8
     - name: MIi_DmaSetParams_wait_src32
       address:
         NA: 0x1FF8554
