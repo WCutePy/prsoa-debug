@@ -2153,6 +2153,28 @@ arm9:
         Syscall Function that always returns zero.
         
         No params.
+    - name: SysCallPrintStrWithPrefix
+      address:
+        NA: 0x2046620
+      description: |-
+        SysCall Function that seems to print "s_[STRING]". It may be a debug print, more analysis needed.
+        
+        r0: script stack pointer, interpreted as params.
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4
+    - name: SysCallDebugPrintf
+      address:
+        NA:
+          - 0x204663C
+          - 0x2046654
+      description: |-
+        SysCall Function that seems to debug print a string. More analysis needed.
+        
+        r0: script stack pointer, interpreted as params.
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4
     - name: SysCallFixedPointMultiply
       address:
         NA: 0x204666C

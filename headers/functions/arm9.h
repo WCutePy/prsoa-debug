@@ -208,6 +208,7 @@ undefined4 SysCallBattleAddPartyPokemon(undefined4* param_1);
 void SysCallAddEnemyFormToEncounterType1(undefined4* param_1);
 undefined4 SysCallBattleSetGenderAndUniform(undefined4* param_1);
 undefined4 SysCallBattleSetBossFightStatus(void);
+undefined4 SysCallSetScriptSubroutine2ByName(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
 bool SysCallGetPlayerGender(void);
 int8_t SysCallGetRangerStylerRank(void);
 int32_t SysCallGetRangerStylerType(void);
@@ -293,6 +294,10 @@ void DebugPrintInternal(char* format, va_list ap);
 void DebugPrintInternalVeneer(char* format, va_list ap);
 void SetSysCallPage(int param_1, void* param_2);
 undefined4 SysCallReturnZero000(void);
+undefined4 SysCallPrintStrWithPrefix(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                                     undefined4 param_4);
+undefined4 SysCallDebugPrintf(undefined4* param_1, undefined4 param_2, undefined4 param_3,
+                              undefined4 param_4);
 unsigned int SysCallFixedPointMultiply(int* param_1);
 void SysCallFixedPointDivide(undefined4* param_1);
 int SysCallGetTrigTableSin(unsigned int* param_1);
