@@ -2696,7 +2696,7 @@ arm9:
     - name: G3C_Direct2
       address:
         NA: 0x2062CD8
-    - name: G3C_UpdateGxDLInfo
+    - name: G3C_UpdateGxDlInfo
       address:
         NA: 0x2062CFC
     - name: G3C_PopMtx

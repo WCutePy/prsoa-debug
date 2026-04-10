@@ -442,7 +442,7 @@ void G2x_ChangeBlendBrightness(uint16_t* param_1, int param_2);
 void G3C_Direct0(unsigned int *param_1,int param_2);
 void G3C_Direct1(undefined4 *param_1,undefined1 param_2,undefined4 param_3);
 void G3C_Direct2(undefined4 *param_1,undefined1 param_2,undefined4 param_3,undefined4 param_4);
-void G3C_UpdateGxDLInfo(unsigned int *param_1,int param_2);
+void G3C_UpdateGxDlInfo(unsigned int *param_1,int param_2);
 void G3C_PopMtx(undefined4 param_1,undefined4 param_2);
 void G3C_Color(undefined4 param_1,undefined4 param_2);
 void G3C_TexCoord(undefined4 param_1,int param_2,int param_3);
