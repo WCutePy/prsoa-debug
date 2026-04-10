@@ -2374,12 +2374,12 @@ arm9:
         NA:
           - 0x20572A4
           - 0x2063A48
-    - name: GX_LoadOBJPltt
+    - name: GX_LoadObjPltt
       address:
         NA:
           - 0x20572B0
           - 0x20635FC
-    - name: GX_LoadBGPltt
+    - name: GX_LoadBgPltt
       address:
         NA:
           - 0x20572BC
@@ -2529,7 +2529,7 @@ arm9:
     - name: GX_SetBankForBG
       address:
         NA: 0x20616C4
-    - name: GX_SetBankForOBJ
+    - name: GX_SetBankForObj
       address:
         NA: 0x2061954
     - name: GX_SetBankForBgExtPltt
@@ -2547,7 +2547,7 @@ arm9:
     - name: GX_SetBankForClearImage
       address:
         NA: 0x2061F10
-    - name: GX_SetBankForARM7
+    - name: GX_SetBankForArm7
       address:
         NA: 0x2062044
     - name: GX_SetBankForLcdc
@@ -2565,13 +2565,13 @@ arm9:
     - name: GX_SetBankForSubObjExtPltt
       address:
         NA: 0x20622A8
-    - name: resetBankForX_
+    - name: resetBankForX
       address:
         NA: 0x2062328
     - name: GX_ResetBankForBG
       address:
         NA: 0x206235C
-    - name: GX_ResetBankForOBJ
+    - name: GX_ResetBankForObj
       address:
         NA: 0x2062370
     - name: GX_ResetBankForBgExtPltt
@@ -2589,13 +2589,13 @@ arm9:
     - name: GX_ResetBankForClearImage
       address:
         NA: 0x20623F4
-    - name: GX_ResetBankForARM7
+    - name: GX_ResetBankForArm7
       address:
         NA: 0x2062408
     - name: GX_ResetBankForSubBG
       address:
         NA: 0x206241C
-    - name: GX_ResetBankForSubOBJ
+    - name: GX_ResetBankForSubObj
       address:
         NA: 0x2062430
     - name: GX_ResetBankForSubBgExtPltt
@@ -2802,9 +2802,6 @@ arm9:
     - name: G3_LoadTexMtxTexCoord
       address:
         NA: 0x206349C
-    - name: GXi_DmaCopy16
-      address:
-        NA: 0x2063550
     - name: GXs_LoadBgPltt
       address:
         NA: 0x20635A4
@@ -3078,7 +3075,7 @@ arm9:
     - name: OS_VsNPrintf
       address:
         NA: 0x2064F90
-    - name: OS_VSNPrintfExStub
+    - name: OS_VsNPrintfExStub
       address:
         NA: 0x2064F9C
     - name: OSi_GetUnusedThreadId
