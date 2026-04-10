@@ -215,7 +215,7 @@ int8_t SysCallGetStylerLevel(void);
 undefined4 SysCallSetRangerCurrentHp(undefined4* param_1);
 int8_t SysCallGetRangerMaxHp(void);
 int8_t SysCallGetRangerCurrentHp(void);
-void SysCallSetPlayerSpawnData(void *param_1, int param_2);
+void SysCallSetPlayerSpawnData(void* param_1, int param_2);
 int8_t SysCallGetActiveMissionId(void);
 undefined4 SysCallTryClearQuest(void);
 void SysCallShouldShowQuestName(undefined4* param_1);
