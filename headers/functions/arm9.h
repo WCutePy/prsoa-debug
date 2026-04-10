@@ -208,7 +208,8 @@ undefined4 SysCallBattleAddPartyPokemon(undefined4* param_1);
 void SysCallAddEnemyFormToEncounterType1(undefined4* param_1);
 undefined4 SysCallBattleSetGenderAndUniform(undefined4* param_1);
 undefined4 SysCallBattleSetBossFightStatus(void);
-undefined4 SysCallSetScriptSubroutine2ByName(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
+undefined4 SysCallSetScriptSubroutine2ByName(undefined4* param_1, undefined4 param_2,
+                                             undefined4 param_3, undefined4 param_4);
 bool SysCallGetPlayerGender(void);
 int8_t SysCallGetRangerStylerRank(void);
 int32_t SysCallGetRangerStylerType(void);
