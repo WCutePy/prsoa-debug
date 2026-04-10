@@ -1840,6 +1840,14 @@ arm9:
       description: |-
         SysCall Function that returns the active mission id.
         
+        r0: script stack pointer, interpreted as params.
+        r1: unknown, but clearly used.
+    - name: SysCallGetActiveMissionId
+      address:
+        NA: 0x20313E8
+      description: |-
+        SysCall Function that returns the active mission id.
+        
         No params.
     - name: SysCallTryClearQuest
       address:
