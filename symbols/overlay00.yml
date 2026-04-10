@@ -643,6 +643,13 @@ overlay0:
         Returns the index of the currently active mission.
         
         No params.
+    - name: DebugGrabFileNameAndMsgId
+      address:
+        NA: 0x214DDBC
+      description: |-
+        Returns a pointer to a string "%s - %d" containing the current textbox script_kind and message_id. Eg: "BAT - 27"
+        
+        No params.
     - name: DebugPrintAllScriptVars
       address:
         NA: 0x214E24C

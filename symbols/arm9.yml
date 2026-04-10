@@ -150,6 +150,163 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: IsTextboxPrinting
+      address:
+        NA: 0x2009ECC
+      description: |-
+        Returns whether or not a textbox is printing.
+        
+        r0: textbox_data pointer
+    - name: CloseTextbox
+      address:
+        NA: 0x2009FB0
+      description: |-
+        Closes a textbox.
+        
+        r0: textbox_data pointer
+        r1: int32_t 
+        r2: int32_t
+    - name: IsPlayerPressingTextbox
+      address:
+        NA: 0x200A97C
+      description: |-
+        Checks if the player is pressing on the touch screen to advance a textbox.
+        
+        r0: textbox_data pointer
+    - name: IsPlayerHoldingButtonsTextbox
+      address:
+        NA: 0x200A9C0
+      description: |-
+        Checks if the player is holding specific buttons to advance a textbox.
+        
+        r0: textbox_data pointer
+    - name: SetCustomTextSpeed
+      address:
+        NA: 0x200AA04
+      description: |-
+        Overrides the default text speed setting with a custom value.
+        
+        r0: textbox_data pointer
+        r1: new text speed setting
+    - name: SetDefaultTextSpeed
+      address:
+        NA: 0x200AA14
+      description: |-
+        Reverts the text speed setting to the default value based on player settings.
+        
+        r0: textbox_data pointer
+    - name: EnableAutoAdvanceTextWithDelay
+      address:
+        NA: 0x200AA28
+      description: |-
+        Causes textboxes to auto-advance with a specified delay after printing completes. Does not impact auto-close.
+        
+        r0: textbox_data pointer
+        r1: delay length
+    - name: DisableAutoAdvanceText
+      address:
+        NA: 0x200AA38
+      description: |-
+        Prevents textboxes from auto-advancing. Does not impact auto-close.
+        
+        r0: textbox_data pointer
+    - name: EnableAutoCloseTextWithDelay
+      address:
+        NA: 0x200AA48
+      description: |-
+        Causes textboxes to auto-close with a specified delay after printing completes. Does not impact auto-advance.
+        
+        r0: textbox_data pointer
+        r1: delay length
+    - name: DisableAutoCloseText
+      address:
+        NA: 0x200AA58
+      description: |-
+        Prevents textboxes from auto-closing. Does not impact auto-advance.
+        
+        r0: textbox_data pointer
+    - name: PrintTextboxById
+      address:
+        NA: 0x200AA84
+      description: |-
+        Causes a textbox to print a specified message id pulled from one of the currently loaded scripts.
+        
+        r0: textbox_data pointer
+        r1: script kind to pull message id from
+        r2: message id
+        r3: undefined4 
+        stack[0]: undefined4 
+        stack[1]: undefined4
+    - name: PrintTextboxBySystemMessageId
+      address:
+        NA: 0x200AD34
+      description: |-
+        Causes a textbox to print a specified message id pulled from a system script.
+        
+        r0: textbox_data pointer
+        r1: message id
+        r2: int32_t 
+        r3: int32_t 
+        stack[0]: undefined4
+    - name: PrintTextboxByAreaMessageId
+      address:
+        NA: 0x200AF74
+      description: |-
+        Causes a textbox to print a specified message id pulled from an area script.
+        
+        r0: textbox_data pointer
+        r1: message id
+        r2: int32_t 
+        r3: int32_t 
+        stack[0]: undefined4
+    - name: PrintTextboxByChapterMessageId
+      address:
+        NA: 0x200B1D0
+      description: |-
+        Causes a textbox to print a specified message id pulled from a chapter script.
+        
+        r0: textbox_data pointer
+        r1: message id
+        r2: int32_t 
+        r3: int32_t 
+        stack[0]: undefined4
+    - name: PrintTextboxByQuestMessageId
+      address:
+        NA: 0x200B410
+      description: |-
+        Causes a textbox to print a specified message id pulled from a quest script.
+        
+        r0: textbox_data pointer
+        r1: message id
+        r2: int32_t 
+        r3: int32_t 
+        stack[0]: undefined4
+    - name: PrintTextboxByBattleMessageId
+      address:
+        NA: 0x200B640
+      description: |-
+        Causes a textbox to print a specified message id pulled from a battle script.
+        
+        r0: textbox_data pointer
+        r1: message id
+        r2: int32_t 
+        r3: int32_t 
+        stack[0]: undefined4
+    - name: TryCloseTextbox
+      address:
+        NA: 0x200B6A4
+      description: |-
+        Attempts to close a textbox, but only if it is done printing.
+        
+        r0: textbox_data pointer
+        r1: undefined4
+    - name: GetYesNoMenuResult
+      address:
+        NA: 0x200B6D4
+      description: |-
+        Returns the result from the most recent yes_no_menu. 
+        
+        r0: textbox_data pointer
     - name: ret_0200bbc0
       address:
         NA: 0x200BBC0
@@ -1202,6 +1359,76 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: SysCallPrintTextbox
+      address:
+        NA: 0x202C86C
+      description: |-
+        SysCall Function for PrintTextbox. 
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallIsTextboxPrinting
+      address:
+        NA: 0x202C8B0
+      description: |-
+        SysCall Function for IsTextboxPrinting.
+        
+        No params.
+    - name: SysCallCloseTextbox
+      address:
+        NA: 0x202C8D0
+      description: |-
+        SysCall Function for CloseTextbox.
+        
+        No params.
+    - name: SysCallSetCustomTextSpeed
+      address:
+        NA: 0x202C928
+      description: |-
+        SysCall Function for SetCustomTextSpeed.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallSetDefaultTextSpeed
+      address:
+        NA: 0x202C950
+      description: |-
+        SysCall Function for SetDefaultTextSpeed.
+        
+        No params.
+    - name: SysCallEnableAutoAdvanceTextWithDelay
+      address:
+        NA: 0x202C974
+      description: |-
+        SysCall Function for EnableAutoAdvanceTextWithDelay.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallDisableAutoAdvanceText
+      address:
+        NA: 0x202C99C
+      description: |-
+        SysCall Function for DisableAutoAdvanceText.
+        
+        No params.
+    - name: SysCallEnableAutoCloseTextWithDelay
+      address:
+        NA: 0x202C9C0
+      description: |-
+        SysCall Function for EnableAutoCloseTextWithDelay.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallDisableAutoCloseText
+      address:
+        NA: 0x202C9E8
+      description: |-
+        SysCall Function for DisableAutoCloseText.
+        
+        No params.
+    - name: SysCallGetYesNoMenuResult
+      address:
+        NA: 0x202CA54
+      description: |-
+        SysCall Function for GetYesNoMenuResult.
+        
+        No params.
     - name: ret_0202d394
       address:
         NA: 0x202D394
@@ -1217,211 +1444,321 @@ arm9:
         
         r0: format
         ...: variadic
-    - name: CopyStringToRangerDebugBuffer
+    - name: SysCallCopyStringToRangerDebugBuffer
       address:
         NA:
           - 0x202F174
           - 0x2030BB8
       description: |-
-        Copies a text string to the debug buffer in RANGER_DATA.
+        Copies a text string to the debug buffer in RANGER_DATA. Both instances are separate SysCalls, but the functions are byte-for-byte identical.
         
-        r0: pointer to pointer of text string to copy.
-    - name: BattleSetBgmIdSafe
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBattleSetBgmId
       address:
         NA: 0x202F23C
       description: |-
         Seems to assign a specified bgm id to a static battle_combatants structure in memory. 
+        Is a SysCall Function.
         
-        r0: pointer to bgm id.
-    - name: BattleSetUnkField0x49Safe
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallSetArenaGraphicId
       address:
         NA: 0x202F268
       description: |-
         Seems to assign a currently unknown field to a static battle_combatants structure in memory.
+        Is a SysCall Function.
         
-        r0: undefined4 pointer
-    - name: GetBattleResultSafe
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallGetBattleResult
       address:
         NA: 0x202F2B4
       description: |-
         Seems to retrieve the results of the battle from megastruct->battle_exports.
+        Is a SysCall Function.
         
         No params.
-    - name: BattleDisableFleeing
+    - name: SysCallBattleDisableFleeing
       address:
         NA: 0x202F2D8
       description: |-
         Seems to disable fleeing in a static battle_combatants structure in memory.
+        Is a SysCall Function.
         
         No params.
-    - name: BattleSetUnkField0x54Safe
+    - name: SysCallBattleSetUnkField0x54
       address:
         NA: 0x202F348
       description: |-
         Seems to assign a currently unknown field to a static battle_combatants structure in memory.
+        Is a SysCall Function.
         
-        r0: undefined4 pointer
-    - name: BattleSetSequenceScriptIdSafe
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBattleSetSequenceScriptId
       address:
         NA: 0x202F374
       description: |-
         Seems to assign a sequence script id to a static battle_combatants structure in memory.
+        Is a SysCall Function.
         
-        r0: sequence script id pointer
-    - name: BattleSetTutorialScriptIdSafe
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBattleSetTutorialScriptId
       address:
         NA: 0x202F3A0
       description: |-
         Seems to assign a tutorial script id to a static battle_combatants structure in memory.
+        Is a SysCall Function.
         
-        r0: tutorial script id pointer
-    - name: BattleSetStartScriptIdSafe
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBattleSetStartScriptId
       address:
         NA: 0x202F3CC
       description: |-
         Seems to assign a start script id to a static battle_combatants structure in memory.
+        Is a SysCall Function.
         
-        r0: start script id pointer
-    - name: BattleSetStylerLevelSafe
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBattleSetStylerLevel
       address:
         NA: 0x202F3F8
       description: |-
         Seems to assign the styler level to a static battle_combatants structure in memory.
+        Is a SysCall Function.
         
-        r0: styler level pointer
-    - name: BattleAddPartyPokemonSafe
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBattleAddPartyPokemon
       address:
         NA: 0x202F424
       description: |-
         Seems to add party pokemon to a static battle_combatants structure in memory.
+        Is a SysCall Function.
         
-        r0: undefined4 pointer
-    - name: AddEnemyFormToEncounterType1
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallAddEnemyFormToEncounterType1
       address:
         NA: 0x202F458
       description: |-
         Seems to add an enemy form to an encounter that's about to occur, modifying both the battle_combatants and the battle_exports struct.
         Unknown how it differs from AddEnemyFormToEncounterType2.
-        r0: maybe form_id pointer? Might be packed with other info.
-    - name: BattleSetBossFightStatusSafe
+        Is a SysCall Function.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBattleSetGenderAndUniform
+      address:
+        NA: 0x202F4BC
+      description: |-
+        SysCall Function for BattleSetGenderAndUniform.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBattleSetBossFightStatus
       address:
         NA: 0x202F4E8
       description: |-
         Seems to set the boss fight status for a static battle_combatants structure in memory.
+        Is a SysCall Function.
         
         No params.
-    - name: GetRangerStylerRank
+    - name: SysCallGetPlayerGender
+      address:
+        NA: 0x202FA44
+      description: |-
+        SysCall Function that returns the player gender.
+        
+        No params.
+    - name: SysCallGetRangerStylerRank
       address:
         NA: 0x202FA54
       description: |-
         Retrieves the current styler rank from RANGER_DATA.
+        Is a SysCall Function.
         
         No params.
-    - name: GetRangerStylerType
+    - name: SysCallGetRangerStylerType
       address:
         NA: 0x202FA68
       description: |-
         Retrieves the current styler type from RANGER_DATA.
+        Is a SysCall Function.
         
         No params.
-    - name: GetStylerLevelSafe
+    - name: SysCallGetStylerLevel
       address:
         NA: 0x202FEA4
       description: |-
         Retrieves the current styler level from RANGER_DATA.
+        Is a SysCall Function.
         
         No params.
-    - name: GetRangerMaxHpSafe
+    - name: SysCallSetRangerCurrentHp
+      address:
+        NA: 0x202FEC0
+      description: |-
+        SysCall Function that sets the current HP of the player. If zero, will heal the player to their max HP.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallGetRangerMaxHp
       address:
         NA: 0x202FF08
       description: |-
         Retrieves the ranger max HP from RANGER_DATA.
+        Is a SysCall Function.
         
         No params.
-    - name: GetRangerCurrentHpSafe
+    - name: SysCallGetRangerCurrentHp
       address:
         NA: 0x202FF20
       description: |-
         Retrieves the current ranger HP from RANGER_DATA.
+        Is a SysCall Function.
         
         No params.
-    - name: TryClearQuestSafe
+    - name: SysCallGetActiveMissionId
+      address:
+        NA: 0x20313E8
+      description: |-
+        SysCall Function that returns the active mission id.
+        
+        No params.
+    - name: SysCallTryClearQuest
       address:
         NA: 0x2031684
       description: |-
-        Same as TryClearQuest, using a pointer to MISSION_QUEST_DATA.
+        SysCall function for TryClearQuest.
         
         No params.
-    - name: GetActiveQuestIdSafe
+    - name: SysCallShouldShowQuestName
+      address:
+        NA: 0x20316A8
+      description: |-
+        SysCall function for ShouldShowQuestName.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallGetActiveQuestId
       address:
         NA: 0x20316CC
       description: |-
         Retrieves the active quest id, using a pointer to MISSION_QUEST_DATA.
-         
-         No params.
-    - name: TryBackOutOfQuestSafe
+        Is a SysCall Function.
+        
+        No params.
+    - name: SysCallTryBackOutOfQuest
       address:
         NA: 0x20316E8
       description: |-
-        Same as TryBackOutOfQuest, using a pointer to MISSION_QUEST_DATA.
+        Is a SysCall Function for TryBackOutOfQuest.
         
         No params.
-    - name: GetChapterNumber
+    - name: SysCallTryUnlockQuest
+      address:
+        NA: 0x203170C
+      description: |-
+        Is a SysCall Function for TryUnlockQuest.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallIsQuestAvailable
+      address:
+        NA: 0x2031734
+      description: |-
+        Is a SysCall Function for IsQuestAvailable.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallMakeQuestNameVisible
+      address:
+        NA: 0x2031758
+      description: |-
+        Is a SysCall Function for MakeQuestNameVisible.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallHasClearedQuest
+      address:
+        NA: 0x2031780
+      description: |-
+        Is a SysCall Function for HasClearedQuest.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallGetChapterNumber
       address:
         NA: 0x20319CC
       description: |-
-        Retrieves the current chapter number from MISSION_QUEST_DATA.
+        SysCall Function that retrieves the current chapter number from MISSION_QUEST_DATA.
         
         No params.
-    - name: EnableSlotStatusBit2
+    - name: SysCallGetQuestVariable
+      address:
+        NA: 0x2031C00
+      description: |-
+        Is a SysCall Function for GetQuestVariable.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallSetQuestVariable
+      address:
+        NA: 0x2031C24
+      description: |-
+        Is a SysCall Function for SetQuestVariable.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallEnableSlotStatusBit2
       address:
         NA: 0x2032148
       description: |-
         Enables slot status bit 2 on a pokemon. This seems to only be enabled on pokemon who cannot be released, such as doduo mid-ride, or your partner.
+        Is a SysCall Function.
         
-        r0: pokemon_data pointer
-    - name: DisableSlotStatusBit2
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallDisableSlotStatusBit2
       address:
         NA: 0x2032174
       description: |-
         Disables slot status bit 2 on a pokemon. This seems to only be enabled on pokemon who cannot be released, such as doduo mid-ride, or your partner.
+        Is a SysCall Function.
         
-        r0: pokemon_data pointer
-    - name: EnableSlotStatusBit1
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallEnableSlotStatusBit1
       address:
         NA: 0x20321A0
       description: |-
         Enables slot status bit 1 on a pokemon. This seems to hide the pokemon from the release menu entirely, and is only known to be used by the partner.
+        Is a SysCall Function.
         
-        r0: pokemon_data pointer
-    - name: DisableSlotStatusBit1
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallDisableSlotStatusBit1
       address:
         NA: 0x20321CC
       description: |-
         Disables slot status bit 1 on a pokemon. This seems to hide the pokemon from the release menu entirely, and is only known to be used by the partner.
+        Is a SysCall Function.
         
-        r0: pokemon_data pointer
-    - name: BitorPartnerPokemonStatus
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBitorPartnerPokemonStatus
       address:
         NA: 0x20327B8
       description: |-
         Bitwise OR on the partner status bitfield in RANGER_DATA.
+        Is a SysCall Function.
         
-        r0: pointer to value to bitor with.
-    - name: BitandPartnerPokemonStatus
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBitandPartnerPokemonStatus
       address:
         NA: 0x20327DC
       description: |-
-        Bitwise AND on the partner status bitfield in RANGER_DATA
+        Bitwise AND on the partner status bitfield in RANGER_DATA.
+        Is a SysCall Function.
         
-        r0: pointer to value to bitand with.
-    - name: GetPartnerPokemonMood
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallGetPartnerPokemonMood
       address:
         NA: 0x2032804
       description: |-
         Retrieves the mood of a specified partner by index.
+        Is a SysCall Function.
         
-        r0: pointer to partner index
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBattleSetPartnerGaugeFillRate
+      address:
+        NA: 0x2032828
+      description: |-
+        Is a SysCall Function.
+        
+        r0: script stack pointer, interpreted as params.
     - name: ret_02032a44
       address:
         NA: 0x2032A44
@@ -1464,81 +1801,81 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: DisableActiveTimersAndMore
+    - name: SysCallDisableActiveTimersAndMore
       address:
         NA: 0x20337EC
       description: |-
-        Resets the timer fields in RANGER_DATA, but seems to do something else too.
+        SysCall Function That resets the timer fields in RANGER_DATA, but seems to do something else too.
         
         No params.
-    - name: InitTimerType1
+    - name: SysCallInitTimerType1
       address:
         NA: 0x203381C
       description: |-
-        Begins a timer of type 1 by initializing relevant fields in RANGER_DATA.
+        SysCall Function That begins a timer of type 1 by initializing relevant fields in RANGER_DATA.
         
-        r0: pointer to the timer duration, in frames.
-    - name: InitTimerType2
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallInitTimerType2
       address:
         NA: 0x2033844
       description: |-
-        Begins a timer of type 2 by initializing relevant fields in RANGER_DATA.
+        SysCall Function That begins a timer of type 2 by initializing relevant fields in RANGER_DATA.
         
-        r0: pointer to the timer 2 "duration", in frames.
-    - name: SetTimerTypeNone
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallSetTimerTypeNone
       address:
         NA: 0x203386C
       description: |-
-        Sets only the timer type field in RANGER_DATA to 0.
+        SysCall Function That sets only the timer type field in RANGER_DATA to 0.
         
         No params.
-    - name: SetTimerType1
+    - name: SysCallSetTimerType1
       address:
         NA: 0x2033884
       description: |-
-        Sets only the timer type field in RANGER_DATA to 1.
+        SysCall Function That sets only the timer type field in RANGER_DATA to 1.
         
         No params.
-    - name: SetTimerType2
+    - name: SysCallSetTimerType2
       address:
         NA: 0x20338A0
       description: |-
-        Sets only the timer type field in RANGER_DATA to 2.
+        SysCall Function That sets only the timer type field in RANGER_DATA to 2.
         
         No params.
-    - name: GetTimer1Duration
+    - name: SysCallGetTimer1Duration
       address:
         NA: 0x20338FC
       description: |-
-        Retrieves the current timer 1 duration in frames, from RANGER_DATA.
+        SysCall Function That retrieves the current timer 1 duration in frames, from RANGER_DATA.
         
         No params.
-    - name: SetTimer1Duration
+    - name: SysCallSetTimer1Duration
       address:
         NA: 0x2033918
       description: |-
-        Sets only the current timer 1 duration in RANGER_DATA.
+        SysCall Function That sets only the current timer 1 duration in RANGER_DATA.
         
-        r0: pointer to the duration of the timer in frames.
-    - name: TimerIsActive
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallTimerIsActive
       address:
         NA: 0x2033934
       description: |-
-        Returns true if the timer type is 1 or 2, but not 0.
+        SysCall Function That returns true if the timer type is 1 or 2, but not 0.
         
         No params.
-    - name: IncrementPokemonRidesRecord
+    - name: SysCallIncrementPokemonRidesRecord
       address:
         NA: 0x2033B50
       description: |-
-        Increments the pokemon_rides_record field of RANGER_DATA->ranger_records. 
+        SysCall Function that increments the pokemon_rides_record field of RANGER_DATA->ranger_records. 
         
         No params.
-    - name: GetGameSavesRecordSafe
+    - name: SysCallGetGameSavesRecord
       address:
         NA: 0x2033C30
       description: |-
-        Retrieves the game_saves_record from RANGER_DATA->ranger_records.
+        SysCall Function that retrieves the game_saves_record from RANGER_DATA->ranger_records.
         
         No params.
     - name: SetScriptSubroutine1
@@ -1568,9 +1905,14 @@ arm9:
         Seems to zero initialize a script_data struct. 
         
         r0: script_data pointer
-    - name: AllocateQuestDataPtrsAndMore
+    - name: InitScriptManager
       address:
         NA: 0x2033F04
+      description: |-
+        Seems to initialize a script_manager struct from the ground up. 
+        
+        r0: script_manager pointer
+        r1: undefined4 pointer
     - name: TryInitSystemScript
       address:
         NA: 0x2033F90
@@ -1799,6 +2141,78 @@ arm9:
         
         r0: format
         r1: ap
+    - name: SetSysCallPage
+      address:
+        NA: 0x2044B38
+      description: |-
+        Stores a pointer to a SysCall Function page at a specified index in SYSCALL_PAGE_PTRS.
+        
+        r0: page index
+        r1: pointer to syscall function page.
+    - name: SysCallReturnZero
+      address:
+        NA: 0x2046618
+      description: |-
+        SysCall Function that returns zero.
+        
+        No params.
+    - name: SysCallPrintStrWithPrefix
+      address:
+        NA: 0x2046620
+      description: |-
+        SysCall Function that seems to print "s_[STRING]". It may be a debug print, more analysis needed.
+        
+        r0: script stack pointer, interpreted as params.
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4
+    - name: SysCallDebugPrintf
+      address:
+        NA:
+          - 0x204663C
+          - 0x2046654
+      description: |-
+        SysCall Function that seems to debug print a string. More analysis needed.
+        
+        r0: script stack pointer, interpreted as params.
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4
+    - name: SysCallBitAndUpper5Nibbles
+      address:
+        NA: 0x20468F0
+      description: |-
+        SysCall function that returns "[input] & 0xFFFFF000".
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallAbs
+      address:
+        NA: 0x2046904
+      description: |-
+        SysCall function that returns the absolute value of the input.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBitlshift0xC
+      address:
+        NA: 0x2046914
+      description: |-
+        SysCall function that returns "[input] >> 0xC".
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallBitrShift0xC
+      address:
+        NA: 0x2046920
+      description: |-
+        SysCall function that returns "[input] << 0xC".
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallStrLen
+      address:
+        NA: 0x204692C
+      description: |-
+        SysCall Function for strlen. Verifies the string is not zero chars long before calling the function.
+        
+        r0: script stack pointer, interpreted as params.
     - name: Wvr_StartUpAsync
       address:
         NA: 0x2046948
@@ -2853,10 +3267,6 @@ arm9:
     - name: OS_Init
       address:
         NA: 0x2066150
-      description: |-
-        Use unknown.
-        
-        No params.
     - name: OS_InitArena
       address:
         NA: 0x2066198
