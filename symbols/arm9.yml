@@ -2330,70 +2330,42 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: GX_LoadBG0Char
+    - name: GX_LoadBG0CharVeneer
       address:
-        NA:
-          - 0x2057238
-          - 0x2063B08
-    - name: GX_LoadBG1Char
+        NA: 0x2057238
+    - name: GX_LoadBG1CharVeneer
       address:
-        NA:
-          - 0x2057244
-          - 0x2063BC8
-    - name: GX_LoadBG2Char
+        NA: 0x2057244
+    - name: GX_LoadBG2CharVeneer
       address:
-        NA:
-          - 0x2057250
-          - 0x2063C88
-    - name: GX_LoadBG3Char
+        NA: 0x2057250
+    - name: GX_LoadBG3CharVeneer
       address:
-        NA:
-          - 0x205725C
-          - 0x2063D48
-    - name: GX_LoadBG0Scr
+        NA: 0x205725C
+    - name: GX_LoadBG0ScrVeneer
       address:
-        NA:
-          - 0x2057268
-          - 0x2063808
-    - name: GX_LoadBG1Scr
+        NA: 0x2057268
+    - name: GX_LoadBG1ScrVeneer
       address:
-        NA:
-          - 0x2057274
-          - 0x20638C8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: GX_LoadBg2Scr
+        NA: 0x2057274
+    - name: GX_LoadBg2ScrVeneer
       address:
-        NA:
-          - 0x2057298
-          - 0x2063988
-    - name: GX_LoadBg3Scr
+        NA: 0x2057298
+    - name: GX_LoadBg3ScrVeneer
       address:
-        NA:
-          - 0x20572A4
-          - 0x2063A48
-    - name: GX_LoadObjPltt
+        NA: 0x20572A4
+    - name: GX_LoadObjPlttVeneer
       address:
-        NA:
-          - 0x20572B0
-          - 0x20635FC
-    - name: GX_LoadBgPltt
+        NA: 0x20572B0
+    - name: GX_LoadBgPlttVeneer
       address:
-        NA:
-          - 0x20572BC
-          - 0x2063550
-    - name: GXs_LoadBg2Scr
+        NA: 0x20572BC
+    - name: GXs_LoadBg2ScrVeneer
       address:
-        NA:
-          - 0x2057398
-          - 0x20639E8
-    - name: GXs_LoadBg3Scr
+        NA: 0x2057398
+    - name: GXs_LoadBg3ScrVeneer
       address:
-        NA:
-          - 0x20573A4
-          - 0x2063AA8
+        NA: 0x20573A4
     - name: ret_0205fc98
       address:
         NA: 0x205FC98
@@ -2565,7 +2537,7 @@ arm9:
     - name: GX_SetBankForSubObjExtPltt
       address:
         NA: 0x20622A8
-    - name: resetBankForX
+    - name: ResetBankForX
       address:
         NA: 0x2062328
     - name: GX_ResetBankForBG
@@ -2724,7 +2696,7 @@ arm9:
     - name: G3C_Direct2
       address:
         NA: 0x2062CD8
-    - name: G3C_UpdateGXDLInfo
+    - name: G3C_UpdateGxDLInfo
       address:
         NA: 0x2062CFC
     - name: G3C_PopMtx
