@@ -107,7 +107,7 @@ struct ranger_data_old {
     undefined4 field51_0x8b68;
     undefined4 field52_0x8b6c;
     undefined4 field53_0x8b70;
-    undefined4 unk_battle_value;
+    enum post_battle_state post_battle;
     undefined2 field55_0x8b78;
     undefined2 field56_0x8b7a;
     undefined4 field57_0x8b7c;

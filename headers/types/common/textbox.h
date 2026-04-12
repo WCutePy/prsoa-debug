@@ -20,6 +20,7 @@ struct textbox_subdata {
 };
 ASSERT_SIZE(struct textbox_subdata, 5692);
 
+
 struct textbox_data {
     void* field0_0x0;
     void* field1_0x4;
