@@ -78,6 +78,13 @@ struct quest {
 
 ASSERT_SIZE(struct quest, 92);
 
+struct lcrng_state {
+    int32_t current_state;
+    int32_t mult;
+    int32_t add;
+};
+ASSERT_SIZE(struct lcrng_state, 12);
+
 // Contains critical player data, such as their gender, HP, position, and exp.
 struct ranger_core_data {
     bool ranger_is_female;

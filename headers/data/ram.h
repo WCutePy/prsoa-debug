@@ -12,5 +12,6 @@ struct room_id_16 FLY_TELEPORT_DESTINATION_ROOM;
 int16_t FLY_TELEPORT_DESTINATION_COORDS[2];
 int ARENA_GRAPHIC_ID;
 extern struct settings_and_variables SETTINGS_AND_VARIABLES;
+extern struct lcrng_state LCRNG_STATE;
 extern void** SYSCALL_PAGE_PTRS[64];
 #endif
