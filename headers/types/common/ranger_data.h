@@ -107,9 +107,10 @@ struct ranger_data_old {
     undefined4 field51_0x8b68;
     undefined4 field52_0x8b6c;
     undefined4 field53_0x8b70;
-    enum post_battle_state post_battle;
-    undefined2 field55_0x8b78;
-    undefined2 field56_0x8b7a;
+    struct room_id_16 fly_teleport_destination_room; // Overlaps with FLY_TELEPORT_DESTINATION_ROOM
+    int16_t
+        fly_teleport_destination_coordinates[2]; // Overlaps with FLY_TELEPORT_DESTINATION_COORDS
+    undefined2 field57_0x8b7a;
     undefined4 field57_0x8b7c;
     undefined4 field58_0x8b80;
     undefined4 field59_0x8b84;

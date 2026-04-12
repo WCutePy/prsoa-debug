@@ -51,6 +51,9 @@ void ret_02149a78(void);
 void ret_02149e58(void);
 void ret_02149e5c(void);
 undefined4 TryMountPokemon(struct pokemon_data* param_1);
+enum room_id SysCallGetFlyTeleportDestinationRoom(void);
+int16_t SysCallGetFlyGetFlyTeleportXCoord(void);
+int16_t SysCallGetFlyGetFlyTeleportYCoord(void);
 void ret_0214b6f0(void);
 void ret_0214b6f4(void);
 void ret_0214b93c(void);
@@ -92,6 +95,7 @@ bool GetPartner17Status(void);
 void SetPartner17Status(bool param_1);
 int8_t GetActiveQuestId(void);
 int8_t GetActiveMissionId(void);
+undefined* DebugGrabFileNameAndMsgId(void);
 void DebugPrintAllScriptVars(void);
 undefined* DebugPrintPartnerPokemonPokeAssists(int param_1, undefined4 param_2, undefined4 param_3,
                                                undefined4 param_4);

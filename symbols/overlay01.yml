@@ -131,8 +131,33 @@ overlay1:
     - name: ret_021293d4
       address:
         NA: 0x21293D4
+      description: Does nothing but return. Likely a debug hook for a nearby function.
+    - name: SysCallPrintTextboxByBattleMessageId1
+      address:
+        NA: 0x212B170
       description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
+        SysCall Function for PrintTextboxByBattleMessageId, with r1-r3 as: "1, 1, 0".
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallPrintTextboxByBattleMessageId2
+      address:
+        NA: 0x212B1AC
+      description: |-
+        SysCall Function for PrintTextboxByBattleMessageId, with r1-r3 as: "0, 1, 0".
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallIsTextboxPrintingBattle
+      address:
+        NA: 0x212B1E4
+      description: |-
+        SysCall Function for IsTextboxPrinting, that lives in overlay_01.
+        
+        No params.
+    - name: SysCallCloseTextboxBattle
+      address:
+        NA: 0x212B204
+      description: |-
+        SysCall Function for CloseTextbox, that lives in overlay_01.
         
         No params.
     - name: ret_0212c028
