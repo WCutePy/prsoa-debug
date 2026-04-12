@@ -7,6 +7,9 @@
 #include "enums.h"
 #include "battle.h"
 #include "script.h"
+#include "flying_menu.h"
+#include "options_menu.h"
+#include "unfinished.h"
 #include "textbox.h"
 
 // Parameters used by the NitroSDK to read the ROM.
@@ -74,6 +77,13 @@ struct quest {
 };
 
 ASSERT_SIZE(struct quest, 92);
+
+struct lcrng_state {
+    int32_t current_state;
+    int32_t mult;
+    int32_t add;
+};
+ASSERT_SIZE(struct lcrng_state, 12);
 
 // Contains critical player data, such as their gender, HP, position, and exp.
 struct ranger_core_data {
@@ -1666,6 +1676,16 @@ struct target_destroyed_nibbles {
 };
 
 ASSERT_SIZE(struct target_destroyed_nibbles, 16);
+
+struct field_data {
+    struct file_wrapper *field_data_file_wrapper;
+    void *npc_data; // Not currently understood, but described as such by field_data.bin
+    void *enemy_data; // Not currently understood, but described as such by field_data.bin
+    void *tobj_data; // Not currently understood, but described as such by field_data.bin
+    void *map_data; // Not currently understood, but described as such by field_data.bin
+};
+ASSERT_SIZE(struct field_data, 20);
+
 
 #include "ranger_data.h"
 
