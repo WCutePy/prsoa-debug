@@ -734,7 +734,6 @@ struct ov_07_unk_struct {
     void* field0_0x0;
     struct megastruct* megastruct_ptr;
     struct ov_07_unk_struct_size_0x280 *unk_struct_size_0x280_ptr;
-    undefined4 field2_0x8;
 };
 ASSERT_SIZE(struct ov_07_unk_struct, 12);
 
@@ -2327,7 +2326,7 @@ struct ov_27_unk_substruct_0x374 {
     struct ov_27_unk_struct_size_0x3c *unk_struct_size_0x3c_ptr;
     undefined4 field3_0xc;
 };
-ASSERT_SIZE(struct ov_27_unk_substruct_0x374, 864);
+ASSERT_SIZE(struct ov_27_unk_substruct_0x374, 16);
 
 struct ov_27_unk_substruct_0x384 {
     undefined4 field0_0x0;
