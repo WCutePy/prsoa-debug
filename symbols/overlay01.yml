@@ -137,7 +137,7 @@ overlay1:
         r0: enemy_script_data pointer
         r1: presumed to be a form_id_16, but the index of the file. 
         r2: undefined2 pointer
-        r3: int32_t
+        r3: int32_t 
     - name: ret_021293d4
       address:
         NA: 0x21293D4

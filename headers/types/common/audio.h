@@ -5,7 +5,7 @@ struct unk_audio_engine_substruct_1 {
     undefined field1_0x1;
     undefined field2_0x2;
     undefined field3_0x3;
-    void* field4_0x4;
+    void *field4_0x4;
     char magic_word_sdat[4];
     undefined field6_0xc;
     undefined field7_0xd;
@@ -30,24 +30,24 @@ struct unk_audio_engine_substruct_1 {
     struct fs_file_id file_id;
     int field27_0x84;
     int field28_0x88;
-    void* file_data;
+    void *file_data;
 };
 
 struct audio_engine {
-    void* unk_heap_size_0x64000;
-    void* unk_heap_size_0x30000;
-    void* unk_heap_size_0xc000;
+    void *unk_heap_size_0x64000;
+    void *unk_heap_size_0x30000;
+    void *unk_heap_size_0xc000;
     struct unk_audio_engine_substruct_1 unk_0x1ac_substruct;
-    void* unk_processed_struct_0x64000;
-    void* unk_processed_struct_0x30000;
-    void* unk_processed_struct_0xc000;
-    void* field7_0xa8;
-    void* field8_0xac;
-    void* field9_0xb0;
-    void* field10_0xb4;
-    void* field11_0xb8;
-    void* field12_0xbc;
-    void* field13_0xc0;
+    void *unk_processed_struct_0x64000;
+    void *unk_processed_struct_0x30000;
+    void *unk_processed_struct_0xc000;
+    void *field7_0xa8;
+    void *field8_0xac;
+    void *field9_0xb0;
+    void *field10_0xb4;
+    void *field11_0xb8;
+    void *field12_0xbc;
+    void *field13_0xc0;
     uint32_t unk_settings_var_field_0xc4;
     uint32_t field15_0xc8;
     int unk_settings_var_field_0xcc;
@@ -99,7 +99,7 @@ struct audio_engine {
     undefined field62_0x121;
     undefined field63_0x122;
     undefined field64_0x123;
-    void* unk_struct_off_0x124; // Seems related to sfx!
+    void *unk_struct_off_0x124; // Seems related to sfx!
     undefined field66_0x128;
     undefined field67_0x129;
     undefined field68_0x12a;

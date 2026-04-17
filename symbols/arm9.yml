@@ -530,7 +530,7 @@ arm9:
         
         r0: screen_fade pointer
         r1: int32_t 
-        r2: int32_t
+        r2: int32_t 
     - name: ScreenApplyIrisTransitionRadius
       address:
         NA: 0x200E6F8
@@ -539,7 +539,7 @@ arm9:
         
         r0: screen_fade pointer
         r1: int32_t 
-        r2: int32_t
+        r2: int32_t 
     - name: MaybeGetIrisCurrentWidth
       address:
         NA: 0x200E904
@@ -1031,7 +1031,7 @@ arm9:
         Checks if a bit in RANGER_NET_MISSION_COMPLETION_BITS is enabled.
         
         r0: undefined4 
-        r1: bit index
+        r1: bit index 
     - name: ZeroQuestBody
       address:
         NA: 0x201135C
@@ -1175,7 +1175,7 @@ arm9:
       description: |-
         Retrieves the party size for a specified ranger rank, excluding the partner if in the active team.
         Seems like the partner is intentionally excluded from the party size...
-        
+
         r0: ranger_data_old pointer
         r1: ranger rank to check party size for. If above 10, checks with the current ranger rank!
     - name: IsTriggerSpawnNibbleUnlocked
@@ -1272,7 +1272,7 @@ arm9:
       description: |-
         Counts the number of valid pokemon in the specified party. 
         If an invalid party index (less than zero or greater than 2) is input, the current party will be chosen.
-        
+
         r0: ranger_data_old pointer
         r1: party index
     - name: GetPartySizeSubtractPartner
@@ -1291,7 +1291,7 @@ arm9:
       description: |-
         Calls CountValidPokemonInParty, then subtracts 1 from the result if the partner is in the party.
         Never returns less than zero.
-        
+
         r0: ranger_data_old pointer
         r1: team slot to use (if invalid uses current)
     - name: HasPartnerPokemonInParty
@@ -2559,7 +2559,7 @@ arm9:
       description: |-
         Checks if the given form_id corresponds to a vanilla partner form_id. Returns 1 if so, 0 if not.
         
-        r0: form_id
+        r0: form_id 
     - name: GetPartnerIndexFromFormId
       address:
         NA: 0x2035088
@@ -3135,7 +3135,7 @@ arm9:
         r0: unk_audio_engine_substruct_1 pointer
         r1: char pointer
         r2: void pointer
-        r3: int32_t
+        r3: int32_t 
     - name: ret_0205fc98
       address:
         NA: 0x205FC98

@@ -21,13 +21,6 @@ overlay7:
         
         r0: ov_07_unk_struct pointer
         r1: megastruct pointer
-    - name: ret_0211cfb0
-      address:
-        NA: 0x211CFB0
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
     - name: IsOverPartyPokemonLimit
       address:
         NA: 0x211EFE4
@@ -55,8 +48,15 @@ overlay7:
       description: |-
         Checks the field in ov_07_unk_struct_size_0x280 to determine if the struct believes the party limit has been exceeded.
         Unclear why this is different from IsOverPartyPokemonLimit.
-        
+
         r0: ov_07_unk_struct_size_0x280 pointer
+    - name: ret_0211cfb0
+      address:
+        NA: 0x211CFB0
+      description: |-
+        Does nothing but return. Likely a debug hook for a nearby function.
+        
+        No params.
   data:
     - name: OV7_STATIC_INITIALIZER
       address:

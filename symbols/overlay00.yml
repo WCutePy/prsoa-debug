@@ -55,7 +55,7 @@ overlay0:
         Seems to open and initialize a file of the form: "data/Script/field/map/%s".
         
         r0: unk_struct_size_0x80 pointer
-        r1: int32_t
+        r1: int32_t 
     - name: ret_02125334
       address:
         NA: 0x2125334
@@ -72,7 +72,7 @@ overlay0:
         r0: unk_struct_size_0x80 pointer
         r1: undefined4 
         r2: char pointer. Maybe a file name?
-        r3: int32_t
+        r3: int32_t 
     - name: ret_021266ac
       address:
         NA: 0x21266AC
@@ -116,7 +116,7 @@ overlay0:
         
         r0: void pointer
         r1: int32_t 
-        r2: int32_t
+        r2: int32_t 
     - name: MaybeOpenAndInitTargetObjectTouchScript
       address:
         NA: 0x2141F88
@@ -125,7 +125,7 @@ overlay0:
         
         r0: unknown struct
         r1: file name
-        r2: undefined2
+        r2: undefined2 
     - name: ret_0214234c
       address:
         NA: 0x214234C

@@ -120,7 +120,7 @@ struct ranger_data_old {
     undefined4 field63_0x8b94;
     undefined4 field64_0x8b98;
     undefined4 field65_0x8b9c;
-    int32_t arena_id; // Seems to be assigned when entering the release menu post-battle.
+    int32_t arena_id; // Seems to be assigned when entering the release menu post-battle. 
     undefined field67_0x8ba4[44];
     // Only the first 8 slots of each group are actually remembered in the save file!
     // Table 0: Land Pokemon
