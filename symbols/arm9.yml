@@ -3142,21 +3142,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: MaybeLinearInterpolationInit
-      address:
-        NA: 0x205FD64
-      description: Likely a library function.
-    - name: MaybeLinearInterpolationProgress
-      address:
-        NA: 0x205FD8C
-      description: Likely a library function.
-    - name: MaybeLinearInterpolationUpdate
-      address:
-        NA: 0x205FDC0
-      description: Likely a library function.
-    - name: MaybeCheckIfLinearInterpolationMeetsThreshold
-      address:
-        NA: 0x205FDD8
     - name: Mtx_Identity22
       address:
         NA: 0x205FDF0
@@ -3181,7 +3166,7 @@ arm9:
     - name: Mtx_RotZ44
       address:
         NA: 0x2060078
-    - name: FixedPoint4x4MatrixMultiply
+    - name: Mtx_Concat44
       address:
         NA: 0x206009C
     - name: Mtx_OrthoW
