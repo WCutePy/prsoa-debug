@@ -294,7 +294,7 @@ void ret_020441ac(void);
 void DebugPrintInternal(char* format, va_list ap);
 void DebugPrintInternalVeneer(char* format, va_list ap);
 void SetSysCallPage(int param_1, void* param_2);
-undefined4 SysCallReturnZero000(void);
+undefined4 SysCallReturnZero(void);
 undefined4 SysCallPrintStrWithPrefix(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                                      undefined4 param_4);
 undefined4 SysCallDebugPrintf(undefined4* param_1, undefined4 param_2, undefined4 param_3,
@@ -314,16 +314,8 @@ void SysCallInverseSqrt(undefined4* param_1);
 int SysCallFixedPointDegToRad(int* param_1);
 unsigned int SysCallFixedPointRadToDeg(unsigned int* param_1);
 void DegreesToFixedPointRotations(int* param_1);
-undefined4 SysCallReturnZero047(void);
-undefined4 SysCallReturnZero048(void);
-undefined4 SysCallReturnZero049(void);
-undefined4 SysCallReturnZero050(void);
-undefined4 SysCallReturnZero051(void);
 void SysCallGetFixedPointArcTanFromTable(undefined4* param_1);
 void SysCallGetFixedPointArcTan2FromTable(undefined4* param_1);
-undefined4 SysCallReturnZero052(void);
-undefined4 SysCallReturnZero053(void);
-undefined4 SysCallReturnZero054(void);
 unsigned int SysCallFloorFixedPoint(unsigned int* param_1);
 int SysCallAbs(int* param_1);
 int SysCallIntToFixedPoint(int* param_1);
