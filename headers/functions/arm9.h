@@ -211,6 +211,8 @@ undefined4 SysCallBattleAddPartyPokemon(undefined4* param_1);
 void SysCallAddEnemyFormToEncounterType1(undefined4* param_1);
 undefined4 SysCallBattleSetGenderAndUniform(undefined4* param_1);
 undefined4 SysCallBattleSetBossFightStatus(void);
+undefined4 SysCallSetScriptSubroutine2ByName(undefined4* param_1, undefined4 param_2,
+                                             undefined4 param_3, undefined4 param_4);
 bool SysCallGetPlayerGender(void);
 int8_t SysCallGetRangerStylerRank(void);
 int32_t SysCallGetRangerStylerType(void);
@@ -300,10 +302,27 @@ undefined4 SysCallPrintStrWithPrefix(undefined4* param_1, undefined4 param_2, un
                                      undefined4 param_4);
 undefined4 SysCallDebugPrintf(undefined4* param_1, undefined4 param_2, undefined4 param_3,
                               undefined4 param_4);
-uint32_t SysCallBitAndUpper5Nibbles(uint32_t* param_1);
+unsigned int SysCallFixedPointMultiply(int* param_1);
+void SysCallFixedPointDivide(undefined4* param_1);
+int SysCallGetTrigTableSin(unsigned int* param_1);
+int SysCallGetTrigTableCos(unsigned int* param_1);
+unsigned int SysCallGetTaylorPackedSinCos(undefined4* param_1);
+unsigned int SysCallGetTaylorPackedCosSin(unsigned int* param_1);
+unsigned int SysCallGetLcrngHigh(unsigned int* param_1);
+unsigned int SysCallFixedPointRandomScale(int* param_1);
+int SysCallFixedPointSignedRandomScale(int* param_1);
+void SysCallSqrt32(undefined4* param_1);
+void SysCallGetFixedPointReciprocal(undefined4* param_1);
+void SysCallInverseSqrt(undefined4* param_1);
+int SysCallFixedPointDegToRad(int* param_1);
+unsigned int SysCallFixedPointRadToDeg(unsigned int* param_1);
+void DegreesToFixedPointRotations(int* param_1);
+void SysCallGetFixedPointArcTanFromTable(undefined4* param_1);
+void SysCallGetFixedPointArcTan2FromTable(undefined4* param_1);
+unsigned int SysCallFloorFixedPoint(unsigned int* param_1);
 int SysCallAbs(int* param_1);
-int SysCallBitlshift0xC(int* param_1);
-int SysCallBitrShift0xC(int* param_1);
+int SysCallIntToFixedPoint(int* param_1);
+int SysCallFixedPointToInt(int* param_1);
 void SysCallStrLen(undefined4* param_1);
 undefined4 Wvr_StartUpAsync(int param_1, int param_2, undefined4 param_3);
 undefined4 Wvr_TerminateAsync(int param_1, undefined4 param_2);
@@ -342,7 +361,7 @@ void Mtx_TransApply44(int* param_1, int* param_2, int param_3, int param_4, int 
 void Mtx_ScaleApply44(unsigned int* param_1, unsigned int* param_2, int param_3, int param_4,
                       int param_5);
 undefined4* Mtx_RotZ44(undefined4* param_1, int param_2, undefined4 param_3);
-void FixedPoint4x4MatrixMultiply(int* param_1, int* param_2, unsigned int* param_3,
+void Mtx_Concat44(int* param_1, int* param_2, unsigned int* param_3,
                                  undefined4 param_4);
 void Mtx_OrthoW(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6,
                 unsigned int param_7, int* param_8);
