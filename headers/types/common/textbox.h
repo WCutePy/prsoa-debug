@@ -60,12 +60,12 @@ struct textbox_subdata {
     undefined4 field4361_0x1620[4];
     undefined4 field4362_0x1630;
     undefined4 field4363_0x1634;
-    struct unk_font_substruct *unk_font_substruct_ptr;
+    undefined4 field4364_0x1638;
 };
 ASSERT_SIZE(struct textbox_subdata, 5692);
 
 struct textbox_data {
-    struct group_msg_wrapper_table *group_msg_wrapper_table_ptr;
+    void* field0_0x0;
     void* field1_0x4;
     void* field2_0x8;
     void* field3_0xc;
@@ -107,7 +107,7 @@ struct textbox_data {
     int font_color; // Default is 0x4, red is 0x7, others unknown.
     int field38_0xb0;
     undefined4 field39_0xb4[16]; // Explicit Size not found, only references to start of the table
-    struct unk_font_substruct *unk_font_substruct_ptr_1;
+    void* field40_0xf4;
     void* field41_0xf8; // Not supported by live analysis, but see 0x200976C NA.
     undefined4 field42_0xfc;
     undefined4 field43_0x100;
@@ -115,7 +115,7 @@ struct textbox_data {
     undefined4 field45_0x108;
     void* field46_0x10c;
     void* field47_0x110;
-    struct unk_font_substruct *unk_font_substruct_ptr_2;
+    void* field48_0x114;
     undefined4 field49_0x118;
     undefined4 field50_0x11c;
     void* field51_0x120; // Not supported by live analysis, but see 0x200976C NA.
@@ -125,7 +125,7 @@ struct textbox_data {
     undefined4 field55_0x130;
     void* field56_0x134;
     void* field57_0x138;
-    struct unk_font_substruct *unk_font_substruct_ptr_3;
+    void* field58_0x13c;
     undefined4 field59_0x140;
     undefined4 field60_0x144;
     undefined4 field61_0x148;
