@@ -653,7 +653,7 @@ struct ov_07_unk_struct_size_0x280 {
     undefined2 field375_0x1f8;
     undefined field376_0x1fa;
     undefined field377_0x1fb;
-    uint field378_0x1fc;
+    unsigned int field378_0x1fc;
     undefined4 field379_0x200;
     int field380_0x204;
     int field381_0x208;
@@ -663,16 +663,16 @@ struct ov_07_unk_struct_size_0x280 {
     undefined field385_0x215;
     undefined field386_0x216;
     undefined field387_0x217;
-    ushort field388_0x218;
+    uint16_t field388_0x218;
     undefined field389_0x21a;
     undefined field390_0x21b;
-    uint field391_0x21c;
+    unsigned int field391_0x21c;
     undefined2 field392_0x220;
     uint16_t field393_0x222;
     void *unk_struct_size_0x7c_ptr;
     void *unk_struct_size_0x18_ptr;
     void *field396_0x22c;
-    int32_t field397_0x230; // Created by Rename Structure Field action
+    int32_t field397_0x230;
     undefined field398_0x234;
     undefined field399_0x235;
     undefined field400_0x236;
@@ -707,7 +707,7 @@ struct ov_07_unk_struct_size_0x280 {
     undefined2 field429_0x256;
     undefined4 unk_struct_size_0x18_off_0x0;
     undefined4 field431_0x25c;
-    undefined4 unk_struct_size_0x18_off_0x4; // Created by Rename Structure Field action
+    undefined4 unk_struct_size_0x18_off_0x4;
     undefined4 unk_struct_size_0x18_off_0x8;
     undefined field434_0x268;
     undefined field435_0x269;
