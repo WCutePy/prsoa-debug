@@ -29,6 +29,9 @@ arm9:
         Once the entry function reaches the end, a constant containing the address to NitroMain is loaded into a register (r1), and a `bx` branch will jump to NitroMain.
         
         No params.
+    - name: MIi_UncompressBackward
+      address:
+        NA: 0x2000970
     - name: ret_02000b98
       address:
         NA: 0x2000B98
@@ -64,6 +67,9 @@ arm9:
         
         r0: num bytes to allocate
         return: pointer to allocated memory
+    - name: GF_Assert_Veneer
+      address:
+        NA: 0x200147C
     - name: LoadOverlay
       address:
         NA: 0x2001488
@@ -455,9 +461,7 @@ arm9:
         r1: Arena Graphic index
     - name: BattleSetWeatherEffectId
       address:
-        NA:
-          - 0x2010A84
-          - 0x2010BB8
+        NA: 0x2010A84
       description: |-
         Stores the index of the weather effect for the battle in the battle_combatants struct.
         
@@ -650,6 +654,13 @@ arm9:
         NA: 0x2010BB0
       description: |-
         Retrieves the arena graphic id from the battle_combatants struct.
+        
+        r0: battle_combatants pointer
+    - name: BattleGetWeatherEffectId
+      address:
+        NA: 0x2010BB8
+      description: |-
+        Retrieves the index of the weather effect from the battle_combatants struct.
         
         r0: battle_combatants pointer
     - name: BattleGetSequenceScriptId
@@ -2340,6 +2351,15 @@ arm9:
         SysCall Function for strlen. Verifies the string is not zero chars long before calling the function.
         
         r0: script stack pointer, interpreted as params.
+    - name: Wvr_StartUpAsync
+      address:
+        NA: 0x2046948
+    - name: Wvr_TerminateAsync
+      address:
+        NA: 0x2046B84
+    - name: WvrReceiveCallback
+      address:
+        NA: 0x2046C64
     - name: ret_02046d3c
       address:
         NA: 0x2046D3C
@@ -2448,6 +2468,42 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: GX_LoadBG0CharVeneer
+      address:
+        NA: 0x2057238
+    - name: GX_LoadBG1CharVeneer
+      address:
+        NA: 0x2057244
+    - name: GX_LoadBG2CharVeneer
+      address:
+        NA: 0x2057250
+    - name: GX_LoadBG3CharVeneer
+      address:
+        NA: 0x205725C
+    - name: GX_LoadBG0ScrVeneer
+      address:
+        NA: 0x2057268
+    - name: GX_LoadBG1ScrVeneer
+      address:
+        NA: 0x2057274
+    - name: GX_LoadBg2ScrVeneer
+      address:
+        NA: 0x2057298
+    - name: GX_LoadBg3ScrVeneer
+      address:
+        NA: 0x20572A4
+    - name: GX_LoadObjPlttVeneer
+      address:
+        NA: 0x20572B0
+    - name: GX_LoadBgPlttVeneer
+      address:
+        NA: 0x20572BC
+    - name: GXs_LoadBg2ScrVeneer
+      address:
+        NA: 0x2057398
+    - name: GXs_LoadBg3ScrVeneer
+      address:
+        NA: 0x20573A4
     - name: ret_0205fc98
       address:
         NA: 0x205FC98
@@ -2462,137 +2518,84 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: MaybeLinearInterpolationInit
-      address:
-        NA: 0x205FD64
-      description: Likely a library function.
-    - name: MaybeLinearInterpolationProgress
-      address:
-        NA: 0x205FD8C
-      description: Likely a library function.
-    - name: MaybeLinearInterpolationUpdate
-      address:
-        NA: 0x205FDC0
-      description: Likely a library function.
-    - name: MaybeCheckIfLinearInterpolationMeetsThreshold
-      address:
-        NA: 0x205FDD8
-      description: Likely a library function.
-    - name: Init2x2IdentityMatrix
+    - name: Mtx_Identity22
       address:
         NA: 0x205FDF0
-      description: Likely a library function.
-    - name: PopulateUpperHemisphereOfRotMatrix
+    - name: Mtx_Scale22
       address:
         NA: 0x205FE08
-      description: Likely a library function.
     - name: Mtx_Identity33
       address:
         NA: 0x205FE14
-    - name: MatrixRotZ
+    - name: Mtx_RotZ33
       address:
         NA: 0x205FE38
-      description: Likely a library function.
-    - name: Mtx_Identity
+    - name: Mtx_Identity44
       address:
         NA: 0x205FE50
-    - name: Mtx_TransApply
+    - name: Mtx_TransApply44
       address:
         NA: 0x205FE7C
-    - name: ScaleMatrix
+    - name: Mtx_ScaleApply44
       address:
         NA: 0x205FF54
-      description: Likely a library function.
-    - name: Mtx_RotZ
+    - name: Mtx_RotZ44
       address:
         NA: 0x2060078
-    - name: FixedPoint4x4MatrixMultiply
+    - name: Mtx_Concat44
       address:
         NA: 0x206009C
-      description: Likely a library function.
-    - name: Mtx_Ortho
+    - name: Mtx_OrthoW
       address:
         NA: 0x2060700
-    - name: FixedPointDivide32
+    - name: FX_Div
       address:
         NA: 0x2060908
-      description: Likely a library function.
-    - name: Divide32HighBy32Low
+    - name: FX_DivFx64c
       address:
         NA: 0x2060918
-      description: Likely a library function.
-    - name: GetFixedPointReciprocal
+    - name: FX_Inv
       address:
         NA: 0x2060944
-      description: Likely a library function.
-    - name: Sqrt32
+    - name: FX_Sqrt
       address:
         NA: 0x2060954
-      description: Likely a library function.
-    - name: InverseSqrt
+    - name: FX_InvSqrt
       address:
         NA: 0x2060988
-      description: Likely a library function.
-    - name: Division64Return
+    - name: FX_GetInvResultFx64c
       address:
         NA: 0x20609F0
-      description: Likely a library function.
-    - name: FixedPointDivision32Return
+    - name: FX_GetDivResult
       address:
         NA: 0x2060A14
-      description: Likely a library function.
-    - name: InitFixedPointReciprocal
+    - name: FX_InvAsync
       address:
         NA: 0x2060A4C
-      description: Likely a library function.
-    - name: InitSqrt32High
+    - name: FX_SqrtAsync
       address:
         NA: 0x2060A7C
-      description: Likely a library function.
-    - name: GetSqrtResultUpper
+    - name: FX_GetSqrtResult
       address:
         NA: 0x2060AC0
-      description: Likely a library function.
-    - name: InitDivision32HighBy32Low
+    - name: FX_DivAsync
       address:
         NA: 0x2060AEC
-      description: Likely a library function.
-    - name: Divide32By32Quotient
+    - name: FX_DivS32
       address:
         NA: 0x2060B14
-      description: Likely a library function.
-    - name: Divide32by32Remainder
+    - name: FX_ModS32
       address:
         NA: 0x2060B50
-      description: Likely a library function.
-    - name: TaylorExpandFixedPointSin
-      address:
-        NA: 0x2060B8C
-      description: Likely a library function.
-    - name: TaylorExpandFixedPointCos
-      address:
-        NA: 0x2060C74
-      description: Likely a library function.
-    - name: GetFixedPointSinCos
-      address:
-        NA: 0x2060D40
-      description: Likely a library function.
-    - name: GetFixedPointCosSin
-      address:
-        NA: 0x2060DD8
-      description: Likely a library function.
-    - name: GetFixedPointArcTanFromTable
+    - name: FX_Atan
       address:
         NA: 0x2060E6C
-      description: Likely a library function.
-    - name: GetFixedPointArcTan2FromTable
+    - name: FX_Atan2
       address:
         NA: 0x2060F3C
-      description: Likely a library function.
-    - name: ArcTan2FromTable16
+    - name: FX_Atan2Idx
       address:
         NA: 0x20610F4
-      description: Likely a library function.
     - name: ret_0206129c
       address:
         NA: 0x206129C
@@ -2603,12 +2606,441 @@ arm9:
     - name: GX_Init
       address:
         NA: 0x20612A0
+    - name: GX_SetVCountEqVal
+      address:
+        NA: 0x20613EC
+    - name: GX_HBlankIntr
+      address:
+        NA: 0x2061414
+    - name: GX_VBlankIntr
+      address:
+        NA: 0x2061448
+    - name: GX_DispOff
+      address:
+        NA: 0x206147C
+    - name: GX_DispOn
+      address:
+        NA: 0x20614B8
+    - name: GX_SetGraphicsMode
+      address:
+        NA: 0x2061500
+    - name: GXs_SetGraphicsMode
+      address:
+        NA: 0x2061568
+    - name: GXx_SetMasterBrightness
+      address:
+        NA: 0x2061584
     - name: GX_InitGxState
       address:
         NA: 0x20615AC
+    - name: GX_VRamCnt_SetLcdc
+      address:
+        NA: 0x206160C
+    - name: GX_SetBankForBG
+      address:
+        NA: 0x20616C4
+    - name: GX_SetBankForObj
+      address:
+        NA: 0x2061954
+    - name: GX_SetBankForBgExtPltt
+      address:
+        NA: 0x2061AA4
+    - name: GX_SetBankForObjExtPltt
+      address:
+        NA: 0x2061BA4
+    - name: GX_SetBankForTex
+      address:
+        NA: 0x2061C50
+    - name: GX_SetBankForTexPltt
+      address:
+        NA: 0x2061E28
+    - name: GX_SetBankForClearImage
+      address:
+        NA: 0x2061F10
+    - name: GX_SetBankForArm7
+      address:
+        NA: 0x2062044
+    - name: GX_SetBankForLcdc
+      address:
+        NA: 0x20620F0
+    - name: GX_SetBankForSubBg
+      address:
+        NA: 0x2062110
+    - name: GX_SetBankForSubObj
+      address:
+        NA: 0x20621B8
+    - name: GX_SetBankForSubBgExtPltt
+      address:
+        NA: 0x2062228
+    - name: GX_SetBankForSubObjExtPltt
+      address:
+        NA: 0x20622A8
+    - name: ResetBankForX
+      address:
+        NA: 0x2062328
+    - name: GX_ResetBankForBG
+      address:
+        NA: 0x206235C
+    - name: GX_ResetBankForObj
+      address:
+        NA: 0x2062370
+    - name: GX_ResetBankForBgExtPltt
+      address:
+        NA: 0x2062384
+    - name: GX_ResetBankForObjExtPltt
+      address:
+        NA: 0x20623A8
+    - name: GX_ResetBankForTex
+      address:
+        NA: 0x20623CC
+    - name: GX_ResetBankForTexPltt
+      address:
+        NA: 0x20623E0
+    - name: GX_ResetBankForClearImage
+      address:
+        NA: 0x20623F4
+    - name: GX_ResetBankForArm7
+      address:
+        NA: 0x2062408
+    - name: GX_ResetBankForSubBG
+      address:
+        NA: 0x206241C
+    - name: GX_ResetBankForSubObj
+      address:
+        NA: 0x2062430
+    - name: GX_ResetBankForSubBgExtPltt
+      address:
+        NA: 0x2062444
+    - name: GX_ResetBankForSubObjExtPltt
+      address:
+        NA: 0x206246C
+    - name: DisableBankForX
+      address:
+        NA: 0x2062494
+    - name: GX_DisableBankForBg
+      address:
+        NA: 0x2062574
+    - name: GX_DisableBankForObj
+      address:
+        NA: 0x2062588
+    - name: GX_DisableBankForBgExtPltt
+      address:
+        NA: 0x206259C
+    - name: GX_DisableBankForObjExtPltt
+      address:
+        NA: 0x20625C0
+    - name: GX_DisableBankForTex
+      address:
+        NA: 0x20625E4
+    - name: GX_DisableBankForTexPltt
+      address:
+        NA: 0x20625F8
+    - name: GX_DisableBankForClearImage
+      address:
+        NA: 0x206260C
+    - name: GX_DisableBankForArm7
+      address:
+        NA: 0x2062620
+    - name: GX_DisableBankForLcdc
+      address:
+        NA: 0x2062634
+    - name: GX_DisableBankForSubBg
+      address:
+        NA: 0x2062648
+    - name: GX_DisableBankForSubObj
+      address:
+        NA: 0x206265C
+    - name: GX_DisableBankForSubBgExtPltt
+      address:
+        NA: 0x2062670
+    - name: GX_DisableBankForSubObjExtPltt
+      address:
+        NA: 0x2062698
+    - name: GX_GetBankForBg
+      address:
+        NA: 0x20626C0
+    - name: GX_GetBankForObj
+      address:
+        NA: 0x20626D0
+    - name: GX_GetBankForBgExtPltt
+      address:
+        NA: 0x20626E0
+    - name: G2_GetBg0ScrPtr
+      address:
+        NA: 0x20626F0
+    - name: G2S_GetBg0ScrPtr
+      address:
+        NA: 0x2062724
+    - name: G2_GetBg1ScrPtr
+      address:
+        NA: 0x2062744
+    - name: G2S_GetBg1ScrPtr
+      address:
+        NA: 0x2062778
+    - name: G2_GetBg2ScrPtr
+      address:
+        NA: 0x2062798
+    - name: G2S_GetBg2ScrPtr
+      address:
+        NA: 0x206281C
+    - name: G2_GetBg3ScrPtr
+      address:
+        NA: 0x2062890
+    - name: G2S_GetBg3ScrPtr
+      address:
+        NA: 0x2062914
+    - name: G2_GetBg0CharPtr
+      address:
+        NA: 0x2062988
+    - name: G2S_GetBg0CharPtr
+      address:
+        NA: 0x20629BC
+    - name: G2_GetBg1CharPtr
+      address:
+        NA: 0x20629DC
+    - name: G2S_GetBg1CharPtr
+      address:
+        NA: 0x2062A10
+    - name: G2_GetBg2CharPtr
+      address:
+        NA: 0x2062A30
+    - name: G2S_GetBg2CharPtr
+      address:
+        NA: 0x2062A80
+    - name: G2_GetBg3CharPtr
+      address:
+        NA: 0x2062AC0
+    - name: G2S_GetBg3CharPtr
+      address:
+        NA: 0x2062B18
+    - name: G2x_SetBgyAffine
+      address:
+        NA: 0x2062B60
+    - name: G2x_SetBlendAlpha
+      address:
+        NA: 0x2062C10
+    - name: G2x_SetBlendBrightness
+      address:
+        NA: 0x2062C2C
+    - name: G2x_ChangeBlendBrightness
+      address:
+        NA: 0x2062C54
+    - name: G3C_Direct0
+      address:
+        NA: 0x2062C98
+    - name: G3C_Direct1
+      address:
+        NA: 0x2062CBC
+    - name: G3C_Direct2
+      address:
+        NA: 0x2062CD8
+    - name: G3C_UpdateGxDlInfo
+      address:
+        NA: 0x2062CFC
+    - name: G3C_PopMtx
+      address:
+        NA: 0x2062D58
+    - name: G3C_Color
+      address:
+        NA: 0x2062D7C
+    - name: G3C_TexCoord
+      address:
+        NA: 0x2062DA0
+    - name: G3C_Vtx
+      address:
+        NA: 0x2062DE4
+    - name: G3C_VtxXY
+      address:
+        NA: 0x2062E20
+    - name: G3C_PolygonAttr
+      address:
+        NA: 0x2062E54
+    - name: G3C_TexImageParam
+      address:
+        NA: 0x2062E94
+    - name: G3C_TexPlttBase
+      address:
+        NA: 0x2062EE8
+    - name: G3C_Begin
+      address:
+        NA: 0x2062F20
+    - name: G3C_End
+      address:
+        NA: 0x2062F44
     - name: G3_LoadMtx44
       address:
         NA: 0x2062F64
+    - name: G3_LoadMtx43
+      address:
+        NA: 0x2062F80
+    - name: G3X_Init
+      address:
+        NA: 0x2062F9C
+    - name: G3X_Reset
+      address:
+        NA: 0x20630A8
+    - name: G3X_ClearFifo
+      address:
+        NA: 0x2063114
+    - name: G3X_InitMtxStack
+      address:
+        NA: 0x206313C
+    - name: G3X_ResetMtxStack
+      address:
+        NA: 0x20631D4
+    - name: G3X_SetToonTable
+      address:
+        NA: 0x2063264
+    - name: G3X_SetClearColor
+      address:
+        NA: 0x206327C
+    - name: G3X_InitTable
+      address:
+        NA: 0x20632A4
+    - name: G3X_GetMtxStackLevelPV
+      address:
+        NA: 0x2063344
+    - name: G3X_GetMtxStackLevelPJ
+      address:
+        NA: 0x2063374
+    - name: GXi_NopClearFifo128
+      address:
+        NA: 0x20633A4
+    - name: G3i_OrthoW
+      address:
+        NA: 0x2063438
+    - name: G3_LoadTexMtxTexCoord
+      address:
+        NA: 0x206349C
+    - name: GXs_LoadBgPltt
+      address:
+        NA: 0x20635A4
+    - name: GX_LoadObjPltt
+      address:
+        NA: 0x20635FC
+    - name: GXs_LoadObjPltt
+      address:
+        NA: 0x2063654
+    - name: GX_LoadOam
+      address:
+        NA: 0x20636AC
+    - name: GXs_LoadOam
+      address:
+        NA: 0x2063700
+    - name: GX_LoadObj
+      address:
+        NA: 0x2063758
+    - name: GXs_LoadObj
+      address:
+        NA: 0x20637B0
+    - name: GX_LoadBg0Scr
+      address:
+        NA: 0x2063808
+    - name: GXs_LoadBg0Scr
+      address:
+        NA: 0x2063868
+    - name: GX_LoadBg1Scr
+      address:
+        NA: 0x20638C8
+    - name: GXs_LoadBg1Scr
+      address:
+        NA: 0x2063928
+    - name: GX_LoadBg0Char
+      address:
+        NA: 0x2063B08
+    - name: GXs_LoadBg0Char
+      address:
+        NA: 0x2063B68
+    - name: GX_LoadBg1Char
+      address:
+        NA: 0x2063BC8
+    - name: GXs_LoadBg1Char
+      address:
+        NA: 0x2063C28
+    - name: GX_LoadBg2Char
+      address:
+        NA: 0x2063C88
+    - name: GXs_LoadBg2Char
+      address:
+        NA: 0x2063CE8
+    - name: GX_LoadBg3Char
+      address:
+        NA: 0x2063D48
+    - name: GXs_LoadBg3Char
+      address:
+        NA: 0x2063DA8
+    - name: GX_BeginLoadBgExtPltt
+      address:
+        NA: 0x2063E08
+    - name: GX_LoadBgExtPltt
+      address:
+        NA: 0x2063EA8
+    - name: GX_EndLoadBgExtPltt
+      address:
+        NA: 0x2063F18
+    - name: GX_BeginLoadObjExtPltt
+      address:
+        NA: 0x2063F60
+    - name: GX_LoadObjExtPltt
+      address:
+        NA: 0x2063FA8
+    - name: GX_EndLoadObjExtPltt
+      address:
+        NA: 0x2064014
+    - name: GXs_BeginLoadBgExtPltt
+      address:
+        NA: 0x2064058
+    - name: GXs_LoadBgExtPltt
+      address:
+        NA: 0x2064070
+    - name: GXs_EndLoadBgExtPltt
+      address:
+        NA: 0x20640D4
+    - name: GXs_BeginLoadObjExtPltt
+      address:
+        NA: 0x2064114
+    - name: GXs_LoadObjExtPltt
+      address:
+        NA: 0x206412C
+    - name: GXs_EndLoadObjExtPltt
+      address:
+        NA: 0x2064190
+    - name: GX_BeginLoadTex
+      address:
+        NA: 0x20641D0
+    - name: GX_LoadTex
+      address:
+        NA: 0x206422C
+    - name: GX_EndLoadTex
+      address:
+        NA: 0x206436C
+    - name: GX_BeginLoadTexPltt
+      address:
+        NA: 0x20643B8
+    - name: GXi_DmaCopy32Async
+      address:
+        NA: 0x20643EC
+    - name: GX_EndLoadTexPltt
+      address:
+        NA: 0x2064458
+    - name: GX_BeginLoadClearImage
+      address:
+        NA: 0x206449C
+    - name: GX_LoadClearImageColor
+      address:
+        NA: 0x206452C
+    - name: GX_LoadClearImageDepth
+      address:
+        NA: 0x2064594
+    - name: GX_EndLoadClearImage
+      address:
+        NA: 0x2064600
+    - name: GX_SendFifo64B
+      address:
+        NA: 0x2064710
+    - name: OS_WaitIrq
+      address:
+        NA: 0x206472C
     - name: ret_020647a0
       address:
         NA: 0x20647A0
@@ -2616,12 +3048,48 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: OSi_IrqCallback
+      address:
+        NA: 0x20647A4
+    - name: OSi_IrqDma0
+      address:
+        NA: 0x206482C
+    - name: OSi_IrqDma1
+      address:
+        NA: 0x206483C
+    - name: OSi_IrqDma2
+      address:
+        NA: 0x206484C
+    - name: OSi_IrqDma3
+      address:
+        NA: 0x206485C
+    - name: OSi_IrqTimer0
+      address:
+        NA: 0x206486C
+    - name: OSi_IrqTimer1
+      address:
+        NA: 0x206487C
+    - name: OSi_IrqTimer2
+      address:
+        NA: 0x206488C
+    - name: OSi_IrqTimer3
+      address:
+        NA: 0x206489C
     - name: OS_InitIrqTable
       address:
         NA: 0x20648AC
     - name: OS_SetIrqFunction
       address:
         NA: 0x20648C4
+    - name: OS_GetIrqFunction
+      address:
+        NA: 0x206494C
+    - name: OSi_EnterDmaCallback
+      address:
+        NA: 0x20649D8
+    - name: OSi_EnterTimerCallback
+      address:
+        NA: 0x2064A20
     - name: OS_SetIrqMask
       address:
         NA: 0x2064A68
@@ -2644,21 +3112,60 @@ arm9:
     - name: OS_InitLock
       address:
         NA: 0x2064B54
+    - name: OSi_DoLockByWord
+      address:
+        NA: 0x2064C20
     - name: OS_LockByWord
       address:
         NA: 0x2064C6C
+    - name: OSi_DoUnlockByWord
+      address:
+        NA: 0x2064C7C
     - name: OS_UnlockByWord
       address:
         NA: 0x2064CF0
+    - name: OSi_DoTryLockByWord
+      address:
+        NA: 0x2064D00
+    - name: OS_LockCartridge
+      address:
+        NA: 0x2064D6C
     - name: OS_UnlockCartridge
       address:
         NA: 0x2064D8C
     - name: OS_UnlockCartridgeVeneer
       address:
         NA: 0x2064DAC
+    - name: OS_TryLockCartridge
+      address:
+        NA: 0x2064DB8
+    - name: OSi_LockCardID
+      address:
+        NA: 0x2064DD8
+    - name: OSi_UnlockCardID
+      address:
+        NA: 0x2064DF0
+    - name: OS_LockCard
+      address:
+        NA: 0x2064E08
+    - name: OS_UnlockCard
+      address:
+        NA: 0x2064E24
+    - name: OSi_AllocateCardBus
+      address:
+        NA: 0x2064E40
+    - name: OSi_FreeCardBus
+      address:
+        NA: 0x2064E58
+    - name: OS_ReadOwnerOfLockWord
+      address:
+        NA: 0x2064E70
     - name: OS_GetLockID
       address:
         NA: 0x2064E78
+    - name: OS_ReleaseLockID
+      address:
+        NA: 0x2064EE0
     - name: MaybeCopyFileName
       address:
         NA: 0x2064F28
@@ -2669,60 +3176,198 @@ arm9:
         r1: source
         r2: maybe num bytes? 
         r3: undefined4
+    - name: OS_VsPrintf
+      address:
+        NA: 0x2064F50
+    - name: OS_SnPrintf
+      address:
+        NA: 0x2064F68
+    - name: OS_VsNPrintf
+      address:
+        NA: 0x2064F90
+    - name: OS_VsNPrintfExStub
+      address:
+        NA: 0x2064F9C
     - name: OSi_GetUnusedThreadId
       address:
         NA: 0x2064FA8
     - name: OSi_InsertLinkToQueue
       address:
         NA: 0x2064FC0
+    - name: OSi_RemoveLinkFromQueue
+      address:
+        NA: 0x2065038
+    - name: OSi_RemoveSpecifiedLinkFromQueue
+      address:
+        NA: 0x206506C
+    - name: OSi_RemoveMutexLinkFromQueue
+      address:
+        NA: 0x20650C0
     - name: OSi_InsertThreadToList
       address:
         NA: 0x20650F0
-    - name: OS_RescheduleThread
+    - name: OSi_RemoveThreadFromList
+      address:
+        NA: 0x2065150
+    - name: OSi_RescheduleThread
       address:
         NA: 0x2065198
     - name: OS_InitThread
       address:
         NA: 0x2065260
+    - name: OS_IsThreadAvailable
+      address:
+        NA: 0x20653A8
     - name: OS_CreateThread
       address:
         NA: 0x20653B8
+    - name: OS_ExitThread
+      address:
+        NA: 0x20654B4
+    - name: OSi_ExitThread_ArgSpecified
+      address:
+        NA: 0x20654D4
+    - name: OSi_ExitThread
+      address:
+        NA: 0x2065530
+    - name: OSi_ExitThread_Destroy
+      address:
+        NA: 0x2065568
+    - name: OS_DestroyThread
+      address:
+        NA: 0x20655C4
+    - name: OSi_CancelThreadAlarmForSleep
+      address:
+        NA: 0x2065640
     - name: OS_JoinThread
       address:
         NA: 0x2065658
+    - name: OS_IsThreadTerminated
+      address:
+        NA: 0x2065688
     - name: OS_SleepThread
       address:
         NA: 0x206569C
+    - name: OS_WakeupThread
+      address:
+        NA: 0x20656EC
     - name: OS_WakeupThreadDirect
       address:
         NA: 0x2065754
+    - name: OS_SelectThread
+      address:
+        NA: 0x206577C
+    - name: OS_RescheduleThread
+      address:
+        NA: 0x20657A4
+    - name: OS_YieldThread
+      address:
+        NA: 0x20657C0
+    - name: OS_SetThreadPriority
+      address:
+        NA: 0x2065878
+    - name: OS_GetThreadPriority
+      address:
+        NA: 0x2065920
+    - name: OS_Sleep
+      address:
+        NA: 0x2065928
+    - name: OSi_SleepAlarmCallback
+      address:
+        NA: 0x20659D0
     - name: OS_SetSwitchThreadCallback
       address:
         NA: 0x20659F0
     - name: OSi_IdleThreadProc
       address:
         NA: 0x2065A18
+    - name: OS_DisableScheduler
+      address:
+        NA: 0x2065A28
+    - name: OS_EnableScheduler
+      address:
+        NA: 0x2065A5C
     - name: OS_SetThreadDestructor
       address:
         NA: 0x2065A90
+    - name: OS_InitContext
+      address:
+        NA: 0x2065A98
     - name: OS_SaveContext
       address:
         NA: 0x2065B1C
     - name: OS_LoadContext
       address:
         NA: 0x2065B68
+    - name: OS_IsRunOnEmulator
+      address:
+        NA: 0x2065BAC
+    - name: OS_GetConsoleType
+      address:
+        NA: 0x2065BB4
+    - name: OS_InitMessageQueue
+      address:
+        NA: 0x2065BCC
+    - name: OS_SendMessage
+      address:
+        NA: 0x2065BF4
+    - name: OS_ReceiveMessage
+      address:
+        NA: 0x2065C88
+    - name: OS_JamMessage
+      address:
+        NA: 0x2065D2C
+    - name: OS_ReadMessage
+      address:
+        NA: 0x2065DC8
     - name: OS_InitMutex
       address:
         NA: 0x2065E44
+    - name: OS_LockMutex
+      address:
+        NA: 0x2065E5C
+    - name: OS_UnlockMutex
+      address:
+        NA: 0x2065EE0
+    - name: OSi_UnlockAllMutex
+      address:
+        NA: 0x2065F3C
+    - name: OS_TryLockMutex
+      address:
+        NA: 0x2065F78
+    - name: OSi_EnqueueTail
+      address:
+        NA: 0x2065FEC
+    - name: OSi_DequeueItem
+      address:
+        NA: 0x2066010
+    - name: DC_InvalidateAll
+      address:
+        NA: 0x2066034
+    - name: DC_Store_All
+      address:
+        NA: 0x2066040
     - name: DC_FlushAll
       address:
         NA: 0x206606C
     - name: DC_InvalidateRange
       address:
         NA: 0x20660A0
+    - name: DC_StoreRange
+      address:
+        NA: 0x20660BC
     - name: DC_FlushRange
       address:
         NA: 0x20660D8
+    - name: DC_WaitWriteBufferEmpty
+      address:
+        NA: 0x20660FC
+    - name: IC_InvalidateAll
+      address:
+        NA: 0x2066108
+    - name: IC_InvalidateRange
+      address:
+        NA: 0x2066114
     - name: OSi_WaitVCount0
       address:
         NA: 0x2066130
@@ -2735,6 +3380,15 @@ arm9:
     - name: OS_InitArenaEx
       address:
         NA: 0x206629C
+    - name: OS_GetArenaHi
+      address:
+        NA: 0x2066308
+    - name: OS_GetArenaLo
+      address:
+        NA: 0x206631C
+    - name: OS_GetInitArenaHi
+      address:
+        NA: 0x2066330
     - name: OS_GetInitArenaLo
       address:
         NA: 0x2066414
@@ -2744,6 +3398,21 @@ arm9:
     - name: OS_SetArenaLo
       address:
         NA: 0x20664D0
+    - name: OS_AllocFromArenaLo
+      address:
+        NA: 0x20664E4
+    - name: OS_GetDtcmAddress
+      address:
+        NA: 0x2066550
+    - name: OS_EnableProtectionUnit
+      address:
+        NA: 0x2066564
+    - name: OS_DisableProtectionUnit
+      address:
+        NA: 0x2066574
+    - name: OS_SetDPermissionsForProtectionRegion
+      address:
+        NA: 0x2066584
     - name: OS_SetProtectionRegion1
       address:
         NA: 0x2066598
@@ -2756,9 +3425,114 @@ arm9:
     - name: OSi_ExceptionHandler
       address:
         NA: 0x2066618
+    - name: OSi_GetAndDisplayContext
+      address:
+        NA: 0x206669C
+    - name: OSi_SetExContext
+      address:
+        NA: 0x20666B0
+    - name: OSi_DisplayExContext
+      address:
+        NA: 0x2066740
+    - name: OSi_DisplayExContext_Helper
+      address:
+        NA: 0x2066790
+    - name: OSi_SetTimerReserved
+      address:
+        NA: 0x20667BC
+    - name: OSi_UnsetTimerReserved
+      address:
+        NA: 0x20667D8
+    - name: OS_InitTick
+      address:
+        NA: 0x20667F8
+    - name: OS_IsTickAvailable
+      address:
+        NA: 0x2066870
+    - name: OSi_CountUpTick
+      address:
+        NA: 0x2066880
+    - name: OS_GetTick
+      address:
+        NA: 0x20668E8
+    - name: OS_GetTickLo
+      address:
+        NA: 0x2066988
+    - name: OSi_SetTimer
+      address:
+        NA: 0x2066998
+    - name: OS_InitAlarm
+      address:
+        NA: 0x2066A24
+    - name: OS_EndAlarm
+      address:
+        NA: 0x2066A64
+    - name: OS_IsAlarmAvailable
+      address:
+        NA: 0x2066AA4
+    - name: OS_CreateAlarm
+      address:
+        NA: 0x2066AB4
+    - name: OSi_InsertAlarm
+      address:
+        NA: 0x2066AC4
+    - name: OS_SetAlarm
+      address:
+        NA: 0x2066BF0
+    - name: OS_CancelAlarm
+      address:
+        NA: 0x2066C5C
+    - name: OSi_AlarmHandler
+      address:
+        NA: 0x2066CE4
+    - name: OSi_ArrangeTimer
+      address:
+        NA: 0x2066CF4
     - name: OS_InitVAlarm
       address:
         NA: 0x2066DE4
+    - name: OS_EndVAlarm
+      address:
+        NA: 0x2066E2C
+    - name: OSi_InsertVAlarm
+      address:
+        NA: 0x2066E54
+    - name: OSi_AppendVAlarm
+      address:
+        NA: 0x2066ED0
+    - name: OSi_DetachVAlarm
+      address:
+        NA: 0x2066F08
+    - name: OS_CreateVAlarm
+      address:
+        NA: 0x2066F40
+    - name: OS_SetVAlarm
+      address:
+        NA: 0x2066F54
+    - name: OS_SetPeriodicVAlarm
+      address:
+        NA: 0x2066FE0
+    - name: OSi_SetNextVAlarm
+      address:
+        NA: 0x206706C
+    - name: OS_CancelVAlarm
+      address:
+        NA: 0x20670AC
+    - name: OS_CancelAllVAlarms
+      address:
+        NA: 0x20670F4
+    - name: OSi_VAlarmHandler
+      address:
+        NA: 0x206714C
+    - name: OSi_CompareVCount
+      address:
+        NA: 0x20672C4
+    - name: OSi_GetVFrame
+      address:
+        NA: 0x2067310
+    - name: OS_EnableInterrupts
+      address:
+        NA: 0x2067350
     - name: OS_DisableInterrupts
       address:
         NA: 0x2067364
@@ -2776,9 +3550,36 @@ arm9:
         
         r0: Value to set the flag to (0x80 to set it, which disables interrupts; 0x0 to unset it, which enables interrupts)
         return: Old value of cpsr & 0x80 (0x80 if interrupts were disabled, 0x0 if they were enabled)
+    - name: OS_EnableInterrupts_IrqAndFiq
+      address:
+        NA: 0x2067390
+    - name: OS_RestoreInterrupts_IrqAndFiq
+      address:
+        NA: 0x20673A4
+    - name: OS_GetCpsrIrq
+      address:
+        NA: 0x20673BC
+    - name: OS_GetProcMode
+      address:
+        NA: 0x20673C8
+    - name: OS_SpinWait
+      address:
+        NA: 0x20673D4
+    - name: OS_WaitVBlankIntr
+      address:
+        NA: 0x20673E0
     - name: OS_InitReset
       address:
         NA: 0x20673FC
+    - name: OSi_CommonCallback
+      address:
+        NA: 0x2067450
+    - name: OSi_SendToPxi
+      address:
+        NA: 0x2067484
+    - name: OS_ResetSystem
+      address:
+        NA: 0x20674B0
     - name: OS_GetMacAddress
       address:
         NA: 0x206756C
@@ -2808,6 +3609,15 @@ arm9:
     - name: OSi_InitVramExclusive
       address:
         NA: 0x2067614
+    - name: OSi_TryLockVram
+      address:
+        NA: 0x2067648
+    - name: OSi_UnlockVram
+      address:
+        NA: 0x2067708
+    - name: OS_GetLowEntropyData
+      address:
+        NA: 0x2067790
     - name: OS_Panic
       address:
         NA: 0x2067860
@@ -2831,12 +3641,33 @@ arm9:
     - name: MI_SetWramBank
       address:
         NA: 0x206787C
+    - name: MI_DmaFill32
+      address:
+        NA: 0x206788C
+    - name: MI_DmaSend32
+      address:
+        NA: 0x206790C
+    - name: MI_DmaFill16
+      address:
+        NA: 0x206797C
     - name: MI_DmaCopy16
       address:
         NA: 0x20679FC
+    - name: MI_DmaFill32Async
+      address:
+        NA: 0x2067A68
+    - name: MI_DmaCopy32Async
+      address:
+        NA: 0x2067B2C
+    - name: MI_WaitDma
+      address:
+        NA: 0x2067BC4
     - name: MI_StopDma
       address:
         NA: 0x2067C2C
+    - name: MIi_CheckAnotherAutoDma
+      address:
+        NA: 0x2067CA8
     - name: MIi_CheckDma0SourceAddress
       address:
         NA: 0x2067D2C
@@ -2900,6 +3731,12 @@ arm9:
         r0: src
         r1: dest
         r2: len (# bytes)
+    - name: MI_Copy36B
+      address:
+        NA: 0x2067ED4
+    - name: MI_Copy48B
+      address:
+        NA: 0x2067EF0
     - name: MI_CpuFill8
       address:
         NA: 0x2067F14
@@ -2926,12 +3763,201 @@ arm9:
         r0: src
         r1: dest
         r2: n (# bytes)
+    - name: MI_SwapWord
+      address:
+        NA: 0x2068150
+    - name: MI_UncompressLZ8
+      address:
+        NA: 0x2068158
+    - name: MI_UncompressHuffman
+      address:
+        NA: 0x20681F4
+    - name: MI_UncompressRL8
+      address:
+        NA: 0x20682EC
+    - name: MI_UnfilterDiff8
+      address:
+        NA: 0x2068358
+    - name: MIi_CardDmaCopy32
+      address:
+        NA: 0x20683B8
     - name: MI_Init
       address:
         NA: 0x206842C
+    - name: Snd_StopSeq
+      address:
+        NA: 0x2068444
+    - name: Snd_PrepareSeq
+      address:
+        NA: 0x2068464
+    - name: Snd_StartPreparedSeq
+      address:
+        NA: 0x206848C
+    - name: Snd_SetPlayerTempoRatio
+      address:
+        NA: 0x20684AC
+    - name: Snd_SetPlayerVolume
+      address:
+        NA: 0x20684C4
+    - name: Snd_SetPlayerChannelPriority
+      address:
+        NA: 0x20684DC
+    - name: Snd_SetTrackPan
+      address:
+        NA: 0x20684F4
+    - name: Snd_SetTrackAllocatableChannel
+      address:
+        NA: 0x2068510
+    - name: Snd_StartTimer
+      address:
+        NA: 0x2068538
+    - name: Snd_StopTimer
+      address:
+        NA: 0x2068560
+    - name: Snd_SetupAlarm
+      address:
+        NA: 0x20685C4
+    - name: Snd_LockChannel
+      address:
+        NA: 0x2068604
+    - name: Snd_UnlockChannel
+      address:
+        NA: 0x2068624
+    - name: Snd_SetChannelVolume
+      address:
+        NA: 0x2068644
+    - name: Snd_SetChannelPan
+      address:
+        NA: 0x206866C
+    - name: Snd_SetupChannelPcm
+      address:
+        NA: 0x206868C
+    - name: Snd_InvalidateSeqData
+      address:
+        NA: 0x20686D8
+    - name: Snd_InvalidateBankData
+      address:
+        NA: 0x20686F8
+    - name: Snd_InvalidateWaveData
+      address:
+        NA: 0x2068718
+    - name: Snd_SetOutputSelector
+      address:
+        NA: 0x2068738
+    - name: Sndi_SetPlayerParam
+      address:
+        NA: 0x2068760
+    - name: Sndi_SetTrackParam
+      address:
+        NA: 0x2068788
+    - name: PushCommand_Impl
+      address:
+        NA: 0x20687B0
+    - name: Snd_Init
+      address:
+        NA: 0x20687F4
+    - name: Sndi_LockMutex
+      address:
+        NA: 0x206882C
+    - name: Sndi_UnlockMutex
+      address:
+        NA: 0x2068840
+    - name: Snd_CommandInit
+      address:
+        NA: 0x2068854
+    - name: Snd_RecvCommandReply
+      address:
+        NA: 0x2068928
+    - name: Snd_AllocCommand
+      address:
+        NA: 0x2068A38
+    - name: Snd_PushCommand
+      address:
+        NA: 0x2068AC0
+    - name: Snd_FlushCommand
+      address:
+        NA: 0x2068AF8
+    - name: Snd_WaitForCommandProc
+      address:
+        NA: 0x2068CB4
+    - name: Snd_GetCurrentCommandTag
+      address:
+        NA: 0x2068D20
+    - name: Snd_IsFinishedCommandTag
+      address:
+        NA: 0x2068D4C
+    - name: Snd_CountFreeCommand
+      address:
+        NA: 0x2068D9C
+    - name: Snd_CountReservedCommand
+      address:
+        NA: 0x2068DD8
+    - name: Snd_CountWaitingCommand
+      address:
+        NA: 0x2068E14
+    - name: PxiFifoCallback
+      address:
+        NA: 0x2068E30
+    - name: InitPxi
+      address:
+        NA: 0x2068E54
+    - name: RequestCommandProc
+      address:
+        NA: 0x2068EB4
+    - name: AllocCommand
+      address:
+        NA: 0x2068EDC
+    - name: IsCommandAvailable
+      address:
+        NA: 0x2068F24
+    - name: Snd_AlarmInit
+      address:
+        NA: 0x2068F64
+    - name: Sndi_IncAlarmId
+      address:
+        NA: 0x2068F94
+    - name: Sndi_SetAlarmHandler
+      address:
+        NA: 0x2068FB4
+    - name: Sndi_CallAlarmHandler
+      address:
+        NA: 0x2068FE4
+    - name: Snd_GetPlayerStatus
+      address:
+        NA: 0x2069028
+    - name: Sndi_GetFinishedCommandTag
+      address:
+        NA: 0x2069054
+    - name: Sndi_InitSharedWork
+      address:
+        NA: 0x206907C
     - name: Snd_CalcChannelVolume
       address:
         NA: 0x20690F8
+    - name: Snd_AssignWaveArc
+      address:
+        NA: 0x2069168
+    - name: Snd_DestroyBank
+      address:
+        NA: 0x2069234
+    - name: Snd_DestroyWaveArc
+      address:
+        NA: 0x20692CC
+    - name: Snd_GetFirstInstDataPos
+      address:
+        NA: 0x2069314
+    - name: Snd_GetNextInstData
+      address:
+        NA: 0x2069334
+    - name: Snd_GetWaveDataCount
+      address:
+        NA: 0x20694E4
+    - name: Snd_SetWaveDataAddress
+      address:
+        NA: 0x20694EC
+    - name: Snd_GetWaveDataAddress
+      address:
+        NA: 0x2069520
     - name: Pxi_Init
       address:
         NA: 0x206955C
@@ -2950,6 +3976,294 @@ arm9:
     - name: Pxii_HandlerRecvFifoNotEmpty
       address:
         NA: 0x2069760
+    - name: FSi_ReleaseCommand
+      address:
+        NA: 0x2069878
+    - name: FSi_TranslateCommand
+      address:
+        NA: 0x20698D4
+    - name: FSi_StrNiCmp
+      address:
+        NA: 0x2069A64
+    - name: FSi_ReadTable
+      address:
+        NA: 0x2069AB4
+    - name: FSi_SeekDirDirect
+      address:
+        NA: 0x2069B74
+    - name: FSi_ReadFileCommand
+      address:
+        NA: 0x2069BA8
+    - name: FSi_WriteFileCommand
+      address:
+        NA: 0x2069BD4
+    - name: FSi_SeekDirCommand
+      address:
+        NA: 0x2069C00
+    - name: FSi_ReadDirCommand
+      address:
+        NA: 0x2069C98
+    - name: FSi_FindPathCommand
+      address:
+        NA: 0x2069DC4
+    - name: FSi_GetPathCommand
+      address:
+        NA: 0x2069FA8
+    - name: FSi_OpenFileFastCommand
+      address:
+        NA: 0x206A354
+    - name: FSi_OpenFileDirectCommand
+      address:
+        NA: 0x206A3D4
+    - name: FSi_CloseFileCommand
+      address:
+        NA: 0x206A3FC
+    - name: FSi_GetPackedName
+      address:
+        NA: 0x206A404
+    - name: FSi_ReadMemCallback
+      address:
+        NA: 0x206A45C
+    - name: FSi_WriteMemCallback
+      address:
+        NA: 0x206A478
+    - name: FSi_ReadMemoryCore
+      address:
+        NA: 0x206A498
+    - name: FSi_NextCommand
+      address:
+        NA: 0x206A4B0
+    - name: FSi_ExecuteAsyncCommand
+      address:
+        NA: 0x206A6C4
+    - name: FSi_ExecuteSyncCommand
+      address:
+        NA: 0x206A758
+    - name: FSi_SendCommand
+      address:
+        NA: 0x206A79C
+    - name: FS_InitArchive
+      address:
+        NA: 0x206A940
+    - name: FS_FindArchive
+      address:
+        NA: 0x206A96C
+    - name: FS_RegisterArchiveName
+      address:
+        NA: 0x206A9AC
+    - name: FS_ReleaseArchiveName
+      address:
+        NA: 0x206AA60
+    - name: FS_LoadArchive
+      address:
+        NA: 0x206AAE4
+    - name: FS_UnloadArchive
+      address:
+        NA: 0x206AB54
+    - name: FS_LoadArchiveTables
+      address:
+        NA: 0x206AC14
+    - name: FS_UnloadArchiveTables
+      address:
+        NA: 0x206AD38
+    - name: FS_SuspendArchive
+      address:
+        NA: 0x206ADC4
+    - name: FS_ResumeArchive
+      address:
+        NA: 0x206AE60
+    - name: FS_SetArchiveProc
+      address:
+        NA: 0x206AED0
+    - name: FS_NotifyArchiveAsyncEnd
+      address:
+        NA: 0x206AEF0
+    - name: FS_Init
+      address:
+        NA: 0x206AF74
+    - name: FS_InitFile
+      address:
+        NA: 0x206AF9C
+    - name: FSi_FindPath
+      address:
+        NA: 0x206AFC4
+    - name: FSi_ReadFileCore
+      address:
+        NA: 0x206B108
+    - name: FS_ConvertPathToFileID
+      address:
+        NA: 0x206B184
+    - name: FS_OpenFileDirect
+      address:
+        NA: 0x206B1C4
+    - name: FS_OpenFileFast
+      address:
+        NA: 0x206B20C
+    - name: FS_OpenFile
+      address:
+        NA: 0x206B27C
+    - name: FS_CloseFile
+      address:
+        NA: 0x206B2C4
+    - name: FS_WaitAsync
+      address:
+        NA: 0x206B300
+    - name: FS_CancelFile
+      address:
+        NA: 0x206B3C0
+    - name: FS_ReadFile
+      address:
+        NA: 0x206B408
+    - name: FS_SeekFile
+      address:
+        NA: 0x206B418
+    - name: FS_ChangeDir
+      address:
+        NA: 0x206B484
+    - name: FSi_OnRomReadDone
+      address:
+        NA: 0x206B4DC
+    - name: FSi_ReadRomCallback
+      address:
+        NA: 0x206B500
+    - name: FSi_WriteDummyCallback
+      address:
+        NA: 0x206B548
+    - name: FSi_RomArchiveProc
+      address:
+        NA: 0x206B550
+    - name: FSi_ReadDummyCallback
+      address:
+        NA: 0x206B5BC
+    - name: FSi_EmptyArchiveProc
+      address:
+        NA: 0x206B5C4
+    - name: FSi_InitRom
+      address:
+        NA: 0x206B5CC
+    - name: FS_SetDefaultDma
+      address:
+        NA: 0x206B714
+    - name: FSi_GetOverlayBinarySize
+      address:
+        NA: 0x206B764
+    - name: FS_ClearOverlayImage
+      address:
+        NA: 0x206B780
+    - name: FS_GetOverlayFileID
+      address:
+        NA: 0x206B7BC
+    - name: FSi_LoadOverlayInfoCore
+      address:
+        NA: 0x206B7E4
+    - name: FS_LoadOverlayInfo
+      address:
+        NA: 0x206B8DC
+    - name: FS_LoadOverlayImage
+      address:
+        NA: 0x206B9D8
+    - name: FSi_CompareOverlayDigest
+      address:
+        NA: 0x206BA68
+    - name: FS_StartOverlay
+      address:
+        NA: 0x206BAFC
+    - name: FS_EndOverlay
+      address:
+        NA: 0x206BBF0
+    - name: FS_UnloadOverlayImage
+      address:
+        NA: 0x206BCE0
+    - name: FS_LoadOverlay
+      address:
+        NA: 0x206BCF0
+    - name: FS_UnloadOverlay
+      address:
+        NA: 0x206BD44
+    - name: Math_MD5Init
+      address:
+        NA: 0x206BD90
+    - name: Math_MD5Update
+      address:
+        NA: 0x206BDD0
+    - name: Math_MD5GetHash
+      address:
+        NA: 0x206BE98
+    - name: Math_MD5Transform
+      address:
+        NA: 0x206BF50
+    - name: Dgt_Hash2Init
+      address:
+        NA: 0x206C304
+    - name: Dgt_Hash2Update
+      address:
+        NA: 0x206C354
+    - name: Dgt_Hash2GetHash
+      address:
+        NA: 0x206C4A8
+    - name: Dgt_Hash2CalcHmac
+      address:
+        NA: 0x206C6A4
+    - name: Dgti_CalcHmac
+      address:
+        NA: 0x206C738
+    - name: Dgt_Hash2Transform
+      address:
+        NA: 0x206C904
+    - name: CP_SaveContext
+      address:
+        NA: 0x206CB84
+    - name: CPi_RestoreContext
+      address:
+        NA: 0x206CBC4
+    - name: TPi_TpCallback
+      address:
+        NA: 0x206CC00
+    - name: TP_Init
+      address:
+        NA: 0x206CE80
+    - name: TP_GetUserInfo
+      address:
+        NA: 0x206CEF8
+    - name: TP_SetCalibrateParam
+      address:
+        NA: 0x206CF8C
+    - name: TP_RequestSamplingAsync
+      address:
+        NA: 0x206D0B4
+    - name: TP_WaitRawResult
+      address:
+        NA: 0x206D148
+    - name: TP_RequestAutoSamplingStartAsync
+      address:
+        NA: 0x206D198
+    - name: TP_RequestSetStabilityAsync
+      address:
+        NA: 0x206D298
+    - name: TP_GetLatestIndexInAuto
+      address:
+        NA: 0x206D330
+    - name: TP_CalcCalibrateParam
+      address:
+        NA: 0x206D340
+    - name: TP_GetCalibratedPoint
+      address:
+        NA: 0x206D52C
+    - name: TP_WaitBusy
+      address:
+        NA: 0x206D650
+    - name: TP_CheckBusy
+      address:
+        NA: 0x206D668
+    - name: PMi_Lock
+      address:
+        NA: 0x206D67C
+    - name: PMi_WaitBusy
+      address:
+        NA: 0x206D6B8
+    - name: PMi_DummyCallback
+      address:
+        NA: 0x206D6F8
     - name: PMi_CallCallbackAndUnlock
       address:
         NA: 0x206D700
@@ -2959,6 +4273,33 @@ arm9:
     - name: PMi_CommonCallback
       address:
         NA: 0x206D7E4
+    - name: PMi_SendSleepStart
+      address:
+        NA: 0x206D8AC
+    - name: PM_SendUtilityCommandAsync
+      address:
+        NA: 0x206D940
+    - name: PMi_ReadRegisterAsync
+      address:
+        NA: 0x206D9A0
+    - name: PMi_ReadRegister
+      address:
+        NA: 0x206DA0C
+    - name: PMi_SetLedAsync
+      address:
+        NA: 0x206DA34
+    - name: PMi_SetLed
+      address:
+        NA: 0x206DA88
+    - name: PM_SetBackLightAsync
+      address:
+        NA: 0x206DAB0
+    - name: PM_SetBackLight
+      address:
+        NA: 0x206DB2C
+    - name: PM_ForceToPowerOffAsync
+      address:
+        NA: 0x206DB54
     - name: PM_ForceToPowerOff
       address:
         NA: 0x206DC00
@@ -2966,33 +4307,534 @@ arm9:
         Powers off the system.
         
         return: ?
+    - name: PM_GetBackLight
+      address:
+        NA: 0x206DC28
+    - name: PMi_SendPxiData
+      address:
+        NA: 0x206DC84
+    - name: PM_GoSleepMode
+      address:
+        NA: 0x206DCB0
+    - name: PMi_SetLcdPower
+      address:
+        NA: 0x206DEE0
+    - name: PM_SetLcdPower
+      address:
+        NA: 0x206DFB4
+    - name: PM_GetLcdPower
+      address:
+        NA: 0x206DFD4
+    - name: PMi_SendLedPatternCommandAsync
+      address:
+        NA: 0x206DFF0
+    - name: PMi_SendLedPatternCommand
+      address:
+        NA: 0x206E038
+    - name: PM_GetLedPatternAsync
+      address:
+        NA: 0x206E060
+    - name: PM_GetLedPattern
+      address:
+        NA: 0x206E0A8
+    - name: PMi_PrependList
+      address:
+        NA: 0x206E0D0
+    - name: PMi_AppendList
+      address:
+        NA: 0x206E0E4
+    - name: PMi_DeleteList
+      address:
+        NA: 0x206E130
+    - name: PMi_ExecuteList
+      address:
+        NA: 0x206E178
+    - name: PM_PrependPreSleepCallback
+      address:
+        NA: 0x206E1A0
+    - name: PM_AppendPostSleepCallback
+      address:
+        NA: 0x206E1B8
+    - name: PM_DeletePreSleepCallback
+      address:
+        NA: 0x206E1D0
+    - name: PM_DeletePostSleepCallback
+      address:
+        NA: 0x206E1E8
+    - name: Rtc_Init
+      address:
+        NA: 0x206E200
+    - name: Rtc_GetDateAsync
+      address:
+        NA: 0x206E26C
+    - name: Rtc_GetDate
+      address:
+        NA: 0x206E2DC
+    - name: Rtc_GetTimeAsync
+      address:
+        NA: 0x206E314
+    - name: Rtc_GetTime
+      address:
+        NA: 0x206E388
+    - name: Rtc_GetDateTimeAsync
+      address:
+        NA: 0x206E3C0
+    - name: Rtc_GetDateTime
+      address:
+        NA: 0x206E43C
+    - name: RtcCommonCallback
+      address:
+        NA: 0x206E474
+    - name: RtcBcd2Hex
+      address:
+        NA: 0x206E9C4
+    - name: RtcGetResultCallback
+      address:
+        NA: 0x206EA34
+    - name: RtcWaitBusy
+      address:
+        NA: 0x206EA44
+    - name: Rtci_ReadRawDateTimeAsync
+      address:
+        NA: 0x206EA5C
+    - name: Rtci_ReadRawDateAsync
+      address:
+        NA: 0x206EA6C
+    - name: Rtci_ReadRawTimeAsync
+      address:
+        NA: 0x206EA7C
+    - name: Rtci_WriteRawStatus2Async
+      address:
+        NA: 0x206EA8C
+    - name: RtcSendPxiCommand
+      address:
+        NA: 0x206EA9C
+    - name: Rtc_ConvertDateToDay
+      address:
+        NA: 0x206EAC4
+    - name: Rtci_ConvertTimeToSecond
+      address:
+        NA: 0x206EB58
+    - name: Rtc_ConvertDateTimeToSecond
+      address:
+        NA: 0x206EB70
+    - name: Rtc_GetDayOfWeek
+      address:
+        NA: 0x206EBD4
+    - name: Cardi_SetTask
+      address:
+        NA: 0x206EC90
+    - name: Cardi_LockResource
+      address:
+        NA: 0x206ECCC
+    - name: Cardi_UnlockResource
+      address:
+        NA: 0x206ED50
     - name: Cardi_InitCommon
       address:
         NA: 0x206EDDC
+    - name: Card_IsEnabled
+      address:
+        NA: 0x206EEEC
+    - name: Card_CheckEnabled
+      address:
+        NA: 0x206EEFC
     - name: Card_Enable
       address:
         NA: 0x206EF14
+    - name: Cardi_WaitAsync
+      address:
+        NA: 0x206EF24
+    - name: Cardi_TryWaitAsync
+      address:
+        NA: 0x206EF70
+    - name: Card_IsAvailable
+      address:
+        NA: 0x206EF8C
+    - name: Card_LockRom
+      address:
+        NA: 0x206EFA0
+    - name: Card_UnlockRom
+      address:
+        NA: 0x206EFBC
+    - name: Card_LockBackup
+      address:
+        NA: 0x206EFD8
+    - name: Card_UnlockBackup
+      address:
+        NA: 0x206EFE8
+    - name: Cardi_IdentifyBackupCore
+      address:
+        NA: 0x206F010
+    - name: Cardi_RequestStreamCommandCore
+      address:
+        NA: 0x206F2E0
+    - name: Cardi_RequestStreamCommand
+      address:
+        NA: 0x206F4B8
+    - name: Card_GetCurrentBackupType
+      address:
+        NA: 0x206F5A0
+    - name: Card_GetBackupTotalSize
+      address:
+        NA: 0x206F5B4
+    - name: Card_GetBackupSectorSize
+      address:
+        NA: 0x206F5C8
+    - name: Card_GetBackupPageSize
+      address:
+        NA: 0x206F5DC
+    - name: Card_IdentifyBackup
+      address:
+        NA: 0x206F5F0
+    - name: Card_WaitBackupAsync
+      address:
+        NA: 0x206F728
+    - name: Card_TryWaitBackupAsync
+      address:
+        NA: 0x206F734
     - name: Cardi_ReadFromCache
       address:
         NA: 0x206F740
     - name: Cardi_SetRomOp
       address:
         NA: 0x206F7CC
+    - name: Cardi_SetCardDma
+      address:
+        NA: 0x206F82C
+    - name: Cardi_OnReadCard
+      address:
+        NA: 0x206F880
+    - name: Cardi_TryReadCardDma
+      address:
+        NA: 0x206F950
     - name: Cardi_ReadCard
       address:
         NA: 0x206FADC
+    - name: Cardi_ReadRomIdCore
+      address:
+        NA: 0x206FBCC
+    - name: Cardi_ReadRomSyncCore
+      address:
+        NA: 0x206FC28
+    - name: Cardi_ReadRom
+      address:
+        NA: 0x206FCC0
     - name: Card_Init
       address:
         NA: 0x206FDB8
+    - name: Card_WaitRomAsync
+      address:
+        NA: 0x206FE1C
+    - name: Cardi_GetRomAccessor
+      address:
+        NA: 0x206FE28
     - name: Cardi_OnFifoRecv
       address:
         NA: 0x206FE34
     - name: Cardi_TaskThread
       address:
         NA: 0x206FE68
+    - name: Cardi_Request
+      address:
+        NA: 0x206FEB8
     - name: Card_InitPulledOutCallback
       address:
         NA: 0x207000C
+    - name: Cardi_PulledOutCallback
+      address:
+        NA: 0x2070038
+    - name: Card_IsPulledOut
+      address:
+        NA: 0x207008C
+    - name: Card_TerminateForPulledOut
+      address:
+        NA: 0x207009C
+    - name: Cardi_CheckPulledOutCore
+      address:
+        NA: 0x2070128
+    - name: Cardi_SendtoPxi
+      address:
+        NA: 0x2070188
+    - name: WM_Init
+      address:
+        NA: 0x20701D8
+    - name: WmInitCore
+      address:
+        NA: 0x2070204
+    - name: WM_Finish
+      address:
+        NA: 0x20703E8
+    - name: WMi_SetCallbackTable
+      address:
+        NA: 0x2070458
+    - name: WmGetCommandBuffer4Arm7
+      address:
+        NA: 0x2070470
+    - name: WMi_SendCommand
+      address:
+        NA: 0x20704C8
+    - name: WMi_SendCommandDirect
+      address:
+        NA: 0x2070574
+    - name: WMi_GetSystemWork
+      address:
+        NA: 0x20705E4
+    - name: WMi_CheckInitialized
+      address:
+        NA: 0x20705F4
+    - name: WMi_CheckIdle
+      address:
+        NA: 0x2070610
+    - name: WMi_CheckStateEx
+      address:
+        NA: 0x2070658
+    - name: WmReceiveFifo
+      address:
+        NA: 0x20706EC
+    - name: WmClearFifoRecvFlag
+      address:
+        NA: 0x2070A98
+    - name: WMi_GetStatusAddress
+      address:
+        NA: 0x2070AB4
+    - name: WM_GetAid
+      address:
+        NA: 0x2070AD8
+    - name: WM_GetConnectedAids
+      address:
+        NA: 0x2070B08
+    - name: WMi_GetMpReadyAids
+      address:
+        NA: 0x2070B38
+    - name: WM_SetIndCallback
+      address:
+        NA: 0x2070B80
+    - name: WM_SetPortCallback
+      address:
+        NA: 0x2070BC4
+    - name: WM_ReadStatus
+      address:
+        NA: 0x2070C9C
+    - name: WM_GetMpSendBufferSize
+      address:
+        NA: 0x2070CE8
+    - name: WM_GetMpReceiveBufferSize
+      address:
+        NA: 0x2070D54
+    - name: WM_ReadMpData
+      address:
+        NA: 0x2070E18
+    - name: WM_GetAllowedChannel
+      address:
+        NA: 0x2070EFC
+    - name: WM_GetLinkLevel
+      address:
+        NA: 0x2070F1C
+    - name: WM_GetDispersionBeaconPeriod
+      address:
+        NA: 0x2070FAC
+    - name: WM_GetDispersionScanPeriod
+      address:
+        NA: 0x207103C
+    - name: WM_GetOtherElements
+      address:
+        NA: 0x20710D0
+    - name: WM_GetNextTgid
+      address:
+        NA: 0x2071228
+    - name: WMi_EnableEx
+      address:
+        NA: 0x207129C
+    - name: WM_Disable
+      address:
+        NA: 0x20712FC
+    - name: WM_PowerOn
+      address:
+        NA: 0x207133C
+    - name: WM_PowerOff
+      address:
+        NA: 0x207137C
+    - name: WMi_InitializeEx
+      address:
+        NA: 0x20713BC
+    - name: WM_Reset
+      address:
+        NA: 0x2071418
+    - name: WM_End
+      address:
+        NA: 0x2071450
+    - name: WM_SetParentParameter
+      address:
+        NA: 0x2071490
+    - name: WmCheckParentParameter
+      address:
+        NA: 0x207156C
+    - name: WMi_StartParentEx
+      address:
+        NA: 0x20715BC
+    - name: WM_StartParent
+      address:
+        NA: 0x2071618
+    - name: WM_EndParent
+      address:
+        NA: 0x2071628
+    - name: WM_StartScan
+      address:
+        NA: 0x2071668
+    - name: WM_StartScanEx
+      address:
+        NA: 0x2071754
+    - name: WM_EndScan
+      address:
+        NA: 0x20718A4
+    - name: WM_StartConnectEx
+      address:
+        NA: 0x20718E4
+    - name: WM_Disconnect
+      address:
+        NA: 0x20719B0
+    - name: WM_DisconnectChildren
+      address:
+        NA: 0x2071A98
+    - name: WMi_StartMp
+      address:
+        NA: 0x2071B24
+    - name: WM_StartMpEx
+      address:
+        NA: 0x2071C94
+    - name: WM_StartMp
+      address:
+        NA: 0x2071D38
+    - name: WM_SetMpDataToPortEx
+      address:
+        NA: 0x2071DA0
+    - name: WM_EndMp
+      address:
+        NA: 0x2071EDC
+    - name: WM_StartDcf
+      address:
+        NA: 0x2071F4C
+    - name: WM_SetDcfData
+      address:
+        NA: 0x2071FEC
+    - name: WM_EndDcf
+      address:
+        NA: 0x20720B8
+    - name: WM_StartDataSharing
+      address:
+        NA: 0x2072124
+    - name: WM_EndDataSharing
+      address:
+        NA: 0x2072378
+    - name: WM_StepDataSharing
+      address:
+        NA: 0x20723C0
+    - name: WmDataSharingSetDataCallback
+      address:
+        NA: 0x2072708
+    - name: WmDataSharingReceiveCallback_Parent
+      address:
+        NA: 0x20727E0
+    - name: WmDataSharingReceiveCallback_Child
+      address:
+        NA: 0x207290C
+    - name: WmDataSharingReceiveData
+      address:
+        NA: 0x2072A00
+    - name: WmDataSharingSendDataSet
+      address:
+        NA: 0x2072ACC
+    - name: WM_GetSharedDataAddress
+      address:
+        NA: 0x2072C20
+    - name: WmGetSharedDataAddress
+      address:
+        NA: 0x2072C74
+    - name: WM_StartKeySharing
+      address:
+        NA: 0x2072CA4
+    - name: WM_EndKeySharing
+      address:
+        NA: 0x2072CC0
+    - name: WM_SetWepKey
+      address:
+        NA: 0x2072CCC
+    - name: WM_SetWepKeyEx
+      address:
+        NA: 0x2072D40
+    - name: WM_SetGameInfo
+      address:
+        NA: 0x2072DBC
+    - name: WM_SetBeaconIndication
+      address:
+        NA: 0x2072E74
+    - name: WM_SetLifeTime
+      address:
+        NA: 0x2072EC4
+    - name: WM_MeasureChannel
+      address:
+        NA: 0x2072F24
+    - name: MB_CommSetParentStateCallback
+      address:
+        NA: 0x2072F9C
+    - name: MB_CommGetChildUser
+      address:
+        NA: 0x2072FC4
+    - name: MB_CommIsBootable
+      address:
+        NA: 0x2073048
+    - name: MB_CommResponseRequest
+      address:
+        NA: 0x207309C
+    - name: MBi_CommChangeParentState
+      address:
+        NA: 0x207317C
+    - name: MBi_CommChangeParentStateCallbackOnly
+      address:
+        NA: 0x20731C8
+    - name: MBi_CommParentCallback
+      address:
+        NA: 0x20731F0
+    - name: MBi_CommParentRecvDataPerChild
+      address:
+        NA: 0x2073690
+    - name: MBi_CommParentRecvData
+      address:
+        NA: 0x2073B74
+    - name: MBi_CommParentSendMsg
+      address:
+        NA: 0x2073C20
+    - name: MBi_CommParentSendDlfileInfo
+      address:
+        NA: 0x2073C60
+    - name: MBi_ReloadCache
+      address:
+        NA: 0x2073DF8
+    - name: MBi_CommParentSendBlock
+      address:
+        NA: 0x2073E98
+    - name: MBi_CommParentSendData
+      address:
+        NA: 0x2074134
+    - name: MBi_Calc_Sendblock
+      address:
+        NA: 0x20742B4
+    - name: MBi_Calc_Nextsendblock
+      address:
+        NA: 0x2074330
+    - name: IsChildAidValid
+      address:
+        NA: 0x2074340
+    - name: MBi_CommCallParentError
+      address:
+        NA: 0x207435C
+    - name: MB_GetSegmentLength
+      address:
+        NA: 0x2074374
+    - name: MB_ReadSegment
+      address:
+        NA: 0x20743F4
     - name: ret_0207484c
       address:
         NA: 0x207484C
@@ -3000,9 +4842,230 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: MBi_ReadSegmentHeader
+      address:
+        NA: 0x2074850
+    - name: MB_RegisterFile
+      address:
+        NA:
+          - 0x20748C8
+          - 0x20776B0
+    - name: MBi_MakeDownloadFileInfo
+      address:
+        NA: 0x2074B58
+    - name: MBi_SetSegmentInfo
+      address:
+        NA: 0x2074BCC
+    - name: MBi_MakeBlockInfoTable
+      address:
+        NA: 0x2074D44
+    - name: MBi_Get_Blockinfo
+      address:
+        NA: 0x2074E10
+    - name: MBi_IsAbleToRecv
+      address:
+        NA: 0x2074EC4
+    - name: IsAbleToLoad
+      address:
+        NA: 0x2074F70
+    - name: MBi_BlockHeaderEnd
+      address:
+        NA: 0x207503C
+    - name: MBi_Calc_Cksum
+      address:
+        NA: 0x2075074
+    - name: MBi_MakeGameInfo
+      address:
+        NA: 0x20750C0
+    - name: MBi_ReadIconInfo
+      address:
+        NA: 0x20751B0
+    - name: MB_UpdateGameInfoMember
+      address:
+        NA: 0x2075250
+    - name: mystrlen
+      address:
+        NA: 0x20752C0
+    - name: MB_AddGameInfo
+      address:
+        NA: 0x20752E8
+    - name: MB_InitSendGameInfoStatus
+      address:
+        NA: 0x207532C
+    - name: MBi_ClearSendStatus
+      address:
+        NA: 0x2075358
+    - name: MB_SendGameInfoBeacon
+      address:
+        NA: 0x207537C
+    - name: MBi_ReadyBeaconSendStatus
+      address:
+        NA: 0x2075408
+    - name: MBi_InitSendFixedBeacon
+      address:
+        NA: 0x20754A8
+    - name: MBi_SendFixedBeacon
+      address:
+        NA: 0x20754FC
+    - name: MBi_InitSendVolatBeacon
+      address:
+        NA: 0x2075660
+    - name: MBi_SendVolatBeacon
+      address:
+        NA: 0x2075690
+    - name: ChangeScanChannel
+      address:
+        NA: 0x20758FC
+    - name: MBi_IsSendEnabled
+      address:
+        NA: 0x207596C
+    - name: MBi_OnInitializeDone
+      address:
+        NA: 0x20759CC
+    - name: MBi_EndCommon
+      address:
+        NA: 0x2075A1C
+    - name: MBi_ParentCallback
+      address:
+        NA: 0x2075A60
+    - name: MBi_ChildPortCallback
+      address:
+        NA: 0x2076214
+    - name: MBi_ChildCallback
+      address:
+        NA: 0x2076284
+    - name: MBi_GetBeaconPeriodDispersion
+      address:
+        NA: 0x2076AB0
+    - name: MB_Init
+      address:
+        NA: 0x2076B18
+    - name: MBi_IsCommSizeValid
+      address:
+        NA: 0x2076CFC
+    - name: MB_SetParentCommParam
+      address:
+        NA: 0x2076D6C
+    - name: MBi_StartCommon
+      address:
+        NA: 0x2076E04
+    - name: MBi_StartParentCore
+      address:
+        NA: 0x2076ED8
+    - name: MB_StartParent
+      address:
+        NA: 0x20770BC
+    - name: MBi_CallReset
+      address:
+        NA: 0x20770E0
+    - name: MBi_CommEnd
+      address:
+        NA: 0x2077124
+    - name: MB_End
+      address:
+        NA: 0x20771B8
+    - name: MB_DisconnectChild
+      address:
+        NA: 0x20771F4
+    - name: MBi_GetLastFountParent
+      address:
+        NA: 0x2077380
+    - name: MBi_GetParentBssDesc
+      address:
+        NA: 0x2077390
+    - name: MBi_SendMp
+      address:
+        NA: 0x20773DC
+    - name: MBi_GetGgid
+      address:
+        NA: 0x20774BC
+    - name: MBi_GetTgid
+      address:
+        NA: 0x20774D0
+    - name: MBi_GetAttribute
+      address:
+        NA: 0x20774E4
+    - name: MBi_IsStarted
+      address:
+        NA: 0x2077544
+    - name: MBi_CheckWmErrcode
+      address:
+        NA: 0x2077564
+    - name: MBi_InitCache
+      address:
+        NA: 0x207759C
+    - name: MBi_AttachCacheBuffer
+      address:
+        NA: 0x20775B0
+    - name: MBi_ReadFromCache
+      address:
+        NA: 0x2077618
+    - name: MBi_InitTaskThread
+      address:
+        NA: 0x20777C8
+    - name: MBi_IsTaskAvailable
+      address:
+        NA: 0x2077848
+    - name: MBi_InitTaskInfo
+      address:
+        NA: 0x2077864
+    - name: MBi_IsTaskBusy
+      address:
+        NA: 0x2077878
+    - name: MBi_SetTask
+      address:
+        NA: 0x2077890
+    - name: MBi_EndTaskThread
+      address:
+        NA: 0x20779F4
+    - name: MBi_SetChildMpMaxSize
+      address:
+        NA: 0x2077A3C
+    - name: MBi_SetParentPieceBuffer
+      address:
+        NA: 0x2077A6C
+    - name: MBi_ClearParentPieceBuffer
+      address:
+        NA: 0x2077A8C
+    - name: MBi_MakeParentSendBuffer
+      address:
+        NA: 0x2077AD0
+    - name: MBi_SetRecvBufferFromChild
+      address:
+        NA: 0x2077B54
+    - name: MBi_ReceiveRequestDataPiece
+      address:
+        NA: 0x2077C70
+    - name: IsGetAllRequestData
+      address:
+        NA: 0x2077CFC
     - name: Ctrdgi_InitCommon
       address:
         NA: 0x2077D50
+    - name: Ctrdgi_IsBitIdAtInit
+      address:
+        NA: 0x2077D88
+    - name: Ctrdg_IsOptionCartridge
+      address:
+        NA: 0x2077DB0
+    - name: Ctrdgi_GetModuleInfoAddr
+      address:
+        NA: 0x2077DD8
+    - name: Ctrdg_IsNumberID
+      address:
+        NA: 0x2077DF0
+    - name: Ctrdg_IsAgbCartridge
+      address:
+        NA: 0x2077E14
+    - name: Ctrdg_IsAgbCartridgePulledOut
+      address:
+        NA: 0x2077E38
+    - name: Ctrdgi_IsAgbCartridgeAtInit
+      address:
+        NA: 0x2077E5C
+    - name: Ctrdg_IsExisting
+      address:
+        NA: 0x2077E80
     - name: Ctrdgi_ChangeLatestAccessCycle
       address:
         NA: 0x2077F8C
@@ -3018,9 +5081,92 @@ arm9:
     - name: Ctrdgi_SendtoPxi
       address:
         NA: 0x2078088
+    - name: Ctrdg_Read8
+      address:
+        NA: 0x20780D8
+    - name: Ctrdgi_AccessCommon
+      address:
+        NA: 0x20780F0
+    - name: Ctrdg_IsEnabled
+      address:
+        NA: 0x20781D0
+    - name: Ctrdg_Enable
+      address:
+        NA: 0x20781E0
+    - name: Ctrdg_CheckEnabled
+      address:
+        NA: 0x2078228
     - name: Ctrdg_Init
       address:
         NA: 0x207824C
+    - name: Ctrdgi_InitModuleInfo
+      address:
+        NA: 0x2078300
+    - name: Ctrdgi_CallbackForInitModuleInfo
+      address:
+        NA: 0x20784F4
+    - name: Ctrdgi_PulledOutCallback
+      address:
+        NA: 0x2078520
+    - name: Ctrdg_TerminateForPulledOut
+      address:
+        NA: 0x207857C
+    - name: Ctrdgi_CallbackForSetPhi
+      address:
+        NA: 0x2078590
+    - name: Ctrdgi_InitTaskThread
+      address:
+        NA: 0x20785A4
+    - name: Ctrdgi_InitTaskInfo
+      address:
+        NA: 0x2078630
+    - name: Ctrdgi_IsTaskBusy
+      address:
+        NA: 0x2078644
+    - name: Math_CountPopulation
+      address:
+        NA: 0x2078734
+    - name: Mathi_Crc16InitTableRev
+      address:
+        NA: 0x2078778
+    - name: Mathi_Crc16UpdateRev
+      address:
+        NA: 0x20787BC
+    - name: Math_CalcCrc16
+      address:
+        NA: 0x20787FC
+    - name: Std_CopyString
+      address:
+        NA: 0x2078824
+    - name: Std_CopyLStringZeroFill
+      address:
+        NA: 0x2078858
+    - name: Std_GetStringLength
+      address:
+        NA: 0x20788B8
+    - name: Std_ConcatenateString
+      address:
+        NA: 0x20788E0
+    - name: Std_CompareString
+      address:
+        NA:
+          - 0x2078904
+          - 0x2078910
+    - name: Std_CompareNString
+      address:
+        NA: 0x2078930
+    - name: string_put_char
+      address:
+        NA: 0x2078970
+    - name: string_fill_char
+      address:
+        NA: 0x20789A0
+    - name: string_put_string
+      address:
+        NA: 0x20789F4
+    - name: OS_VsNPrintfEx
+      address:
+        NA: 0x2078A4C
     - name: abs
       address:
         NA: 0x20794C8
