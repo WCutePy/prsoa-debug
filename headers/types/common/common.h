@@ -119,9 +119,9 @@ struct pokemon_data {
     undefined field5_0x6;          // Seems to be padding
     undefined field6_0x7;
     // slot_status_bitfield
-    uint32_t is_valid : 1; 
+    uint32_t is_valid : 1;
     uint32_t is_partner : 1;      // Also prevents release
-    uint32_t is_unreleasable : 1; // Also affects poke-assist use. 
+    uint32_t is_unreleasable : 1; // Also affects poke-assist use.
     uint32_t unknown_bits : 29;
     // These last 12 bytes change rapidly, and are likely related to pokemon motion.
     int x_coordinate;
