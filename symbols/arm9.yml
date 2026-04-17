@@ -3142,6 +3142,18 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: MaybeLinearInterpolationInit
+      address:
+        NA: 0x205FD64
+      description: Likely a library function.
+    - name: MaybeLinearInterpolationProgress
+      address:
+        NA: 0x205FD8C
+      description: Likely a library function.
+    - name: MaybeLinearInterpolationUpdate
+      address:
+        NA: 0x205FDC0
+      description: Likely a library function.
     - name: Mtx_Identity22
       address:
         NA: 0x205FDF0
