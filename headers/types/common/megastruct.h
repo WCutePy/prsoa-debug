@@ -52,7 +52,7 @@ struct megastruct {
     undefined4 field3841_0x1464;
     undefined4 field3842_0x1468;
     undefined field3843_0x146c[32];
-    void* unk_struct_size_0x1ac; // Very likely related to sound, bgm, or sfx.
+    void* unk_struct_size_0x1ac;
     // A pointer to this is present in the mission_quest_footer. Looks to be related to the message
     // given before a quest is accepted. Has ties to "data/message/quest/quest%03d_mes"
     void* unk_struct_size_0x158;
