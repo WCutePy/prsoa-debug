@@ -219,7 +219,7 @@ arm9:
       address:
         NA: 0x20092D4
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to completely wipe a textbox_data struct.
         
         r0: textbox_data pointer
     - name: ZeroInitTextboxData
@@ -503,11 +503,12 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: InitIrisTransitionStructById
+    - name: InitScreenFadeStructById
       address:
         NA: 0x200E330
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to initialize a screen_fade struct. 
+        Is currently only confirmed to handle Iris Transitions.
         
         r0: screen_fade pointer
         r1: undefined4 pointer
@@ -515,17 +516,17 @@ arm9:
       address:
         NA: 0x200E5AC
       description: |-
-        [MANUAL DESCRIPTION]
+        While keeping a screen_fade pointer in r0, clamps an input to a minimum and maximum. Frequently used in relation to the size of the DS screen...
         
         r0: screen_fade pointer
-        r1: uint32_t 
-        r2: uint32_t 
-        r3: uint32_t 
+        r1: value
+        r2: minimum
+        r3: maximum
     - name: ScreenInitStripesForIrisTransition
       address:
         NA: 0x200E614
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to be responsible for initializing the stripes table for an Iris Transition.
         
         r0: screen_fade pointer
         r1: int32_t 
@@ -534,7 +535,7 @@ arm9:
       address:
         NA: 0x200E6F8
       description: |-
-        [MANUAL DESCRIPTION]
+        Called repeatedly to adjust the radius of the Iris during an Iris Transition.
         
         r0: screen_fade pointer
         r1: int32_t 
@@ -543,7 +544,7 @@ arm9:
       address:
         NA: 0x200E904
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to be responsible for returning the current width of the Iris in an Iris Transition.
         
         r0: screen_fade pointer
     - name: ret_0200ee10
@@ -578,28 +579,28 @@ arm9:
       address:
         NA: 0x201024C
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the window and text speed settings to their appropriate places in the textbox_data struct in the megastruct.
         
         r0: megastruct pointer
     - name: SetUnkAudioSettingVariables
       address:
         NA: 0x2010324
       description: |-
-        [MANUAL DESCRIPTION]
+        Assigns settings variables from an unknown audio struct, pointed to by the megastruct.
         
         r0: megastruct pointer
     - name: GetUnkAudioSettingVariables
       address:
         NA: 0x2010378
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves settings variables and stores them in an unknown audio struct, pointed to by the megastruct.
         
         r0: megastruct pointer
     - name: InitUnkAudioSettingVariables
       address:
         NA: 0x2010400
       description: |-
-        [MANUAL DESCRIPTION]
+        Initializes settings variables used by GetUnkAudioSettingVariables and SetUnkAudioSettingVariables.
         
         r0: megastruct pointer
     - name: ret_02010448
@@ -1012,25 +1013,25 @@ arm9:
       address:
         NA: 0x201128C
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to Initialize RANGER_NET_MISSION_COMPLETION_BITS to zero. 
         
-        r0: int16_t pointer
+        r0: pointer to RANGER_NET_MISSION_COMPLETION_BITS
     - name: SetRangerNetMissionCompletionBit
       address:
         NA: 0x20112DC
       description: |-
-        [MANUAL DESCRIPTION]
+        Enables a bit in RANGER_NET_MISSION_COMPLETION_BITS.
         
-        r0: void pointer
-        r1: uint32_t 
+        r0: pointer to RANGER_NET_MISSION_COMPLETION_BITS
+        r1: bit index. If less than zero, empties the entire field!
     - name: GetRangerNetMissionCompletionBit
       address:
         NA: 0x2011318
       description: |-
-        [MANUAL DESCRIPTION]
+        Checks if a bit in RANGER_NET_MISSION_COMPLETION_BITS is enabled.
         
         r0: undefined4 
-        r1: uint32_t 
+        r1: bit index 
     - name: ZeroQuestBody
       address:
         NA: 0x201135C
@@ -1172,10 +1173,11 @@ arm9:
       address:
         NA: 0x2015658
       description: |-
-        [MANUAL DESCRIPTION]
-        
+        Retrieves the party size for a specified ranger rank, excluding the partner if in the active team.
+        Seems like the partner is intentionally excluded from the party size...
+
         r0: ranger_data_old pointer
-        r1: uint32_t 
+        r1: ranger rank to check party size for. If above 10, checks with the current ranger rank!
     - name: IsTriggerSpawnNibbleUnlocked
       address:
         NA: 0x2015690
@@ -1252,10 +1254,10 @@ arm9:
       address:
         NA: 0x2015E54
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to be iterating over the following_npcs and party pokemon_data structs, and doing something. Validation is only an educated guess, but it seems plausible.
         
         r0: ranger_data_old pointer
-        r1: uint32_t 
+        r1: affects whether followers or party are being checked? Not a bool!
     - name: MaybeHandleStylerLevelUp
       address:
         NA: 0x20160B8
@@ -1268,43 +1270,46 @@ arm9:
       address:
         NA: 0x2016138
       description: |-
-        [MANUAL DESCRIPTION]
-        
+        Counts the number of valid pokemon in the specified party. 
+        If an invalid party index (less than zero or greater than 2) is input, the current party will be chosen.
+
         r0: ranger_data_old pointer
-        r1: int32_t 
-    - name: GetPartySizeExcludingPartner
+        r1: party index
+    - name: GetPartySizeSubtractPartner
       address:
         NA: 0x20161AC
       description: |-
-        [MANUAL DESCRIPTION]
+        Calls GetPartySize, then subtracts 1 from the result if the partner is in the party.
+        Never returns less than zero.
         
         r0: ranger_data_old pointer
-        r1: undefined4 
-        r2: int32_t 
+        r1: ranger rank to use (if negative uses current)
+        r2: team slot to use (if invalid uses current)
     - name: CountNonPartnerPokemonInParty
       address:
         NA: 0x20161E4
       description: |-
-        [MANUAL DESCRIPTION]
-        
+        Calls CountValidPokemonInParty, then subtracts 1 from the result if the partner is in the party.
+        Never returns less than zero.
+
         r0: ranger_data_old pointer
-        r1: int32_t 
+        r1: team slot to use (if invalid uses current)
     - name: HasPartnerPokemonInParty
       address:
         NA: 0x201621C
       description: |-
-        [MANUAL DESCRIPTION]
+        Loops through the number of valid pokemon in the party for slot_status_field & 0x2, which seems to be true for the partner.
         
         r0: ranger_data_old pointer
-        r1: int32_t 
+        r1: team slot to use (if invalid uses current)
     - name: GetPartnerIndexInParty
       address:
         NA: 0x2016268
       description: |-
-        [MANUAL DESCRIPTION]
+        Loops through the number of valid pokemon in the party for slot_status_field & 0x2, then calls and returns GetPartnerIndexFromFormId on the form_id of that species.
         
         r0: ranger_data_old pointer
-        r1: int32_t 
+        r1: team slot to use (if invalid uses current)
     - name: UpdatePlayTime
       address:
         NA: 0x201668C
@@ -2545,14 +2550,14 @@ arm9:
       address:
         NA: 0x2034478
       description: |-
-        [MANUAL DESCRIPTION]
+        Initializes the audio_engine struct. More research needed.
         
         r0: audio_engine pointer
     - name: IsFormIdPartnerPokemon
       address:
         NA: 0x2034F9C
       description: |-
-        [MANUAL DESCRIPTION]
+        Checks if the given form_id corresponds to a vanilla partner form_id. Returns 1 if so, 0 if not.
         
         r0: form_id 
     - name: GetPartnerIndexFromFormId
@@ -3118,14 +3123,14 @@ arm9:
       address:
         NA: 0x205B968
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to call Snd_Init, as well as a few more audio-related functions.
         
         No params.
     - name: InitAudioSubstructFileData
       address:
         NA: 0x205CCF8
       description: |-
-        [MANUAL DESCRIPTION]
+        Initializes a substruct of the audio_engine struct. More research needed.
         
         r0: unk_audio_engine_substruct_1 pointer
         r1: char pointer
