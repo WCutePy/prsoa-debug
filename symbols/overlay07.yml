@@ -25,30 +25,29 @@ overlay7:
       address:
         NA: 0x211EFE4
       description: |-
-        Checks if the number of pokemon in the party is above the limit, for a player of the current ranger rank.
+        [MANUAL DESCRIPTION]
         
         No params.
     - name: IsRangerAtOrAboveFullHp
       address:
         NA: 0x211F4E0
       description: |-
-        Seems to check if the player is at or above full HP, likely to check if recharging the styler is allowed.
+        [MANUAL DESCRIPTION]
         
         r0: ov_07_unk_struct_size_0x280 pointer
     - name: AreButtonsOrTouchScreenPressed
       address:
         NA: 0x211F4FC
       description: |-
-        Seems to check if any buttons or the touch screen is pressed.
+        [MANUAL DESCRIPTION]
         
         r0: ov_07_unk_struct_size_0x280 pointer
     - name: IsOverPartyLimit
       address:
         NA: 0x211F604
       description: |-
-        Checks the field in ov_07_unk_struct_size_0x280 to determine if the struct believes the party limit has been exceeded.
-        Unclear why this is different from IsOverPartyPokemonLimit.
-
+        [MANUAL DESCRIPTION]
+        
         r0: ov_07_unk_struct_size_0x280 pointer
     - name: ret_0211cfb0
       address:

@@ -70,7 +70,7 @@ struct textbox_subdata* ZeroInitTextboxSubData(struct textbox_subdata* param_1);
 void ret_0200c404(void);
 struct font_file_data* InitFontFileData(struct font_file_data* param_1);
 void ret_0200d414(void);
-void InitScreenFadeStructById(struct screen_fade *param_1,undefined4 *param_2);
+void InitIrisTransitionStructById(struct screen_fade *param_1,undefined4 *param_2);
 unsigned int ScreenClampValueToRange(struct screen_fade *param_1,unsigned int param_2,unsigned int param_3,unsigned int param_4);
 void ScreenInitStripesForIrisTransition(struct screen_fade *param_1,int param_2,int param_3);
 void ScreenApplyIrisTransitionRadius(struct screen_fade *param_1,int param_2,int param_3);
@@ -172,7 +172,7 @@ void EnableNpcSpawnNibble(struct ranger_data* param_1, int param_2, enum room_id
 undefined4 MaybeValidateFollowersAndParty(ranger_data_old *param_1,unsigned int param_2);
 void MaybeHandleStylerLevelUp(struct ranger_data* param_1, unsigned int styler_level);
 int CountValidPokemonInParty(ranger_data_old *param_1,int param_2);
-int GetPartySizeSubtractPartner(ranger_data_old *param_1,undefined4 param_2,int param_3);
+int GetPartySizeExcludingPartner(ranger_data_old *param_1,undefined4 param_2,int param_3);
 int CountNonPartnerPokemonInParty(ranger_data_old *param_1,int param_2);
 bool HasPartnerPokemonInParty(ranger_data_old *param_1,int param_2);
 int GetPartnerIndexInParty(ranger_data_old *param_1,int param_2);
