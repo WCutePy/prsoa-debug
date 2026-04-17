@@ -3154,6 +3154,10 @@ arm9:
       address:
         NA: 0x205FDC0
       description: Likely a library function.
+    - name: MaybeCheckIfLinearInterpolationMeetsThreshold
+      address:
+        NA: 0x205FDD8
+      description: Likely a library function.
     - name: Mtx_Identity22
       address:
         NA: 0x205FDF0
