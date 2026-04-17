@@ -17,13 +17,6 @@ overlay29:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: PrintCartErrorMsg
-      address:
-        NA: 0x211CB54
-      description: |-
-        Seems to be responsible for printing an error message related to cart ejection.
-        
-        No params.
   data:
     - name: OV29_STATIC_INITIALIZER
       address:

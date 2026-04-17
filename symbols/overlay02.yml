@@ -13,20 +13,6 @@ overlay2:
     JP: 0x800
   description: Unknown.
   functions:
-    - name: PostprocessBattleResults
-      address:
-        NA: 0x211C9E0
-      description: |-
-        Seems to handle miscellaneous things that occur after a battle, like incrementing catch ranks, ranger records, granting exp, releasing team members, and much more.
-        
-        r0: ov_00_unk_struct pointer
-    - name: ChooseReturnOverlayId
-      address:
-        NA: 0x211D08C
-      description: |-
-        Seems to check if the player has more pokemon than they should, and if so, return 7 instead of 1. It is unlikely a coincidence that overlay_07 is the release menu.
-        
-        r0: ov_00_unk_struct pointer
     - name: ret_0211d124
       address:
         NA: 0x211D124
@@ -67,13 +53,6 @@ overlay2:
         NA: 0x211D138
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ov_02_return_0x5
-      address:
-        NA: 0x211D13C
-      description: |-
-        Always returns 0x5. Does nothing else.
         
         No params.
   data:

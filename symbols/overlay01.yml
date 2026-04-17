@@ -11,7 +11,7 @@ overlay1:
     EU: 0x25940
     NA: 0x25820
     JP: 0x25D40
-  description: Controls in-game battles.
+  description: Likely controls battles.
   functions:
     - name: Overlay1EntryPoint
       address:
@@ -128,16 +128,6 @@ overlay1:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: InitEnemyPokemonScript
-      address:
-        NA: 0x2124F90
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: enemy_script_data pointer
-        r1: form_id_16 
-        r2: undefined2 pointer
-        r3: int32_t 
     - name: ret_021293d4
       address:
         NA: 0x21293D4

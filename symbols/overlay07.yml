@@ -21,34 +21,6 @@ overlay7:
         
         r0: ov_07_unk_struct pointer
         r1: megastruct pointer
-    - name: IsOverPartyPokemonLimit
-      address:
-        NA: 0x211EFE4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: IsRangerAtOrAboveFullHp
-      address:
-        NA: 0x211F4E0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: ov_07_unk_struct_size_0x280 pointer
-    - name: AreButtonsOrTouchScreenPressed
-      address:
-        NA: 0x211F4FC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: ov_07_unk_struct_size_0x280 pointer
-    - name: IsOverPartyLimit
-      address:
-        NA: 0x211F604
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: ov_07_unk_struct_size_0x280 pointer
     - name: ret_0211cfb0
       address:
         NA: 0x211CFB0

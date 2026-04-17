@@ -116,11 +116,9 @@ struct pokemon_data {
     int16_t room_caught_index;     // Index of this pokemon in room_caught's available pokemon.
     undefined field5_0x6;          // Seems to be padding
     undefined field6_0x7;
-    // slot_status_bitfield
-    uint32_t is_valid : 1; 
-    uint32_t is_partner : 1;      // Also prevents release
-    uint32_t is_unreleasable : 1; // Also affects poke-assist use. 
-    uint32_t unknown_bits : 29;
+    // Bitfield of data that affects whether the pokemon exists, can use poke-assists, can be
+    // released, etc. Requires more research to fully understand...
+    undefined4 slot_status_fields;
     // These last 12 bytes change rapidly, and are likely related to pokemon motion.
     int x_coordinate;
     int y_coordinate;
