@@ -1600,14 +1600,6 @@ arm9:
         Is a SysCall Function.
         
         No params.
-    - name: SysCallSetPlayerSpawnData
-      address:
-        NA: 0x2030B40
-      description: |-
-        SysCall Function that prepares the room_id, coordinates, and face angle of the player on room transition. Also used for flying and teleporting.
-        
-        r0: script stack pointer, interpreted as params.
-        r1: unknown, but clearly used.
     - name: SysCallGetActiveMissionId
       address:
         NA: 0x20313E8
