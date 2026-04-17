@@ -19,7 +19,9 @@ void FreeBattlePokemonSlot(struct battle_struct* param_1, int param_2);
 void UpdateBrowserLifetimeCaughtAndMore(struct battle_struct* param_1, undefined4 param_2,
                                         undefined4 param_3, undefined4 param_4);
 void ret_02123770(void);
-struct enemy_script_data *InitEnemyPokemonScript(struct enemy_script_data *param_1,struct form_id_16 param_2,undefined2 *param_3,int param_4);
+struct enemy_script_data* InitEnemyPokemonScript(struct enemy_script_data* param_1,
+                                                 struct form_id_16 param_2, undefined2* param_3,
+                                                 int param_4);
 void ret_021293d4(void);
 undefined4 SysCallPrintTextboxByBattleMessageId1(undefined4* param_1);
 undefined4 SysCallPrintTextboxByBattleMessageId2(undefined4* param_1);
