@@ -10,8 +10,6 @@
 #include "options_menu.h"
 #include "unfinished.h"
 #include "textbox.h"
-#include "display.h"
-#include "audio.h"
 
 // Parameters used by the NitroSDK to read the ROM.
 struct start_module_params {
