@@ -69,15 +69,6 @@ arm9:
         return: pointer to allocated memory
     - name: GF_Assert_Veneer
       address:
-        NA:
-          - 0x2001470
-          - 0x200147C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined pointer
-    - name: GF_Assert_Veneer
-      address:
         NA: 0x200147C
     - name: LoadOverlay
       address:
@@ -103,20 +94,6 @@ arm9:
         Seems to initialize what we believe to be the struct that stores player inputs. 
         
         r0: controller_inputs pointer
-    - name: InitTouchScreenWrapper
-      address:
-        NA: 0x2001D34
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: touch_screen_wrapper pointer
-    - name: InitTouchScreen
-      address:
-        NA: 0x2001DF4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: touch_screen pointer
     - name: ret_02001eb4
       address:
         NA: 0x2001EB4
@@ -131,34 +108,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: InitTouchScreenWrapperOuter
-      address:
-        NA: 0x2002054
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: touch_screen_wrapper pointer
-    - name: InitFileWrapper
-      address:
-        NA: 0x2002BC4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: file_wrapper pointer
-        r1: char pointer
-        r2: int32_t 
-        r3: undefined4 
-        stack[0]: int32_t 
-        stack[1]: int32_t 
-    - name: InitFileWrapperWithLangSuffix
-      address:
-        NA: 0x200313C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: file_wrapper pointer
-        r1: undefined4 
-        r2: int32_t 
     - name: ret_0200372c
       address:
         NA: 0x200372C
@@ -201,20 +150,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: InitTextboxDataOuter
-      address:
-        NA: 0x20091E8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: textbox_data pointer
-    - name: ZeroInitTextboxData
-      address:
-        NA: 0x20093B4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: textbox_data pointer
     - name: IsTextboxPrinting
       address:
         NA: 0x2009ECC
@@ -386,13 +321,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: ZeroInitTextboxSubData
-      address:
-        NA: 0x200BBC8
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: textbox_subdata pointer
     - name: ret_0200c404
       address:
         NA: 0x200C404
@@ -400,13 +328,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: InitFontFileData
-      address:
-        NA: 0x200CFF4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: font_file_data pointer
     - name: ret_0200d414
       address:
         NA: 0x200D414
@@ -449,13 +370,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: InitBattleCombatantsOuter
-      address:
-        NA: 0x2010854
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: battle_combatants pointer
     - name: InitializeBattlePokemonFields
       address:
         NA: 0x2010868
@@ -1303,123 +1217,6 @@ arm9:
         Checks if the save file constant is correct. If not, the save file will be corrupt. NOT a checksum!
         
         No params.
-    - name: InitGroupMsgWrapperTable
-      address:
-        NA: 0x2018208
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-    - name: FillPokemonNameMsgWrapper
-      address:
-        NA: 0x2018250
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-    - name: ZeroPkmnNameMsgWrapper
-      address:
-        NA: 0x2018374
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-    - name: FillItemNameMsgWrapper
-      address:
-        NA: 0x2018410
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-    - name: ZeroItemNameMsgWrapper
-      address:
-        NA: 0x2018534
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-    - name: FillTargetNameMsgWrapper
-      address:
-        NA: 0x20185D0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-    - name: ZeroTargetNameMsgWrapper
-      address:
-        NA: 0x20186F4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-    - name: FillNpcNameMsgWrapper
-      address:
-        NA: 0x2018790
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-    - name: ZeroNpcNameMsgWrapper
-      address:
-        NA: 0x20188B4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-    - name: FillFieldMoveNameMsgWrapper
-      address:
-        NA: 0x2018950
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-    - name: ZeroFieldMoveNameMsgWrapper
-      address:
-        NA: 0x2018A74
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-    - name: GetPokemonNameById
-      address:
-        NA: 0x2018B10
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-        r1: int32_t 
-    - name: GetItemNameById
-      address:
-        NA: 0x2018B2C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-        r1: int32_t 
-    - name: GetTargetNameById
-      address:
-        NA: 0x2018B48
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-        r1: int32_t 
-    - name: GetNpcNameById
-      address:
-        NA: 0x2018B64
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-        r1: int32_t 
-    - name: GetFieldMoveNameById
-      address:
-        NA: 0x2018B80
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: group_msg_wrapper_table pointer
-        r1: int32_t 
     - name: ZeroSettingsAndVariables
       address:
         NA: 0x2018E1C
@@ -1625,13 +1422,6 @@ arm9:
         SysCall Function for DisableAutoCloseText.
         
         No params.
-    - name: SysCallTryCloseTextbox
-      address:
-        NA: 0x202CA30
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: SysCallGetYesNoMenuResult
       address:
         NA: 0x202CA54
@@ -1663,13 +1453,6 @@ arm9:
         Copies a text string to the debug buffer in RANGER_DATA. Both instances are separate SysCalls, but the functions are byte-for-byte identical.
         
         r0: script stack pointer, interpreted as params.
-    - name: SysCallAddEnemyFormToEncounterType2
-      address:
-        NA: 0x202F208
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: undefined4 pointer
     - name: SysCallBattleSetBgmId
       address:
         NA: 0x202F23C
@@ -2111,13 +1894,6 @@ arm9:
         SysCall Function that retrieves the game_saves_record from RANGER_DATA->ranger_records.
         
         No params.
-    - name: InitScriptDataOuter
-      address:
-        NA: 0x2033C4C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: script_data pointer
     - name: SetScriptSubroutine1
       address:
         NA: 0x2033D58
@@ -2143,13 +1919,6 @@ arm9:
         NA: 0x2033E50
       description: |-
         Seems to zero initialize a script_data struct. 
-        
-        r0: script_data pointer
-    - name: InitScriptData
-      address:
-        NA: 0x2033EB0
-      description: |-
-        [MANUAL DESCRIPTION]
         
         r0: script_data pointer
     - name: InitScriptManager
@@ -2321,24 +2090,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: InitFieldData
-      address:
-        NA: 0x2041C80
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: field_data pointer
-        r1: char pointer
-        r2: undefined4 
-    - name: InitFieldFileData
-      address:
-        NA: 0x2041CB4
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        r0: field_data pointer
-        r1: char pointer
-        r2: int32_t 
     - name: ret_02043124
       address:
         NA: 0x2043124
@@ -2406,13 +2157,6 @@ arm9:
         
         r0: format
         r1: ap
-    - name: SetSysCallPageZero
-      address:
-        NA: 0x2044440
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: SetSysCallPage
       address:
         NA: 0x2044B38
