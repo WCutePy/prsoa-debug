@@ -8,4 +8,5 @@ bool IsRangerAtOrAboveFullHp(struct ov_07_unk_struct_size_0x280* param_1);
 bool AreButtonsOrTouchScreenPressed(struct ov_07_unk_struct_size_0x280* param_1);
 uint32_t IsOverPartyLimit(struct ov_07_unk_struct_size_0x280* param_1);
 
+
 #endif
