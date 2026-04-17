@@ -1,7 +1,7 @@
 #ifndef HEADERS_TYPES_COMMON_TEXTBOX_H_
 #define HEADERS_TYPES_COMMON_TEXTBOX_H_
 
-#include "file.h"
+#include file.h
 
 // Note: uncompressed .mes files store these as non-pointers after their header.
 struct msg {
