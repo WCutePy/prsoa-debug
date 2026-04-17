@@ -2373,15 +2373,15 @@ struct ov_27_unk_substruct_0x384 {
     undefined4 *field41_0x38[1][56];
     undefined field42_0x118[4360];
 };
-ASSERT_SIZE(ov_27_unk_substruct_0x384, 4832);
+ASSERT_SIZE(struct ov_27_unk_substruct_0x384, 4832);
 
 struct ov_27_unk_struct {
     void* field0_0x0;
     undefined4 field1_0x4;
-    undefined4* field2_0x8;
-    undefined4* field3_0xc;
-    struct ov_27_unk_substruct_0x10 field4_0x10;
-    undefined4 field869_0x374;
+    struct ov_27_unk_substruct_0x10 *unk_substruct_0x10_ptr; // Points to unk_substruct_0x10
+    struct ov_27_unk_substruct_0x374 *unk_substruct_0x374_ptr; // Points to unk_substruct_0x374
+    struct ov_27_unk_substruct_0x10 unk_substruct_0x10;
+    undefined4 unk_field_0x370;
     struct ov_27_unk_substruct_0x374 unk_substruct_0x374;
     struct ov_27_unk_substruct_0x384 unk_substruct_0x384;    
 };
