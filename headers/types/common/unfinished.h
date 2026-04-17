@@ -283,10 +283,10 @@ struct ov_07_unk_struct_size_0x280 {
     undefined field5_0x6;
     undefined field6_0x7;
     undefined4 is_over_party_pokemon_limit;
-    void *unk_struct_size_0x2c_ptr;
-    struct unk_struct_0x28 *unk_struct_size_0x28_ptr;
-    void *unk_arena_struct_0x1c_ptr;
-    void *field11_0x18;
+    void* unk_struct_size_0x2c_ptr;
+    struct unk_struct_0x28* unk_struct_size_0x28_ptr;
+    void* unk_arena_struct_0x1c_ptr;
+    void* field11_0x18;
     undefined field12_0x1c;
     undefined field13_0x1d;
     undefined field14_0x1e;
@@ -343,7 +343,7 @@ struct ov_07_unk_struct_size_0x280 {
     undefined field65_0x55;
     undefined field66_0x56;
     undefined field67_0x57;
-    void *unk_struct_size_0x44_table_ptr[2];
+    void* unk_struct_size_0x44_table_ptr[2];
     undefined field69_0x60;
     undefined field70_0x61;
     undefined field71_0x62;
@@ -356,8 +356,8 @@ struct ov_07_unk_struct_size_0x280 {
     undefined field78_0x69;
     undefined field79_0x6a;
     undefined field80_0x6b;
-    void *field81_0x6c;
-    void *field82_0x70;
+    void* field81_0x6c;
+    void* field82_0x70;
     int field83_0x74;
     int field84_0x78;
     int field85_0x7c;
@@ -387,12 +387,12 @@ struct ov_07_unk_struct_size_0x280 {
     undefined field109_0x9d;
     undefined field110_0x9e;
     undefined field111_0x9f;
-    void *unk_struct_size_0x8;
-    void *unk_struct_size_0x10;
-    void *unk_struct_size_0x30_ptr; // may have header size 0x8
+    void* unk_struct_size_0x8;
+    void* unk_struct_size_0x10;
+    void* unk_struct_size_0x30_ptr; // may have header size 0x8
     undefined4 unk_struct_size_0x918_ptr;
-    struct ranger_data_old *ranger_data_old_ptr;
-    void *field117_0xb4[16];
+    struct ranger_data_old* ranger_data_old_ptr;
+    void* field117_0xb4[16];
     undefined field118_0xf4;
     undefined field119_0xf5;
     undefined field120_0xf6;
@@ -657,7 +657,7 @@ struct ov_07_unk_struct_size_0x280 {
     undefined4 field379_0x200;
     int field380_0x204;
     int field381_0x208;
-    void *field382_0x20c;
+    void* field382_0x20c;
     int field383_0x210;
     undefined field384_0x214;
     undefined field385_0x215;
@@ -669,9 +669,9 @@ struct ov_07_unk_struct_size_0x280 {
     unsigned int field391_0x21c;
     undefined2 field392_0x220;
     uint16_t field393_0x222;
-    void *unk_struct_size_0x7c_ptr;
-    void *unk_struct_size_0x18_ptr;
-    void *field396_0x22c;
+    void* unk_struct_size_0x7c_ptr;
+    void* unk_struct_size_0x18_ptr;
+    void* field396_0x22c;
     int32_t field397_0x230;
     undefined field398_0x234;
     undefined field399_0x235;
@@ -725,15 +725,15 @@ struct ov_07_unk_struct_size_0x280 {
     undefined field447_0x275;
     undefined field448_0x276;
     undefined field449_0x277;
-    void *unk_struct_size_0x5e4_ptr;
-    struct megastruct *megastruct_ptr;
+    void* unk_struct_size_0x5e4_ptr;
+    struct megastruct* megastruct_ptr;
 };
 ASSERT_SIZE(struct ov_07_unk_struct_size_0x280, 640);
 
 struct ov_07_unk_struct {
     void* field0_0x0;
     struct megastruct* megastruct_ptr;
-    struct ov_07_unk_struct_size_0x280 *unk_struct_size_0x280_ptr;
+    struct ov_07_unk_struct_size_0x280* unk_struct_size_0x280_ptr;
 };
 ASSERT_SIZE(struct ov_07_unk_struct, 12);
 
@@ -1525,7 +1525,7 @@ struct ov_27_unk_struct_size_0x3c {
     undefined field1_0x2;
     undefined field2_0x3;
     undefined4 field3_0x4;
-    struct unk_map_struct_size_0x68 *unk_map_struct_size_0x68_ptr;
+    struct unk_map_struct_size_0x68* unk_map_struct_size_0x68_ptr;
     undefined4 field5_0xc;
     undefined4 field6_0x10;
     undefined4 field7_0x14;
@@ -1534,12 +1534,12 @@ struct ov_27_unk_struct_size_0x3c {
     undefined field10_0x1d;
     undefined field11_0x1e;
     undefined field12_0x1f;
-    void *field13_0x20[5];
+    void* field13_0x20[5];
     undefined field14_0x34;
     undefined field15_0x35;
     undefined field16_0x36;
     undefined field17_0x37;
-    struct megastruct *megastruct_ptr;
+    struct megastruct* megastruct_ptr;
 };
 ASSERT_SIZE(struct ov_27_unk_struct_size_0x3c, 60);
 
@@ -2321,9 +2321,9 @@ struct ov_27_unk_substruct_0x10 {
 ASSERT_SIZE(struct ov_27_unk_substruct_0x10, 864);
 
 struct ov_27_unk_substruct_0x374 {
-    void *unk_fun_ptr;
+    void* unk_fun_ptr;
     undefined4 field1_0x4;
-    struct ov_27_unk_struct_size_0x3c *unk_struct_size_0x3c_ptr;
+    struct ov_27_unk_struct_size_0x3c* unk_struct_size_0x3c_ptr;
     undefined4 field3_0xc;
 };
 ASSERT_SIZE(struct ov_27_unk_substruct_0x374, 16);
@@ -2370,7 +2370,7 @@ struct ov_27_unk_substruct_0x384 {
     undefined field38_0x35;
     undefined field39_0x36;
     undefined field40_0x37;
-    undefined4 *field41_0x38[1][56];
+    undefined4* field41_0x38[1][56];
     undefined field42_0x118;
     undefined field43_0x119;
     undefined field44_0x11a;
@@ -2608,12 +2608,12 @@ ASSERT_SIZE(struct ov_27_unk_substruct_0x384, 4832);
 struct ov_27_unk_struct {
     void* field0_0x0;
     undefined4 field1_0x4;
-    struct ov_27_unk_substruct_0x10 *unk_substruct_0x10_ptr; // Points to unk_substruct_0x10
-    struct ov_27_unk_substruct_0x374 *unk_substruct_0x374_ptr; // Points to unk_substruct_0x374
+    struct ov_27_unk_substruct_0x10* unk_substruct_0x10_ptr;   // Points to unk_substruct_0x10
+    struct ov_27_unk_substruct_0x374* unk_substruct_0x374_ptr; // Points to unk_substruct_0x374
     struct ov_27_unk_substruct_0x10 unk_substruct_0x10;
     undefined4 unk_field_0x370;
     struct ov_27_unk_substruct_0x374 unk_substruct_0x374;
-    struct ov_27_unk_substruct_0x384 unk_substruct_0x384;    
+    struct ov_27_unk_substruct_0x384 unk_substruct_0x384;
 };
 ASSERT_SIZE(struct ov_27_unk_struct, 5732);
 
