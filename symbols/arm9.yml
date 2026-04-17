@@ -215,6 +215,13 @@ arm9:
         Seems to initialize textbox_data, in tandem with InitTextboxData.
         
         r0: textbox_data pointer
+    - name: WipeTextboxData
+      address:
+        NA: 0x20092D4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: textbox_data pointer
     - name: ZeroInitTextboxData
       address:
         NA: 0x20093B4
@@ -496,6 +503,49 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: InitIrisTransitionStructById
+      address:
+        NA: 0x200E330
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: screen_fade pointer
+        r1: undefined4 pointer
+    - name: ScreenClampValueToRange
+      address:
+        NA: 0x200E5AC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: screen_fade pointer
+        r1: uint32_t 
+        r2: uint32_t 
+        r3: uint32_t 
+    - name: ScreenInitStripesForIrisTransition
+      address:
+        NA: 0x200E614
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: screen_fade pointer
+        r1: int32_t 
+        r2: int32_t 
+    - name: ScreenApplyIrisTransitionRadius
+      address:
+        NA: 0x200E6F8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: screen_fade pointer
+        r1: int32_t 
+        r2: int32_t 
+    - name: MaybeGetIrisCurrentWidth
+      address:
+        NA: 0x200E904
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: screen_fade pointer
     - name: ret_0200ee10
       address:
         NA: 0x200EE10
@@ -524,6 +574,34 @@ arm9:
         Retrieves a megastruct pointer.
         
         return: megastruct pointer
+    - name: SetTextboxWindowAndSpeedSettings
+      address:
+        NA: 0x201024C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: megastruct pointer
+    - name: SetUnkAudioSettingVariables
+      address:
+        NA: 0x2010324
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: megastruct pointer
+    - name: GetUnkAudioSettingVariables
+      address:
+        NA: 0x2010378
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: megastruct pointer
+    - name: InitUnkAudioSettingVariables
+      address:
+        NA: 0x2010400
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: megastruct pointer
     - name: ret_02010448
       address:
         NA: 0x2010448
@@ -930,6 +1008,29 @@ arm9:
         Zeroes the entirety of a battle_exports struct, except for the function pointer at field_0x0.
         
         r0: battle_exports pointer
+    - name: InitRangerNetMissionCompletionBits
+      address:
+        NA: 0x201128C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int16_t pointer
+    - name: SetRangerNetMissionCompletionBit
+      address:
+        NA: 0x20112DC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: void pointer
+        r1: uint32_t 
+    - name: GetRangerNetMissionCompletionBit
+      address:
+        NA: 0x2011318
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 
+        r1: uint32_t 
     - name: ZeroQuestBody
       address:
         NA: 0x201135C
@@ -1067,6 +1168,14 @@ arm9:
         r0: ranger_data ptr 
         r1: slot index
         return: pokemon_data pointer
+    - name: GetPartySize
+      address:
+        NA: 0x2015658
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ranger_data_old pointer
+        r1: uint32_t 
     - name: IsTriggerSpawnNibbleUnlocked
       address:
         NA: 0x2015690
@@ -1139,6 +1248,14 @@ arm9:
         r0: ranger_data ptr
         r1: nibble_index
         r2: room_id
+    - name: MaybeValidateFollowersAndParty
+      address:
+        NA: 0x2015E54
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ranger_data_old pointer
+        r1: uint32_t 
     - name: MaybeHandleStylerLevelUp
       address:
         NA: 0x20160B8
@@ -1147,6 +1264,47 @@ arm9:
         
         r0: ranger_data pointer
         r1: styler_level
+    - name: CountValidPokemonInParty
+      address:
+        NA: 0x2016138
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ranger_data_old pointer
+        r1: int32_t 
+    - name: GetPartySizeExcludingPartner
+      address:
+        NA: 0x20161AC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ranger_data_old pointer
+        r1: undefined4 
+        r2: int32_t 
+    - name: CountNonPartnerPokemonInParty
+      address:
+        NA: 0x20161E4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ranger_data_old pointer
+        r1: int32_t 
+    - name: HasPartnerPokemonInParty
+      address:
+        NA: 0x201621C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ranger_data_old pointer
+        r1: int32_t 
+    - name: GetPartnerIndexInParty
+      address:
+        NA: 0x2016268
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ranger_data_old pointer
+        r1: int32_t 
     - name: UpdatePlayTime
       address:
         NA: 0x201668C
@@ -2375,6 +2533,20 @@ arm9:
         Zero Inits the 4 script_data fields in sequence.
         
         r0: script_manager pointer
+    - name: InitAudioEngineOuter
+      address:
+        NA: 0x2034478
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: audio_engine pointer
+    - name: IsFormIdPartnerPokemon
+      address:
+        NA: 0x2034F9C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: form_id 
     - name: GetPartnerIndexFromFormId
       address:
         NA: 0x2035088
@@ -2934,6 +3106,23 @@ arm9:
     - name: GXs_LoadBg3ScrVeneer
       address:
         NA: 0x20573A4
+    - name: InitSndAndMore
+      address:
+        NA: 0x205B968
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: InitAudioSubstructFileData
+      address:
+        NA: 0x205CCF8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: unk_audio_engine_substruct_1 pointer
+        r1: char pointer
+        r2: void pointer
+        r3: int32_t 
     - name: ret_0205fc98
       address:
         NA: 0x205FC98

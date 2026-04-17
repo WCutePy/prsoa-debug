@@ -7,12 +7,16 @@ void AddEnemyFormToEncounterType2(struct ov_00_unk_struct* param_1, undefined4 p
                                   undefined4 param_3, undefined4 param_4);
 void Overlay00PreEntryPoint(undefined4 param_1, struct megastruct* param_2, undefined4 param_3,
                             undefined4 param_4);
+void OpenAndInitMapScriptFile(unk_struct_size_0x80 *param_1,int param_2);
 void ret_02125334(void);
+undefined4 MaybeOpenAndInitMapDatAndTexFiles(unk_struct_size_0x80 *param_1,undefined4 param_2,char *param_3,int param_4);
 void ret_021266ac(void);
 void ret_021266b0(void);
 void ret_021266c4(void);
 void ret_021266c8(void);
 void ret_0213524c(void);
+undefined4 MaybeOpenAndInitTargetClearScript(void *param_1,int param_2,int param_3);
+void MaybeOpenAndInitTargetObjectTouchScript(undefined2 *param_1,char *param_2,undefined2 param_3);
 void ret_0214234c(void);
 void ret_02142398(void);
 void ret_021427ec(void);
