@@ -27,42 +27,42 @@ overlay2:
         Seems to check if the player has more pokemon than they should, and if so, return 7 instead of 1. It is unlikely a coincidence that overlay_07 is the release menu.
         
         r0: ov_00_unk_struct pointer
-    - name: ret_0211d124
+    - name: ret_0211D124
       address:
         NA: 0x211D124
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: ret_0211d128
+    - name: ret_0211D128
       address:
         NA: 0x211D128
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: ret_0211d12c
+    - name: ret_0211D12C
       address:
         NA: 0x211D12C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: ret_0211d130
+    - name: ret_0211D130
       address:
         NA: 0x211D130
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: ret_0211d134
+    - name: ret_0211D134
       address:
         NA: 0x211D134
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: ret_0211d138
+    - name: ret_0211D138
       address:
         NA: 0x211D138
       description: |-
