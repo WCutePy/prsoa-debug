@@ -52,7 +52,7 @@ undefined4 TryCloseTextbox(struct textbox_data* param_1, undefined4 param_2);
 int GetYesNoMenuResult(struct textbox_data* param_1);
 void ret_0200bbc0(void);
 void ret_0200bbc4(void);
-textbox_subdata * ZeroInitTextboxSubData(textbox_subdata *param_1);
+struct textbox_subdata * ZeroInitTextboxSubData(struct textbox_subdata *param_1);
 void ret_0200c404(void);
 struct font_file_data * InitFontFileData(struct font_file_data *param_1);
 void ret_0200d414(void);
@@ -291,7 +291,7 @@ undefined4 SetScriptSubroutine1(struct script_data* param_1, char* param_2, unde
 void SetScriptSubroutine2(struct script_data* param_1, char* param_2, undefined4 param_3, undefined4 param_4);
 void ZeroInitScriptData(struct script_data* param_1);
 void InitScriptData(struct script_data *param_1);
-struct script_manager * InitScriptManagerOuter(struct script_manager *param_1,undefined4 *param_2);
+struct script_manager * InitScriptManager(struct script_manager *param_1,undefined4 *param_2);
 int TryInitSystemScript(struct script_manager* param_1, int param_2);
 int TryInitAreaScript(struct script_manager* param_1, int param_2, undefined4 param_3,
                       undefined4 param_4);
@@ -316,8 +316,8 @@ void ret_0203e930(void);
 void ret_0204078c(void);
 void ret_0204129c(void);
 void ret_02041920(void);
-field_data * InitFieldData(field_data *param_1,char *param_2,undefined4 param_3);
-void InitFieldFileData(field_data *param_1,char *param_2,int param_3);
+struct field_data * InitFieldData(struct field_data *param_1,char *param_2,undefined4 param_3);
+void InitFieldFileData(struct field_data *param_1,char *param_2,int param_3);
 void ret_02043124(void);
 void ret_02043128(void);
 void ret_020439c4(void);
