@@ -2912,22 +2912,6 @@ arm9:
     - name: FX_ModS32
       address:
         NA: 0x2060B50
-    - name: TaylorExpandFixedPointSin
-      address:
-        NA: 0x2060B8C
-      description: Likely a library function.
-    - name: TaylorExpandFixedPointCos
-      address:
-        NA: 0x2060C74
-      description: Likely a library function.
-    - name: GetFixedPointSinCos
-      address:
-        NA: 0x2060D40
-      description: Likely a library function.
-    - name: GetFixedPointCosSin
-      address:
-        NA: 0x2060DD8
-      description: Likely a library function.
     - name: FX_Atan
       address:
         NA: 0x2060E6C
