@@ -2094,6 +2094,14 @@ arm9:
         Is a SysCall Function.
         
         No params.
+    - name: SysCallSetPlayerSpawnData
+      address:
+        NA: 0x2030B40
+      description: |-
+        SysCall Function responsible for handling where the player spawns on loading zone transition, as well as where they face, and what room_id they're in.
+        
+        r0: script stack pointer, interpreted as params.
+        r1: int32_t 
     - name: SysCallGetActiveMissionId
       address:
         NA: 0x20313E8

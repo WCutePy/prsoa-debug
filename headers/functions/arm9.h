@@ -1,8 +1,3 @@
-#ifndef HEADERS_FUNCTIONS_ARM9_H_
-#define HEADERS_FUNCTIONS_ARM9_H_
-
-#include "arm9/itcm.h"
-
 void _start(void);
 undefined4 MIi_UncompressBackward(int param_1);
 void ret_02000b98(void);
@@ -285,6 +280,7 @@ int8_t SysCallGetRangerStylerRank(void);
 int32_t SysCallGetRangerStylerType(void);
 int8_t SysCallGetStylerLevel(void);
 undefined4 SysCallSetRangerCurrentHp(undefined4* param_1);
+void SysCallSetPlayerSpawnData(void *param_1,int param_2);
 int8_t SysCallGetRangerMaxHp(void);
 int8_t SysCallGetRangerCurrentHp(void);
 int8_t SysCallGetActiveMissionId(void);
