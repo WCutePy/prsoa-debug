@@ -119,7 +119,7 @@ struct ranger_data_old {
     undefined4 field63_0x8b94;
     undefined4 field64_0x8b98;
     undefined4 field65_0x8b9c;
-    undefined4 field66_0x8ba0;
+    int32_t arena_id; // Seems to be assigned when entering the release menu post-battle.
     undefined field67_0x8ba4[44];
     struct pokemon_data recruited_pokemon_tables_backup[3][10];
     struct following_npc follower_1_backup;

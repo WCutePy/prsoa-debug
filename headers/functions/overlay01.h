@@ -19,6 +19,9 @@ void FreeBattlePokemonSlot(struct battle_struct* param_1, int param_2);
 void UpdateBrowserLifetimeCaughtAndMore(struct battle_struct* param_1, undefined4 param_2,
                                         undefined4 param_3, undefined4 param_4);
 void ret_02123770(void);
+struct enemy_script_data* InitEnemyPokemonScript(struct enemy_script_data* param_1,
+                                                 struct form_id_16 param_2, undefined2* param_3,
+                                                 int param_4);
 void ret_021293d4(void);
 undefined4 SysCallPrintTextboxByBattleMessageId1(undefined4* param_1);
 undefined4 SysCallPrintTextboxByBattleMessageId2(undefined4* param_1);
@@ -39,4 +42,8 @@ void ret_02136ae8(void);
 void ret_02137b90(void);
 void ret_02137b94(void);
 void ret_0213ae14(void);
+struct interface_file_manager* InitInterfaceFileManagerOuter(struct interface_file_manager* param_1,
+                                                             char* param_2, char* param_3);
+void InitInterfaceFileManagerInner(struct interface_file_manager* param_1, char* param_2,
+                                   char* param_3);
 #endif

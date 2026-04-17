@@ -143,6 +143,20 @@ arm9:
         r3: int32_t  
         stack[0]: int32_t 
         stack[1]: int32_t
+    - name: ConvertFilePathToId
+      address:
+        NA: 0x2003108
+      description: |-
+        Seems to be the higher level equivalent of FS_ConvertFilePathToId.
+        
+        r0: file path
+    - name: GetMsgLangSuffix
+      address:
+        NA: 0x2003124
+      description: |-
+        Retrieves the correct file suffix for the respective language. Presumed to interact with the megastruct in EU.
+        
+        No params.
     - name: InitFileWrapperWithLangSuffix
       address:
         NA: 0x200313C
@@ -199,6 +213,13 @@ arm9:
         NA: 0x20091E8
       description: |-
         Seems to initialize textbox_data, in tandem with InitTextboxData.
+        
+        r0: textbox_data pointer
+    - name: WipeTextboxData
+      address:
+        NA: 0x20092D4
+      description: |-
+        Seems to completely wipe a textbox_data struct.
         
         r0: textbox_data pointer
     - name: ZeroInitTextboxData
@@ -295,6 +316,21 @@ arm9:
         r3: undefined4 
         stack[0]: undefined4 
         stack[1]: undefined4
+    - name: FillSystemMsgWrapperAndId
+      address:
+        NA: 0x200AB28
+      description: |-
+        Fills the system msg_wrapper with extracted strings and updates the system script_id in textbox_data.
+        
+        r0: textbox_data pointer
+        r1: script id
+    - name: ClearSystemMsgWrapperAndId
+      address:
+        NA: 0x200AC90
+      description: |-
+        Wipes the system msg_wrapper and system script_id in textbox_data.
+        
+        r0: textbox_data pointer
     - name: PrintTextboxBySystemMessageId
       address:
         NA: 0x200AD34
@@ -306,6 +342,21 @@ arm9:
         r2: int32_t 
         r3: int32_t 
         stack[0]: undefined4
+    - name: FillAreaMsgWrapperAndId
+      address:
+        NA: 0x200AD80
+      description: |-
+        Fills the area msg_wrapper with extracted strings and updates the area script_id in textbox_data.
+        
+        r0: textbox_data pointer
+        r1: script id
+    - name: ClearAreaMsgWrapperAndId
+      address:
+        NA: 0x200AED0
+      description: |-
+        Wipes the area msg_wrapper and area script_id in textbox_data.
+        
+        r0: textbox_data pointer
     - name: PrintTextboxByAreaMessageId
       address:
         NA: 0x200AF74
@@ -317,6 +368,21 @@ arm9:
         r2: int32_t 
         r3: int32_t 
         stack[0]: undefined4
+    - name: FillChapterMsgWrapperAndId
+      address:
+        NA: 0x200AFC0
+      description: |-
+        Fills the chapter msg_wrapper with extracted strings and updates the chapter script_id in textbox_data.
+        
+        r0: textbox_data pointer
+        r1: script id
+    - name: ClearChapterMsgWrapperAndId
+      address:
+        NA: 0x200B12C
+      description: |-
+        Wipes the chapter msg_wrapper and chapter script_id in textbox_data.
+        
+        r0: textbox_data pointer
     - name: PrintTextboxByChapterMessageId
       address:
         NA: 0x200B1D0
@@ -328,6 +394,21 @@ arm9:
         r2: int32_t 
         r3: int32_t 
         stack[0]: undefined4
+    - name: FillQuestMsgWrapperAndId
+      address:
+        NA: 0x200B21C
+      description: |-
+        Fills the quest msg_wrapper with extracted strings and updates the chapter script_id in textbox_data.
+        
+        r0: textbox_data pointer
+        r1: int32_t
+    - name: ClearQuestMsgWrapperAndId
+      address:
+        NA: 0x200B36C
+      description: |-
+        Wipes the quest msg_wrapper and ques script_id in textbox_data.
+        
+        r0: textbox_data pointer
     - name: PrintTextboxByQuestMessageId
       address:
         NA: 0x200B410
@@ -339,6 +420,21 @@ arm9:
         r2: int32_t 
         r3: int32_t 
         stack[0]: undefined4
+    - name: FillBattleMsgWrapperAndId
+      address:
+        NA: 0x200B45C
+      description: |-
+        Fills the battle msg_wrapper with extracted strings and updates the battle script_id in textbox_data.
+        
+        r0: textbox_data pointer
+        r1: script id
+    - name: ClearBattleMsgWrapperAndId
+      address:
+        NA: 0x200B59C
+      description: |-
+        Wipes the battle msg_wrapper and battle script_id in textbox_data.
+        
+        r0: textbox_data pointer
     - name: PrintTextboxByBattleMessageId
       address:
         NA: 0x200B640
@@ -407,6 +503,50 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: InitScreenFadeStructById
+      address:
+        NA: 0x200E330
+      description: |-
+        Seems to initialize a screen_fade struct. 
+        Is currently only confirmed to handle Iris Transitions.
+        
+        r0: screen_fade pointer
+        r1: undefined4 pointer
+    - name: ScreenClampValueToRange
+      address:
+        NA: 0x200E5AC
+      description: |-
+        While keeping a screen_fade pointer in r0, clamps an input to a minimum and maximum. Frequently used in relation to the size of the DS screen...
+        
+        r0: screen_fade pointer
+        r1: value
+        r2: minimum
+        r3: maximum
+    - name: ScreenInitStripesForIrisTransition
+      address:
+        NA: 0x200E614
+      description: |-
+        Seems to be responsible for initializing the stripes table for an Iris Transition.
+        
+        r0: screen_fade pointer
+        r1: int32_t 
+        r2: int32_t
+    - name: ScreenApplyIrisTransitionRadius
+      address:
+        NA: 0x200E6F8
+      description: |-
+        Called repeatedly to adjust the radius of the Iris during an Iris Transition.
+        
+        r0: screen_fade pointer
+        r1: int32_t 
+        r2: int32_t
+    - name: MaybeGetIrisCurrentWidth
+      address:
+        NA: 0x200E904
+      description: |-
+        Seems to be responsible for returning the current width of the Iris in an Iris Transition.
+        
+        r0: screen_fade pointer
     - name: ret_0200ee10
       address:
         NA: 0x200EE10
@@ -435,6 +575,34 @@ arm9:
         Retrieves a megastruct pointer.
         
         return: megastruct pointer
+    - name: SetTextboxWindowAndSpeedSettings
+      address:
+        NA: 0x201024C
+      description: |-
+        Stores the window and text speed settings to their appropriate places in the textbox_data struct in the megastruct.
+        
+        r0: megastruct pointer
+    - name: SetUnkAudioSettingVariables
+      address:
+        NA: 0x2010324
+      description: |-
+        Assigns settings variables from an unknown audio struct, pointed to by the megastruct.
+        
+        r0: megastruct pointer
+    - name: GetUnkAudioSettingVariables
+      address:
+        NA: 0x2010378
+      description: |-
+        Retrieves settings variables and stores them in an unknown audio struct, pointed to by the megastruct.
+        
+        r0: megastruct pointer
+    - name: InitUnkAudioSettingVariables
+      address:
+        NA: 0x2010400
+      description: |-
+        Initializes settings variables used by GetUnkAudioSettingVariables and SetUnkAudioSettingVariables.
+        
+        r0: megastruct pointer
     - name: ret_02010448
       address:
         NA: 0x2010448
@@ -841,6 +1009,29 @@ arm9:
         Zeroes the entirety of a battle_exports struct, except for the function pointer at field_0x0.
         
         r0: battle_exports pointer
+    - name: InitRangerNetMissionCompletionBits
+      address:
+        NA: 0x201128C
+      description: |-
+        Seems to Initialize RANGER_NET_MISSION_COMPLETION_BITS to zero. 
+        
+        r0: pointer to RANGER_NET_MISSION_COMPLETION_BITS
+    - name: SetRangerNetMissionCompletionBit
+      address:
+        NA: 0x20112DC
+      description: |-
+        Enables a bit in RANGER_NET_MISSION_COMPLETION_BITS.
+        
+        r0: pointer to RANGER_NET_MISSION_COMPLETION_BITS
+        r1: bit index. If less than zero, empties the entire field!
+    - name: GetRangerNetMissionCompletionBit
+      address:
+        NA: 0x2011318
+      description: |-
+        Checks if a bit in RANGER_NET_MISSION_COMPLETION_BITS is enabled.
+        
+        r0: undefined4 
+        r1: bit index
     - name: ZeroQuestBody
       address:
         NA: 0x201135C
@@ -978,6 +1169,15 @@ arm9:
         r0: ranger_data ptr 
         r1: slot index
         return: pokemon_data pointer
+    - name: GetPartySize
+      address:
+        NA: 0x2015658
+      description: |-
+        Retrieves the party size for a specified ranger rank, excluding the partner if in the active team.
+        Seems like the partner is intentionally excluded from the party size...
+        
+        r0: ranger_data_old pointer
+        r1: ranger rank to check party size for. If above 10, checks with the current ranger rank!
     - name: IsTriggerSpawnNibbleUnlocked
       address:
         NA: 0x2015690
@@ -1050,6 +1250,14 @@ arm9:
         r0: ranger_data ptr
         r1: nibble_index
         r2: room_id
+    - name: MaybeValidateFollowersAndParty
+      address:
+        NA: 0x2015E54
+      description: |-
+        Seems to be iterating over the following_npcs and party pokemon_data structs, and doing something. Validation is only an educated guess, but it seems plausible.
+        
+        r0: ranger_data_old pointer
+        r1: affects whether followers or party are being checked? Not a bool!
     - name: MaybeHandleStylerLevelUp
       address:
         NA: 0x20160B8
@@ -1058,6 +1266,50 @@ arm9:
         
         r0: ranger_data pointer
         r1: styler_level
+    - name: CountValidPokemonInParty
+      address:
+        NA: 0x2016138
+      description: |-
+        Counts the number of valid pokemon in the specified party. 
+        If an invalid party index (less than zero or greater than 2) is input, the current party will be chosen.
+        
+        r0: ranger_data_old pointer
+        r1: party index
+    - name: GetPartySizeSubtractPartner
+      address:
+        NA: 0x20161AC
+      description: |-
+        Calls GetPartySize, then subtracts 1 from the result if the partner is in the party.
+        Never returns less than zero.
+        
+        r0: ranger_data_old pointer
+        r1: ranger rank to use (if negative uses current)
+        r2: team slot to use (if invalid uses current)
+    - name: CountNonPartnerPokemonInParty
+      address:
+        NA: 0x20161E4
+      description: |-
+        Calls CountValidPokemonInParty, then subtracts 1 from the result if the partner is in the party.
+        Never returns less than zero.
+        
+        r0: ranger_data_old pointer
+        r1: team slot to use (if invalid uses current)
+    - name: HasPartnerPokemonInParty
+      address:
+        NA: 0x201621C
+      description: |-
+        Loops through the number of valid pokemon in the party for slot_status_field & 0x2, which seems to be true for the partner.
+        
+        r0: ranger_data_old pointer
+        r1: team slot to use (if invalid uses current)
+    - name: GetPartnerIndexInParty
+      address:
+        NA: 0x2016268
+      description: |-
+        Loops through the number of valid pokemon in the party for slot_status_field & 0x2, then calls and returns GetPartnerIndexFromFormId on the form_id of that species.
+        
+        r0: ranger_data_old pointer
+        r1: team slot to use (if invalid uses current)
     - name: UpdatePlayTime
       address:
         NA: 0x201668C
@@ -1497,6 +1749,14 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: RetrieveStringIdFromMsgWrapperTable
+      address:
+        NA: 0x20215F8
+      description: |-
+        Returns a string from a given msg_wrapper struct.
+        
+        r0: msg_wrapper pointer
+        r1: msg_id
     - name: ret_020222c8
       address:
         NA: 0x20222C8
@@ -2108,6 +2368,23 @@ arm9:
         Assists in initializing a script_data struct.
         
         r0: script_data pointer
+    - name: OpenAndInitScriptFile
+      address:
+        NA: 0x2033C60
+      description: |-
+        Is called to open a script file, unpack it, and likely more.
+        
+        r0: script_data pointer
+        r1: script file name
+    - name: OpenAndInitChXScript
+      address:
+        NA: 0x2033D00
+      description: |-
+        A variant of OpenAndInitScriptFile run in place of it for exclusively "chx###" scripts.
+        
+        r0: script_data pointer
+        r1: script_file pointer
+        r2: int32_t
     - name: SetScriptSubroutine1
       address:
         NA: 0x2033D58
@@ -2142,7 +2419,14 @@ arm9:
         Assists in initializing a script_data struct.
         
         r0: script_data pointer
-    - name: InitScriptManager
+    - name: MaybeCloseAndDeallocateScriptFile
+      address:
+        NA: 0x2033ED4
+      description: |-
+        Might be responsible for closing and removing a script file from ram.
+        
+        r0: script_data pointer
+    - name: InitScriptManagerOuter
       address:
         NA: 0x2033F04
       description: |-
@@ -2254,6 +2538,20 @@ arm9:
         Zero Inits the 4 script_data fields in sequence.
         
         r0: script_manager pointer
+    - name: InitAudioEngineOuter
+      address:
+        NA: 0x2034478
+      description: |-
+        Initializes the audio_engine struct. More research needed.
+        
+        r0: audio_engine pointer
+    - name: IsFormIdPartnerPokemon
+      address:
+        NA: 0x2034F9C
+      description: |-
+        Checks if the given form_id corresponds to a vanilla partner form_id. Returns 1 if so, 0 if not.
+        
+        r0: form_id
     - name: GetPartnerIndexFromFormId
       address:
         NA: 0x2035088
@@ -2404,6 +2702,13 @@ arm9:
         Stores a pointer to SysCall page zero in slot 0 of SYSCALL_PAGE_PTRS.
         
         No params.
+    - name: UnpackScriptFile
+      address:
+        NA: 0x2044AC8
+      description: |-
+        Seems to be responsible for unpacking a script file.
+        
+        r0: script_file pointer
     - name: SetSysCallPage
       address:
         NA: 0x2044B38
@@ -2806,6 +3111,23 @@ arm9:
     - name: GXs_LoadBg3ScrVeneer
       address:
         NA: 0x20573A4
+    - name: InitSndAndMore
+      address:
+        NA: 0x205B968
+      description: |-
+        Seems to call Snd_Init, as well as a few more audio-related functions.
+        
+        No params.
+    - name: InitAudioSubstructFileData
+      address:
+        NA: 0x205CCF8
+      description: |-
+        Initializes a substruct of the audio_engine struct. More research needed.
+        
+        r0: unk_audio_engine_substruct_1 pointer
+        r1: char pointer
+        r2: void pointer
+        r3: int32_t
     - name: ret_0205fc98
       address:
         NA: 0x205FC98
@@ -2820,6 +3142,22 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: MaybeLinearInterpolationInit
+      address:
+        NA: 0x205FD64
+      description: Likely a library function.
+    - name: MaybeLinearInterpolationProgress
+      address:
+        NA: 0x205FD8C
+      description: Likely a library function.
+    - name: MaybeLinearInterpolationUpdate
+      address:
+        NA: 0x205FDC0
+      description: Likely a library function.
+    - name: MaybeCheckIfLinearInterpolationMeetsThreshold
+      address:
+        NA: 0x205FDD8
+      description: Likely a library function.
     - name: Mtx_Identity22
       address:
         NA: 0x205FDF0

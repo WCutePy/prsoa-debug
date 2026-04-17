@@ -48,6 +48,14 @@ overlay0:
         r1: megastruct pointer
         r2: undefined4 
         r3: undefined4
+    - name: OpenAndInitMapScriptFile
+      address:
+        NA: 0x2124D98
+      description: |-
+        Seems to open and initialize a file of the form: "data/Script/field/map/%s".
+        
+        r0: unk_struct_size_0x80 pointer
+        r1: int32_t
     - name: ret_02125334
       address:
         NA: 0x2125334
@@ -55,6 +63,16 @@ overlay0:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: MaybeOpenAndInitMapDatAndTexFiles
+      address:
+        NA: 0x2125D28
+      description: |-
+        Seems to open and initialize a file of the form: "data/field/map/%s.map.lz", "data/field/map/%s.map.dat.lz", or "data/field/map/%s.map.tex.lz".
+        
+        r0: unk_struct_size_0x80 pointer
+        r1: undefined4 
+        r2: char pointer. Maybe a file name?
+        r3: int32_t
     - name: ret_021266ac
       address:
         NA: 0x21266AC
@@ -90,6 +108,24 @@ overlay0:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: MaybeOpenAndInitTargetClearScript
+      address:
+        NA: 0x213E3E4
+      description: |-
+        Seems to open, init, and process a script file of the form "data/Script/field/poketargetclear/ptc%03d_%02d.fsb" into a struct.
+        
+        r0: void pointer
+        r1: int32_t 
+        r2: int32_t
+    - name: MaybeOpenAndInitTargetObjectTouchScript
+      address:
+        NA: 0x2141F88
+      description: |-
+        Seems to be used exclusively by FUN_overlay_00__021420ac to open, init, and process a script file of the form "data/Script/field/targetobject/to%02d/TargetObject%03d.fsb" or "data/Script/field/targettouch/tt%02d/TargetTouch%03d.fsb"
+        
+        r0: unknown struct
+        r1: file name
+        r2: undefined2
     - name: ret_0214234c
       address:
         NA: 0x214234C
@@ -982,6 +1018,14 @@ overlay0:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: MaybeOpenAndInitEffectScriptFile
+      address:
+        NA: 0x2163904
+      description: |-
+        Seems to open an overworld effect script file. Specifically: "data/Script/field/effect/ef%03d.fsb"
+        
+        r0: unknown struct
+        r1: int32_t
     - name: ret_02163cf4
       address:
         NA: 0x2163CF4
