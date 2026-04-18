@@ -1,5 +1,6 @@
 #ifndef HEADERS_TYPES_AUDIO_H_
 #define HEADERS_TYPES_AUDIO_H_
+
 struct unk_audio_engine_substruct_1 {
     undefined field0_0x0;
     undefined field1_0x1;

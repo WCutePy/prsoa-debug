@@ -1,10 +1,8 @@
 #ifndef HEADERS_TYPES_COMMON_OPTIONS_MENU_H_
 #define HEADERS_TYPES_COMMON_OPTIONS_MENU_H_
 
-#include "enums.h"
 #include "common.h"
 #include "battle.h"
-#include "textbox.h"
 
 // All ov_06 functions that take parameters seem to take this as param_1.
 struct options_menu {

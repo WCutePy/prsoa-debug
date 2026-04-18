@@ -1,5 +1,5 @@
-#include "enums.h"
-#include "common.h"
+#ifndef HEADERS_TYPES_COMMON_MEGASTRUCT_H_
+#define HEADERS_TYPES_COMMON_MEGASTRUCT_H_
 
 struct mega_substruct_1 {
     undefined4 unk_field_0x0;
@@ -88,3 +88,5 @@ struct megastruct {
 };
 
 ASSERT_SIZE(struct megastruct, 5604);
+
+#endif
