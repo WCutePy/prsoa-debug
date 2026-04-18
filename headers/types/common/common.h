@@ -7,7 +7,7 @@
 // No Dependencies besides enums.h
 #include "util.h"
 
-#include "battle_combatants.h"
+#include "battle_includes.h"
 #include "browser.h"
 #include "clock.h"
 #include "display.h"

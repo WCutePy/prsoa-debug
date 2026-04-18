@@ -23,7 +23,7 @@ struct save_data {
     struct pokemon_data party_group_2[8]; // 0x8984
     struct following_npc follower_1;      // 0x8A44
     struct following_npc follower_2;      // 0x8A7C
-    struct quest_body quest_body;         // 0x8AB4
+    struct mission_quest_header mission_quest_data;         // 0x8AB4
     // Consists of event flags,
     struct settings_and_variables settings_and_variables; // 0x8B08
     undefined unk_field_0x8c04[96];                       // 0x8C04: Permanent home is 0x210C1C0

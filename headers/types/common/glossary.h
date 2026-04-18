@@ -109,6 +109,9 @@ struct glossary_terms_table {
     enum glossary_table_entry unk_entry_02 : 2;
     enum glossary_table_entry unk_entry_03 : 2;
     enum glossary_table_entry unk_entry_04 : 2;
+    // Presumed to be padding.
+    undefined field_0x2a;
+    undefined field_0x2b;
 };
 
 ASSERT_SIZE(struct glossary_terms_table, 10);
@@ -136,8 +139,6 @@ struct ranger_glossary {
     undefined field_0x1f;
     struct glossary_terms_table terms_entries;
     // Presumed to be padding.
-    undefined field_0x2a;
-    undefined field_0x2b;
     undefined field_0x2c;
     undefined field_0x2d;
     undefined field_0x2e;

@@ -1,18 +1,6 @@
 #ifndef HEADERS_TYPES_COMMON_BATTLE_H_
 #define HEADERS_TYPES_COMMON_BATTLE_H_
 
-#include "common.h"
-#include "megastruct.h"
-#include "script.h"
-
-
-// This is populated in an unknown way before starting any battle.
-struct battle_init {
-    undefined unk_fields[2048];
-};
-
-ASSERT_SIZE(struct battle_init, 2048);
-
 // This is primarily used to export battle data between overlays. Overlay_02 frequently reads this
 // struct from the megastruct.
 struct battle_exports {

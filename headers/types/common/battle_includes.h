@@ -1,5 +1,13 @@
-#ifndef HEADERS_TYPES_COMMON_BATTLE_COMBATANTS_H_
-#define HEADERS_TYPES_COMMON_BATTLE_COMBATANTS_H_
+#ifndef HEADERS_TYPES_COMMON_BATTLE_INCLUDES_H_
+#define HEADERS_TYPES_COMMON_BATTLE_INCLUDES_H_
+
+// This is populated in an unknown way before starting any battle.
+struct battle_init {
+    undefined unk_fields[2048];
+};
+
+ASSERT_SIZE(struct battle_init, 2048);
+
 
 struct battle_combatants {
     int* unk_struct_ptr_0x0;

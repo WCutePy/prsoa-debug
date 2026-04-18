@@ -141,8 +141,8 @@ void ZeroBattleExports(struct battle_exports* param_1);
 void InitRangerNetMissionCompletionBits(int16_t* param_1);
 void SetRangerNetMissionCompletionBit(void* param_1, unsigned int param_2);
 unsigned int GetRangerNetMissionCompletionBit(undefined4 param_1, unsigned int param_2);
-void ZeroQuestBody(struct quest* param_1);
-void ZeroQuestFooter(struct quest* param_1);
+void ZeroQuestBody(struct mission_quest_data* param_1);
+void ZeroQuestFooter(struct mission_quest_data* param_1);
 void InitMissionQuestFooter(struct mission_quest_data* param_1, struct script_manager* param_2,
                             undefined* param_3);
 void TryUnlockQuest(struct mission_quest_data* param_1, int param_2);
