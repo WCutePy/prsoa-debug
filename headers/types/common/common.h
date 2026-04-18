@@ -6,7 +6,7 @@
 #include "enums.h"
 // No Dependencies besides enums.h
 #include "util.h"
-#include "audio.h"
+
 #include "battle_combatants.h"
 #include "browser.h"
 #include "clock.h"
@@ -19,6 +19,7 @@
 #include "settings_and_variables.h"
 #include "styler.h"
 // Requires some of the above dependencies
+#include "audio.h"
 #include "field_data.h"
 #include "ranger_records.h"
 #include "textbox.h"

@@ -42,20 +42,20 @@ union event_variables {
     struct named_event_variables named_event_variables;
     int32_t event_variable_table[21];
 };
-ASSERT_SIZE(union spawn_or_visibility_flags, 84);
+ASSERT_SIZE(union event_variables, 84);
 
 
 union settings_variables {
     struct named_settings_variables named_settings_variables;
     int32_t settings_variable_table[31];
 };
-ASSERT_SIZE(union spawn_or_visibility_flags, 124);
+ASSERT_SIZE(union settings_variables, 124);
 
 union quest_variables {
     struct named_quest_variables named_quest_variables;
     int32_t quest_variable_table[11];
 };
-ASSERT_SIZE(union spawn_or_visibility_flags, 44);
+ASSERT_SIZE(union quest_variables, 44);
 
 
 

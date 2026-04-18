@@ -43,3 +43,4 @@ struct battle_combatants {
 };
 
 ASSERT_SIZE(struct battle_combatants, 92);
+#endif

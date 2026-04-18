@@ -1,10 +1,13 @@
 #ifndef HEADERS_TYPES_COMMON_STYLER_H_
 #define HEADERS_TYPES_COMMON_STYLER_H_
 
+#pragma pack(push, 1)   // This is usually stored as a 1 byte struct.
+// Stored the time played in hours, minutes, and seconds.
 struct styler_rank_and_type {
     int8_t styler_rank : 4;
     enum styler_type styler_type : 4;
 };
+#pragma pack(pop)     // Restore alignment
 ASSERT_SIZE(struct styler_rank_and_type, 1);
 
 struct styler_upgrades {

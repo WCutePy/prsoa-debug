@@ -35,14 +35,14 @@ struct mission_quest_header {
     undefined field_0x52;
     undefined field_0x53;
 };
-ASSERT_SIZE(struct quest_body, 84);
+ASSERT_SIZE(struct mission_quest_header, 84);
 
 // Pointers to other relevant structs to mission and quest management
 struct mission_quest_footer {
     struct textbox_data* textbox_data_ptr;
     struct script_manager* script_manager_ptr;
 };
-ASSERT_SIZE(struct quest_footer, 8);
+ASSERT_SIZE(struct mission_quest_footer, 8);
 
 // Tracks relevant mission and quest data
 struct mission_quest_data {
@@ -50,7 +50,7 @@ struct mission_quest_data {
     struct mission_quest_footer footer;
 };
 
-ASSERT_SIZE(struct quest, 92);
+ASSERT_SIZE(struct mission_quest_data, 92);
 
 
 #endif

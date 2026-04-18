@@ -1,6 +1,7 @@
 #ifndef HEADERS_TYPES_COMMON_BROWSER_H_
 #define HEADERS_TYPES_COMMON_BROWSER_H_
 
+
 struct species_status_table {
     enum species_status unk_0001_status : 2; // Bulbasaur
     enum species_status unk_0002_status : 2; // Ivysaur
@@ -494,8 +495,9 @@ struct species_status_table {
     enum species_status unk_0490_status : 2; // Manaphy
     enum species_status darkrai_status : 2;
     enum species_status shaymin_status : 2;
+    undefined field_0x7b;
 };
-ASSERT_SIZE(struct species_status_table, 122);
+ASSERT_SIZE(struct species_status_table, 124);
 
 struct capture_rank_table {
     enum capture_rank unk_0001_rank : 2; // Bulbasaur
@@ -990,13 +992,13 @@ struct capture_rank_table {
     enum capture_rank unk_0490_rank : 2; // Manaphy
     enum capture_rank darkrai_rank : 2;
     enum capture_rank shaymin_rank : 2;
+    undefined field_0x2ef;
 };
-ASSERT_SIZE(struct capture_rank_table, 122);
+ASSERT_SIZE(struct capture_rank_table, 124);
 
 // Statistics on seend and befriended pokemon.
 struct browser_data {
     struct species_status_table species_statuses;
-    undefined field_0x7b;
     undefined field_0x7c;
     undefined field_0x7d;
     undefined field_0x7e;
@@ -1011,10 +1013,10 @@ struct browser_data {
     undefined field_0x272;
     undefined field_0x273;
     struct capture_rank_table capture_ranks;
-    undefined field_0x2ef;
     undefined field_0x2f0;
     undefined field_0x2f1;
     undefined field_0x2f2;
     undefined field_0x2f3;
 };
 ASSERT_SIZE(struct browser_data, 756);
+#endif
