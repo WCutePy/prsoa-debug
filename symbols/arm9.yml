@@ -3454,22 +3454,22 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: GX_LoadBG0CharVeneer
+    - name: GX_LoadBg0CharVeneer
       address:
         NA: 0x2057238
-    - name: GX_LoadBG1CharVeneer
+    - name: GX_LoadBg1CharVeneer
       address:
         NA: 0x2057244
-    - name: GX_LoadBG2CharVeneer
+    - name: GX_LoadBg2CharVeneer
       address:
         NA: 0x2057250
-    - name: GX_LoadBG3CharVeneer
+    - name: GX_LoadBg3CharVeneer
       address:
         NA: 0x205725C
-    - name: GX_LoadBG0ScrVeneer
+    - name: GX_LoadBg0ScrVeneer
       address:
         NA: 0x2057268
-    - name: GX_LoadBG1ScrVeneer
+    - name: GX_LoadBg1ScrVeneer
       address:
         NA: 0x2057274
     - name: GX_LoadBg2ScrVeneer
@@ -3983,13 +3983,13 @@ arm9:
     - name: GXs_LoadBg1Scr
       address:
         NA: 0x2063928
-    - name: GX_LoadBG2Scr
+    - name: GX_LoadBg2Scr
       address:
         NA: 0x2063988
     - name: GXs_LoadBg2Scr
       address:
         NA: 0x20639E8
-    - name: GX_LoadBG3Scr
+    - name: GX_LoadBg3Scr
       address:
         NA: 0x02063A48
     - name: GXs_LoadBg3Scr
