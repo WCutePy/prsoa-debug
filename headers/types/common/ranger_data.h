@@ -133,7 +133,7 @@ struct ranger_data_old {
     undefined4 unk_battle_value;
     struct room_id_16 fly_destination_room;
     int16_t fly_destination_coords[2];
-    undefined4 field57_0x8b7c;
+    undefined2 field57_0x8b7e;
     undefined4 field58_0x8b80;
     struct rtc_date date;
     struct rtc_time time;

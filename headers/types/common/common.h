@@ -6,7 +6,6 @@
 #include "enums.h"
 // No Dependencies besides enums.h
 #include "util.h"
-
 #include "battle_includes.h"
 #include "browser.h"
 #include "clock.h"
@@ -14,13 +13,13 @@
 #include "file.h"
 #include "flying_menu.h"
 #include "glossary.h"
-#include "map.h"
 #include "pokemon_and_followers.h"
 #include "settings_and_variables.h"
 #include "styler.h"
 // Requires some of the above dependencies
 #include "audio.h"
 #include "field_data.h"
+#include "map.h"
 #include "ranger_records.h"
 #include "textbox.h"
 #include "script.h"
