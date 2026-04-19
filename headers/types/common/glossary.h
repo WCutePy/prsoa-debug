@@ -114,7 +114,7 @@ struct glossary_terms_table {
     undefined field_0x2b;
 };
 
-ASSERT_SIZE(struct glossary_terms_table, 10);
+ASSERT_SIZE(struct glossary_terms_table, 12);
 
 struct ranger_glossary {
     struct glossary_fields_table fields_entries;
