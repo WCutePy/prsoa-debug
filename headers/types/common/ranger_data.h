@@ -36,8 +36,8 @@ struct ranger_data {
     undefined4 field4_0x7c38;   // Related to battle result somehow...
     struct browser_data browser;
     struct ranger_glossary glossary;
-    undefined4 battle_exports_is_alloc : 1; // Seems to flicker on area transition
-    undefined4 display_timer_on_screen : 1; // When enabled, a timer appears on-screen.
+    bool battle_exports_is_alloc : 1; // Seems to flicker on area transition
+    bool display_timer_on_screen : 1; // When enabled, a timer appears on-screen.
     undefined4 unk_bitfield_fields : 30;
     long long map_and_fly_bitfield; // Seems to handle world map unlocks as a bitfield. Something
                                     // like 37 bits long? More research needed.
