@@ -1,9 +1,6 @@
 #ifndef HEADERS_TYPES_COMMON_UNFINISHED_H_
 #define HEADERS_TYPES_COMMON_UNFINISHED_H_
 
-#include "common.h"
-#include "battle.h"
-
 struct ov_03_unk_struct_0 {
     void* field0_0x0;
     void* field1_0x4;
