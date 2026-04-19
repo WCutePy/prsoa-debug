@@ -1056,9 +1056,9 @@ arm9:
       address:
         NA: 0x2011370
       description: |-
-        [MANUAL DESCRIPTION]
+        Zeroes the body struct of a quest struct.
         
-        r0: mission_quest_header pointer
+        r0: quest pointer
     - name: ZeroQuestFooter
       address:
         NA: 0x2011384

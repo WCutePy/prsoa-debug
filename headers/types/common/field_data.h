@@ -159,12 +159,12 @@ ASSERT_SIZE(struct field_data, 20);
 
 struct field_data_bin {
     char field_string[4]; // "FLID"
-    pointer enemy_data_ptr;
-    pointer enemy_data_offset;
-    pointer target_data_offset;
-    pointer npc_data_offset;
-    pointer map_data_offset;
-    pointer file_end_offset;
+    int enemy_data_ptr;
+    int enemy_data_offset;
+    int target_data_offset;
+    int npc_data_offset;
+    int map_data_offset;
+    int file_end_offset;
     char enmy[4]; // "ENMY"
     int num_enemy_entries;
     struct field_enemy_data enemy_data_table[443];
