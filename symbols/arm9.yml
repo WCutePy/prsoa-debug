@@ -135,7 +135,7 @@ arm9:
       address:
         NA: 0x2002AEC
       description: |-
-        [MANUAL DESCRIPTION]
+        Initializes a file_archive_wrapper struct.
         
         r0: file_archive_wrapper pointer
         r1: undefined4 
@@ -1079,7 +1079,7 @@ arm9:
       address:
         NA: 0x20113B4
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to start a mission, given a mission index.
         
         r0: mission_quest_data pointer
         r1: int32_t
@@ -1087,14 +1087,14 @@ arm9:
       address:
         NA: 0x201140C
       description: |-
-        [MANUAL DESCRIPTION]
+        Might end the current mission?
         
         r0: mission_quest_data pointer
     - name: MaybeExitMissionMode
       address:
         NA: 0x2011464
       description: |-
-        [MANUAL DESCRIPTION]
+        Might exit "mission mode". Seems closely related to the above two, at least.
         
         r0: mission_quest_data pointer
     - name: TryUnlockQuest
@@ -1163,7 +1163,7 @@ arm9:
       address:
         NA: 0x201164C
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to initialize a chapter by chapter index?
         
         r0: mission_quest_data pointer
         r1: int32_t
@@ -1171,14 +1171,14 @@ arm9:
       address:
         NA: 0x2011678
       description: |-
-        [MANUAL DESCRIPTION]
+        Returns how many quests the player has cleared.
         
         r0: mission_quest_data pointer
     - name: MissionQuestDataFillChapterMsgWrapper
       address:
         NA: 0x20116A8
       description: |-
-        [MANUAL DESCRIPTION]
+        Fills a chapter msg_wrapper given an index and a mission_quest_data pointer.
         
         r0: mission_quest_data pointer
         r1: int32_t
@@ -1186,7 +1186,7 @@ arm9:
       address:
         NA: 0x20116C0
       description: |-
-        [MANUAL DESCRIPTION]
+        Might be responsible for unlocking quests by the chapter index?
         
         r0: mission_quest_data pointer
         r1: int32_t
@@ -1387,7 +1387,7 @@ arm9:
       address:
         NA: 0x201630C
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to calculate a relative date/time from the absolute one given by the RTC? Might be something else, hard to tell.
         
         r0: ranger_data_old pointer
         r1: rtc_time pointer
@@ -1627,7 +1627,7 @@ arm9:
       address:
         NA: 0x20171A0
       description: |-
-        [MANUAL DESCRIPTION]
+        Calls CountClearedQuests with a pointer to MISSION_QUEST_DATA.
         
         No params.
     - name: GetSaveFileMagicWord
@@ -1641,19 +1641,19 @@ arm9:
       address:
         NA: 0x20172BC
       description: |-
-        [MANUAL DESCRIPTION]
+        Writes the save file constant to the correct value.
         
         No params.
     - name: SetCurrentRangerPlaytime
       address:
         NA: 0x2018148
       description: |-
-        [MANUAL DESCRIPTION]
+        Writes hour, minute, and second values to the current play_time struct.
         
         r0: ranger_data_old pointer
-        r1: int32_t 
-        r2: int8_t 
-        r3: int8_t
+        r1: hours 
+        r2: minutes 
+        r3: seconds
     - name: InitGroupMsgWrapperTable
       address:
         NA: 0x2018208
@@ -1932,7 +1932,7 @@ arm9:
       address:
         NA: 0x202BEA0
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallPrintTextbox
@@ -1940,7 +1940,8 @@ arm9:
         NA: 0x202C86C
       description: |-
         SysCall Function for PrintTextbox. 
-        
+        Parameter 4 is always zero.
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallIsTextboxPrinting
       address:
@@ -2012,13 +2013,13 @@ arm9:
         SysCall Function for GetYesNoMenuResult.
         
         No params.
-    - name: SysCallPrintTextboxByIdFull
+    - name: SysCallPrintTextboxFull
       address:
         NA: 0x202CA74
       description: |-
-        [MANUAL DESCRIPTION]
+        Similar to SysCallPrintTextbox, but the final param of PrintTextbox is actually pulled from the script stack.
         
-        r0: undefined4 pointer
+        r0: script stack pointer, interpreted as params.
     - name: ret_0202d394
       address:
         NA: 0x202D394
@@ -2030,14 +2031,14 @@ arm9:
       address:
         NA: 0x202E060
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero2078
       address:
         NA: 0x202E068
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: DebugPrintError
@@ -2052,21 +2053,21 @@ arm9:
       address:
         NA: 0x202E548
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero2082
       address:
         NA: 0x202E550
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallInitBattleCombatantsAndExports
       address:
         NA: 0x202F13C
       description: |-
-        [MANUAL DESCRIPTION]
+        SysCall Function that calls InitializeBattlePokemonFields and ZeroBattleExports with their relevant structs.
         
         No params.
     - name: SysCallCopyStringToRangerDebugBuffer
@@ -2105,28 +2106,28 @@ arm9:
       address:
         NA: 0x202F294
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero2093
       address:
         NA: 0x202F29C
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero2094
       address:
         NA: 0x202F2A4
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero2095
       address:
         NA: 0x202F2AC
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallGetBattleResult
@@ -2221,35 +2222,35 @@ arm9:
       address:
         NA: 0x202F784
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero2098
       address:
         NA: 0x202F78C
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero2099
       address:
         NA: 0x202F794
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero2100
       address:
         NA: 0x202F79C
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero2101
       address:
         NA: 0x202F7A4
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallSetScriptSubroutine2ByName
@@ -2287,7 +2288,7 @@ arm9:
       address:
         NA: 0x202FE28
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallGetStylerLevel
@@ -2325,14 +2326,14 @@ arm9:
       address:
         NA: 0x20309B4
       description: |-
-        [MANUAL DESCRIPTION]
+        SysCall Function that seems to eventually call an Iris Transition?
         
-        r0: uint32_t pointer
+        r0: script stack pointer, interpreted as params.
     - name: SysCallReturnZero2112
       address:
         NA: 0x2030AD0
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallSetPlayerSpawnData
@@ -2347,21 +2348,21 @@ arm9:
       address:
         NA: 0x2030F8C
       description: |-
-        [MANUAL DESCRIPTION]
+        SysCall Function that seems to call StartMissionById, then many audio-related functions.
         
-        r0: undefined4 pointer
+        r0: script stack pointer, interpreted as params.
     - name: SysCallMaybeEndMissionWithFanfare
       address:
         NA: 0x203117C
       description: |-
-        [MANUAL DESCRIPTION]
+        SysCall Function that seems to call many audio-related/graphics functions, then MaybeTryEndMission.
         
-        r0: undefined4 pointer
+        r0: script stack pointer, interpreted as params.
     - name: SysCallMaybeExitMissionModeWithFanfare
       address:
         NA: 0x20312C4
       description: |-
-        [MANUAL DESCRIPTION]
+        SysCall Function that seems to call a few audio-related functions, then MaybeExitMissionMode.
         
         No params.
     - name: SysCallGetActiveMissionId
@@ -2375,30 +2376,30 @@ arm9:
       address:
         NA: 0x2031404
       description: |-
-        [MANUAL DESCRIPTION]
+        SysCall Function for MaybeTryEndMission.
         
         No params.
     - name: SysCallTryStartMissionById
       address:
         NA: 0x2031428
       description: |-
-        [MANUAL DESCRIPTION]
+        SysCall Function for TryStartMissionById.
         
-        r0: undefined4 pointer
+        r0: script stack pointer, interpreted as params.
     - name: SysCallMaybeExitMissionMode
       address:
         NA: 0x2031450
       description: |-
-        [MANUAL DESCRIPTION]
+        SysCall Function for MaybeTryExitMissionMode.
         
         No params.
     - name: SysCallTryAcceptQuestWithFanfare
       address:
         NA: 0x2031474
       description: |-
-        [MANUAL DESCRIPTION]
+        SysCall Function that calls TryAcceptQuest, ZeroQuestVariables, then a few audio/visual/text functions. 
         
-        r0: int32_t pointer
+        r0: script stack pointer, interpreted as params.
     - name: SysCallTryClearQuest
       address:
         NA: 0x2031684
@@ -2460,7 +2461,7 @@ arm9:
       address:
         NA: 0x20319C4
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallGetChapterNumber
@@ -2474,30 +2475,30 @@ arm9:
       address:
         NA: 0x2031B60
       description: |-
-        [MANUAL DESCRIPTION]
+        Is a SysCall Function for GetEventVariable.
         
-        r0: undefined4 pointer
+        r0: script stack pointer, interpreted as params.
     - name: SysCallSetEventVariable
       address:
         NA: 0x2031B84
       description: |-
-        [MANUAL DESCRIPTION]
+        Is a SysCall Function for SetEventVariable.
         
-        r0: undefined4 pointer
+        r0: script stack pointer, interpreted as params.
     - name: SysCallGetSettingsVariable
       address:
         NA: 0x2031BB0
       description: |-
-        [MANUAL DESCRIPTION]
+        Is a SysCall Function for GetSettingsVariable.
         
-        r0: undefined4 pointer
+        r0: script stack pointer, interpreted as params.
     - name: SysCallSetSettingsVariable
       address:
         NA: 0x2031BD4
       description: |-
-        [MANUAL DESCRIPTION]
+        Is a SysCall Function for SetSettingsVariable.
         
-        r0: undefined4 pointer
+        r0: script stack pointer, interpreted as params.
     - name: SysCallGetQuestVariable
       address:
         NA: 0x2031C00
@@ -2663,14 +2664,14 @@ arm9:
       address:
         NA: 0x20338BC
       description: |-
-        [MANUAL DESCRIPTION]
+        SysCall Function that enables the timer used in timed events, causing it to appear on screen.
         
         No params.
     - name: SysCallDisbleTimerDisplay
       address:
         NA: 0x20338DC
       description: |-
-        [MANUAL DESCRIPTION]
+        SysCall Function that disables the timer used in timed events, causing it to disappear from the screen.
         
         No params.
     - name: SysCallGetTimer1Duration
@@ -2979,31 +2980,31 @@ arm9:
       address:
         NA: 0x2041D44
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves a field_npc_data struct by the specified sprite index.
         
         r0: field_data pointer
-        r1: int32_t
+        r1: npc_sprite_id
     - name: GetFieldEnemyDataByFormId
       address:
         NA: 0x2041D58
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves a field_enemy_data struct by the specified form_id index.
         
         r0: field_data pointer
-        r1: int32_t
+        r1: form_id
     - name: GetFieldTargetDataByIndex
       address:
         NA: 0x2041D6C
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves a field_target_data struct by the specified target_object_id index.
         
         r0: field_data pointer
-        r1: int32_t
+        r1: target_object_id
     - name: GetFieldMapDataByRoomId
       address:
         NA: 0x2041D80
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves a field_map_data struct by the specified room_id index.
         
         r0: field_data pointer
         r1: room_id

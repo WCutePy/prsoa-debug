@@ -277,7 +277,7 @@ undefined4 SysCallEnableAutoCloseTextWithDelay(undefined4* param_1);
 undefined4 SysCallDisableAutoCloseText(void);
 void SysCallTryCloseTextbox(void);
 void SysCallGetYesNoMenuResult(void);
-undefined4 SysCallPrintTextboxByIdFull(undefined4* param_1);
+undefined4 SysCallPrintTextboxFull(undefined4* param_1);
 void ret_0202d394(void);
 undefined4 SysCallReturnZero2077(void);
 undefined4 SysCallReturnZero2078(void);
