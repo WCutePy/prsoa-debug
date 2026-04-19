@@ -27,10 +27,11 @@ struct file_wrapper* InitFileWrapperWithLangSuffix(struct file_wrapper* param_1,
                                                    int param_3);
 void ret_0200372c(void);
 void ret_0200396c(void);
+void SetFunctionPtrToReturn(void *param_1);
 void ret_02003984(void);
 void ret_02007ca8(void);
 void ret_02007cc0(void);
-void ret_02008ed8(void);
+textbox_data * InitTextboxDataOuter(textbox_data *param_1);
 struct textbox_data* InitTextboxDataOuter(struct textbox_data* param_1);
 void WipeTextboxData(struct textbox_data* param_1);
 void ZeroInitTextboxData(struct textbox_data* param_1);
@@ -222,7 +223,6 @@ int16_t AddFledPokemonRecord(struct ranger_data* param_1, int16_t pokemon_fled);
 void SetPokeAssistsUsedRecord(struct ranger_data* param_1, int16_t param_2);
 undefined1 CountClearedQuestsSafe(void);
 int16_t AddPokeAssistsUsedRecord(struct ranger_data* param_1, int16_t param_2);
-bool CheckSaveFileValidity(void);
 void GetSaveFileMagicWord(void);
 void SetSaveFileMagicWord(void);
 void SetCurrentRangerPlaytime(struct ranger_data_old *param_1,int param_2,int8_t param_3,int8_t param_4);
@@ -306,8 +306,6 @@ undefined4 SysCallReturnZero2099(void);
 undefined4 SysCallReturnZero2100(void);
 undefined4 SysCallReturnZero2101(void);
 undefined4 SysCallBattleSetBossFightStatus(void);
-undefined4 SysCallSetScriptSubroutine2ByName(undefined4* param_1, undefined4 param_2,
-                                             undefined4 param_3, undefined4 param_4);
 undefined4 SysCallSetScriptSubroutine2ByName(undefined4* param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 bool SysCallGetPlayerGender(void);
 int8_t SysCallGetRangerStylerRank(void);
@@ -374,28 +372,18 @@ int32_t SysCallGetGameSavesRecord(void);
 struct script_data * InitScriptDataOuter(struct script_data *param_1);
 struct script_data* InitScriptDataOuter(struct script_data* param_1);
 undefined4 OpenAndInitScriptFile(struct script_data* param_1, char* param_2);
-undefined4 OpenAndInitChXScript(struct script_data* param_1, struct script_file* param_2,
-                                int param_3);
-undefined4 SetScriptSubroutine1(struct script_data* param_1, char* param_2, undefined4 param_3,
-                                undefined4 param_4);
-void SetScriptSubroutine2(struct script_data* param_1, char* param_2, undefined4 param_3,
-                          undefined4 param_4);
+undefined4 OpenAndInitChXScript(struct script_data* param_1, struct script_file* param_2, int param_3);
+undefined4 SetScriptSubroutine1(struct script_data* param_1, char* param_2, undefined4 param_3, undefined4 param_4);
 void SetScriptSubroutine2(struct script_data* param_1, char* param_2, undefined4 param_3, undefined4 param_4);
 void ZeroInitScriptData(struct script_data* param_1);
 void InitScriptData(struct script_data* param_1);
-void MaybeCloseAndDeallocateScriptFile(struct script_data* param_1);
 struct script_manager * InitScriptManagerOuter(struct script_manager *param_1,undefined4 *param_2);
 struct script_manager* InitScriptManagerOuter(struct script_manager* param_1, undefined4* param_2);
 int TryInitSystemScript(struct script_manager* param_1, int param_2);
-int TryInitAreaScript(struct script_manager* param_1, int param_2, undefined4 param_3,
-                      undefined4 param_4);
-int TryInitChapterScript(struct script_manager* param_1, int param_2, undefined4 param_3,
-                         undefined4 param_4);
+int TryInitAreaScript(struct script_manager* param_1, int param_2, undefined4 param_3, undefined4 param_4);
 int TryInitChapterScript(struct script_manager* param_1, int param_2, undefined4 param_3, undefined4 param_4);
 void TryInitQuestScript(struct script_manager* param_1, int param_2);
 undefined4 SetScriptSubroutine1ByName(struct script_manager* param_1, char* param_2);
-void SetScriptSubroutine2ByName(struct script_manager* param_1, char* param_2,
-                                struct megastruct* param_3, undefined4 param_4);
 void SetScriptSubroutine2ByName(struct script_manager* param_1, char* param_2, struct megastruct* param_3, undefined4 param_4);
 void ZeroInitSystemScriptData(struct script_manager* param_1);
 void ZeroInitAreaScriptData(struct script_manager* param_1);
@@ -433,10 +421,7 @@ void SetSysCallPageZero(void);
 void UnpackScriptFile(struct script_file* param_1);
 void SetSysCallPage(int param_1, void* param_2);
 undefined4 SysCallReturnZero000(void);
-undefined4 SysCallPrintStrWithPrefix(undefined4* param_1, undefined4 param_2, undefined4 param_3,
-                                     undefined4 param_4);
-undefined4 SysCallDebugPrintf(undefined4* param_1, undefined4 param_2, undefined4 param_3,
-                              undefined4 param_4);
+undefined4 SysCallPrintStrWithPrefix(undefined4* param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 undefined4 SysCallDebugPrintf(undefined4* param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 unsigned int SysCallFixedPointMultiply(int* param_1);
 void SysCallFixedPointDivide(undefined4* param_1);
@@ -496,8 +481,6 @@ void GX_LoadBgPlttVeneer(void);
 void GXs_LoadBg2ScrVeneer(void);
 void GXs_LoadBg3ScrVeneer(void);
 void InitSndAndMore(void);
-void InitAudioSubstructFileData(struct unk_audio_engine_substruct_1* param_1, char* param_2,
-                                void* param_3, int param_4);
 void InitAudioSubstructFileData(struct unk_audio_engine_substruct_1* param_1, char* param_2, void* param_3, int param_4);
 void ret_0205fc98(void);
 void ret_0205fcb8(void);
@@ -511,13 +494,9 @@ undefined4* Mtx_Identity33(undefined4* param_1);
 void Mtx_RotZ33(undefined4* param_1, int param_2, undefined4 param_3);
 undefined4* Mtx_Identity44(undefined4* param_1);
 void Mtx_TransApply44(int* param_1, int* param_2, int param_3, int param_4, int param_5);
-void Mtx_ScaleApply44(unsigned int* param_1, unsigned int* param_2, int param_3, int param_4,
-                      int param_5);
 void Mtx_ScaleApply44(unsigned int* param_1, unsigned int* param_2, int param_3, int param_4, int param_5);
 undefined4* Mtx_RotZ44(undefined4* param_1, int param_2, undefined4 param_3);
 void Mtx_Concat44(int* param_1, int* param_2, unsigned int* param_3, undefined4 param_4);
-void Mtx_OrthoW(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6,
-                unsigned int param_7, int* param_8);
 void Mtx_OrthoW(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6, unsigned int param_7, int* param_8);
 unsigned int FX_Div(int32_t param_1, int32_t param_2);
 int64_t FX_DivFx64c(int32_t param_1, int32_t param_2);
@@ -610,10 +589,7 @@ int G2_GetBg2CharPtr(void);
 int G2S_GetBg2CharPtr(void);
 int G2_GetBg3CharPtr(void);
 int G2S_GetBg3CharPtr(void);
-void G2x_SetBgyAffine(unsigned int* param_1, int* param_2, int param_3, int param_4, int param_5,
-                      int param_6);
-void G2x_SetBlendAlpha(unsigned int* param_1, unsigned int param_2, int param_3,
-                       unsigned int param_4, int param_5);
+void G2x_SetBgyAffine(unsigned int* param_1, int* param_2, int param_3, int param_4, int param_5, int param_6);
 void G2x_SetBlendAlpha(unsigned int* param_1, unsigned int param_2, int param_3, unsigned int param_4, int param_5);
 void G2x_SetBlendBrightness(uint16_t* param_1, uint16_t param_2, int param_3);
 void G2x_ChangeBlendBrightness(uint16_t* param_1, int param_2);
@@ -626,10 +602,7 @@ void G3C_Color(undefined4 param_1, undefined4 param_2);
 void G3C_TexCoord(undefined4 param_1, int param_2, int param_3);
 void G3C_Vtx(undefined4 param_1, unsigned int param_2, int param_3, undefined2 param_4);
 void G3C_VtxXY(undefined4 param_1, unsigned int param_2, int param_3);
-void G3C_PolygonAttr(undefined4 param_1, unsigned int param_2, int param_3, int param_4,
-                     int param_5, int param_6, unsigned int param_7);
-void G3C_TexImageParam(undefined4 param_1, int param_2, int param_3, int param_4, int param_5,
-                       int param_6, int param_7, int param_8, unsigned int param_9);
+void G3C_PolygonAttr(undefined4 param_1, unsigned int param_2, int param_3, int param_4, int param_5, int param_6, unsigned int param_7);
 void G3C_TexImageParam(undefined4 param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, unsigned int param_9);
 void G3C_TexPlttBase(undefined4 param_1, unsigned int param_2, int param_3);
 void G3C_Begin(undefined4 param_1, undefined4 param_2);
@@ -642,16 +615,13 @@ void G3X_ClearFifo(void);
 void G3X_InitMtxStack(void);
 void G3X_ResetMtxStack(void);
 void G3X_SetToonTable(undefined4 param_1);
-void G3X_SetClearColor(unsigned int param_1, int param_2, undefined2 param_3, int param_4,
-                       int param_5);
 void G3X_SetClearColor(unsigned int param_1, int param_2, undefined2 param_3, int param_4, int param_5);
 void G3X_InitTable(void);
 undefined4 G3X_GetMtxStackLevelPV(unsigned int* param_1);
 undefined4 G3X_GetMtxStackLevelPJ(unsigned int* param_1);
 void GXi_NopClearFifo128(undefined4* param_1);
-void G3i_OrthoW(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6,
-                unsigned int param_7, int param_8, int* param_9);
-void GX_LoadBGPltt(int param_1,int param_2,uint32_t param_3);
+void G3i_OrthoW(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6, unsigned int param_7, int param_8, int* param_9);
+void GX_LoadBGPltt(int param_1,int param_2,uint param_3);
 void G3_LoadTexMtxTexCoord(undefined4* param_1);
 void GXs_LoadBgPltt(int param_1, int param_2, unsigned int param_3, undefined4 param_4);
 void GX_LoadObjPltt(int param_1, int param_2, unsigned int param_3, undefined4 param_4);
@@ -663,7 +633,8 @@ void GXs_LoadObj(undefined4 param_1, int param_2, unsigned int param_3);
 void GX_LoadBg0Scr(int param_1, int param_2, unsigned int param_3);
 void GXs_LoadBg0Scr(int param_1, int param_2, unsigned int param_3);
 void GX_LoadBg1Scr(int param_1, int param_2, unsigned int param_3);
-void GXS_LoadBG3Scr(int param_1,int param_2,uint32_t param_3);
+void GXS_LoadBG2Scr(int param_1,int param_2,uint param_3);
+void GXS_LoadBG3Scr(int param_1,int param_2,uint param_3);
 void GXs_LoadBg1Scr(int param_1, int param_2, unsigned int param_3);
 void GX_LoadBg0Char(undefined4 param_1, int param_2, unsigned int param_3);
 void GXs_LoadBg0Char(undefined4 param_1, int param_2, unsigned int param_3);
@@ -693,8 +664,6 @@ void GXi_DmaCopy32Async(undefined4 param_1, int param_2, undefined4 param_3);
 void GX_EndLoadTexPltt(void);
 void GX_BeginLoadClearImage(void);
 void GX_LoadClearImageColor(undefined4 param_1, undefined4 param_2);
-void GX_LoadClearImageDepth(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                            undefined4 param_4);
 void GX_LoadClearImageDepth(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void GX_EndLoadClearImage(void);
 undefined4* GX_SendFifo64B(undefined4* param_1, undefined4* param_2);
@@ -720,12 +689,8 @@ uint32_t OS_DisableIrqMask(uint32_t mask);
 uint32_t OS_ResetRequestIrqMask(uint32_t mask);
 void OS_SetIrqStackChecker(void);
 void OS_InitLock(void);
-void OSi_DoLockByWord(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                      undefined4 param_4);
 void OSi_DoLockByWord(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 int32_t OS_LockByWord(uint16_t lock_id, struct os_lock_word* lockp, lock_ctrl_funcp ctrl_funcp);
-undefined4 OSi_DoUnlockByWord(unsigned int param_1, undefined4* param_2, void** param_3,
-                              int param_4);
 undefined4 OSi_DoUnlockByWord(unsigned int param_1, undefined4* param_2, void** param_3, int param_4);
 int32_t OS_UnlockByWord(uint16_t lock_id, struct os_lock_word* lockp, lock_ctrl_funcp ctrl_funcp);
 int OSi_DoTryLockByWord(undefined4 param_1, int param_2, void** param_3, int param_4);
@@ -757,12 +722,8 @@ void OSi_RemoveThreadFromList(int param_1);
 void OSi_RescheduleThread(void);
 void OS_InitThread(void);
 undefined4 OS_IsThreadAvailable(void);
-void OS_CreateThread(struct thread* param_1, undefined4 param_2, uint32_t param_3, void* param_4,
-                     int param_5, int param_6);
 void OS_CreateThread(struct thread* param_1, undefined4 param_2, uint32_t param_3, void* param_4, int param_5, int param_6);
 void OS_ExitThread(void);
-void OSi_ExitThread_ArgSpecified(unsigned int* param_1, unsigned int param_2, undefined4 param_3,
-                                 undefined4 param_4);
 void OSi_ExitThread_ArgSpecified(unsigned int* param_1, unsigned int param_2, undefined4 param_3, undefined4 param_4);
 void OSi_ExitThread(void);
 void OSi_ExitThread_Destroy(void);
@@ -892,10 +853,7 @@ void MI_DmaFill32(int param_1, undefined4 param_2, undefined4 param_3, unsigned 
 void MI_DmaSend32(int param_1, undefined4 param_2, undefined4 param_3, unsigned int param_4);
 void MI_DmaFill16(int param_1, undefined4 param_2, undefined4 param_3, unsigned int param_4);
 void MI_DmaCopy16(uint32_t dma_no, void* src, void* dest, uint32_t size);
-void MI_DmaFill32Async(int param_1, undefined4 param_2, undefined4 param_3, unsigned int param_4,
-                       void** param_5, undefined4 param_6);
-void MI_DmaCopy32Async(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                       unsigned int param_4, void** param_5, undefined4 param_6);
+void MI_DmaFill32Async(int param_1, undefined4 param_2, undefined4 param_3, unsigned int param_4, void** param_5, undefined4 param_6);
 void MI_DmaCopy32Async(undefined4 param_1, undefined4 param_2, undefined4 param_3, unsigned int param_4, void** param_5, undefined4 param_6);
 void MI_WaitDma(int param_1);
 void MI_StopDma(uint32_t dma_no);
@@ -927,18 +885,12 @@ void Snd_SetPlayerChannelPriority(undefined4 param_1, undefined4 param_2);
 void Snd_SetTrackPan(undefined4 param_1, undefined4 param_2, undefined4 param_3);
 void Snd_SetTrackAllocatableChannel(undefined4 param_1, undefined4 param_2, undefined4 param_3);
 void Snd_StartTimer(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
-void Snd_StopTimer(undefined4 param_1, undefined4 param_2, unsigned int param_3,
-                   undefined4 param_4);
-void Snd_SetupAlarm(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4,
-                    undefined4 param_5);
+void Snd_StopTimer(undefined4 param_1, undefined4 param_2, unsigned int param_3, undefined4 param_4);
 void Snd_SetupAlarm(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5);
 void Snd_LockChannel(undefined4 param_1, undefined4 param_2);
 void Snd_UnlockChannel(undefined4 param_1, undefined4 param_2);
 void Snd_SetChannelVolume(undefined4 param_1, undefined4 param_2, undefined4 param_3);
 void Snd_SetChannelPan(undefined4 param_1, undefined4 param_2);
-void Snd_SetupChannelPcm(unsigned int param_1, int param_2, undefined4 param_3, int param_4,
-                         unsigned int param_5, unsigned int param_6, int param_7, int param_8,
-                         int param_9, int param_10);
 void Snd_SetupChannelPcm(unsigned int param_1, int param_2, undefined4 param_3, int param_4, unsigned int param_5, unsigned int param_6, int param_7, int param_8, int param_9, int param_10);
 void Snd_InvalidateSeqData(undefined4 param_1, undefined4 param_2);
 void Snd_InvalidateBankData(undefined4 param_1, undefined4 param_2);
@@ -976,8 +928,6 @@ void Sndi_IncAlarmId(int param_1);
 char Sndi_SetAlarmHandler(int param_1, undefined4 param_2, undefined4 param_3);
 void Sndi_CallAlarmHandler(unsigned int param_1);
 undefined4 Snd_GetPlayerStatus(void);
-undefined4 Sndi_GetFinishedCommandTag(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                                      undefined4 param_4);
 undefined4 Sndi_GetFinishedCommandTag(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void Sndi_InitSharedWork(undefined4* param_1);
 uint16_t Snd_CalcChannelVolume(int32_t value);
@@ -1004,21 +954,14 @@ undefined4 FSi_ReadFileCommand(int param_1);
 undefined4 FSi_WriteFileCommand(int param_1);
 int FSi_SeekDirCommand(int param_1);
 int FSi_ReadDirCommand(int param_1);
-undefined4 FSi_FindPathCommand(int param_1, undefined4 param_2, undefined4 param_3,
-                               undefined4 param_4);
-undefined4 FSi_GetPathCommand(int param_1, undefined4 param_2, undefined4 param_3,
-                              undefined4 param_4);
-int FSi_OpenFileFastCommand(int param_1, undefined4 param_2, undefined4 param_3,
-                            undefined4 param_4);
+undefined4 FSi_FindPathCommand(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
+undefined4 FSi_GetPathCommand(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 int FSi_OpenFileFastCommand(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 undefined4 FSi_OpenFileDirectCommand(int param_1);
 undefined4 FSi_CloseFileCommand(void);
 unsigned int FSi_GetPackedName(int param_1, int param_2);
 undefined4 FSi_ReadMemCallback(int param_1, undefined4* param_2, int param_3, unsigned int param_4);
-undefined4 FSi_WriteMemCallback(int param_1, undefined4* param_2, int param_3,
-                                unsigned int param_4);
-undefined4 FSi_ReadMemoryCore(undefined4 param_1, undefined4* param_2, undefined4* param_3,
-                              unsigned int param_4);
+undefined4 FSi_WriteMemCallback(int param_1, undefined4* param_2, int param_3, unsigned int param_4);
 undefined4 FSi_ReadMemoryCore(undefined4 param_1, undefined4* param_2, undefined4* param_3, unsigned int param_4);
 int FSi_NextCommand(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void FSi_ExecuteAsyncCommand(int param_1);
@@ -1028,9 +971,6 @@ void FS_InitArchive(int8_t* param_1);
 int* FS_FindArchive(void);
 undefined4 FS_RegisterArchiveName(undefined4* param_1, undefined4 param_2, undefined4 param_3);
 void FS_ReleaseArchiveName(int* param_1);
-undefined4 FS_LoadArchive(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4,
-                          undefined4 param_5, undefined4 param_6, undefined* param_7,
-                          undefined* param_8);
 undefined4 FS_LoadArchive(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5, undefined4 param_6, undefined* param_7, undefined* param_8);
 undefined4 FS_UnloadArchive(int param_1);
 unsigned int FS_LoadArchiveTables(int param_1, int param_2, unsigned int param_3);
@@ -1043,10 +983,7 @@ void FS_Init(void);
 void FS_InitFile(undefined4* param_1);
 void FSi_FindPath(int param_1, char* param_2, undefined4 param_3, int param_4);
 int FSi_ReadFileCore(int param_1, undefined4 param_2, int param_3, int param_4);
-bool FS_ConvertPathToFileID(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                            undefined4 param_4);
-undefined4 FS_OpenFileDirect(int param_1, undefined4 param_2, undefined4 param_3,
-                             undefined4 param_4, undefined4 param_5);
+bool FS_ConvertPathToFileID(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 undefined4 FS_OpenFileDirect(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5);
 undefined4 FS_OpenFileFast(int param_1, int param_2, undefined4 param_3);
 undefined4 FS_OpenFile(undefined4 param_1);
@@ -1055,12 +992,8 @@ unsigned int FS_WaitAsync(int param_1);
 void FS_CancelFile(int param_1);
 void FS_ReadFile(void);
 undefined4 FS_SeekFile(int param_1, int param_2, int param_3);
-undefined4 FS_ChangeDir(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                        undefined4 param_4);
 undefined4 FS_ChangeDir(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void FSi_OnRomReadDone(undefined4 param_1);
-undefined4 FSi_ReadRomCallback(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                               undefined4 param_4);
 undefined4 FSi_ReadRomCallback(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 undefined4 FSi_WriteDummyCallback(void);
 undefined4 FSi_RomArchiveProc(undefined4 param_1, int param_2);
@@ -1071,17 +1004,10 @@ undefined4 FS_SetDefaultDma(undefined4 param_1);
 unsigned int FSi_GetOverlayBinarySize(int param_1);
 void FS_ClearOverlayImage(int param_1);
 void FS_GetOverlayFileID(undefined4* param_1, int param_2);
-undefined4 FSi_LoadOverlayInfoCore(int param_1, int param_2, int param_3, undefined4 param_4,
-                                   int param_5, unsigned int param_6, int param_7,
-                                   unsigned int param_8);
 undefined4 FSi_LoadOverlayInfoCore(int param_1, int param_2, int param_3, undefined4 param_4, int param_5, unsigned int param_6, int param_7, unsigned int param_8);
 undefined4 FS_LoadOverlayInfo(undefined4* param_1, int param_2, int param_3, undefined4 param_4);
-undefined4 FS_LoadOverlayImage(int param_1, undefined4 param_2, undefined4 param_3,
-                               undefined4 param_4);
 undefined4 FS_LoadOverlayImage(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 bool FSi_CompareOverlayDigest(int param_1, undefined4 param_2, undefined4 param_3);
-void FS_StartOverlay(unsigned int* param_1, undefined4 param_2, undefined4 param_3,
-                     undefined4 param_4);
 void FS_StartOverlay(unsigned int* param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void FS_EndOverlay(int param_1);
 undefined4 FS_UnloadOverlayImage(void);
@@ -1093,12 +1019,8 @@ void Math_MD5GetHash(undefined4* param_1, int8_t* param_2, undefined4 param_3, u
 void Math_MD5Transform(unsigned int* param_1);
 void Dgt_Hash2Init(undefined4* param_1);
 void Dgt_Hash2Update(int param_1, undefined4* param_2, unsigned int param_3, undefined4 param_4);
-void Dgt_Hash2GetHash(undefined4* param_1, undefined1* param_2, undefined4 param_3,
-                      undefined4 param_4);
-void Dgt_Hash2CalcHmac(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                       undefined4 param_4, undefined4 param_5);
-void Dgti_CalcHmac(int param_1, int param_2, int param_3, int8_t***** param_4, int param_5,
-                   int* param_6);
+void Dgt_Hash2GetHash(undefined4* param_1, undefined1* param_2, undefined4 param_3, undefined4 param_4);
+void Dgt_Hash2CalcHmac(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5);
 void Dgti_CalcHmac(int param_1, int param_2, int param_3, int8_t***** param_4, int param_5, int* param_6);
 void Dgt_Hash2Transform(unsigned int* param_1, unsigned int* param_2, int param_3);
 void CP_SaveContext(undefined4* param_1);
@@ -1109,14 +1031,9 @@ void TP_GetUserInfo(undefined* param_1);
 void TP_SetCalibrateParam(int16_t* param_1);
 void TP_RequestSamplingAsync(void);
 undefined4 TP_WaitRawResult(undefined2* param_1);
-void TP_RequestAutoSamplingStartAsync(unsigned int param_1, unsigned int param_2,
-                                      undefined4 param_3, unsigned int param_4);
 void TP_RequestAutoSamplingStartAsync(unsigned int param_1, unsigned int param_2, undefined4 param_3, unsigned int param_4);
 void TP_RequestSetStabilityAsync(void);
 undefined2 TP_GetLatestIndexInAuto(void);
-undefined2* TP_CalcCalibrateParam(undefined2* param_1, undefined2* param_2, unsigned int param_3,
-                                  unsigned int param_4, uint16_t param_5, uint16_t param_6,
-                                  uint16_t param_7, uint16_t param_8, uint16_t param_9);
 undefined2* TP_CalcCalibrateParam(undefined2* param_1, undefined2* param_2, unsigned int param_3, unsigned int param_4, uint16_t param_5, uint16_t param_6, uint16_t param_7, uint16_t param_8, uint16_t param_9);
 void TP_GetCalibratedPoint(uint16_t* param_1, uint16_t* param_2);
 void TP_WaitBusy(uint16_t param_1);
@@ -1129,34 +1046,23 @@ void PM_Init(void);
 void PMi_CommonCallback(void);
 undefined4 PMi_SendSleepStart(unsigned int param_1, unsigned int param_2);
 undefined4 PM_SendUtilityCommandAsync(unsigned int param_1, undefined4 param_2, undefined4 param_3);
-undefined4 PMi_ReadRegisterAsync(unsigned int param_1, undefined4 param_2, undefined4 param_3,
-                                 undefined4 param_4);
 undefined4 PMi_ReadRegisterAsync(unsigned int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 int PMi_ReadRegister(uint16_t param_1, uint16_t* param_2);
 void PMi_SetLedAsync(int param_1, undefined4 param_2, undefined4 param_3);
 int PMi_SetLed(undefined4 param_1, undefined4 param_2, undefined4 param_3, int param_4);
 undefined4 PM_SetBackLightAsync(int param_1, int param_2, undefined4 param_3, undefined4 param_4);
 int PM_SetBackLight(undefined4 param_1, undefined4 param_2);
-void PM_ForceToPowerOffAsync(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                             undefined4 param_4);
 void PM_ForceToPowerOffAsync(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 uint32_t PM_ForceToPowerOff(void);
-void PM_GetBackLight(unsigned int* param_1, unsigned int* param_2, undefined4 param_3,
-                     unsigned int param_4);
 void PM_GetBackLight(unsigned int* param_1, unsigned int* param_2, undefined4 param_3, unsigned int param_4);
 void PMi_SendPxiData(undefined4 param_1);
 void PM_GoSleepMode(unsigned int param_1, uint16_t param_2, uint16_t param_3, undefined4 param_4);
 undefined4 PMi_SetLcdPower(int param_1, int param_2, int param_3, int param_4);
 void PM_SetLcdPower(int param_1);
 bool PM_GetLcdPower(void);
-undefined4 PMi_SendLedPatternCommandAsync(unsigned int param_1, undefined4 param_2,
-                                          undefined4 param_3);
-int PMi_SendLedPatternCommand(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                              int param_4);
+undefined4 PMi_SendLedPatternCommandAsync(unsigned int param_1, undefined4 param_2, undefined4 param_3);
 int PMi_SendLedPatternCommand(undefined4 param_1, undefined4 param_2, undefined4 param_3, int param_4);
 undefined4 PM_GetLedPatternAsync(undefined4 param_1, undefined4 param_2, undefined4 param_3);
-undefined4 PM_GetLedPattern(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                            undefined4 param_4);
 undefined4 PM_GetLedPattern(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void PMi_PrependList(int* param_1, int param_2);
 void PMi_AppendList(int* param_1, int param_2);
@@ -1168,16 +1074,10 @@ void PM_DeletePreSleepCallback(undefined4 param_1);
 void PM_DeletePostSleepCallback(undefined4 param_1);
 void Rtc_Init(void);
 undefined4 Rtc_GetDateAsync(undefined4 param_1, undefined4 param_2, undefined4 param_3);
-undefined4 Rtc_GetDate(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                       undefined4 param_4);
 undefined4 Rtc_GetDate(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 undefined4 Rtc_GetTimeAsync(undefined4 param_1, undefined4 param_2, undefined4 param_3);
-undefined4 Rtc_GetTime(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                       undefined4 param_4);
-undefined4 Rtc_GetDateTimeAsync(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                                undefined4 param_4);
-undefined4 Rtc_GetDateTime(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                           undefined4 param_4);
+undefined4 Rtc_GetTime(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
+undefined4 Rtc_GetDateTimeAsync(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 undefined4 Rtc_GetDateTime(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void RtcCommonCallback(undefined4 param_1, unsigned int param_2, int param_3, undefined4 param_4);
 int RtcBcd2Hex(unsigned int param_1);
@@ -1187,8 +1087,6 @@ void Rtci_ReadRawDateTimeAsync(void);
 void Rtci_ReadRawDateAsync(void);
 void Rtci_ReadRawTimeAsync(void);
 void Rtci_WriteRawStatus2Async(void);
-bool RtcSendPxiCommand(unsigned int param_1, undefined4 param_2, undefined4 param_3,
-                       undefined4 param_4);
 bool RtcSendPxiCommand(unsigned int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 int Rtc_ConvertDateToDay(unsigned int* param_1);
 int Rtci_ConvertTimeToSecond(int* param_1);
@@ -1210,9 +1108,6 @@ void Card_LockBackup(undefined4 param_1);
 void Card_UnlockBackup(undefined4 param_1);
 void Cardi_IdentifyBackupCore(unsigned int param_1);
 void Cardi_RequestStreamCommandCore(int* param_1);
-bool Cardi_RequestStreamCommand(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                                undefined4 param_4, undefined4 param_5, int param_6,
-                                undefined4 param_7, undefined4 param_8, undefined4 param_9);
 bool Cardi_RequestStreamCommand(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5, int param_6, undefined4 param_7, undefined4 param_8, undefined4 param_9);
 undefined4 Card_GetCurrentBackupType(void);
 undefined4 Card_GetBackupTotalSize(void);
@@ -1227,12 +1122,8 @@ void Cardi_SetCardDma(void);
 void Cardi_OnReadCard(void);
 bool Cardi_TryReadCardDma(int param_1);
 void Cardi_ReadCard(void* p);
-undefined4 Cardi_ReadRomIdCore(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                               undefined4 param_4);
 undefined4 Cardi_ReadRomIdCore(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void Cardi_ReadRomSyncCore(void);
-void Cardi_ReadRom(unsigned int param_1, int param_2, undefined4 param_3, undefined4 param_4,
-                   undefined4 param_5, undefined4 param_6, int param_7);
 void Cardi_ReadRom(unsigned int param_1, int param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5, undefined4 param_6, int param_7);
 void Card_Init(void);
 void Card_WaitRomAsync(void);
@@ -1245,23 +1136,17 @@ void Cardi_PulledOutCallback(undefined4 param_1, unsigned int param_2);
 undefined4 Card_IsPulledOut(void);
 void Card_TerminateForPulledOut(void);
 void Cardi_CheckPulledOutCore(int param_1);
-void Cardi_SendtoPxi(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                     undefined4 param_4);
 void Cardi_SendtoPxi(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void WM_Init(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 undefined4 WmInitCore(int* param_1, unsigned int param_2, undefined4 param_3);
 int WM_Finish(void);
 void WMi_SetCallbackTable(int param_1, undefined4 param_2);
 uint16_t* WmGetCommandBuffer4Arm7(void);
-undefined4 WMi_SendCommand(undefined2 param_1, unsigned int param_2, undefined4 param_3,
-                           undefined4 param_4);
 undefined4 WMi_SendCommand(undefined2 param_1, unsigned int param_2, undefined4 param_3, undefined4 param_4);
 undefined4 WMi_SendCommandDirect(undefined4* param_1, unsigned int param_2);
 undefined4 WMi_GetSystemWork(void);
 undefined4 WMi_CheckInitialized(void);
 int WMi_CheckIdle(void);
-int WMi_CheckStateEx(unsigned int param_1, undefined4 param_2, undefined4 param_3,
-                     undefined4 param_4);
 int WMi_CheckStateEx(unsigned int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void WmReceiveFifo(undefined4 param_1, uint16_t* param_2, int param_3);
 void WmClearFifoRecvFlag(void);
@@ -1279,8 +1164,6 @@ undefined2 WM_GetAllowedChannel(void);
 undefined2 WM_GetLinkLevel(void);
 unsigned int WM_GetDispersionBeaconPeriod(void);
 unsigned int WM_GetDispersionScanPeriod(void);
-void WM_GetOtherElements(undefined4* param_1, uint16_t* param_2, undefined4 param_3,
-                         undefined4 param_4);
 void WM_GetOtherElements(undefined4* param_1, uint16_t* param_2, undefined4 param_3, undefined4 param_4);
 unsigned int WM_GetNextTgid(void);
 int WMi_EnableEx(undefined4 param_1);
@@ -1292,36 +1175,23 @@ int WM_Reset(undefined4 param_1);
 int WM_End(undefined4 param_1);
 int WM_SetParentParameter(undefined4 param_1, int* param_2, undefined4 param_3, undefined4 param_4);
 undefined4 WmCheckParentParameter(int param_1);
-int WMi_StartParentEx(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                      undefined4 param_4);
 int WMi_StartParentEx(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void WM_StartParent(undefined4 param_1);
 int WM_EndParent(undefined4 param_1);
 int WM_StartScan(undefined4 param_1, int* param_2, undefined4 param_3, undefined4 param_4);
 int WM_StartScanEx(undefined4 param_1, int* param_2);
 int WM_EndScan(undefined4 param_1);
-int WM_StartConnectEx(undefined4 param_1, uint16_t* param_2, undefined4* param_3,
-                      undefined4 param_4, undefined2 param_5);
 int WM_StartConnectEx(undefined4 param_1, uint16_t* param_2, undefined4* param_3, undefined4 param_4, undefined2 param_5);
 int WM_Disconnect(undefined4 param_1, unsigned int param_2);
 int WM_DisconnectChildren(undefined4 param_1, unsigned int param_2);
-int WMi_StartMp(undefined4 param_1, undefined4 param_2, unsigned int param_3, undefined4 param_4,
-                uint16_t param_5, undefined4 param_6);
-void WM_StartMpEx(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4,
-                  undefined2 param_5, int param_6, undefined2 param_7, undefined1 param_8,
-                  undefined1 param_9, int param_10, undefined1 param_11);
-void WM_StartMp(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4,
-                undefined2 param_5, undefined2 param_6);
+int WMi_StartMp(undefined4 param_1, undefined4 param_2, unsigned int param_3, undefined4 param_4, uint16_t param_5, undefined4 param_6);
+void WM_StartMpEx(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined2 param_5, int param_6, undefined2 param_7, undefined1 param_8, undefined1 param_9, int param_10, undefined1 param_11);
 void WM_StartMp(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined2 param_5, undefined2 param_6);
 int WM_SetMpDataToPortEx(undefined4 param_1, undefined4 param_2, int param_3, unsigned int param_4);
 int WM_EndMp(undefined4 param_1);
 int WM_StartDcf(undefined4 param_1, int param_2, unsigned int param_3);
-int WM_SetDcfData(undefined4 param_1, undefined4* param_2, undefined4 param_3,
-                  unsigned int param_4);
 int WM_SetDcfData(undefined4 param_1, undefined4* param_2, undefined4 param_3, unsigned int param_4);
 int WM_EndDcf(undefined4 param_1);
-int WM_StartDataSharing(undefined4* param_1, unsigned int param_2, int param_3, int16_t param_4,
-                        int param_5);
 int WM_StartDataSharing(undefined4* param_1, unsigned int param_2, int param_3, int16_t param_4, int param_5);
 undefined4 WM_EndDataSharing(int param_1);
 int WM_StepDataSharing(int param_1, int param_2, int param_3);
@@ -1330,8 +1200,6 @@ void WmDataSharingReceiveCallback_Parent(int param_1);
 void WmDataSharingReceiveCallback_Child(int param_1);
 void WmDataSharingReceiveData(int param_1, unsigned int param_2, int param_3, undefined4 param_4);
 void WmDataSharingSendDataSet(int param_1, int param_2, undefined4 param_3, undefined4 param_4);
-void WM_GetSharedDataAddress(int param_1, uint16_t* param_2, unsigned int param_3,
-                             undefined4 param_4);
 void WM_GetSharedDataAddress(int param_1, uint16_t* param_2, unsigned int param_3, undefined4 param_4);
 int WmGetSharedDataAddress(int param_1, unsigned int param_2, int param_3, unsigned int param_4);
 void WM_StartKeySharing(undefined4 param_1, undefined4 param_2);
@@ -1341,8 +1209,6 @@ int WM_SetWepKeyEx(undefined4 param_1, unsigned int param_2, undefined4 param_3,
 int WM_SetGameInfo(undefined4 param_1, int param_2, unsigned int param_3);
 int WM_SetBeaconIndication(undefined4 param_1, unsigned int param_2);
 int WM_SetLifeTime(undefined4 param_1, undefined4 param_2, undefined4 param_3);
-int WM_MeasureChannel(undefined4 param_1, undefined2 param_2, undefined2 param_3,
-                      undefined2 param_4, undefined2 param_5);
 int WM_MeasureChannel(undefined4 param_1, undefined2 param_2, undefined2 param_3, undefined2 param_4, undefined2 param_5);
 void MB_CommSetParentStateCallback(undefined4 param_1);
 int MB_CommGetChildUser(int param_1);
@@ -1350,10 +1216,7 @@ undefined4 MB_CommIsBootable(int param_1);
 undefined4 MB_CommResponseRequest(int param_1, undefined4 param_2);
 void MBi_CommChangeParentState(int param_1, undefined4 param_2, undefined4 param_3);
 void MBi_CommChangeParentStateCallbackOnly(void);
-void MBi_CommParentCallback(int param_1, undefined2* param_2, undefined4 param_3,
-                            unsigned int param_4);
-void MBi_CommParentRecvDataPerChild(int param_1, unsigned int param_2, undefined4 param_3,
-                                    undefined4 param_4);
+void MBi_CommParentCallback(int param_1, undefined2* param_2, undefined4 param_3, unsigned int param_4);
 void MBi_CommParentRecvDataPerChild(int param_1, unsigned int param_2, undefined4 param_3, undefined4 param_4);
 void MBi_CommParentRecvData(undefined4 param_1);
 void MBi_CommParentSendMsg(undefined1 param_1, undefined4 param_2);
@@ -1364,16 +1227,10 @@ void MBi_CommParentSendData(void);
 void MBi_Calc_Sendblock(unsigned int param_1);
 unsigned int MBi_Calc_Nextsendblock(unsigned int param_1, unsigned int param_2);
 undefined4 IsChildAidValid(unsigned int param_1);
-void MBi_CommCallParentError(undefined4 param_1, undefined2 param_2, undefined4 param_3,
-                             undefined4 param_4);
-unsigned int MB_GetSegmentLength(int param_1, undefined4 param_2, undefined4 param_3,
-                                 undefined4 param_4);
-int MB_ReadSegment(undefined1* param_1, undefined4* param_2, unsigned int param_3,
-                   undefined4 param_4);
+void MBi_CommCallParentError(undefined4 param_1, undefined2 param_2, undefined4 param_3, undefined4 param_4);
+unsigned int MB_GetSegmentLength(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 int MB_ReadSegment(undefined1* param_1, undefined4* param_2, unsigned int param_3, undefined4 param_4);
 void ret_0207484c(void);
-void MBi_ReadSegmentHeader(unsigned int* param_1, unsigned int param_2, unsigned int param_3,
-                           int param_4);
 void MBi_ReadSegmentHeader(unsigned int* param_1, unsigned int param_2, unsigned int param_3, int param_4);
 undefined4 MB_RegisterFile(int param_1, int param_2, undefined4 param_3, undefined4 param_4);
 void MBi_MakeDownloadFileInfo(undefined4* param_1, int param_2);
@@ -1394,8 +1251,6 @@ void MBi_ClearSendStatus(void);
 void MB_SendGameInfoBeacon(undefined4 param_1, undefined4 param_2, undefined4 param_3);
 undefined4 MBi_ReadyBeaconSendStatus(void);
 void MBi_InitSendFixedBeacon(void);
-void MBi_SendFixedBeacon(undefined4 param_1, undefined4 param_2, int8_t param_3,
-                         undefined4 param_4);
 void MBi_SendFixedBeacon(undefined4 param_1, undefined4 param_2, int8_t param_3, undefined4 param_4);
 void MBi_InitSendVolatBeacon(void);
 void MBi_SendVolatBeacon(undefined4 param_1, undefined4 param_2, int8_t param_3);
@@ -1407,8 +1262,6 @@ void MBi_ParentCallback(uint16_t* param_1);
 void MBi_ChildPortCallback(int param_1);
 void MBi_ChildCallback(uint16_t* param_1);
 int64_t MBi_GetBeaconPeriodDispersion(void);
-undefined4 MB_Init(int param_1, undefined4* param_2, undefined4 param_3, int param_4,
-                   undefined2 param_5);
 undefined4 MB_Init(int param_1, undefined4* param_2, undefined4 param_3, int param_4, undefined2 param_5);
 bool MBi_IsCommSizeValid(unsigned int param_1, unsigned int param_2, int param_3);
 undefined4 MB_SetParentCommParam(undefined4 param_1, undefined4 param_2);
@@ -1418,12 +1271,8 @@ void MB_StartParent(void);
 int MBi_CallReset(void);
 undefined4 MBi_CommEnd(void);
 void MB_End(void);
-void MB_DisconnectChild(unsigned int param_1, undefined4 param_2, undefined4 param_3,
-                        undefined4 param_4);
 void MB_DisconnectChild(unsigned int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void MBi_GetLastFountParent(undefined2 param_1);
-undefined4 MBi_GetParentBssDesc(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                                undefined4 param_4, undefined2 param_5);
 undefined4 MBi_GetParentBssDesc(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined2 param_5);
 int MBi_SendMp(unsigned int param_1, undefined2 param_2, undefined2 param_3);
 undefined4 MBi_GetGgid(void);
@@ -1432,18 +1281,13 @@ unsigned int MBi_GetAttribute(void);
 bool MBi_IsStarted(void);
 void MBi_CheckWmErrcode(undefined2 param_1, int param_2);
 void MBi_InitCache(undefined4 param_1);
-void MBi_AttachCacheBuffer(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4,
-                           undefined4 param_5);
-undefined4 MBi_ReadFromCache(undefined4* param_1, int param_2, undefined4* param_3,
-                             unsigned int param_4);
+void MBi_AttachCacheBuffer(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5);
 undefined4 MBi_ReadFromCache(undefined4* param_1, int param_2, undefined4* param_3, unsigned int param_4);
 void MBi_InitTaskThread(struct thread* param_1, int param_2);
 bool MBi_IsTaskAvailable(void);
 void MBi_InitTaskInfo(undefined4 param_1);
 bool MBi_IsTaskBusy(int param_1);
 void MBi_SetTask(undefined4* param_1, undefined4 param_2, undefined4 param_3, unsigned int param_4);
-void MBi_EndTaskThread(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                       undefined4 param_4);
 void MBi_EndTaskThread(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void MBi_SetChildMpMaxSize(int param_1);
 void MBi_SetParentPieceBuffer(undefined4 param_1);
@@ -1467,8 +1311,6 @@ void Ctrdgi_LockByProcessor(uint16_t lock_id, void* info);
 void Ctrdgi_UnlockByProcessor(uint16_t lock_id, void* info);
 void Ctrdgi_SendtoPxi(uint32_t data);
 bool Ctrdg_Read8(undefined4 param_1, undefined4 param_2);
-bool Ctrdgi_AccessCommon(undefined4* param_1, undefined4 param_2, undefined4* param_3,
-                         unsigned int param_4);
 bool Ctrdgi_AccessCommon(undefined4* param_1, undefined4 param_2, undefined4* param_3, unsigned int param_4);
 undefined4 Ctrdg_IsEnabled(void);
 void Ctrdg_Enable(int param_1);
@@ -1488,8 +1330,6 @@ void Ctrdgi_IsTaskBusy(int param_1);
 unsigned int Math_CountPopulation(unsigned int param_1);
 void Mathi_Crc16InitTableRev(uint16_t* param_1, unsigned int param_2);
 void Mathi_Crc16UpdateRev(int param_1, uint16_t* param_2, int8_t* param_3, unsigned int param_4);
-unsigned int Math_CalcCrc16(undefined4 param_1, undefined4 param_2, undefined4 param_3,
-                            unsigned int param_4);
 unsigned int Math_CalcCrc16(undefined4 param_1, undefined4 param_2, undefined4 param_3, unsigned int param_4);
 char* Std_CopyString(char* param_1, char* param_2);
 void Std_CopyLStringZeroFill(int param_1, char* param_2, int param_3);
@@ -1509,8 +1349,6 @@ bool TryAssignByteWrapper(uint8_t* ptr, uint8_t val);
 size_t wcstombs(char* dest, const wchar_t* src, size_t n);
 void* memcpy(void* dest, const void* src, size_t n);
 void* memmove(void* dest, const void* src, size_t n);
-int __vsprintf_internal_slice(slice_append_fn_t append, struct slice* str, const char* format,
-                              va_list ap);
 int __vsprintf_internal_slice(slice_append_fn_t append, struct slice* str, const char* format, va_list ap);
 bool TryAppendToSlice(struct slice* slice, const void* data, size_t data_len);
 int __vsprintf_internal(char* str, size_t maxlen, const char* format, va_list ap);
@@ -1524,7 +1362,7 @@ int32_t strncmp(const char* s1, const char* s2, size_t n);
 char* strchr(const char* string, int32_t c);
 char* strstr(const char* haystack, const char* needle);
 void ret_0207f910(void);
-void MaybeMemAllocWords(undefined4 *param_1,uint32_t param_2);
+void MaybeMemAllocWords(undefined4 *param_1,uint param_2);
 void ret_0207f9c0(void);
 double _dadd(double a, double b);
 unsigned long long _ll_ufrom_d(double d);
