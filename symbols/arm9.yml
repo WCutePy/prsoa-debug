@@ -131,6 +131,19 @@ arm9:
         Seems to partially initialize a touch_screen_wrapper struct in tandem with InitTouchScreenWrapper.
         
         r0: touch_screen_wrapper pointer
+    - name: InitFileArchiveWrapper
+      address:
+        NA: 0x2002AEC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: file_archive_wrapper pointer
+        r1: undefined4 
+        r2: char pointer
+        r3: int32_t 
+        stack[0]: undefined4 
+        stack[1]: int32_t 
+        stack[2]: int32_t 
     - name: InitFileWrapper
       address:
         NA: 0x2002BC4
@@ -1039,6 +1052,13 @@ arm9:
         Zeroes the body struct of a quest struct.
         
         r0: quest pointer
+    - name: ZeroQuestBodyVeneer
+      address:
+        NA: 0x2011370
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_header pointer
     - name: ZeroQuestFooter
       address:
         NA: 0x2011384
@@ -1055,6 +1075,28 @@ arm9:
         r0: mission_quest_data pointer
         r1: script_manager pointer
         r2: undefined pointer
+    - name: TryStartMissionById
+      address:
+        NA: 0x20113B4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+        r1: int32_t 
+    - name: MaybeTryEndMission
+      address:
+        NA: 0x201140C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+    - name: MaybeExitMissionMode
+      address:
+        NA: 0x2011464
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
     - name: TryUnlockQuest
       address:
         NA: 0x20114C4
@@ -1117,6 +1159,37 @@ arm9:
         
         r0: mission_quest_data pointer
         r1: quest id
+    - name: InitChapterById
+      address:
+        NA: 0x201164C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+        r1: int32_t 
+    - name: CountClearedQuests
+      address:
+        NA: 0x2011678
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+    - name: MissionQuestDataFillChapterMsgWrapper
+      address:
+        NA: 0x20116A8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+        r1: int32_t 
+    - name: MaybeUnlockQuestsByChapter
+      address:
+        NA: 0x20116C0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+        r1: int32_t 
     - name: ret_020117ac
       address:
         NA: 0x20117AC
@@ -1310,6 +1383,15 @@ arm9:
         
         r0: ranger_data_old pointer
         r1: team slot to use (if invalid uses current)
+    - name: CalcDateAndTime
+      address:
+        NA: 0x201630C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ranger_data_old pointer
+        r1: rtc_time pointer
+        r2: rtc_date pointer
     - name: UpdatePlayTime
       address:
         NA: 0x201668C
@@ -1541,13 +1623,37 @@ arm9:
         
         r0: ranger_data pointer
         r1: short
-    - name: CheckSaveFileValidity
+    - name: CountClearedQuestsSafe
+      address:
+        NA: 0x20171A0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GetSaveFileMagicWord
       address:
         NA: 0x2017298
       description: |-
         Checks if the save file constant is correct. If not, the save file will be corrupt. NOT a checksum!
         
         No params.
+    - name: SetSaveFileMagicWord
+      address:
+        NA: 0x20172BC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SetCurrentRangerPlaytime
+      address:
+        NA: 0x2018148
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ranger_data_old pointer
+        r1: int32_t 
+        r2: int8_t 
+        r3: int8_t 
     - name: InitGroupMsgWrapperTable
       address:
         NA: 0x2018208
@@ -1806,6 +1912,7 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+        r1: int32_t 
     - name: ret_02029778
       address:
         NA: 0x2029778
@@ -1818,6 +1925,7 @@ arm9:
         NA: 0x202A5F8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
+        
         
         No params.
     - name: SysCallPrintTextbox
@@ -1897,11 +2005,32 @@ arm9:
         SysCall Function for GetYesNoMenuResult.
         
         No params.
+    - name: SysCallPrintTextboxByIdFull
+      address:
+        NA: 0x202CA74
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
     - name: ret_0202d394
       address:
         NA: 0x202D394
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
+        
+        No params.
+    - name: SysCallReturnZero2077
+      address:
+        NA: 0x202E060
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallReturnZero2078
+      address:
+        NA: 0x202E068
+      description: |-
+        [MANUAL DESCRIPTION]
         
         No params.
     - name: DebugPrintError
@@ -1912,6 +2041,27 @@ arm9:
         
         r0: format
         ...: variadic
+    - name: SysCallReturnZero2081
+      address:
+        NA: 0x202E548
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallReturnZero2082
+      address:
+        NA: 0x202E550
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallInitBattleCombatantsAndExports
+      address:
+        NA: 0x202F13C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: SysCallCopyStringToRangerDebugBuffer
       address:
         NA:
@@ -1944,6 +2094,34 @@ arm9:
         Is a SysCall Function.
         
         r0: script stack pointer, interpreted as params.
+    - name: SysCallReturnZero2092
+      address:
+        NA: 0x202F294
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallReturnZero2093
+      address:
+        NA: 0x202F29C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallReturnZero2094
+      address:
+        NA: 0x202F2A4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallReturnZero2095
+      address:
+        NA: 0x202F2AC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: SysCallGetBattleResult
       address:
         NA: 0x202F2B4
@@ -2032,6 +2210,41 @@ arm9:
         Is a SysCall Function.
         
         No params.
+    - name: SysCallReturnZero2097
+      address:
+        NA: 0x202F784
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallReturnZero2098
+      address:
+        NA: 0x202F78C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallReturnZero2099
+      address:
+        NA: 0x202F794
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallReturnZero2100
+      address:
+        NA: 0x202F79C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallReturnZero2101
+      address:
+        NA: 0x202F7A4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: SysCallSetScriptSubroutine2ByName
       address:
         NA: 0x202F9FC
@@ -2061,6 +2274,13 @@ arm9:
       description: |-
         Retrieves the current styler type from RANGER_DATA.
         Is a SysCall Function.
+        
+        No params.
+    - name: SysCallReturnZero2166
+      address:
+        NA: 0x202FE28
+      description: |-
+        [MANUAL DESCRIPTION]
         
         No params.
     - name: SysCallGetStylerLevel
@@ -2094,6 +2314,20 @@ arm9:
         Is a SysCall Function.
         
         No params.
+    - name: SysCallMaybeDoIrisTransition
+      address:
+        NA: 0x20309B4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: uint32_t pointer
+    - name: SysCallReturnZero2112
+      address:
+        NA: 0x2030AD0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: SysCallSetPlayerSpawnData
       address:
         NA: 0x2030B40
@@ -2102,6 +2336,27 @@ arm9:
         
         r0: script stack pointer, interpreted as params.
         r1: int32_t
+    - name: SysCallMaybeStartMissionWithFanfare
+      address:
+        NA: 0x2030F8C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallMaybeEndMissionWithFanfare
+      address:
+        NA: 0x203117C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallMaybeExitMissionModeWithFanfare
+      address:
+        NA: 0x20312C4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: SysCallGetActiveMissionId
       address:
         NA: 0x20313E8
@@ -2109,6 +2364,34 @@ arm9:
         SysCall Function that returns the active mission id.
         
         No params.
+    - name: SysCallMaybeTryEndMission
+      address:
+        NA: 0x2031404
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallTryStartMissionById
+      address:
+        NA: 0x2031428
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallMaybeExitMissionMode
+      address:
+        NA: 0x2031450
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallTryAcceptQuestWithFanfare
+      address:
+        NA: 0x2031474
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: int32_t pointer
     - name: SysCallTryClearQuest
       address:
         NA: 0x2031684
@@ -2166,6 +2449,13 @@ arm9:
         Is a SysCall Function for HasClearedQuest.
         
         r0: script stack pointer, interpreted as params.
+    - name: SysCallReturnZero2130
+      address:
+        NA: 0x20319C4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: SysCallGetChapterNumber
       address:
         NA: 0x20319CC
@@ -2173,6 +2463,34 @@ arm9:
         SysCall Function that retrieves the current chapter number from MISSION_QUEST_DATA.
         
         No params.
+    - name: SysCallGetEventVariable
+      address:
+        NA: 0x2031B60
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallSetEventVariable
+      address:
+        NA: 0x2031B84
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallGetSettingsVariable
+      address:
+        NA: 0x2031BB0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
+    - name: SysCallSetSettingsVariable
+      address:
+        NA: 0x2031BD4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: undefined4 pointer
     - name: SysCallGetQuestVariable
       address:
         NA: 0x2031C00
@@ -2332,6 +2650,20 @@ arm9:
         NA: 0x20338A0
       description: |-
         SysCall Function That sets only the timer type field in RANGER_DATA to 2.
+        
+        No params.
+    - name: SysCallEnableTimerDisplay
+      address:
+        NA: 0x20338BC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallDisbleTimerDisplay
+      address:
+        NA: 0x20338DC
+      description: |-
+        [MANUAL DESCRIPTION]
         
         No params.
     - name: SysCallGetTimer1Duration
@@ -2636,6 +2968,38 @@ arm9:
         r0: field_data pointer
         r1: field_data.bin file name and path
         r2: undefined4
+    - name: GetFieldNpcDataBySpriteId
+      address:
+        NA: 0x2041D44
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: field_data pointer
+        r1: int32_t 
+    - name: GetFieldEnemyDataByFormId
+      address:
+        NA: 0x2041D58
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: field_data pointer
+        r1: int32_t 
+    - name: GetFieldTargetDataByIndex
+      address:
+        NA: 0x2041D6C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: field_data pointer
+        r1: int32_t 
+    - name: GetFieldMapDataByRoomId
+      address:
+        NA: 0x2041D80
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: field_data pointer
+        r1: room_id 
     - name: ret_02043124
       address:
         NA: 0x2043124
@@ -3101,6 +3465,7 @@ arm9:
     - name: GX_LoadBG1ScrVeneer
       address:
         NA: 0x2057274
+        No params.
     - name: GX_LoadBg2ScrVeneer
       address:
         NA: 0x2057298
@@ -3576,6 +3941,7 @@ arm9:
     - name: G3_LoadTexMtxTexCoord
       address:
         NA: 0x206349C
+        r2: uint32_t 
     - name: GXs_LoadBgPltt
       address:
         NA: 0x20635A4
@@ -3609,6 +3975,7 @@ arm9:
     - name: GXs_LoadBg1Scr
       address:
         NA: 0x2063928
+        r2: uint32_t 
     - name: GX_LoadBg0Char
       address:
         NA: 0x2063B08
@@ -6043,6 +6410,7 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+        r1: uint32_t 
     - name: _dadd
       address:
         NA: 0x207FE5C
