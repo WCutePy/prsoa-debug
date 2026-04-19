@@ -3940,7 +3940,6 @@ arm9:
     - name: G3_LoadTexMtxTexCoord
       address:
         NA: 0x206349C
-        r2: uint32_t 
     - name: GXs_LoadBgPltt
       address:
         NA: 0x20635A4
