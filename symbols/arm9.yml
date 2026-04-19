@@ -3973,7 +3973,6 @@ arm9:
     - name: GXs_LoadBg1Scr
       address:
         NA: 0x2063928
-        r2: uint32_t 
     - name: GX_LoadBg0Char
       address:
         NA: 0x2063B08
