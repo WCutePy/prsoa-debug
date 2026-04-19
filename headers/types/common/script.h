@@ -1,8 +1,6 @@
 #ifndef HEADERS_TYPES_COMMON_SCRIPT_H_
 #define HEADERS_TYPES_COMMON_SCRIPT_H_
 
-#include "file.h"
-
 // Seems to be a decompressed .fsb script file. Maybe someone else has researched this topic? :P
 struct script_file {
     int unk_pointer_0x0;

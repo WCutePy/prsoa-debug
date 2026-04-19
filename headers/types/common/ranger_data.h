@@ -1,8 +1,29 @@
 #ifndef HEADERS_TYPES_COMMON_RANGER_DATA_H_
 #define HEADERS_TYPES_COMMON_RANGER_DATA_H_
 
-#include "enums.h"
-#include "common.h"
+// Contains critical player data, such as their gender, HP, position, and exp.
+struct ranger_core_data {
+    bool ranger_is_female;
+    int8_t current_hp;
+    int8_t max_hp;
+    struct styler_rank_and_type styler_rank_and_type;
+    int32_t partner_assist_gauge; // Maximum varies by partner. May contain other data as nibbles.
+    undefined field8_0x8;
+    int8_t partner_pokemon_moods[17]; // 0x0 normal, 0x1 happy, 0x2 very happy?
+    struct room_id_16 room;
+    int16_t player_coordinates[2];
+    undefined field28_0x20;
+    undefined field29_0x21;
+    undefined field30_0x22;
+    undefined field31_0x23;
+    int16_t player_face_direction;
+    // This seems to mess with pathing and collision when edited. Copied to caught pokemon?
+    int16_t player_collision_data;
+    int32_t current_styler_exp;
+    int32_t current_player_exp;
+};
+
+ASSERT_SIZE(struct ranger_core_data, 48);
 
 struct ranger_data {
     struct ranger_core_data core_data;
@@ -13,12 +34,14 @@ struct ranger_data {
     struct target_destroyed_nibbles
         targets_destroyed[441]; // This is really 441 sets of 32 nibbles!
     undefined4 field4_0x7c38;   // Related to battle result somehow...
-    struct ranger_pokedex pokedex;
+    struct browser_data browser;
     struct ranger_glossary glossary;
+    bool battle_exports_is_alloc : 1; // Seems to flicker on area transition
+    bool display_timer_on_screen : 1; // When enabled, a timer appears on-screen.
+    undefined4 unk_bitfield_fields : 30;
     long long map_and_fly_bitfield; // Seems to handle world map unlocks as a bitfield. Something
                                     // like 37 bits long? More research needed.
     // This block of fields seems to be related to wandering enemies. More research needed.
-    undefined4 field7_0x7f68;
     undefined2 field8_0x7f6c;
     undefined2 field9_0x7f6e[63];
     undefined2 field10_0x7fec[10];
@@ -108,17 +131,12 @@ struct ranger_data_old {
     undefined4 field52_0x8b6c;
     undefined4 field53_0x8b70;
     undefined4 unk_battle_value;
-    undefined2 field55_0x8b78;
-    undefined2 field56_0x8b7a;
-    undefined4 field57_0x8b7c;
+    struct room_id_16 fly_destination_room;
+    int16_t fly_destination_coords[2];
+    undefined2 field57_0x8b7e;
     undefined4 field58_0x8b80;
-    undefined4 field59_0x8b84;
-    undefined4 field60_0x8b88;
-    undefined4 field61_0x8b8c;
-    undefined4 field62_0x8b90;
-    undefined4 field63_0x8b94;
-    undefined4 field64_0x8b98;
-    undefined4 field65_0x8b9c;
+    struct rtc_date date;
+    struct rtc_time time;
     int32_t arena_id; // Seems to be assigned when entering the release menu post-battle.
     undefined field67_0x8ba4[44];
     struct pokemon_data recruited_pokemon_tables_backup[3][10];

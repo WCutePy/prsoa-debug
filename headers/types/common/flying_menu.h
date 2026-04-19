@@ -1,8 +1,6 @@
 #ifndef HEADERS_TYPES_COMMON_FLYING_MENU_H_
 #define HEADERS_TYPES_COMMON_FLYING_MENU_H_
 
-#include "enums.h"
-
 // At some point, the unfinished overlay_09 structs should be moved here.
 
 struct fly_destination {

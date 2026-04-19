@@ -2,7 +2,6 @@
 #define HEADERS_FUNCTIONS_ARM9_H_
 
 #include "arm9/itcm.h"
-
 void _start(void);
 undefined4 MIi_UncompressBackward(int param_1);
 void ret_02000b98(void);
@@ -146,8 +145,8 @@ void ZeroBattleExports(struct battle_exports* param_1);
 void InitRangerNetMissionCompletionBits(int16_t* param_1);
 void SetRangerNetMissionCompletionBit(void* param_1, unsigned int param_2);
 unsigned int GetRangerNetMissionCompletionBit(undefined4 param_1, unsigned int param_2);
-void ZeroQuestBody(struct quest* param_1);
-void ZeroQuestFooter(struct quest* param_1);
+void ZeroQuestBody(struct mission_quest_data* param_1);
+void ZeroQuestFooter(struct mission_quest_data* param_1);
 void InitMissionQuestFooter(struct mission_quest_data* param_1, struct script_manager* param_2,
                             undefined* param_3);
 void TryUnlockQuest(struct mission_quest_data* param_1, int param_2);
@@ -287,6 +286,7 @@ int8_t SysCallGetStylerLevel(void);
 undefined4 SysCallSetRangerCurrentHp(undefined4* param_1);
 int8_t SysCallGetRangerMaxHp(void);
 int8_t SysCallGetRangerCurrentHp(void);
+void SysCallSetPlayerSpawnData(void* param_1, int param_2);
 int8_t SysCallGetActiveMissionId(void);
 undefined4 SysCallTryClearQuest(void);
 void SysCallShouldShowQuestName(undefined4* param_1);
