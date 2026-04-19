@@ -995,7 +995,7 @@ struct capture_rank_table {
 };
 ASSERT_SIZE(struct capture_rank_table, 124);
 
-// Statistics on seend and befriended pokemon.
+// Statistics on seen and befriended pokemon.
 struct browser_data {
     struct species_status_table species_statuses;
     undefined field_0x7c;
