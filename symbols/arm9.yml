@@ -143,7 +143,7 @@ arm9:
         r3: int32_t 
         stack[0]: undefined4 
         stack[1]: int32_t 
-        stack[2]: int32_t 
+        stack[2]: int32_t
     - name: InitFileWrapper
       address:
         NA: 0x2002BC4
@@ -1082,7 +1082,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: mission_quest_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: MaybeTryEndMission
       address:
         NA: 0x201140C
@@ -1166,7 +1166,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: mission_quest_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: CountClearedQuests
       address:
         NA: 0x2011678
@@ -1181,7 +1181,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: mission_quest_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: MaybeUnlockQuestsByChapter
       address:
         NA: 0x20116C0
@@ -1189,7 +1189,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: mission_quest_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: ret_020117ac
       address:
         NA: 0x20117AC
@@ -1653,7 +1653,7 @@ arm9:
         r0: ranger_data_old pointer
         r1: int32_t 
         r2: int8_t 
-        r3: int8_t 
+        r3: int8_t
     - name: InitGroupMsgWrapperTable
       address:
         NA: 0x2018208
@@ -1912,7 +1912,7 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-        r1: int32_t 
+        r1: int32_t
     - name: ret_02029778
       address:
         NA: 0x2029778
@@ -2982,7 +2982,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: field_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: GetFieldEnemyDataByFormId
       address:
         NA: 0x2041D58
@@ -2990,7 +2990,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: field_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: GetFieldTargetDataByIndex
       address:
         NA: 0x2041D6C
@@ -2998,7 +2998,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: field_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: GetFieldMapDataByRoomId
       address:
         NA: 0x2041D80
@@ -3006,7 +3006,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         r0: field_data pointer
-        r1: room_id 
+        r1: room_id
     - name: ret_02043124
       address:
         NA: 0x2043124
@@ -3991,7 +3991,7 @@ arm9:
         NA: 0x20639E8
     - name: GX_LoadBg3Scr
       address:
-        NA: 0x02063A48
+        NA: 0x2063A48
     - name: GXs_LoadBg3Scr
       address:
         NA: 0x2063AA8
@@ -6429,7 +6429,7 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-        r1: uint32_t 
+        r1: uint32_t
     - name: _dadd
       address:
         NA: 0x207FE5C

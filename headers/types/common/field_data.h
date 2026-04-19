@@ -5,7 +5,8 @@ struct field_target_data {
     undefined2 field0_0x0;
     undefined1 field1_0x2;
     undefined1 field2_0x3;
-    struct field_move_8 field_move_id; // The type of field move, if any, required to interact with this target
+    struct field_move_8
+        field_move_id; // The type of field move, if any, required to interact with this target
     int8_t field_move_level; // The minimum level of field move, if any, required for this target
     undefined field5_0x6;
     undefined field6_0x7;
@@ -35,7 +36,7 @@ ASSERT_SIZE(struct field_target_data, 32);
 
 // Field Sizes From ov_00 0x2135e30
 struct field_enemy_data {
-    undefined2 field0_0x0; 
+    undefined2 field0_0x0;
     undefined2 field1_0x2;
     undefined2 field2_0x4;
     undefined2 field3_0x6;
@@ -62,7 +63,8 @@ struct field_enemy_data {
     undefined1 field24_0x34;
     undefined1 field25_0x35;
     undefined1 field26_0x36;
-    struct target_object_8 disguised_target_id; // The target_object this pokemon should be disguised as in the overworld. 
+    struct target_object_8 disguised_target_id; // The target_object this pokemon should be
+                                                // disguised as in the overworld.
     undefined1 field28_0x38;
     undefined1 field29_0x39;
     undefined1 field30_0x3a;
@@ -80,7 +82,6 @@ struct field_npc_data {
     undefined1 field2_0x3;
 };
 ASSERT_SIZE(struct field_npc_data, 4);
-
 
 struct field_map_data {
     undefined1 area_id;
@@ -149,11 +150,11 @@ struct field_map_data {
 ASSERT_SIZE(struct field_map_data, 84);
 
 struct field_data {
-    struct file_wrapper *field_data_file_wrapper;
-    struct field_npc_data *npc_data;
-    struct field_enemy_data *enemy_data;
-    struct field_target_data *target_data;
-    struct field_map_data *map_data;
+    struct file_wrapper* field_data_file_wrapper;
+    struct field_npc_data* npc_data;
+    struct field_enemy_data* enemy_data;
+    struct field_target_data* target_data;
+    struct field_map_data* map_data;
 };
 ASSERT_SIZE(struct field_data, 20);
 
@@ -168,7 +169,7 @@ struct field_data_bin {
     char enmy[4]; // "ENMY"
     int num_enemy_entries;
     struct field_enemy_data enemy_data_table[443];
-    char target_string[4];  // "TOBJ"
+    char target_string[4]; // "TOBJ"
     int num_target_entries;
     struct field_target_data target_data_table[369];
     char npc_string[4]; // "NPC"
