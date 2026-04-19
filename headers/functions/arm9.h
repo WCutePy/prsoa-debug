@@ -18,6 +18,7 @@ struct touch_screen* InitTouchScreen(struct touch_screen* param_1);
 void ret_02001eb4(void);
 void ret_02001ecc(void);
 struct touch_screen_wrapper* InitTouchScreenWrapperOuter(struct touch_screen_wrapper* param_1);
+struct file_archive_wrapper *InitFileArchiveWrapper(struct file_archive_wrapper *param_1,undefined4 param_2,char *param_3,int param_4,undefined4 param_5,int param_6,int param_7);
 struct file_wrapper* InitFileWrapper(struct file_wrapper* param_1, char* param_2, int param_3,
                                      undefined4 param_4, int param_5, int param_6);
 bool ConvertFilePathToId(char* param_1);
