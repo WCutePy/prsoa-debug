@@ -1941,7 +1941,7 @@ arm9:
       description: |-
         SysCall Function for PrintTextbox. 
         Parameter 4 is always zero.
-
+        
         r0: script stack pointer, interpreted as params.
     - name: SysCallIsTextboxPrinting
       address:
