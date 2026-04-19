@@ -1928,6 +1928,13 @@ arm9:
         
         
         No params.
+    - name: SysCallReturnZero2353
+      address:
+        NA: 0x202BEA0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: SysCallPrintTextbox
       address:
         NA: 0x202C86C
@@ -3940,6 +3947,9 @@ arm9:
     - name: G3_LoadTexMtxTexCoord
       address:
         NA: 0x206349C
+    - name: GX_LoadBGPltt
+      address:
+        NA: 0x2063550
     - name: GXs_LoadBgPltt
       address:
         NA: 0x20635A4
@@ -3973,6 +3983,18 @@ arm9:
     - name: GXs_LoadBg1Scr
       address:
         NA: 0x2063928
+    - name: GX_LoadBG2Scr
+      address:
+        NA: 0x2063988
+    - name: GXs_LoadBg2Scr
+      address:
+        NA: 0x20639E8
+    - name: GX_LoadBG3Scr
+      address:
+        NA: 0x02063A48
+    - name: GXS_LoadBg3Scr
+      address:
+        NA: 0x2063AA8
     - name: GX_LoadBg0Char
       address:
         NA: 0x2063B08
