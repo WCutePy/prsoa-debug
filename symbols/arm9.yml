@@ -3947,7 +3947,7 @@ arm9:
     - name: G3_LoadTexMtxTexCoord
       address:
         NA: 0x206349C
-    - name: GX_LoadBGPltt
+    - name: GX_LoadBgPltt
       address:
         NA: 0x2063550
     - name: GXs_LoadBgPltt
@@ -3992,7 +3992,7 @@ arm9:
     - name: GX_LoadBG3Scr
       address:
         NA: 0x02063A48
-    - name: GXS_LoadBg3Scr
+    - name: GXs_LoadBg3Scr
       address:
         NA: 0x2063AA8
     - name: GX_LoadBg0Char

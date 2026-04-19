@@ -7,9 +7,9 @@ void AddEnemyFormToEncounterType2(struct ov_00_unk_struct* param_1, undefined4 p
                                   undefined4 param_3, undefined4 param_4);
 void Overlay00PreEntryPoint(undefined4 param_1, struct megastruct* param_2, undefined4 param_3,
                             undefined4 param_4);
-void OpenAndInitMapScriptFile(struct unk_struct_size_0x80* param_1, int param_2);
+void OpenAndInitMapScriptFile(struct unk_map_struct_size_0x80* param_1, int param_2);
 void ret_02125334(void);
-undefined4 MaybeOpenAndInitMapDatAndTexFiles(struct unk_struct_size_0x80* param_1,
+undefined4 MaybeOpenAndInitMapDatAndTexFiles(struct unk_map_struct_size_0x80* param_1,
                                              undefined4 param_2, char* param_3, int param_4);
 void ret_021266ac(void);
 void ret_021266b0(void);
