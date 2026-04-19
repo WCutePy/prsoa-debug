@@ -5,7 +5,7 @@
 struct named_event_variables {
     int32_t subchapter_progression; // 0x00: Seems to increase linearly, or to the nearest multiple
                                     // of 10. Sub-sub-chapters perhaps?
-    int32_t scrach_paper[20];       // 0x04: Varies wildly by subchapter.
+    int32_t scratch_paper[20];       // 0x04: Varies wildly by subchapter.
 };
 
 ASSERT_SIZE(struct named_event_variables, 84);
