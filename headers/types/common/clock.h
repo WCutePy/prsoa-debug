@@ -9,7 +9,6 @@ struct rtc_date {
 };
 ASSERT_SIZE(struct rtc_date, 16);
 
-
 struct rtc_time {
     uint32_t hours;
     uint32_t minutes;
@@ -17,8 +16,7 @@ struct rtc_time {
 };
 ASSERT_SIZE(struct rtc_time, 12);
 
-
-#pragma pack(push, 1)   // This is usually stored as a 7 byte struct.
+#pragma pack(push, 1) // This is usually stored as a 7 byte struct.
 // Stored the time played in hours, minutes, and seconds.
 struct play_time {
     int hours;
@@ -26,7 +24,7 @@ struct play_time {
     int8_t seconds;
     bool has_max_play_time;
 };
-#pragma pack(pop)     // Restore alignment
+#pragma pack(pop) // Restore alignment
 ASSERT_SIZE(struct play_time, 7);
 
 #endif

@@ -28,7 +28,7 @@ struct glossary_fields_table {
     undefined field_0x6;
     undefined field_0x7;
 };
-ASSERT_SIZE(struct glossary_fields_table,8);
+ASSERT_SIZE(struct glossary_fields_table, 8);
 
 // Start of the "Capture" glossary bitfield
 struct glossary_capture_table {
@@ -65,7 +65,7 @@ struct glossary_capture_table {
     enum glossary_table_entry poke_assist_dragon_entry : 2;
     enum glossary_table_entry poke_assist_special_effects_entry : 2;
 };
-ASSERT_SIZE(struct glossary_capture_table,8);
+ASSERT_SIZE(struct glossary_capture_table, 8);
 
 // Start of the "Terms" header glossary bitfield
 struct glossary_terms_table {

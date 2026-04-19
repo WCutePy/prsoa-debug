@@ -1,7 +1,6 @@
 #ifndef HEADERS_TYPES_COMMON_BROWSER_H_
 #define HEADERS_TYPES_COMMON_BROWSER_H_
 
-
 struct species_status_table {
     enum species_status unk_0001_status : 2; // Bulbasaur
     enum species_status unk_0002_status : 2; // Ivysaur

@@ -52,5 +52,4 @@ struct mission_quest_data {
 
 ASSERT_SIZE(struct mission_quest_data, 92);
 
-
 #endif

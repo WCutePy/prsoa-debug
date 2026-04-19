@@ -39,7 +39,6 @@
 #include "options_menu.h"
 #include "unfinished.h"
 
-
 // Parameters used by the NitroSDK to read the ROM.
 struct start_module_params {
     void* autoload_list;
@@ -52,7 +51,6 @@ struct start_module_params {
     uint32_t nitrocode_be;
     uint32_t nitrocode_le;
 };
-
 
 struct lcrng_state {
     int32_t current_state;

@@ -8,7 +8,6 @@ struct battle_init {
 
 ASSERT_SIZE(struct battle_init, 2048);
 
-
 struct battle_combatants {
     int* unk_struct_ptr_0x0;
     int8_t current_hp;

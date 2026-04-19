@@ -10,7 +10,8 @@ struct named_event_variables {
 
 ASSERT_SIZE(struct named_event_variables, 84);
 
-// Seems to be used for settings-adjacent things, like the actual in-game settings, and a few other things...
+// Seems to be used for settings-adjacent things, like the actual in-game settings, and a few other
+// things...
 struct named_settings_variables {
     int32_t unk_setting_0x0;
     int32_t window_border; // 0x4: Determines what color the textbox border will be.
@@ -37,13 +38,11 @@ struct named_quest_variables {
 
 ASSERT_SIZE(struct named_quest_variables, 44);
 
-
 union event_variables {
     struct named_event_variables named_event_variables;
     int32_t event_variable_table[21];
 };
 ASSERT_SIZE(union event_variables, 84);
-
 
 union settings_variables {
     struct named_settings_variables named_settings_variables;
@@ -56,8 +55,6 @@ union quest_variables {
     int32_t quest_variable_table[11];
 };
 ASSERT_SIZE(union quest_variables, 44);
-
-
 
 // Many interactions with these values seem to treat them as tables of ints, rather than individual
 // fields. For ghidra analysis, these fields should be unions, at least in the short term.

@@ -23,7 +23,6 @@ struct pokemon_data {
 
 ASSERT_SIZE(struct pokemon_data, 24);
 
-
 struct following_npc {
     int is_valid; // 0x0: If true, an NPC is following the player.
     undefined4 unk_field0_0x4;

@@ -239,7 +239,7 @@ struct unk_map_struct_size_0x80 {
     undefined field70_0x49;
     undefined field71_0x4a;
     undefined field72_0x4b;
-    struct file_wrapper *map_script_file_wrapper;
+    struct file_wrapper* map_script_file_wrapper;
     undefined4 field74_0x50;
     undefined1 field75_0x54;
     undefined field76_0x55;
@@ -277,7 +277,7 @@ struct unk_map_struct_size_0x80 {
     undefined field108_0x75;
     undefined field109_0x76;
     undefined field110_0x77;
-    struct script_file *map_script_file;
+    struct script_file* map_script_file;
     undefined4 field112_0x7c;
 };
 ASSERT_SIZE(struct unk_map_struct_size_0x80, 128);
