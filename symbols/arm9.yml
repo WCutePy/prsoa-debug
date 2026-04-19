@@ -3465,7 +3465,6 @@ arm9:
     - name: GX_LoadBG1ScrVeneer
       address:
         NA: 0x2057274
-        No params.
     - name: GX_LoadBg2ScrVeneer
       address:
         NA: 0x2057298
