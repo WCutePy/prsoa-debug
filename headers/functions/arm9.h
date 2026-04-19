@@ -403,7 +403,6 @@ void ZeroInitQuestScriptData(struct script_manager* param_1);
 void SetUnkRidingData(struct script_manager* param_1, undefined4 param_2);
 undefined4 GetUnkRidingData(struct script_manager* param_1);
 void ZeroInitAllScriptData(struct script_manager* param_1);
-audio_engine * InitAudioEngineOuter(audio_engine *param_1);
 struct audio_engine* InitAudioEngineOuter(struct audio_engine* param_1);
 bool IsFormIdPartnerPokemon(enum form_id param_1);
 undefined4 GetPartnerIndexFromFormId(enum form_id param_1);
@@ -414,12 +413,11 @@ void ret_0203e930(void);
 void ret_0204078c(void);
 void ret_0204129c(void);
 void ret_02041920(void);
-field_data * InitFieldData(field_data *param_1,char *param_2,undefined4 param_3);
 struct field_data* InitFieldData(struct field_data* param_1, char* param_2, undefined4 param_3);
-field_npc_data * GetFieldNpcDataBySpriteId(field_data *param_1,int param_2);
-field_enemy_data * GetFieldEnemyDataByFormId(field_data *param_1,int param_2);
-field_target_data * GetFieldTargetDataByIndex(field_data *param_1,int param_2);
-field_map_data * GetFieldMapDataByRoomId(field_data *param_1,room_id param_2);
+struct field_npc_data * GetFieldNpcDataBySpriteId(struct field_data *param_1,int param_2);
+struct field_enemy_data * GetFieldEnemyDataByFormId(struct field_data *param_1,int param_2);
+struct field_target_data * GetFieldTargetDataByIndex(struct field_data *param_1,int param_2);
+struct field_map_data * GetFieldMapDataByRoomId(struct field_data *param_1,room_id param_2);
 void InitFieldFileData(struct field_data* param_1, char* param_2, int param_3);
 void ret_02043124(void);
 void ret_02043128(void);
@@ -480,7 +478,6 @@ int32_t connect(int32_t sockfd, const struct sockaddr_in* addr);
 int32_t recv(int32_t sockfd, void* buf, size_t size, int32_t flags);
 int32_t recvfrom(int32_t sockfd, void* buf, size_t size, int32_t flags, struct sockaddr_in* addr,
                  int32_t addr_len);
-ssize_t sendto(int _fd,void *_buf,size_t _n,int _flags,sockaddr *_addr,socklen_t _addr_len);
 int32_t send(int32_t sockfd, const void* buf, size_t size, int32_t flags);
 int CloseVeneer(int _fd);
 void ret_02049d08(void);
@@ -1475,6 +1472,9 @@ bool Ctrdgi_AccessCommon(undefined4* param_1, undefined4 param_2, undefined4* pa
 undefined4 Ctrdg_IsEnabled(void);
 void Ctrdg_Enable(int param_1);
 void Ctrdg_CheckEnabled(void);
+void Ctrdg_Init(void);
+// If declaring these builtins causes issues, you can disable them
+#ifndef PRSOA_NO_BUILTIN
 // If declaring these builtins causes issues, you can disable them
 void Ctrdgi_InitModuleInfo(void);
 void Ctrdgi_CallbackForInitModuleInfo(undefined4 param_1, unsigned int param_2);
@@ -1554,4 +1554,3 @@ void ret_02083544(void);
 #endif
 
 #endif
-void ret_02082e20(void);
