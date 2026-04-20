@@ -11,7 +11,10 @@ overlay2:
     EU: 0x800
     NA: 0x800
     JP: 0x800
-  description: Unknown.
+  description: |-
+    Likely handles transition out of battle back into field.
+    
+    The scene class is named "Battle To Field" internally.
   functions:
     - name: PostprocessBattleResults
       address:

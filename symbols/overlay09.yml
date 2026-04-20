@@ -11,7 +11,10 @@ overlay9:
     EU: 0x15A0
     NA: 0x15A0
     JP: 0x15A0
-  description: Seems to be loaded when flying on Staraptor.
+  description: |-
+    Used when flying on Staraptor.
+    
+    The scene class is named "Flying" internally.
   functions:
     - name: Overlay9EntryPoint
       address:

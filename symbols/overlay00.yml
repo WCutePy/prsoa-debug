@@ -11,7 +11,10 @@ overlay0:
     EU: 0x5E6E0
     NA: 0x5E6E0
     JP: 0x5E740
-  description: "Likely controls the \"ground\" mode for overworlds and cutscenes."
+  description: |-
+    The main field mode overlay, responsible for overworlds and cutscenes.
+    
+    The scene class is named "Field" internally.
   functions:
     - name: Overlay0EntryPoint
       address:

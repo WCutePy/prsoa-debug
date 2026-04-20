@@ -11,7 +11,10 @@ overlay20:
     EU: 0x620
     NA: 0x620
     JP: 0x620
-  description: Unknown. Initiates a game save when called.
+  description: |-
+    Unknown. Initiates a game save when called.
+    
+    The scene class is named "Auto Save" internally.
   functions:
     - name: Overlay20EntryPoint
       address:

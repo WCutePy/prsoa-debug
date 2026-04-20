@@ -11,7 +11,10 @@ overlay27:
     EU: 0x4CC0
     NA: 0x4CA0
     JP: 0x4CC0
-  description: Seems to be loaded in the Quests menu option.
+  description: |-
+    Handles the quest list. Implements the "Quests" menu option.
+    
+    The scene class is named "Quest List" internally.
   functions:
     - name: Overlay27EntryPoint
       address:

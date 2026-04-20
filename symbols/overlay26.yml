@@ -11,7 +11,10 @@ overlay26:
     EU: 0x11C0
     NA: 0x1180
     JP: 0x1180
-  description: "Unknown. Might handle dual-screen visual displays, like the construction of Altru Tower."
+  description: |-
+    Likely handles dual-screen visual displays, like the construction of Altru Tower.
+    
+    The scene class is named "Suite Picture" internally.
   functions:
     - name: Overlay26EntryPoint
       address:

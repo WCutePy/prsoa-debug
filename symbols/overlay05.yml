@@ -11,7 +11,10 @@ overlay5:
     EU: 0x43A0
     NA: 0x43A0
     JP: 0x43E0
-  description: Seems to be active when viewing the styler status menu.
+  description: |-
+    Shows the Styler status. Implements the "Styler" menu option.
+    
+    The scene class is named "Styler" internally."
   functions:
     - name: Overlay5EntryPoint
       address:

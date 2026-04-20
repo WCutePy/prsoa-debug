@@ -11,7 +11,10 @@ overlay1:
     EU: 0x25940
     NA: 0x25820
     JP: 0x25D40
-  description: Controls in-game battles.
+  description: |-
+    Controls in-game battles.
+    
+    The scene class is named "Battle" internally.
   functions:
     - name: Overlay1EntryPoint
       address:

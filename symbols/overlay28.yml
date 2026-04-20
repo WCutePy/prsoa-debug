@@ -11,7 +11,10 @@ overlay28:
     EU: 0x1320
     NA: 0x1320
     JP: 0x1320
-  description: Seems to be loaded in the Map menu option.
+  description: |-
+    Displays the map of Almia. Implements the "Map" menu option.
+    
+    The scene class is named "Map Disp" internally.
   functions:
     - name: Overlay28EntryPoint
       address:

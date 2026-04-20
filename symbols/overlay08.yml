@@ -11,7 +11,9 @@ overlay8:
     EU: 0x1C60
     NA: 0x1CA0
     JP: 0x1CA0
-  description: Seems to be loaded in the Missions menu option.
+  description: |-
+    Displays the mission list and active mission. Despite the internal name, quests have their own overlay (27).
+    The scene class is named "Mission Quest" internally.
   functions:
     - name: Overlay8EntryPoint
       address:

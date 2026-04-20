@@ -11,7 +11,10 @@ overlay7:
     EU: 0x2E80
     NA: 0x2E80
     JP: 0x2E80
-  description: Seems to be active during the release menu option.
+  description: |-
+    Used for releasing Pokemon. Implements the "Release" menu option.
+    
+    The scene class is named "Release" internally.
   functions:
     - name: Overlay7EntryPoint
       address:

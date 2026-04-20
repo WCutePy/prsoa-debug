@@ -11,7 +11,10 @@ overlay25:
     EU: 0x33A0
     NA: 0x3340
     JP: 0x3340
-  description: Seems to play the credits when called.
+  description: |-
+    Responsible for displaying the game credits.
+    
+    The scene class is named "Staffroll" internally.
   functions:
     - name: Overlay25EntryPoint
       address:

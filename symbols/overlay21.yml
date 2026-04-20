@@ -11,7 +11,10 @@ overlay21:
     EU: 0x82A0
     NA: 0x78E0
     JP: 0x7940
-  description: Seems to be loaded while viewing the Browser menu option.
+  description: |-
+    Responsible for the browser. Implements the "Browser" menu option.
+    
+    The scene class is named "Browser" internally.
   functions:
     - name: ret_02120764
       address:

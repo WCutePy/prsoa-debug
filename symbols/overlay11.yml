@@ -11,7 +11,11 @@ overlay11:
     EU: 0x4D7E0
     NA: 0x4D160
     JP: 0x4D520
-  description: Unknown.
+  description: |-
+    Primarily implements the Ranger Net menu, but also seems to be used on boot (maybe for displaying logos?)
+    Contains a fair amount of NitroSDK code related to WFC. It's believed that this is only region other than arm9 to contain SDK code.
+    
+    There are three scene classes in this overlay, internally named "Ranger Net", "Ranger Net AGB", and "Company Logo". Each entry point likely corresponds to one of these.
   functions:
     - name: Overlay11EntryPoint0
       address:

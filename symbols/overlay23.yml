@@ -11,7 +11,10 @@ overlay23:
     EU: 0x2920
     NA: 0x2920
     JP: 0x28C0
-  description: Seems to display Ranger Records.
+  description: |-
+    Displays the Ranger Record.
+    
+    The scene class is named "Record" internally.
   functions:
     - name: Overlay23EntryPoint
       address:

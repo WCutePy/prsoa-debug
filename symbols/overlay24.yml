@@ -11,7 +11,10 @@ overlay24:
     EU: 0x960
     NA: 0x940
     JP: 0x940
-  description: Unknown. Seems to read Ranger Net Mission Data when called.
+  description: |-
+    Unknown. Seems to read Ranger Net Mission Data when called.
+    
+    The scene class is named "Retry" internally.
   functions:
     - name: Overlay24EntryPoint
       address:

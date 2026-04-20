@@ -11,7 +11,10 @@ overlay22:
     EU: 0x5320
     NA: 0x51E0
     JP: 0x5240
-  description: Seems to be loaded in the Glossary menu option.
+  description: |-
+    Displays the glossary. Implements the "Glossary" menu option.
+    
+    The scene class is named "Encylopedia" internally.
   functions:
     - name: Overlay22EntryPoint
       address:

@@ -11,7 +11,10 @@ overlay3:
     EU: 0xF000
     NA: 0xEB20
     JP: 0xED40
-  description: Controls the title screen and player name entry screen.
+  description: |-
+    Controls the title screen and player name entry screen.
+    
+    There are five scene classes in this overlay, internally named "Title", "Continue", "Conf", "Input", and "Opening Demo". Each entry point likely corresponds to one of these.
   functions:
     - name: Overlay3EntryPoint0
       address:

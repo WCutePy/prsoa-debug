@@ -11,7 +11,10 @@ overlay6:
     EU: 0x1380
     NA: 0x1380
     JP: 0x13A0
-  description: Seems to be loaded in the Settings menu option.
+  description: |-
+    Implements the "Settings" menu option.
+    
+    The scene class is named "Option" internally."
   functions:
     - name: Overlay6EntryPoint
       address:

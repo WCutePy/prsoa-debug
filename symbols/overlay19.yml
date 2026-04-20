@@ -11,7 +11,10 @@ overlay19:
     EU: 0x1CA0
     NA: 0x1C80
     JP: 0x1C80
-  description: "Seems to be used right after selecting \"new game.\" Controls player gender selection, maybe more?"
+  description: |-
+    Used right after selecting "New Game." Controls player gender selection.
+    
+    The scene class is named "Sex Select" internally."
   functions:
     - name: Overlay19EntryPoint
       address:
