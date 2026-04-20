@@ -177,6 +177,22 @@ overlay1:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: InitBattlePokemonTableWrapper
+      address:
+        NA: 0x212DC20
+      description: |-
+        Seems to initialize a battle_pokemon_table_wrapper struct, using "param/BattlePokemon.bin".
+        
+        r0: battle_pokemon_table_wrapper pointer
+        r1: undefined4
+    - name: InitBattleEffectTableWrapper
+      address:
+        NA: 0x212E008
+      description: |-
+        Seems to initialize a battle_effect_table_wrapper struct, using "param/BattleEffect.bin".
+        
+        r0: battle_effect_table_wrapper pointer
+        r1: undefined4
     - name: ret_0212e524
       address:
         NA: 0x212E524
@@ -205,6 +221,15 @@ overlay1:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: InitBattleAssistTableWrapper
+      address:
+        NA: 0x212EEB4
+      description: |-
+        Seems to initialize a battle_assist_table_wrapper struct, using either "param/BattleAssist.bin" or "param/BattlePartnerAssist.bin".
+        
+        r0: battle_assist_table_wrapper pointer
+        r1: file name
+        r2: undefined4
     - name: ret_02130b70
       address:
         NA: 0x2130B70
