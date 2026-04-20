@@ -9,7 +9,7 @@ void ret_02000b9c(void);
 void NitroMain(void);
 void ret_0200120c(void);
 void* MaybeMemAlloc(uint32_t param_1);
-void GF_Assert_Veneer(void);
+void MaybeMemFreeVeneer(void);
 void LoadOverlay(int overlay, bool param_2);
 undefined* SetGameState(int state, struct megastruct* param_2);
 void InitControllerInputs(struct controller_inputs* param_1);

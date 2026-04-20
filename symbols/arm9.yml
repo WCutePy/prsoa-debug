@@ -67,7 +67,7 @@ arm9:
         
         r0: num bytes to allocate
         return: pointer to allocated memory
-    - name: GF_Assert_Veneer
+    - name: MaybeMemFreeVeneer
       address:
         NA:
           - 0x2001470
