@@ -102,12 +102,10 @@ arm9:
           - 0x2001D28
           - 0x200203C
           - 0x2002258
-          - 0x200233C
-          - 0x20101A8
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to allocate memory, returning a pointer to the newly allocated memory.
         
-        r0: undefined4 
+        r0: num bytes to allocate
     - name: InitTouchScreenWrapper
       address:
         NA: 0x2001D34
@@ -147,9 +145,9 @@ arm9:
       address:
         NA: 0x20022F4
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems like it might deallocate memory?
         
-        r0: void pointer
+        r0: pointer to memory to deallocate?
     - name: InitFileArchiveWrapper
       address:
         NA: 0x2002AEC
@@ -532,7 +530,7 @@ arm9:
       address:
         NA: 0x200D114
       description: |-
-        [MANUAL DESCRIPTION]
+        Zeroes a param_file_data struct prior to use.
         
         r0: param_file_data pointer
         r1: undefined4 
@@ -540,58 +538,58 @@ arm9:
       address:
         NA: 0x200D134
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to assist in deallocating a param_file_data struct.
         
         r0: param_file_data pointer
     - name: InitParamFileData
       address:
         NA: 0x200D148
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to initialize a param_file_data struct prior to use.
         
         r0: param_file_data pointer
-        r1: char pointer
+        r1: param file name
     - name: MaybeDeallocateParamFileData
       address:
         NA: 0x200D1A0
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to assist in deallocating a param_file_data struct.
         
         r0: param_file_data pointer
     - name: SchemaExpandParamFileData
       address:
         NA: 0x200D200
       description: |-
-        [MANUAL DESCRIPTION]
+        Processes a param_file_data pointer, "schema-expanding" it. See param_file.h for details.
         
         r0: param_file_data pointer
     - name: GetParamRamTableEntrySize
       address:
         NA: 0x200D390
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the size of the final ram table from a param_file_data struct.
         
         r0: param_file_data pointer
     - name: ParamGetExpandedRamTableFieldInner
       address:
         NA: 0x200D398
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves a schema-expanded element from a param_file_data pointer, at a given index and offset.
         
         r0: param_file_data pointer
-        r1: int32_t 
-        r2: int32_t 
-        r3: int32_t pointer
+        r1: index
+        r2: offset
+        r3: returned element pointer
     - name: ParamGetExpandedRamTableFieldOuter
       address:
         NA: 0x200D3B8
       description: |-
-        [MANUAL DESCRIPTION]
+        Assists and seemingly repeats parts of ParamGetExpandedRamTableFieldInner?
         
         r0: param_file_data pointer
-        r1: int32_t 
-        r2: int32_t 
-        r3: undefined4 pointer
+        r1: index
+        r2: offset
+        r3: returned element pointer
     - name: ret_0200d414
       address:
         NA: 0x200D414
@@ -710,7 +708,7 @@ arm9:
       address:
         NA: 0x2010470
       description: |-
-        [MANUAL DESCRIPTION]
+        Initializes a poke_id_table_wrapper struct, using "param/PokeId.bin".
         
         r0: poke_id_table_wrapper pointer
         r1: undefined4 
@@ -1117,7 +1115,7 @@ arm9:
       address:
         NA: 0x2010D2C
       description: |-
-        [MANUAL DESCRIPTION]
+        Initializes a disk_hp_table_wrapper struct, using "param/DiskHp.bin".
         
         r0: disk_hp_table_wrapper pointer
         r1: undefined4 
@@ -2461,7 +2459,7 @@ arm9:
       address:
         NA: 0x2031244
       description: |-
-        [MANUAL DESCRIPTION]
+        SysCall Function that seems to call the same audio-related/graphics functions as SysCallMaybeEndMissionWithFanfare, but NOT MaybeTryEndMission.
         
         No params.
     - name: SysCallMaybeExitMissionModeWithFanfare
