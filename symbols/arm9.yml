@@ -96,12 +96,11 @@ arm9:
         Seems to initialize what we believe to be the struct that stores player inputs. 
         
         r0: controller_inputs pointer
-    - name: MaybeMemAlloc
+    - name: MaybeMemAllocVeneer
       address:
         NA:
           - 0x2001D28
           - 0x200203C
-          - 0x2002258
       description: |-
         Seems to allocate memory, returning a pointer to the newly allocated memory.
         

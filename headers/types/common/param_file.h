@@ -134,6 +134,7 @@ struct battle_effect_table_wrapper {
 ASSERT_SIZE(struct battle_effect_table_wrapper, 8);
 
 // Only field sizes are currently known.
+#pragma pack(push, 1) // This is usually stored as a 17 byte struct.
 struct battle_effect_entry_rom {
     undefined2 field0_0x0;
     undefined1 field1_0x2;
@@ -152,8 +153,10 @@ struct battle_effect_entry_rom {
     undefined1 field14_0xf;
     undefined1 field15_0x10;
 };
+#pragma pack(pop) // Restore alignment
 ASSERT_SIZE(struct battle_effect_entry_rom, 17);
 
+#pragma pack(push, 1) // This is usually stored as a 4929 byte struct.
 // File structure of "param/BattleEffect.bin"
 struct battle_effect_bin {
     struct param_file_header header;
@@ -161,6 +164,7 @@ struct battle_effect_bin {
     struct battle_effect_entry_rom battle_effect_entries[288];
 };
 ASSERT_SIZE(struct battle_effect_bin, 4929);
+#pragma pack(pop) // Restore alignment
 
 struct battle_pokemon_entry_ram {
     int16_t friendship_gauge;
@@ -242,12 +246,14 @@ struct disk_hp_table_wrapper {
 };
 ASSERT_SIZE(struct disk_hp_table_wrapper, 16);
 
+#pragma pack(push, 1) // This is usually stored as a 5 byte struct.
 struct disk_hp_entry_rom {
     int8_t unk_byte_a_0x0;
     int16_t unk_hword_b_0x1;
     int16_t unk_hword_c_0x3;
 };
 ASSERT_SIZE(struct disk_hp_entry_rom, 5);
+#pragma pack(pop) // Restore alignment
 
 // File structure of "param/DiskHp.bin"
 struct disk_hp_bin {
@@ -295,7 +301,7 @@ struct poke_id_entry_rom {
     int8_t poke_assist_type;
     int8_t field_move_id;
     int8_t field_move_level;
-    undefined1 field5_0x7
+    undefined1 field5_0x7;
     undefined1 field6_0x8;
     undefined1 field7_0x9;
     undefined1 field8_0xa;
