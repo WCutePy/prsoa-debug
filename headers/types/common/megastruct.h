@@ -37,8 +37,8 @@ struct megastruct {
     void* unk_struct_size_0x80_1;
     // This is likely a table of substructs. Not a clue what they do though!
     struct mega_substruct_1 struct_table_0xc34[128];
-    void* unk_struct_size_0x8;
-    void* unk_struct_size_0x10;
+    struct poke_id_table_wrapper* poke_id_table_wrapper_ptr;
+    struct disk_hp_table_wrapper* disk_hp_table_wrapper_ptr;
     struct battle_combatants* battle_combatants_ptr;
     void* field3832_0x1440; // "Initialized" by 0x02010C3C, but isn't actually modified???
     struct battle_exports* battle_exports_ptr;
