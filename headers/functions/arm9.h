@@ -98,7 +98,7 @@ void SetUnkAudioSettingVariables(struct megastruct* param_1);
 bool GetUnkAudioSettingVariables(struct megastruct* param_1);
 void InitUnkAudioSettingVariables(struct megastruct* param_1);
 void ret_02010448(void);
-uint16_t * InitPokeIdTableWrapper(poke_id_table_wrapper *param_1,undefined4 param_2);
+struct poke_id_table_wrapper * InitPokeIdTableWrapper(struct poke_id_table_wrapper *param_1,undefined4 param_2);
 struct battle_combatants * InitBattleCombatantsOuter(struct battle_combatants *param_1);
 void InitializeBattlePokemonFields(struct battle_combatants* param_1);
 void BattleSetUnkField0x0(struct battle_combatants* param_1, int* param_2);

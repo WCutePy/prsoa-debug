@@ -92,12 +92,14 @@ struct battle_assist_entry_rom {
 ASSERT_SIZE(struct battle_assist_entry_rom, 50);
 
 // File structure of "param/BattleAssist.bin" and "param/BattleAssistPartner.bin"
+#pragma pack(push, 1) // This is usually stored as a 5042 byte struct.
 struct battle_assist_bin {
     struct param_file_header header;
     struct param_encoding_8 encodings[26];
     struct battle_assist_entry_rom battle_assist_entries[100];
 };
 ASSERT_SIZE(struct battle_assist_bin, 5042);
+#pragma pack(pop) // Restore alignment
 
 // Only field sizes are currently known.
 struct battle_effect_entry_ram {
@@ -163,8 +165,9 @@ struct battle_effect_bin {
     struct param_encoding_8 encodings[17];
     struct battle_effect_entry_rom battle_effect_entries[288];
 };
-ASSERT_SIZE(struct battle_effect_bin, 4929);
 #pragma pack(pop) // Restore alignment
+ASSERT_SIZE(struct battle_effect_bin, 4929);
+
 
 struct battle_pokemon_entry_ram {
     int16_t friendship_gauge;
@@ -200,6 +203,7 @@ struct battle_pokemon_table_wrapper {
 };
 ASSERT_SIZE(struct battle_pokemon_table_wrapper, 8);
 
+#pragma pack(push, 1) // This is struct has intentionally bad alignment.
 struct battle_pokemon_entry_rom {
     int8_t field0_0x0;
     int16_t friendship_gauge;
@@ -223,14 +227,17 @@ struct battle_pokemon_entry_rom {
     int8_t field19_0x16;
     int8_t field20_0x17;
 };
+#pragma pack(pop) // Restore alignment
 ASSERT_SIZE(struct battle_pokemon_entry_rom, 24);
 
+#pragma pack(push, 1) // This is struct has intentionally bad alignment.
 // File structure of "param/BattlePokemon.bin"
 struct battle_pokemon_bin {
     struct param_file_header header;
     struct param_encoding_8 encodings[22];
     struct battle_pokemon_entry_rom battle_pokemon_entries[500];
 };
+#pragma pack(pop) // Restore alignment
 ASSERT_SIZE(struct battle_pokemon_bin, 12038);
 
 // Lives in megastruct.
