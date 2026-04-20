@@ -32,3 +32,9 @@ overlay6:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 6.
+    - name: C_OPTION_SCENE
+      address:
+        NA: 0x211DC60
+      length:
+        NA: 0xC
+      description: Basic information for the COptionScene class. This class is a single-inheritance class.

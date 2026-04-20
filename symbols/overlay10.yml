@@ -73,3 +73,9 @@ overlay10:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 10.
+    - name: C_FIELD_TO_MENU_SCENE
+      address:
+        NA: 0x211CA40
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldToMenuScene class. This class is a single-inheritance class.

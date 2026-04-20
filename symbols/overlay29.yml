@@ -33,3 +33,9 @@ overlay29:
         EU: 0x4
         NA: 0x4
       description: Static initializer for overlay 29.
+    - name: C_CARD_ACCESS_ERROR_SCENE
+      address:
+        NA: 0x211CCE0
+      length:
+        NA: 0xC
+      description: Basic information for the CCardAccessErrorScene class. This class is a single-inheritance class.

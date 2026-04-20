@@ -39,3 +39,9 @@ overlay9:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 9.
+    - name: C_FLYING_SCENE
+      address:
+        NA: 0x211DB00
+      length:
+        NA: 0xC
+      description: Basic information for the CFlyingScene class. This class is a single-inheritance class.
