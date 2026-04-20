@@ -678,7 +678,6 @@ enum pokemon_type {
 ENUM_8_BIT(pokemon_type);
 #pragma pack(pop)
 
-
 enum target_object {
     NOTHING_0x0 = 0x0,
     ODDISH_WEED_0x1 = 0x1,
@@ -1549,7 +1548,7 @@ enum browser_id {
     BROWSER_SHAYMIN = 437
 };
 
-enum form_id { 
+enum form_id {
     FORM_NONE = 0,
     FORM_CHARMANDER = 1,
     FORM_CHARMELEON = 2,
@@ -1924,14 +1923,14 @@ ENUM_8_BIT(mount_species);
 #pragma pack(pop)
 
 enum param_encoding {
-    ENCODE_NULL = 0x0,   // Do nothing.
-    ENCODE_BYTE_1 = 0x1, // Write 1 byte
-    ENCODE_BYTE_2 = 0x2, // Write 1 byte
+    ENCODE_NULL = 0x0,    // Do nothing.
+    ENCODE_BYTE_1 = 0x1,  // Write 1 byte
+    ENCODE_BYTE_2 = 0x2,  // Write 1 byte
     ENCODE_HWORD_1 = 0x3, // Write 2 bytes
     ENCODE_HWORD_2 = 0x4, // Write 2 bytes
-    ENCODE_WORD_1 = 0x5, // Write 4 bytes
-    ENCODE_WORD_2 = 0x6, // Write 4 bytes
-    ENCODE_ZINIT = 0x7 // Zeroes destination
+    ENCODE_WORD_1 = 0x5,  // Write 4 bytes
+    ENCODE_WORD_2 = 0x6,  // Write 4 bytes
+    ENCODE_ZINIT = 0x7    // Zeroes destination
 };
 // This is usually (always?) stored as 8-bit integer
 #pragma pack(push, 1)

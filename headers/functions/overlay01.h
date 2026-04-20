@@ -28,13 +28,17 @@ undefined4 SysCallPrintTextboxByBattleMessageId2(undefined4* param_1);
 void SysCallIsTextboxPrintingBattle(void);
 undefined4 SysCallCloseTextboxBattle(void);
 void ret_0212c028(void);
-struct battle_pokemon_table_wrapper *InitBattlePokemonTableWrapper(struct battle_pokemon_table_wrapper *param_1,undefined4 param_2);
-struct battle_effect_table_wrapper *InitBattleEffectTableWrapper(struct battle_effect_table_wrapper *param_1,undefined4 param_2);
+struct battle_pokemon_table_wrapper*
+InitBattlePokemonTableWrapper(struct battle_pokemon_table_wrapper* param_1, undefined4 param_2);
+struct battle_effect_table_wrapper*
+InitBattleEffectTableWrapper(struct battle_effect_table_wrapper* param_1, undefined4 param_2);
 void ret_0212e524(void);
 void ret_0212e888(void);
 void ret_0212ee20(void);
 void ret_0212ee38(void);
-struct battle_assist_table_wrapper *InitBattleAssistTableWrapper(struct battle_assist_table_wrapper *param_1,char *param_2,undefined4 param_3);
+struct battle_assist_table_wrapper*
+InitBattleAssistTableWrapper(struct battle_assist_table_wrapper* param_1, char* param_2,
+                             undefined4 param_3);
 void ret_02130b70(void);
 void ret_02131b44(void);
 void ret_02133c04(void);

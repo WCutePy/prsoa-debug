@@ -532,7 +532,7 @@ arm9:
         Zeroes a param_file_data struct prior to use.
         
         r0: param_file_data pointer
-        r1: undefined4 
+        r1: undefined4
     - name: MaybeDeallocateParamFileDataOuter
       address:
         NA: 0x200D134
@@ -710,7 +710,7 @@ arm9:
         Initializes a poke_id_table_wrapper struct, using "param/PokeId.bin".
         
         r0: poke_id_table_wrapper pointer
-        r1: undefined4 
+        r1: undefined4
     - name: InitBattleCombatantsOuter
       address:
         NA: 0x2010854
@@ -1117,7 +1117,7 @@ arm9:
         Initializes a disk_hp_table_wrapper struct, using "param/DiskHp.bin".
         
         r0: disk_hp_table_wrapper pointer
-        r1: undefined4 
+        r1: undefined4
     - name: InitRangerNetMissionCompletionBits
       address:
         NA: 0x201128C

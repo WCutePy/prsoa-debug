@@ -10,11 +10,11 @@ struct param_file_header {
 ASSERT_SIZE(struct param_file_header, 16);
 
 struct param_file_data {
-    struct file_wrapper *file_wrapper_ptr;
-    struct param_file_header *param_file_header_ptr;
+    struct file_wrapper* file_wrapper_ptr;
+    struct param_file_header* param_file_header_ptr;
     undefined4 unk_megastruct_field_0x14a8;
-    struct param_encoding_8 *param_encoding_ptr; // Created by Rename Structure Field action
-    undefined4 *ram_table_expanded_ptr;
+    struct param_encoding_8* param_encoding_ptr; // Created by Rename Structure Field action
+    undefined4* ram_table_expanded_ptr;
     int param_encoding_size;
     int ram_table_size;
     int ram_table_entry_size;
@@ -56,7 +56,7 @@ struct battle_assist_table_wrapper {
     uint16_t ram_table_entry_size;
     undefined field1_0x2;
     undefined field2_0x3;
-    struct battle_assist_entry_ram *entry_table_ptr;
+    struct battle_assist_entry_ram* entry_table_ptr;
 };
 ASSERT_SIZE(struct battle_assist_table_wrapper, 8);
 
@@ -131,7 +131,7 @@ struct battle_effect_table_wrapper {
     uint16_t table_entry_size;
     undefined field1_0x2;
     undefined field2_0x3;
-    struct battle_effect_entry_ram *entry_table_ptr;
+    struct battle_effect_entry_ram* entry_table_ptr;
 };
 ASSERT_SIZE(struct battle_effect_table_wrapper, 8);
 
@@ -168,7 +168,6 @@ struct battle_effect_bin {
 #pragma pack(pop) // Restore alignment
 ASSERT_SIZE(struct battle_effect_bin, 4929);
 
-
 struct battle_pokemon_entry_ram {
     int16_t friendship_gauge;
     undefined2 field1_0x2;
@@ -199,7 +198,7 @@ struct battle_pokemon_table_wrapper {
     uint16_t table_entry_size;
     undefined field1_0x2;
     undefined field2_0x3;
-    struct battle_pokemon_entry_ram *entry_table_ptr;
+    struct battle_pokemon_entry_ram* entry_table_ptr;
 };
 ASSERT_SIZE(struct battle_pokemon_table_wrapper, 8);
 
@@ -246,10 +245,10 @@ struct disk_hp_table_wrapper {
     undefined field1_0x1;
     undefined field2_0x2;
     undefined field3_0x3;
-    // Unlike the others, this is NOT a disk_hp_entry_ram pointer! 
-    int8_t *unk_byte_a_table_0x4;
-    int16_t *unk_hword_b_table_0x8;
-    int16_t *unk_hword_c_table_0xC;
+    // Unlike the others, this is NOT a disk_hp_entry_ram pointer!
+    int8_t* unk_byte_a_table_0x4;
+    int16_t* unk_hword_b_table_0x8;
+    int16_t* unk_hword_c_table_0xC;
 };
 ASSERT_SIZE(struct disk_hp_table_wrapper, 16);
 
@@ -297,7 +296,7 @@ struct poke_id_table_wrapper {
     uint16_t entry_table_size;
     undefined field1_0x2;
     undefined field2_0x3;
-    struct poke_id_entry_ram *entry_table_ptr;
+    struct poke_id_entry_ram* entry_table_ptr;
 };
 ASSERT_SIZE(struct poke_id_table_wrapper, 8);
 
@@ -334,10 +333,5 @@ struct poke_id_bin {
     struct poke_id_entry_rom poke_id_entries[500];
 };
 ASSERT_SIZE(struct poke_id_bin, 14040);
-
-
-
-
-
 
 #endif
