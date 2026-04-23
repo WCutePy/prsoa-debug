@@ -10,4 +10,20 @@ extern undefined C_QUEST_LIST_SCREEN;
 extern struct __class_type_info C_QL_LIST_BOX;
 extern struct __si_class_type_info C_QUEST_LIST_MAP_SCREEN;
 
+// Virtual function tables
+extern undefined C_QUEST_LIST_SCENE_VFTABLE;
+extern undefined C_QUEST_LIST_SCENE_VFTABLE_FUNCS;
+extern undefined I_QL_PUSH_BUTTON_LISTENER_VFTABLE;
+extern undefined I_QL_PUSH_BUTTON_LISTENER_VFTABLE_FUNCS;
+extern undefined I_QL_LIST_BOX_EVENT_LISTENER_VFTABLE;
+extern undefined I_QL_LIST_BOX_EVENT_LISTENER_VFTABLE_FUNCS;
+extern undefined C_QUEST_LIST_SCREEN_BASE_VFTABLE;
+extern undefined C_QUEST_LIST_SCREEN_BASE_VFTABLE_FUNCS;
+extern undefined C_QUEST_LIST_SCREEN_VFTABLE;
+extern undefined C_QUEST_LIST_SCREEN_VFTABLE_FUNCS;
+extern undefined C_QL_LIST_BOX_VFTABLE;
+extern undefined C_QL_LIST_BOX_VFTABLE_FUNCS;
+extern undefined C_QUEST_LIST_MAP_SCREEN_VFTABLE;
+extern undefined C_QUEST_LIST_MAP_SCREEN_VFTABLE_FUNCS;
+
 #endif

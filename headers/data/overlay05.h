@@ -8,4 +8,16 @@ extern struct __si_class_type_info C_STYLER_UPPER_SCREEN;
 extern struct __si_class_type_info C_STYLER_STATUS_SCREEN;
 extern struct __si_class_type_info C_STYLER_PARTS_SCREEN;
 
+// Virtual function tables
+extern undefined C_STYLER_SCENE_VFTABLE;
+extern undefined C_STYLER_SCENE_VFTABLE_FUNCS;
+extern undefined C_STYLER_UPPER_SCREEN_VFTABLE;
+extern undefined C_STYLER_UPPER_SCREEN_VFTABLE_FUNCS;
+extern undefined C_STYLER_SCREEN_VFTABLE;
+extern undefined C_STYLER_SCREEN_VFTABLE_FUNCS;
+extern undefined C_STYLER_STATUS_SCREEN_VFTABLE;
+extern undefined C_STYLER_STATUS_SCREEN_VFTABLE_FUNCS;
+extern undefined C_STYLER_PARTS_SCREEN_VFTABLE;
+extern undefined C_STYLER_PARTS_SCREEN_VFTABLE_FUNCS;
+
 #endif
