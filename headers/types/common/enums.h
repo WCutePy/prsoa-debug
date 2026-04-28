@@ -162,7 +162,7 @@ enum area_id {
     PUEL_SEA = 11,              // m011
     ALTRU_PARK = 14,            // m014
     UNION_ROAD = 15,            // m015
-    PERIL_CLIFFS = 16           // m016
+    PERIL_CLIFFS = 16,          // m016
     RANGER_UNION = 17,          // m017
     BOYLELAND = 18,             // m018
     VOLCANO_CAVE = 19,          // m019
@@ -189,7 +189,7 @@ enum area_id {
     CAPTURE_ARENA_2F = 43,      // m043
     CAPTURE_ARENA_3F = 44,      // m044
     OCEAN_ROUTE = 201,          // m201
-}
+};
 
 enum room_id {         // area - room_group - room_version // comment_1 - comment_2...
     IMAKUNI = 0x0,     //  SOMEWHERE_IN_ALMIA
