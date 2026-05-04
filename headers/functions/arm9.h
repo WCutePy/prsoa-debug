@@ -1433,8 +1433,6 @@ undefined4 Ctrdg_IsEnabled(void);
 void Ctrdg_Enable(int param_1);
 void Ctrdg_CheckEnabled(void);
 void Ctrdg_Init(void);
-// If declaring these builtins causes issues, you can disable them
-#ifndef PRSOA_NO_BUILTIN
 void Ctrdgi_InitModuleInfo(void);
 void Ctrdgi_CallbackForInitModuleInfo(undefined4 param_1, unsigned int param_2);
 void Ctrdgi_PulledOutCallback(undefined4 param_1, unsigned int param_2);
@@ -1458,6 +1456,8 @@ void string_put_char(int* param_1, undefined1 param_2);
 void string_fill_char(unsigned int* param_1, undefined1 param_2, unsigned int param_3);
 void string_put_string(unsigned int* param_1, int param_2, unsigned int param_3);
 int OS_VsNPrintfEx(undefined1* param_1, int param_2, int8_t* param_3, unsigned int* param_4);
+// If declaring these builtins causes issues, you can disable them
+#ifndef PRSOA_NO_BUILTIN
 int32_t abs(int32_t x);
 void ret_020794d4(void);
 int32_t mbtowc(wchar_t* pwc, const char* s, size_t n);
