@@ -22,6 +22,7 @@
 #include "field_data.h"
 #include "map.h"
 #include "ranger_records.h"
+#include "param_file.h"
 #include "textbox.h"
 #include "script.h"
 // Requires some of the above dependencies

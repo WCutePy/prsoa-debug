@@ -679,6 +679,55 @@ enum field_move {
 ENUM_8_BIT(field_move);
 #pragma pack(pop)
 
+enum poke_assist {
+    ASSIST_NORMAL = 0x0,
+    ASSIST_FIRE = 0x1,
+    ASSIST_WATER = 0x2,
+    ASSIST_ELECTRIC = 0x3,
+    ASSIST_GRASS = 0x4,
+    ASSIST_ICE = 0x5,
+    ASSIST_FIGHTING = 0x6,
+    ASSIST_POISON = 0x7,
+    ASSIST_GROUND = 0x8,
+    ASSIST_FLYING = 0x9,
+    ASSIST_PSYCHIC = 0xA,
+    ASSIST_BUG = 0xB,
+    ASSIST_ROCK = 0xC,
+    ASSIST_GHOST = 0xD,
+    ASSIST_DRAGON = 0xE,
+    ASSIST_DARK = 0xF,
+    ASSIST_STEEL = 0x10,
+    ASSIST_RECHARGE = 0x11
+};
+// This is usually stored as an 8-bit integer.
+#pragma pack(push, 1)
+ENUM_8_BIT(poke_assist);
+#pragma pack(pop)
+
+enum pokemon_type {
+    TYPE_NORMAL = 0x0,
+    TYPE_FIRE = 0x1,
+    TYPE_WATER = 0x2,
+    TYPE_ELECTRIC = 0x3,
+    TYPE_GRASS = 0x4,
+    TYPE_ICE = 0x5,
+    TYPE_FIGHTING = 0x6,
+    TYPE_POISON = 0x7,
+    TYPE_GROUND = 0x8,
+    TYPE_FLYING = 0x9,
+    TYPE_PSYCHIC = 0xA,
+    TYPE_BUG = 0xB,
+    TYPE_ROCK = 0xC,
+    TYPE_GHOST = 0xD,
+    TYPE_DRAGON = 0xE,
+    TYPE_DARK = 0xF,
+    TYPE_STEEL = 0x10
+};
+// This is usually stored as an 8-bit integer.
+#pragma pack(push, 1)
+ENUM_8_BIT(pokemon_type);
+#pragma pack(pop)
+
 enum target_object {
     NOTHING_0x0 = 0x0,
     ODDISH_WEED_0x1 = 0x1,
@@ -1232,7 +1281,7 @@ enum npc_sprite {
     NPC_MISMAGIUS = 0x9F,
     NPC_INFERNAPE = 0xA0
 };
-// A subset of this enum is rarely stored as an 8-bit integer.
+// A subset of this enum is rarely stored as an 16-bit integer.
 #pragma pack(push, 1)
 ENUM_16_BIT(npc_sprite);
 #pragma pack(pop)
@@ -1550,6 +1599,7 @@ enum browser_id {
 };
 
 enum form_id {
+    FORM_NONE = 0,
     FORM_CHARMANDER = 1,
     FORM_CHARMELEON = 2,
     FORM_SQUIRTLE = 3,
@@ -1920,6 +1970,21 @@ enum mount_species {
 // This is usually stored as 8-bit integer
 #pragma pack(push, 1)
 ENUM_8_BIT(mount_species);
+#pragma pack(pop)
+
+enum param_encoding {
+    ENCODE_NULL = 0x0,    // Do nothing.
+    ENCODE_BYTE_1 = 0x1,  // Write 1 byte
+    ENCODE_BYTE_2 = 0x2,  // Write 1 byte
+    ENCODE_HWORD_1 = 0x3, // Write 2 bytes
+    ENCODE_HWORD_2 = 0x4, // Write 2 bytes
+    ENCODE_WORD_1 = 0x5,  // Write 4 bytes
+    ENCODE_WORD_2 = 0x6,  // Write 4 bytes
+    ENCODE_ZINIT = 0x7    // Zeroes destination
+};
+// This is usually (always?) stored as 8-bit integer
+#pragma pack(push, 1)
+ENUM_8_BIT(param_encoding);
 #pragma pack(pop)
 
 #endif

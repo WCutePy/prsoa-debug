@@ -67,7 +67,7 @@ arm9:
         
         r0: num bytes to allocate
         return: pointer to allocated memory
-    - name: GF_Assert_Veneer
+    - name: MaybeMemFreeVeneer
       address:
         NA:
           - 0x2001470
@@ -96,6 +96,15 @@ arm9:
         Seems to initialize what we believe to be the struct that stores player inputs. 
         
         r0: controller_inputs pointer
+    - name: MaybeMemAllocVeneer
+      address:
+        NA:
+          - 0x2001D28
+          - 0x200203C
+      description: |-
+        Seems to allocate memory, returning a pointer to the newly allocated memory.
+        
+        r0: num bytes to allocate
     - name: InitTouchScreenWrapper
       address:
         NA: 0x2001D34
@@ -131,6 +140,13 @@ arm9:
         Seems to partially initialize a touch_screen_wrapper struct in tandem with InitTouchScreenWrapper.
         
         r0: touch_screen_wrapper pointer
+    - name: MaybeMemFree
+      address:
+        NA: 0x20022F4
+      description: |-
+        Seems like it might deallocate memory?
+        
+        r0: pointer to memory to deallocate?
     - name: InitFileArchiveWrapper
       address:
         NA: 0x2002AEC
@@ -509,6 +525,70 @@ arm9:
         Seems to initialize font_file_data.
         
         r0: font_file_data pointer
+    - name: ZeroInitParamFileData
+      address:
+        NA: 0x200D114
+      description: |-
+        Zeroes a param_file_data struct prior to use.
+        
+        r0: param_file_data pointer
+        r1: undefined4
+    - name: MaybeDeallocateParamFileDataOuter
+      address:
+        NA: 0x200D134
+      description: |-
+        Seems to assist in deallocating a param_file_data struct.
+        
+        r0: param_file_data pointer
+    - name: InitParamFileData
+      address:
+        NA: 0x200D148
+      description: |-
+        Seems to initialize a param_file_data struct prior to use.
+        
+        r0: param_file_data pointer
+        r1: param file name
+    - name: MaybeDeallocateParamFileData
+      address:
+        NA: 0x200D1A0
+      description: |-
+        Seems to assist in deallocating a param_file_data struct.
+        
+        r0: param_file_data pointer
+    - name: SchemaExpandParamFileData
+      address:
+        NA: 0x200D200
+      description: |-
+        Processes a param_file_data pointer, "schema-expanding" it. See param_file.h for details.
+        
+        r0: param_file_data pointer
+    - name: GetParamRamTableEntrySize
+      address:
+        NA: 0x200D390
+      description: |-
+        Retrieves the size of the final ram table from a param_file_data struct.
+        
+        r0: param_file_data pointer
+    - name: ParamGetExpandedRamTableFieldInner
+      address:
+        NA: 0x200D398
+      description: |-
+        Retrieves a schema-expanded element from a param_file_data pointer, at a given index and offset.
+        
+        r0: param_file_data pointer
+        r1: index
+        r2: offset
+        r3: returned element pointer
+    - name: ParamGetExpandedRamTableFieldOuter
+      address:
+        NA: 0x200D3B8
+      description: |-
+        Assists and seemingly repeats parts of ParamGetExpandedRamTableFieldInner?
+        
+        r0: param_file_data pointer
+        r1: index
+        r2: offset
+        r3: returned element pointer
     - name: ret_0200d414
       address:
         NA: 0x200D414
@@ -623,6 +703,14 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: InitPokeIdTableWrapper
+      address:
+        NA: 0x2010470
+      description: |-
+        Initializes a poke_id_table_wrapper struct, using "param/PokeId.bin".
+        
+        r0: poke_id_table_wrapper pointer
+        r1: undefined4
     - name: InitBattleCombatantsOuter
       address:
         NA: 0x2010854
@@ -1022,6 +1110,14 @@ arm9:
         Zeroes the entirety of a battle_exports struct, except for the function pointer at field_0x0.
         
         r0: battle_exports pointer
+    - name: InitDiskHpTableWrapper
+      address:
+        NA: 0x2010D2C
+      description: |-
+        Initializes a disk_hp_table_wrapper struct, using "param/DiskHp.bin".
+        
+        r0: disk_hp_table_wrapper pointer
+        r1: undefined4
     - name: InitRangerNetMissionCompletionBits
       address:
         NA: 0x201128C
@@ -2358,6 +2454,13 @@ arm9:
         SysCall Function that seems to call many audio-related/graphics functions, then MaybeTryEndMission.
         
         r0: script stack pointer, interpreted as params.
+    - name: SysCallMaybeEndMissionOnlyFanfare
+      address:
+        NA: 0x2031244
+      description: |-
+        SysCall Function that seems to call the same audio-related/graphics functions as SysCallMaybeEndMissionWithFanfare, but NOT MaybeTryEndMission.
+        
+        No params.
     - name: SysCallMaybeExitMissionModeWithFanfare
       address:
         NA: 0x20312C4

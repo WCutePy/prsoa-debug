@@ -8,16 +8,18 @@ void ret_02000b98(void);
 void ret_02000b9c(void);
 void NitroMain(void);
 void ret_0200120c(void);
-void* MaybeMemAlloc(undefined4 param_1);
-void GF_Assert_Veneer(void);
+void* MaybeMemAlloc(uint32_t param_1);
+void MaybeMemFreeVeneer(void);
 void LoadOverlay(int overlay, bool param_2);
 undefined* SetGameState(int state, struct megastruct* param_2);
 void InitControllerInputs(struct controller_inputs* param_1);
+void* MaybeMemAllocVeneer(uint32_t param_1);
 struct touch_screen_wrapper* InitTouchScreenWrapper(struct touch_screen_wrapper* param_1);
 struct touch_screen* InitTouchScreen(struct touch_screen* param_1);
 void ret_02001eb4(void);
 void ret_02001ecc(void);
 struct touch_screen_wrapper* InitTouchScreenWrapperOuter(struct touch_screen_wrapper* param_1);
+void MaybeMemFree(void* param_1);
 struct file_archive_wrapper* InitFileArchiveWrapper(struct file_archive_wrapper* param_1,
                                                     undefined4 param_2, char* param_3, int param_4,
                                                     undefined4 param_5, int param_6, int param_7);
@@ -32,6 +34,7 @@ void ret_0200396c(void);
 void ret_02003984(void);
 void ret_02007ca8(void);
 void ret_02007cc0(void);
+void ret_02008ed8(void);
 struct textbox_data* InitTextboxDataOuter(struct textbox_data* param_1);
 void WipeTextboxData(struct textbox_data* param_1);
 void ZeroInitTextboxData(struct textbox_data* param_1);
@@ -74,6 +77,16 @@ void ret_0200bbc4(void);
 struct textbox_subdata* ZeroInitTextboxSubData(struct textbox_subdata* param_1);
 void ret_0200c404(void);
 struct font_file_data* InitFontFileData(struct font_file_data* param_1);
+struct param_file_data* ZeroInitParamFileData(struct param_file_data* param_1, undefined4 param_2);
+struct param_file_data* MaybeDeallocateParamFileDataOuter(struct param_file_data* param_1);
+void InitParamFileData(struct param_file_data* param_1, char* param_2);
+void MaybeDeallocateParamFileData(struct param_file_data* param_1);
+void SchemaExpandParamFileData(struct param_file_data* param_1);
+int GetParamRamTableEntrySize(struct param_file_data* param_1);
+bool ParamGetExpandedRamTableFieldInner(struct param_file_data* param_1, int param_2, int param_3,
+                                        int* param_4);
+undefined4 ParamGetExpandedRamTableFieldOuter(struct param_file_data* param_1, int param_2,
+                                              int param_3, undefined4* param_4);
 void ret_0200d414(void);
 void InitScreenFadeStructById(struct screen_fade* param_1, undefined4* param_2);
 unsigned int ScreenClampValueToRange(struct screen_fade* param_1, unsigned int param_2,
@@ -90,6 +103,8 @@ void SetUnkAudioSettingVariables(struct megastruct* param_1);
 bool GetUnkAudioSettingVariables(struct megastruct* param_1);
 void InitUnkAudioSettingVariables(struct megastruct* param_1);
 void ret_02010448(void);
+struct poke_id_table_wrapper* InitPokeIdTableWrapper(struct poke_id_table_wrapper* param_1,
+                                                     undefined4 param_2);
 struct battle_combatants* InitBattleCombatantsOuter(struct battle_combatants* param_1);
 void InitializeBattlePokemonFields(struct battle_combatants* param_1);
 void BattleSetUnkField0x0(struct battle_combatants* param_1, int* param_2);
@@ -144,6 +159,8 @@ int16_t BattleGetGenderAndUniform(struct battle_combatants* param_1);
 struct battle_exports* InitBattleExports(struct battle_exports* param_1);
 void ret_02010cec(void);
 void ZeroBattleExports(struct battle_exports* param_1);
+struct disk_hp_table_wrapper* InitDiskHpTableWrapper(struct disk_hp_table_wrapper* param_1,
+                                                     undefined4 param_2);
 void InitRangerNetMissionCompletionBits(int16_t* param_1);
 void SetRangerNetMissionCompletionBit(void* param_1, unsigned int param_2);
 unsigned int GetRangerNetMissionCompletionBit(undefined4 param_1, unsigned int param_2);
@@ -324,6 +341,7 @@ undefined4 SysCallReturnZero2112(void);
 void SysCallSetPlayerSpawnData(void* param_1, int param_2);
 undefined4 SysCallMaybeStartMissionWithFanfare(undefined4* param_1);
 undefined4 SysCallMaybeEndMissionWithFanfare(undefined4* param_1);
+undefined4 SysCallMaybeEndMissionOnlyFanfare(void);
 undefined4 SysCallMaybeExitMissionModeWithFanfare(void);
 int8_t SysCallGetActiveMissionId(void);
 undefined4 SysCallMaybeTryEndMission(void);
@@ -383,6 +401,7 @@ void SetScriptSubroutine2(struct script_data* param_1, char* param_2, undefined4
                           undefined4 param_4);
 void ZeroInitScriptData(struct script_data* param_1);
 void InitScriptData(struct script_data* param_1);
+void MaybeCloseAndDeallocateScriptFile(struct script_data* param_1);
 struct script_manager* InitScriptManagerOuter(struct script_manager* param_1, undefined4* param_2);
 int TryInitSystemScript(struct script_manager* param_1, int param_2);
 int TryInitAreaScript(struct script_manager* param_1, int param_2, undefined4 param_3,
