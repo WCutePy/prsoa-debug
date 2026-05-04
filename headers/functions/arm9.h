@@ -1435,7 +1435,6 @@ void Ctrdg_CheckEnabled(void);
 void Ctrdg_Init(void);
 // If declaring these builtins causes issues, you can disable them
 #ifndef PRSOA_NO_BUILTIN
-// If declaring these builtins causes issues, you can disable them
 void Ctrdgi_InitModuleInfo(void);
 void Ctrdgi_CallbackForInitModuleInfo(undefined4 param_1, unsigned int param_2);
 void Ctrdgi_PulledOutCallback(undefined4 param_1, unsigned int param_2);
